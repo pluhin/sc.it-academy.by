@@ -41,17 +41,17 @@
 		называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
 		используем этот модуль в нашем первом примере.</P>
 
-		<P><code>
+		<pre><code>
 
-		#=======================================<Br>
+		#=======================================
 		# random_example.py<Br>
-		# Module example using the random module<Br>
-		#=======================================<Br>
-		import random<Br>
-		# print 14 random integers<Br>
-		for cntr in range(1,15):<Br>
+		# Module example using the random module<
+		#=======================================
+		import random
+		# print 14 random integers
+		for cntr in range(1,15):
 		&nbsp; print random.randint(1,10)
-		</code></P>
+		</code></pre>
 
 		<P>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
 		мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
@@ -71,23 +71,23 @@
 		результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
 		чисел. Тогда наш пример будет выглядеть как код ниже.</P>
 
-		<P><code>
-		#silly example<Br>
-		print '%d + %d = %d ' % (1,2,1+2)<Br>
-		print '%d * %d = %d ' % (1,2,1*2)<Br>
-		print '%d - %d = %d ' % (1,2,1-2)<Br>
-		<Br>
-		print '\n'<Br>
-		print '%d + %d = %d ' % (1,4,1+4)<Br>
-		print '%d * %d = %d ' % (1,4,1*4)<Br>
-		print '%d - %d = %d ' % (1,4,1-4)<Br>
-		<Br>
-		print '\n'<Br>
-		print '%d + %d = %d ' % (10,5,10+5)<Br>
-		print '%d * %d = %d ' % (10,5,10*5)<Br>
-		print '%d - %d = %d ' % (10,5,10-5)<Br>
+		<pre><code>
+		#silly example
+		print '%d + %d = %d ' % (1,2,1+2)
+		print '%d * %d = %d ' % (1,2,1*2)
+		print '%d - %d = %d ' % (1,2,1-2)
+		
 		print '\n'
-		</code></P>
+		print '%d + %d = %d ' % (1,4,1+4)
+		print '%d * %d = %d ' % (1,4,1*4)
+		print '%d - %d = %d ' % (1,4,1-4)
+		
+		print '\n'
+		print '%d + %d = %d ' % (10,5,10+5)
+		print '%d * %d = %d ' % (10,5,10*5)
+		print '%d - %d = %d ' % (10,5,10-5)
+		print '\n'
+		</code></pre>
 
 		<P>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при
 		написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую
@@ -98,17 +98,17 @@
 		необходимо завершить двоеточием. Код функции набирается с отступом. Наш
 		улучшенный простой пример (No2) показан ниже.</P>
 
-		<P><code>
-		#silly example 2...still silly, but better<Br>
-		def DoTwo(num1,num2):<Br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d + %d = %d ' % (num1,num2,num1+num2)<Br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d * %d = %d ' % (num1,num2,num1*num2)<Br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d - %d = %d ' % (num1,num2,num1-num2)<Br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '\n'<Br>
-		DoTwo(1,2)<Br>
-		DoTwo(1,4)<Br>
-		DoTwo(10,5)<Br>
-		</code></P>
+		<pre><code>
+		#silly example 2...still silly, but better
+		def DoTwo(num1,num2):
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d + %d = %d ' % (num1,num2,num1+num2)
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d * %d = %d ' % (num1,num2,num1*num2)
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '%d - %d = %d ' % (num1,num2,num1-num2)
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print '\n'
+		DoTwo(1,2)
+		DoTwo(1,4)
+		DoTwo(10,5)<
+		</code></pre>
 
 		<P>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-
 		либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей
