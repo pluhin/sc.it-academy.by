@@ -55,7 +55,7 @@
 							<fieldset>
 								<legend>Авторизируйтесь</legend>
 								<input type="text" id="login" name="login" required>
-								<label for="login"><span>*Логин</span></label><br>
+								<label for="login"><span>*</span>Логин</label><br>
 								<input type="password" id="pass" name="password" required>
 								<label for="login"><span>*Пароль</span></label><br>
 								<label>
@@ -97,14 +97,10 @@
 						<form method="post" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
 								<legend>Оставьте Ваш Отзыв</legend>
-								<label>
-									<input type="text" name="Name" required placeholder>
-									<span>* Имя</span>
-								</label>
-								<label>
-									<input type="email" name="email" required placeholder>
-									<span>* e-mail</span>
-								</label>
+								<input type="text" name="Name" required placeholder>
+								<span>* Имя</span>
+								<input type="email" name="email" required placeholder>
+								<span>* e-mail</span>
 								<textarea name="text_area">
 									Форма отправки
 								</textarea><br>
@@ -162,11 +158,9 @@
 							<fieldset>
 								<legend>Upload</legend> 
 								<input type="file" name="file_field" dir="ltr"><br>
-								<label>
-									<span>Срок хранения (года):</span>
-									<input type="text" name="date" pattern="[0-9]{1,2}"" placeholder required="Только цифры от 0 до 9">
-									<input type="file" name="подтвердить" dir="rtl" value="загрузить"><br>
-								</label>
+								<span>Срок хранения (года):</span>
+								<input type="text" name="date" pattern="[0-9]{1,2}"" placeholder required="Только цифры от 0 до 9">
+								<input type="file" name="подтвердить" dir="rtl" value="загрузить"><br>
 								<span><i>Метод POST</i></span><br>
 								<span><i>В теге form используйте атрибут enctype="multipart/form-data" для отправки файла на сервер</i></span>								
 							</fieldset>							
@@ -177,12 +171,11 @@
 						<form method="get" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
 								<legend>Строка поиска</legend>
-								<input type="text" name="search" pattern="[А-я]{1,99}" placeholder="Только русские буквы"><br>
-								<label>
-									<span><i>Телефонный номер в формате</i></span><br>
-									<span><i>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i></span>
-									<input type="tel" name="telnumber" placeholder="+375-29-1234567" pattern="\+375-(29|44|25)-[0-9]{7}">
-								</label><br>
+								<input type="text" name="search" pattern="[А-я]+" placeholder="Только русские буквы"><br>
+								<span><i>Телефонный номер в формате</i></span><br>
+								<span><i>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i></span>
+								<input type="tel" name="telnumber" placeholder="+375-29-1234567" pattern="\+[0-9]{3}-(29|44|25)-[0-9]{7}">
+								<br>
 								<input type="submit" name="Проверить" value="Проверить">			
 							</fieldset>							
 						</form>
