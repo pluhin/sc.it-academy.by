@@ -5,9 +5,9 @@
 			<TITLE>Form_01</TITLE>
 		</HEAD>
 		<BODY>
-			<table>
+			<table width="100%">
 				<tr>
-					<td width="350px">
+					<td>
 						<h2>Простая форма поиска с вариантами:</h2>
 						<form method="get" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
@@ -26,7 +26,7 @@
 							</fieldset>
 						</form>
 					</td>
-					<td width="350px">
+					<td>
 						<h2>Простая форма поиска с вариантами:</h2>
 						<form method="get" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
@@ -49,7 +49,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td width="350px">
+					<td>
 						<h2>Простая форма авторизации:</h2>
 						<form method="post" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
@@ -67,7 +67,7 @@
 							</fieldset>							
 						</form>
 					</td>
-					<td width="350px">
+					<td>
 						<h2>Опрос(голосование):</h2>
 						<form method="post" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
@@ -86,30 +86,30 @@
 								</label><br>
 								<input type="submit" name="Отправить" value="Отправить"><br>
 								<input type="hidden" name="date_voite" value="2013.12.31"> <!--  вот и оно -->
-								<span><i>Есть скрытое поле name=date_voite, value="2013.12.31"</i></span>
+								<label><i>Есть скрытое поле name=date_voite, value="2013.12.31"</i></label>
 							</fieldset>							
 						</form>
 					</td>
 				</tr>
 				<tr>
-					<td width="350px">
+					<td>
 						<h2>Отзыв:</h2>
 						<form method="post" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
 								<legend>Оставьте Ваш Отзыв</legend>
-								<input type="text" name="Name" required placeholder>
-								<span>* Имя</span>
-								<input type="email" name="email" required placeholder>
-								<span>* e-mail</span>
+								<input type="text" id="review" name="Name" required placeholder="Name">
+								<label for="review"><span>*</span>Имя</label><br>
+								<input type="email" id="email_1" name="email" required placeholder="e-mail">
+								<label for="email_1"><span>*</span>e-mail</label><br>
 								<textarea name="text_area">
 									Форма отправки
 								</textarea><br>
 								<input type="submit" name="Отправить" value="Отправить"><br>
-								<span><i>*- обязательное поле email- с проверкой метод POST</i></span>
+								<label><i>*- обязательное поле email- с проверкой метод POST</i></label>
 							</fieldset>							
 						</form>
 					</td>
-					<td width="350px">
+					<td>
 						<h2>Выпадающий и мульти списки:</h2>
 						<form method="post" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
@@ -144,7 +144,7 @@
 									<option value="3">Магадан
 									</option>
 								</select>
-								<input type="submit" name="Отправить" value="Ок"><br>
+								<input type="submit" name="submit" value="Ок"><br>
 
 								
 							</fieldset>							
@@ -152,31 +152,31 @@
 					</td>
 				</tr>
 				<tr>
-					<td width="350px">
+					<td>
 						<h2>Загрузка файла на сервер:</h2>
 						<form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
 							<fieldset>
 								<legend>Upload</legend> 
 								<input type="file" name="file_field" dir="ltr"><br>
-								<span>Срок хранения (года):</span>
-								<input type="text" name="date" pattern="[0-9]{1,2}"" placeholder required="Только цифры от 0 до 9">
+								<label> Срок хранения (года):</label><br>
+								<input type="text" name="date" pattern="[0-9]{1,2}"" placeholder required="Только цифры от 0 до 9"><br>
 								<input type="file" name="подтвердить" dir="rtl" value="загрузить"><br>
-								<span><i>Метод POST</i></span><br>
-								<span><i>В теге form используйте атрибут enctype="multipart/form-data" для отправки файла на сервер</i></span>								
+								<label><i>Метод POST</i></label><br>
+								<label><i>В теге form используйте атрибут enctype="multipart/form-data" для отправки файла на сервер</i></label>								
 							</fieldset>							
 						</form>
 					</td>
-					<td width="350px">
+					<td>
 						<h2>Валидация данных HTML5:</h2>
 						<form method="get" action="http://sc.it-academy.by/fe/form.php">
 							<fieldset>
 								<legend>Строка поиска</legend>
 								<input type="text" name="search" pattern="[А-я]+" placeholder="Только русские буквы"><br>
-								<span><i>Телефонный номер в формате</i></span><br>
-								<span><i>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i></span>
-								<input type="tel" name="telnumber" placeholder="+375-29-1234567" pattern="\+[0-9]{3}-(29|44|25)-[0-9]{7}">
+								<label><i>Телефонный номер в формате</i></label><br>
+								<label><i>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i></label>
+								<input type="tel" name="telnumber" placeholder="+375-29-1234567" pattern="\+[0-9]{3}-[0-9]{2})-[0-9]{7}">
 								<br>
-								<input type="submit" name="Проверить" value="Проверить">			
+								<input type="submit" name="submit" value="Проверить">			
 							</fieldset>							
 						</form>
 					</td>
