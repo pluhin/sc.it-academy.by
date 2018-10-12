@@ -1,0 +1,13 @@
+.headr {
+		/*color: red;*/
+		text-align: right;
+		/*font-family: 'Caveat',cursive;*/
+		}
+.exotic {
+		font-family: 'Caveat',cursive;
+		text-indent: 1cm;
+		font-size: 150%
+		}
+h3.exotic {
+			text-decoration: underline;
+		}

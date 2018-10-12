@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+	<HTML>
+		<HEAD>
+			<META charset="utf-8">
+			<TITLE>Домашнее задание  часть 1</TITLE>
+		</HEAD>
+		<BODY style="margin-left: 40px">
+			<img src="Icon-Python.png" alt="Здесь должен быть логотип Питон" title="Логотип Питон" align="right" vspace="5" hspace="5"> 
+			<H1>HOW -TO: Программа на Python, Часть 1</H1>
+			<UL>
+				<LI><a href="python_1.html"><i>Программа на Python — часть 1</i></a></LI>
+				<LI><a href="python_2.html"><i>Программа на Python — часть 2</i></a></LI>
+				<LI><a href="python_3.html"><i>Программа на Python — часть 3</i></a></LI>
+			</UL>
+			<H2>Содержание</H2>
+			<H3>HOW-TO: Программа на Python, Часть 1</H3>
+			<UL>
+				<LI><a href="#firstProgram">Наша первая программа</a></LI>
+				<LI><a href="#cycleFor">Пример цикла For</a></LI>
+			</UL>
+			<P>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо сейчас.</P>	
+			<H2 id="firstProgram">Наша первая программа</H2>
+<!-- -->	<p><a href="#">К содержанию</a></p>
+			<P>Наберём код в текстовом редакторе (например, в <STRONG>gedit</STRONG>). Потом мы разберёмся, что делает каждая строка и пойдём дальше.<P>
+			<P>Введите эти 4 строки:</P>   
+			<pre>
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</pre>
+			<P>Это всё. Сохраните файл как <STRONG>hello.py</STRONG> в любом месте. Я предлагаю сохранить его в папке <STRONG>python_examples</STRONG> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</P>
+			<code><u><i>chmod <b>+x</b> hello.<b>py</b></i></u></code> 
+			<P>в папке, в которой вы сохранили программу. Теперь запустите её.</P>
+			<pre>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$</pre>
+			<P>Вот и всё.</P>
+			<h2 id="cycleFor">Пример цикла For</h2>
+			<p><a href="#">К содержанию</a></p>
+			<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</p>
+			<pre>
+#!/usr/bin/env python
+for cntr in range(0,10):
+	print cntr</pre>
+			<p><i>Не забудьте поставить символ табуляции перед строкой «print cntr».</i> Это важно. В Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки как в других языках программирования, а отступы.<p>
+			<table width="100%">	
+				<col width="33%"><col width="34%"><col width="33%">
+				<tr>
+					<td align="left"><a href=""> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAAZiS0dEAP8A/wD/oL2nkwAABQZJREFUOI2NlUtsVFUcxr9z7mPmztyZTl+0U3X6ohItaGlLlCCJ0RgCokZiWLggMdGyMCQsNLqSYDTElSvtujExkbog0QQSYTEhgIFSaFrGFmlpO9XOTOfRedx53PNyMVJrKOiXnNX5/3/5zvl/OYfgMRoamTCkSVuJUGEo+ABAKVLhgiVE3k7FxvvdR/WSR23sPj69l1B5VCoMgKgIqOYHAHBWJuBxgEwB7Mft2a+vjI+Pi/8ED43M9HIqTxJde9f226GOliBta/ZiR0sRliEwn7WxmJJIra3JbN6pSFa7YsrKF9bvn12LRqN8S/DuD2OdkHyUmMGDAz0WDu0JYNdTCttCBjRaL1UAckWOhQTD+ckqLk/nUKsUfvOo3Cee2S/PP4Brm50qIr7xB4MH3trbQI69bKEvrMFjaDh3NYuZxTJmFsvoavNCowQtQR27Og20NRpYSKiWfBnDaBmafP/w9pVoNKr0B2BO+ceaGTx4YLABr+82YOgExYrE5ek83nixCe1NJgoOxw/RNPbvDAKEAFDY02eB8SYydlE+XSyIkXg8PgWgpNUHNbmXGOaZgd6g9+CgAUoBl0lcnyvitaEQws0mKCHwmBRcKNSYgsskqkzB5QpNNoXj6lhOsq6MjEwd2dd4Xx8amTCUkkf9fm9wsNeEkBJ5R2EpWcVLO4PoavNuzCC1zpB3HgoAhFTYERa4HfIEMpnAkcVK+6+65LRVmWogFGygIS9HwaFYL3EM9tnoe8KqD0wp/JFxcfNuCS5X/wCFwkpWYDoRQqHigwObEpnrz/POiE48KqxAIi0BgoorUXEldnb7MNRnb3IEnL+e2zLvDRYwn/77VLoORfQwNYyIDgUfNMPvMxjWHYnnun0Y7gv8q1nXCD441L4luFRVWCkDl+4AhBAozbQoJ4GNVBSqBpJ5BZ+3noj/K9tL0Nm6EZL61UFQqhSpgLNy0rFwPx/Ez7c1FMrqsbDNSuaBy7N1MIECFbUqBa/pXLCErpF4viy7BbFwcxn46HuFz98B2kN15xUXOPkdsJx+GCwUwARgUKBUqUFBpIh0ElTk7RRApmQtKw1NwdQUVjIKX/0kkS7WnVsm8OmbwLYGoFSrrxqXkFKAKAGvLmDqAsrNSAPVu41yaVVbi30rwsPvOUrIt0O2bjXbErbBUK0yzK5wPN+twzIJGv3Aq89KXIuV0Oh10eB1ETAZAiaD32Bwqw4KmbWSyZZG2+XklAYA+3sKKznPC90EfCjSqiPo4fCbHJwxLKcY+jpMWB4Kj0FwdWYdfpPBNus1foNDJwzx1QyqTu7CAD03xhhLaQAQi8VU2/CxBddVzwgpOp9s1ojPQ+AxFKquwHKqht6wB5duF5EtuvCaCh5DwaMrEDDMLhdkOr0+0SpmRhu1xJ1IJFLceN2OH45k5gvNE6WK1l8o866Az0BTQIdpULhc4dZ8BZkCh6kTmDqBoQHpPMP0Qh6rycLENj55pgM3bty7dy89NjYmNsDRaFTt661l857+WwUHvuS621VyhOk1OPFbOnRKQQmglEAm52BmoSxj8WIplytcaBUzox24ccO27dTZs2cZsMUPcurUKRqPx/136NFXXC1whEitHzoNByzNAoCSI6pSyZSB6l2dJ3/p1y5eJYQk5+bm1h/5g2wSOXHihLlYaQ/leWeEGkaEggQUBKXgNSKdRKNcWvXJP7NSymJPT0/l9OnTcjPgL1TvfEZDLWD+AAAAAElFTkSuQmCC" alt="назад" title="назад"></a></td>
+					<td align="center"><a href="#"><img src="home.png" alt="К началу" title="К началу"></a></td>
+					<td align="right">
+						<a href="python_2.html"><img src="next.png" alt="вперед" title="вперед"></a>
+					</td>					
+				</tr>
+			</table>
+
+		</BODY>
+	<HTML>

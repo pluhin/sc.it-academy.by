@@ -1,0 +1,2 @@
+@import "style_for_print.css" print;
+@import "style_for_screen.css" screen;
