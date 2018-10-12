@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Шахматы</TITLE> 
+		<style type="text/css">
+            table {
+                counter-reset: td 65;
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr:nth-child(odd) td:nth-child(even),tr:nth-child(even) td:nth-child(odd){
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                color: white;
+            } 
+            td:before {
+                display: block;
+                font-size: 30px;
+                content: counter(td);
+                counter-increment: td -1;
+                text-align: center;
+                }
+    	</style>	
+</HEAD> 
+<BODY>
+     <table>
+         <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+     </table>
+</BODY> 
+</HTML> 
