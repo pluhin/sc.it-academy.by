@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Ссылки. Оформление</TITLE> 
+		    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+            </script>
+</HEAD> 
+<BODY>
+    
+    <BR>
+    <input type="button" id="button" value="Нет скрытых строк">
+    <BR><BR>
+       <table class="table table-bordered table-hover">
+         <tr>
+             <th>ФИО</th>
+             <th>пол</th> 
+             <th>должность</th>
+             <th>дата рож.</th>
+             <th>Данные 01</th>
+             <th>Данные 02</th>
+         </tr>
+         <tr class="r1">
+             <th>Иванов Иван Иванович</th>
+             <td>М</td> 
+             <td>начальник</td>
+             <td>01.01.1960</td>
+             <td>4567</td>
+             <td>3453</td>
+         </tr>
+         <tr class="r1">
+             <th>Петрова Илонна Петровна</th>
+             <td>Ж</td> 
+             <td>секретарь</td>
+             <td>01.01.1989</td>
+             <td>98795</td>
+             <td>46523</td>
+         </tr>
+         <tr class="r1">
+             <th>Сидоров Илья Игоревич</th>
+             <td>М</td> 
+             <td>бухгалтер</td>
+             <td>01.01.1979</td>
+             <td>743434</td>
+             <td>987979</td>
+         </tr>
+         <tr class="r1">
+             <th>Пупин Фёдор Фёдорович</th>
+             <td>М</td> 
+             <td>водитель</td>
+             <td>01.01.1963</td>
+             <td>74323434</td>
+             <td>9232379</td>
+         </tr>
+         <tr class="r1">
+             <th>Крупин Сергей Иванович</th>
+             <td>М</td> 
+             <td>водитель 2</td>
+             <td>01.01.1983</td>
+             <td>3234534</td>
+             <td>923123379</td>
+         </tr>
+        </table>
+
+        <script>
+        $(document).ready(function(){
+
+           $(".r1").click(function () {
+                $(this).hide();
+                if ($(".r1").is(":hidden")) {
+                    $('#button').val('Показать скрытые строки');
+                }
+                else {                   
+                    $('#button').val('Нет скрытых строк');}
+            });
+            $("#button").click(function () { 
+                $(".r1").show(); 
+                $('#button').val('Нет скрытых строк');
+            }); 
+        });
+    </script>
+    
+        </BODY> 
+</HTML> 
