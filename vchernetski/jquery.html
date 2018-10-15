@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<HTML>
+   <HEAD>
+   		<META charset="utf-8">
+   		<TITLE>jquery</TITLE> 
+   		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   		<script type="text/javascript">
+   			$(document).ready(function(){
+   				var a= null;
+   				var b= null;
+   				$('#p1').keyup(function(){
+   				 a=$('#p1').val();
+   				 if(a==b){
+   					$('#p1').css('background-color','yellow');
+   					$('#p2').css('background-color','yellow');
+   					$('#y').html('<p>Nice</p>');
+   				}
+   				else{
+   					$('#p1').css('background-color','green');
+   					$('#p2').css('background-color','green');
+   					$('#y').html('<p>Try again</p>');
+   				}
+   				});
+   				$('#p2').keyup(function(){
+   				 b=$('#p2').val();
+   				 if(a==b){
+   					$('#p1').css('background-color','yellow');
+   					$('#p2').css('background-color','yellow');
+   					$('#y').html('<p>Nice</p>');
+   				}
+   				else{
+   					$('#p1').css('background-color','green');
+   					$('#p2').css('background-color','green');
+   					$('#y').html('<p>Try again</p>');
+   				}
+   				});
+   			});
+   		</script>
+   </HEAD> 
+    	<BODY> 
+    		<input type="password" placeholder="пароль1" name="psw" id="p1">
+    		<br>
+    		<br>
+    		<input  type="password" placeholder="пароль2" name="psw" id="p2">
+    		<br>
+    		<br>
+    		<p id="y"><p>
+   		</BODY>  
+</HTML> ​
