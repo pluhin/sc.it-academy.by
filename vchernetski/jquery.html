@@ -8,21 +8,9 @@
    			$(document).ready(function(){
    				var a= null;
    				var b= null;
-   				$('#p1').keyup(function(){
+   				$('#p1,#p2').keyup(function(){
    				 a=$('#p1').val();
-   				 if(a==b){
-   					$('#p1').css('background-color','yellow');
-   					$('#p2').css('background-color','yellow');
-   					$('#y').html('<p>Nice</p>');
-   				}
-   				else{
-   					$('#p1').css('background-color','green');
-   					$('#p2').css('background-color','green');
-   					$('#y').html('<p>Try again</p>');
-   				}
-   				});
-   				$('#p2').keyup(function(){
-   				 b=$('#p2').val();
+           b=$('#p2').val();
    				 if(a==b){
    					$('#p1').css('background-color','yellow');
    					$('#p2').css('background-color','yellow');
