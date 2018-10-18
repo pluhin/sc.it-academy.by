@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+		<META charset="utf-8">
+		<TITLE>GRID with foundation </TITLE>
+		
+		<link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	<BODY>
+		<header>
+			<div class="row">
+				<div class="small-9 columns">
+					<H1>HOW -TO: Программа на Python, Часть 2</H1> 
+				</div>
+				<div class="small-3 columns">
+					<img src="img/Icon-Python.png" alt="Здесь должен быть логотип Питон" title="Логотип Питон" align="right" vspace="5" hspace="5">
+				</div>					
+			</div>
+		</header>
+		<section>
+			<div class="row">
+				<div class="small-12 columns">
+					<ul id="links">
+						<li><a href="skeleton.html"><i>Программа на Python — часть 1</i></a></li>
+						<li><a href="foundation.html"><i>Программа на Python — часть 2</i></a></li>
+						<li><a href="Python_3.html"><i>Программа на Python — часть 3</i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row columns">
+				<h2 class="text-center">Содержание</h2>
+			</div>
+			<div class="row columns">
+				<H3>HOW-TO: Программа на Python, Часть 2</H3>
+			</div>
+			<div class="row columns">
+				<ul>
+					<li><a href="#lists">Списки</a></li>
+					<li><a href="#comment">Комментарии</a></li>
+				</ul>
+				<hr>
+			</div>
+			<div class="row">
+				<div class="12-small columns">
+					<p>
+					Впрошлом уроке мы рассмотрели простую программу, которая использовала raw_input для получения ответа пользователя, простые типы переменных и простой цикл «for». В этом уроке мы рассмотрим ещё больше типов переменных и напишем ещё больше программ.
+					</p>
+				</div>
+			</div>
+			<div class="row columns">
+				<h2 id="lists" class="text-center">Списки</h2>
+			</div>
+			<div class="row columns">
+				<a href="#">К содержанию</a>
+			</div>				
+			<div class="row">
+				<div class="12-small columns">
+					<p>
+						Давайте рассмотрим другой тип переменных, который называется <i>списки</i>. В других языках программирования они называются <i>массивами</i>. Если мы обратимся к аналогии с 	коробками для обуви, то массив (список) представляет собой несколько склеенных друг с другом коробок с одинаковыми вещами. Например, в одной коробке лежат вилки, в другой — ножи, в третьей — ложки. Посмотрим на простой список— список месяцев. Мы запрограммируем его так:
+					</p>
+					<code>
+						months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+					</code>
+					<p>Чтобы создать список, мы заключили все значения в квадратные скобки ( '[' и ']' ). Мы назвали наш список 'months'. Чтобы использовать список, мы дадим команду print months[0] или months[1] (которые выведут на экран 'Jan' или 'Feb'). Помните: счет начинается с нуля. Чтобы найти длину списка, можно использовать такую функцию:</p>
+					<code>print len(months)</code>
+					<p>которая вернёт 12.</p>
+					<p>Ещё один пример списков — категории в поваренной книге. Например…</p>
+					<code>categories = ['Main dish','Meat','Fish','Soup','Cookies']</code>
+					<p>Таким образом, в <b>categories[0]</b> хранится <i>'Main dish'</i>, а в <b>categories[4]</b> — <i>'Cookies'</i>. Всё очень просто. Я уверен, вы сможете придумать много других примеров использования списков.</p>
+				</div>
+			</div>
+			<div class="row columns">
+				<h2 id="comment" class="text-center">Комментарии</h2>
+			</div>
+			
+			<div class="row columns">
+				<a href="#">К содержанию</a>
+			</div>
+
+			<div class="row">
+				<div class="12-small columns">
+					<p>Далее, мы должны обсудить комментарии. Комментарии важны по нескольким причинам. Они не только говорят вам или другим людям, что вы пытаетесь делать, но и напомнят вам через полгода, что же вы хотели сделать. Когда вы будете писать много программ, комментарии станут важными. Также при их помощи вы заставите Python игнорировать какие-либо части кода. Чтобы закомментировать строку, поставьте перед ней знак '#'. Например:</p>
+					<code>#</code>
+					<p>Это комментарий</p>
+					<p>Комментарии можно вставлять в любое место в строке, но помните, что Python проигнорирует всё, что идёт после '#'.</p>
+				</div>
+			</div>
+		</section>
+		<div class="row">
+			<div class="4-small columns" class="text-right">
+				<a href="skeleton.html">
+							<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+							 	!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+							 	<g>
+							  	 <title>background</title>
+							  	 <rect fill="#fff" id="canvas_background" height="32" width="32" y="-1" x="-1"/>
+							  	 <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+							   	  <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+							  	 </g>
+							 	</g>
+							 	<g>
+							  	 <title>назад</title>
+							  	 <path id="svg_1" d="m27.495254,5.820133l-11.199367,8.906481l11.199367,8.906472l-6.400321,5.092995l-17.599678,-13.999466l17.599678,-14.000536" stroke-width="1.5" stroke="#000" fill="#0000bf"/>
+							 	</g>
+							</svg>
+						</a>
+			 </div>
+			<div class="4-small columns" id="center">
+				<a href="#"><img src="img/home.png" alt="К началу" title="К началу"></a>
+			</div>
+			<div class="4-small columns" id="right">
+				<a href="python_3.html"><img src="img/next.png" alt="вперед" title="вперед"></a>
+			</div>			
+		</div>		 
+</BODY>
+<HTML>

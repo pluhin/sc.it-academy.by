@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Домашнее задание - базовое #2</title>
+</head>
+	<style type="text/css">
+		input {margin-bottom: 0.2em}
+		div {
+			display: none;
+			box-shadow: 0 0 10px;
+			margin: 5px;			
+			}
+		.alarm{
+			border: 2px red solid;
+			background-color: rgb(255, 0, 0);
+		}		
+		.greenn {
+			display: inline-block;
+			background-color: lightgreen;
+			color: yellow;
+			border: 2px green solid;			
+		}
+		.redd {
+			display: inline-block;
+			background-color: red;
+			color: white;
+			border: 2px red solid;
+		}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+			$(function(){
+			$('#n1, #n2').keyup(function(){
+				if ($('#n1').val() != $('#n2').val())
+				{
+					$('#n1, #n2').addClass('alarm');
+					$('#match').removeClass().addClass('redd').text('Not Match');
+				}else{
+					if (($('#n1').val() =='' && $('#n2').val() == '')) {
+						$('#match, #n1, #n2').removeClass();
+					}else{
+						$('#n1, #n2, #match').removeClass();
+						$('#match').text('Password MATCH').addClass('greenn');
+					}
+				}
+			});
+	});
+	</script>
+ <body>
+	<form method="post" id="frm" name="test" action="">
+		<input type="password" name="pswrd" id="n1" placeholder="enter password"><br>
+		<input type="password" name="confpswrd" id="n2" placeholder="confirm password">
+	</form>
+	<div id="match">enter passwords</div>
+</body>
+
+</html>
+
