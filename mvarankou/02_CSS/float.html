@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+	<HTML> 
+		<HEAD>
+		<META charset="utf-8">
+		<TITLE>Float</TITLE>	
+			<style type="text/css">
+			.left {
+				width: 15em;
+				float: left;
+				width: 20%;
+				background-color: rgb(204,204,204);
+			}
+			.right {
+				width: 80%;
+				background-color: rgb(170,170,170);
+				overflow: hidden;
+				margin-bottom: .2em;
+			}
+			.bottom {
+				clear: both;
+				width: 100%;
+				background-color: rgb(150,150,150);
+			}
+			.row {
+				overflow: hidden;
+				margin-bottom: .2em;
+			}
+			a {
+				mix-blend-mode: multiply;
+				float: right;
+			}
+
+			</style>
+		</HEAD> 
+		<BODY>
+			<div class="row">
+				<div class="left">
+					<div>
+						<h2>Блок навигации</h2>
+						<ul>
+							<li>Ширина 15em</li>
+							<li>Высота определается контентом</li>
+							<li>Должен присутствовать цвет фона</li>
+							<li>Распологается слева</li>
+							<li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<div class="right">
+						<h2>Статья 1</h2>
+						<p>Размер блока:</p>
+						<p>Занимает всю доступную ширину</p>
+						<p>Высота по размеру контента</p>
+						<p>Должен присутствовать цвет фона</p>
+						<p>Во всех "статьях" сделать отступ снизу от соседей равным 2em, при помощи свойства margin-bottom</p>
+					</div>
+					<div class="right">
+						<h2>Статья 2</h2>
+						<p>Размер блока:</p>
+						<p>Занимает всю доступную ширину</p>
+						<p>Высота по размеру контента</p>
+						<p>Должен присутствовать цвет фона</p>
+						<p>Во всех "статьях" сделать отступ снизу от соседей равным 2em, при помощи свойства margin-bottom. Картинка вставленна при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки.</p>
+						<div>
+							<a href="mailto:mexonizator@gmail.com">
+							<img src="mail.png" alt="mail">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.
+				</div>
+			</div>
+
+		</BODY> 
+</HTML> 
