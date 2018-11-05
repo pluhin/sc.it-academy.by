@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML> 
+=======
+<!DOCTYPE html> 
+>>>>>>> 2461792aec9d2d9b12576f83cd2c2492cb433944
 <HTML> 
 	<HEAD>
 		<META charset="utf-8">
@@ -26,6 +30,7 @@
 		<H2>Наша первая программа</H2>
 		<P>Наберём код в текстовом редакторе (например, в <B>gedit</B>). Потом мы разберёмся, что делает<BR>
 		каждая строка и пойдём дальше.<BR><BR>
+<<<<<<< HEAD
 		Введите эти 4 строки:<BR><BR>
 		<PRE><CODE>#!/usr/bin/env python
 print 'Hello. I am a python program.'
@@ -50,6 +55,32 @@ greg@earth:~/python_examples$</CODE></PRE>
 		<PRE><CODE>#!/usr/bin/env python
 for cntr in range(0,10):
     print cntr</CODE></PRE>
+=======
+		Введите эти 4 строки:<BR><BR><BR>
+		<CODE>#!/usr/bin/env python<BR>
+		print 'Hello. I am a python program.'<BR>
+		name = raw_input("What is your name?")<BR>
+		print "Hello there, " + name + "!"</CODE><BR><BR>
+		Это всё. Сохраните файл как <B>hello.py</B> в любом месте. Я предлагаю сохранить его в папке<BR>
+		<B>python_examples</B> в домашнем каталоге. Этот пример показывает, как просто написать<BR>
+		программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для<BR>
+		этого введите в терминале<BR><BR>
+		<B><CODE><U>chmod +x hello.py</U></CODE></B><BR><BR>
+		в папке, в которой вы 
+		сохранили программу. Теперь запустите её.<BR><BR><BR>
+		<CODE>greg@earth:~/python_examples$ ./hello.py<BR>
+		Hello. I am a python program.<BR>
+		What is your name? Ferd Burphel<BR>
+		Hello there, Ferd Burphel!<BR>
+		greg@earth:~/python_examples$</CODE><BR><BR>
+		Вот и всё.</P>
+		<H2>Пример цикла For</H2>
+		<P>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый<BR>
+		редактор и наберите следующую программу:<BR>
+		<CODE>#!/usr/bin/env python<BR>
+		for cntr in range(0,10):
+		<PRE>    print cntr</CODE><BR><BR></PRE>
+>>>>>>> 2461792aec9d2d9b12576f83cd2c2492cb433944
 		<I>Не забудьте поставить символ табуляции перед строкой "print cntr"</I>. Это важно. В<BR>
 		Python для указания на блоки кода используются не круглые"(" и фигурные "{" скобки<BR>
 		как в других языках программирования, а отступы.</P>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+ <TITLE>HOW-TO: Программа на Python, Часть 2</TITLE>
+ </HEAD>  
+  <BODY> 
+  <H1>HOW-TO: Программа на Python, Часть 2</H1> 
+  <img src="Icon-Python.PNG" align="right" width="210" height="210" alt="Python_Icon" title="Python_Icon">
+        <ul>
+          <li><a href="Task2.3.html">Программа на Python — часть 1</a></li>
+          <li><a href="Task2.4.html">Программа на Python — часть 2</a></li>
+          <li><a href="Task2.5.html">Программа на Python — часть 3</a></li>
+      </ul>
+  <H2>Содержание</H2>
+  <H3>HOW-TO: Программа на Python, Часть 2</H3>
+      <ul>
+        <li><a href="#1">Списки</a></li>
+        <li><a href="#2">Комментарии</a></li>
+    </ul><Hr>
+  <P>Впрошлом уроке мы рассмотрели простую программу, которая использовала raw_input для получения ответа пользователя, простые типы переменных и простой цикл <strong>&#171;for&#187;</strong>. В этом уроке мы рассмотрим ещё больше типов переменных и напишем ещё больше программ.</P>
+  <H2 id="1">Списки</H2>
+  <a href="#">К содержанию</a>
+  <P>Давайте рассмотрим другой тип переменных, который называется <EM>списки</EM>. В других языках программирования они называются <EM>массивами</EM>. Если мы обратимся к аналогии с коробками для обуви, то массив (список) представляет собой несколько склеенных друг с другом коробок с одинаковыми вещами. Например, в одной коробке лежат вилки, в другой — ножи, в третьей — ложки. Посмотрим на простой список— список месяцев. Мы  запрограммируем его так:</P><Br>
+  <pre>months =
+&#91;&#39;Jan&#39;,&#39;Feb&#39;,&#39;Mar&#39;,&#39;Apr&#39;,&#39;May&#39;,&#39;Jun&#39;,&#39;Jul&#39;,&#39;Aug&#39;,&#39;Sep&#39;,&#39;Oct&#39;,&#39;Nov&#39;,&#39;Dec&#39;&#93;</pre>
+  <P>Чтобы создать список, мы заключили все значения в квадратные скобки (<strong>&#39;&#91;&#39;</strong> и <strong>&#39;&#93;&#39;</strong>). Мы назвали наш список <EM>&#39;months&#39;</EM>. Чтобы использовать список, мы дадим команду print <strong>months&#91;0&#93;</strong> или <strong>months&#91;1&#93;</strong> (которые выведут на экран <EM>&#39;Jan&#39;</EM> или <EM>&#39;Feb&#39;</EM>). Помните: счет начинается с нуля. Чтобы найти длину списка, можно использовать такую функцию:</P>
+  <pre>print len&#40;months&#41;</pre>
+  <P>которая вернёт 12</P>
+  <P>Ещё один пример списков — категории в поваренной книге. Например…</P>
+  <pre>categories = &#91;&#39;Main dish&#39;,&#39;Meat&#39;,&#39;Fish&#39;,&#39;Soup&#39;,&#39;Cookies&#39;&#93;</pre>
+  <P>Таким образом, в <strong>categories&#91;0&#93;</strong> хранится <EM>&#39;Main dish&#39;</EM>, а в <strong>categories&#91;4&#93;</strong> — <EM>&#39;Cookies&#39;</EM>. Всё очень просто. Я уверен, вы сможете придумать много других примеров использования списков.</P><HR>
+  <H2 id="2">Комментарии</H2>
+  <a href="#">К содержанию</a>
+  <P>Далее, мы должны обсудить комментарии. Комментарии важны по нескольким причинам. Они не только говорят вам или другим людям, что вы пытаетесь делать, но и напомнят вам через полгода, что же вы хотели сделать. Когда вы будете писать много программ, комментарии станут важными. Также при их помощи вы заставите Python игнорировать какие-либо части кода. Чтобы закомментировать строку, поставьте перед ней знак &#39;<EM>&#35;</EM>&#39;.</P>
+  <P>Например:</P>
+  <pre>&#35;</pre>
+  <P>Это комментарий</P>
+  <P>Комментарии можно вставлять в любое место в строке, но помните, что Python проигнорирует всё, что идёт после &#39;<EM>&#35;</EM>&#39;.</P>
+  <table width="100%">
+      <tr>
+        <td>
+    <a href="Task2.3.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAAZiS0dEAP8A/wD/oL2nkwAABQxJREFUOI2NlUtsXFcZx3/n3MfMnbkzfteeAONXTVWctkmcCqJSCYEApS9EVGXRRSUkSBcoUhcgWBEFgSpWrCBrCwmJhEUlkFKJdjGKmqLGdWvZceM0D8djiD32zHied+bee85hMdQYNSn8pbM63/fT/5zvr3MEn6O5MwuOduWIUCaHIQVgjAhiFW2pml9avTQbPqxXPGzj6GvLJ4TUp43hCMLkkXYaABW2MXERxBJEf3608tt3L126pP4neO7MyrSS+nVh26/46XR/bjgrR4eSPDbcwHMUtys+6yXNzs6OrtTagY467zo6+JX3yS/eKxQK8QPBR3+8Oo6OLwg3e/LIlMdzT2d44kuGR/odLNkrNUC1EXNnK+LyYocry1W6Qf3jhKn+LHHj15c/hVsHnRqhfudns9/93ok+8eo3PGZyFgnH4s2rFVbW26yst5kYTWJJwXDW5olxh9EBh7vbZrgecNwMzS3+8IVHNwuFgrE/BSsZ/1S62ZPfOdbH80cdHFvQCDRXlmu8+LVBxgZd6q2YPxV2efZwFoQADE/PeETxoJh/W3+5WVdnisXiEtC0eoNaPCEd942nprPJk8ccpIQw0ry/1uDbc/3khlykECRcSawM3cgQRppOZAhjw6AvaYU2G6VoYlfnl049M3DXnjuz4Bj0aT+dzB6bdlFaU2sZ7m13+PrhLBOjyf0ZlPYiaq3PBAClDY/lFEt9iUy5nDm1Hoz93daxHME1R/qyfbI/GVNvSfaaMcdmfGa+4PUGZgz/KId8cLNJGJv/AJVhs6JY3uqnHqRo4ktMdbYWj+dtkTA5g8gPZwRBqAlCzeHJFHMz/gFHcPn96gPz3ufB7d1/n8q2McLOScfJ2xhSWG465UTstTRPTqY4PpP5r2bbEvzoubEHgpsdw2Yb3rkOQgiQrie1yOynot5x2K4ZUsleIv5f+UnB+Mh+SHpXh5LSGBGgwvZ2y+NuLctfP7Kot83nwg5quwZXbvTAAoNQ3Y4k7tqxirZsSxRrbT2phMcHG/CTPxp++TKM9fecByG8/gfY2P0sWBmIFDgSmkEXgyoJ3dqSquaXQCyZbkU7lsG1DJtlw2/+otlt9Jx7Lvz8JXikD5rd3urGGq0VwiiStsK1FYRl7dC5OaDv3bd2Vn+vcsd/0ELr7/f7tjfka3wnotOJuLEZ89SkjecKBtLwra9o3lttMpAM6UuGZNyIjBuRdiLCTotGZaeZCO9dGNWLSxbAs1P1zUriq5PCxHP5EZtsIibtxsRRxEYpYuaQi5eQJBzB1ZU90m6E7/Zq0k6MLSKK98t0WtW3npRvzkdRVLIAVldXzejxV++EoXlcazX+xSFLpBKChGPohIqNUpfpXIJ3PmpQaYQkXUPCMSRsgyBibaOuy+W9heF45cKAtXU9n8839l+3117Il2/XhxYagTVbb8cTmZTDYMbGdSRhbPjwdkC5HuPaAtcWOBbs1iKW79TYKtUXRqLFNw5x7dqtW7d25+fn1T64UCiYZ6a7lVpi9sN6m1RpL5potJWbtGOR9mxsKZECjFGUqy1W7rb1xxuNZrVaf2s4XrlwiGvXfN8vXbx4MYIH/CDnzp2TxWIxfV2e/mZkZU5hrFlhyVzGszyARlt1tNYlh85NN97+2+PW21eFENtra2t7D/1BDkicPXvWXQ/G+mvxeF46Tl4iMgYlJXFX6NbWgL53P6X/WdFaN6ampoLz58/rg4B/Acs1ek8PTca4AAAAAElFTkSuQmCC" alt="Назад" title="Назад"></a>
+    </td>
+    <td align="center">
+    <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABQZJREFUOI2FlV1oVEcUx/8zc+fevbt3v5JNYtK4+dgYKVsxMUobQqW1BZEGCkKltOhDKfGhCL70tSIUfOyTWOhDyauRUuiLoLQsrS02IVaNIWoSk6w12TXJft69u3vvzPRhGzW1aQ8MM8yc+c2cc+acIfgPGRqb4lKnLUSodij4AUAp4njCXRMFKzs7kazvtJfstDB4+u4wofKEVBgAUXFQFgAAeG6FwEsD5DbgXunb/OrGxMSE+F/w0NhMwqPyLNHYR1bAinTEQrSt2Ye9sRJMLrCwaWEpK5F9+lRuFmxHurUbunS+NB9+8VsqlfK2OGzbLT+b7VJEXKRG6OPBvrB58kiUfDjCMDqkYaNYh2kwnHzbwkg/wWtdJhHE1J/kVKIu5RuIHVpKWCuLy8vLcht4aGwmoYi4GAiFjr4/HCan3jKxp53B4Ay/3CvhnYEw+jpMXL9VQLzVh1hIw74ujrYox+KaihUqOIjY0PSno32PU6mUoltgj3qfE906dvRAmL43yME1gpIjcXOuhMP7QrD8DH4fxZGBMG7OlVCsCAipcGiPiQ8ONxErGOqvqshYOp0OACCsEajpYcL1CwOJkO/YAQ5KgborsbhWxcF+C7EwB6MEhBDoGkFLmGN6vgxdo6h7Ck0WhV3XsJJxuzdk/PbxkegjNjQ2xQF11goFD787ECBRC6i5ChslD/t7A+iMGdDY8xgTQmAaFJGAhrm0A6mAqiuhszoWslIvV4Ur6+s/a9KjLUpXA5FQmEZ8Hoo2hcYI+l/xoavNAKMvv0hKCDqadQwmAvjh9wKm0mEUHT9sWJTIXLLgdcUpMVQ7CInHggROXaLsCHS3Gdi72/+v0Bdld6uBfYkmOJ4PT20D0AJQRGunnMcpFPygPODnLvK2RGtER7LLv838nYRRguF+DaMHnrtJMd2kIEFtS6lY5cgUFNSKh3KtiKDJcGS/BZ/eOCBvS+RtwFMUnU2AjwPf/AQ8yhJkCgAhAFSDpSCophRx4LmVjG3CFj48ygM3l4FdEYqRJODTG8rfTVF8m2qMv/4ESHYCd1aAP5a3bttAUlGrUng1zRPumsZIulCRPYKYz8y0XGBbxqudXaIxgAIoOzUoiCyR9hoVBSsLkNuytik5U9D/bpyp7bR/cblPE/BzAZ8moGsCqr4hOaoPonJ5lTZKn3tFOPkCFzm0+G20+m1EjQoqNYmSI5G3JXy0ip5ICT2REoTwUHIkIkYV7VZDn4scZCVna17mml8+2WQA8GZv8XHOeL2HwBuKt2gIGR4oXMyla5h66ODHO2X8uV6DxV1YuoulTA3TC1UU7RpM5kEjLtKrG6jauasD9Ptx13WzDABmZ2dV28FTi/W6elVI0dXZzIipE0gpIaQEpwoGVzC0Rg88nydwMbdSlOvr+akWMXMpytbuxePx0rPqdno0vrFQbJ4qOyxZrHjdQT9HU1CDzil0jbzUOAPWCy7uLhawmilOtXrTFzowOTk/P78+Pj4unoFTqZQaSdQ2C0byVtGGP5Ovd5dtofu4RwKmBo1SUAIoJbCRszGzWJGz6VI5lytebREzlzowOWlZVvby5cv/fE8NOXfuHE2n04F79MSROgseJ5IlodH2oMlMACjboiqVzHJUH2he5lqSXf+VEJK5f/9+/sUfZKe8JWfOnNGXnF2RgtcVb+Q+CSoISuHViLTXonJ51S+fbEopS729vc758+fli4C/AAAdTsx0wjCZAAAAAElFTkSuQmCC" alt="К содержанию" title="К содержанию"></a>
+  </td>
+  <td align="right">
+    <a href="Task2.5.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABOdJREFUOI2VlUtslFUUx3/3ft/95j3T6QOsjykW1JAGLVQWqPEVH0ExJixYqGFlYGFIXGjcSUg0LFkR1t24oMaFLjCKjwmCjzYY0lqslFertZ0+pvPofDPf9917XbQUiKLxn5zNPef+zr2555wr+BcNHBhRxpNdQttuLEkAa4Uf6XBWV9Kl8aG+4E57xZ0c2w+O7hLS7LOWfoQtIN0UADpoYKNpEBcg/HjL0rGzQ0ND+j/BAwfGNmtp3hau+1o6lWrr7szKjR1xHuqskVCay0tprpUM8/PzZqnS8E3YPKuM/0Hi0vvfF4vF6B/B298a78FEJ4SX3d3fm+ClnRm23WfZ0KZw5GqoBcq1iCuzIafONzkzWqblVy/GbPm92K8fnroBd249qRX6eDqbffHVXTmx/+kED3Q7xJRDzbd8NRoyMaNpTwtiStKZddnWo9iYV1yds51Vn0dtx8D5N/ds+b1YLFr3BljL6F3pZXe/sCPHy9sVyhXUfANAtQHPPhwH4NtRn20FiesIwLLzgQRh1C4GT5sH61V9YHp6+gJQd1Yf6vwuqbyjj2zOxnfvUEgJQWhohoZWaOjKORS6PDIJyT3tLl+Ntkh6hjCyBJGlPS1ZCVymSuGmBVO4sPfx/FVn4MCIQti309nMk8/1p0Q+Da3Q0gwtrTWLtKU9s3qLRExwT4fL9xMBklV4MzR4TsCVkvHqTR2aYOGMayLZhWf7c9mcbItHVOoSbW4vlsWqZqGqeX5HjpgSbMg57NmZ4qNilTBoMTbXRtVPUictseW+StRTkCJmuxGi0JkR+IHhjzL4Jv43K9UV311srSfbkHPY/0yOqVo7lxfizK/EwE1hhdstlSq4WJI4XiqpQpZXDM8PZOjvjd2pb25Te0by7ise73wEM2UQQoD0EtKIzHpVVJuKuYqlsMH9N9bfVOiEdByEWCtywKKltFb46KAxt5LgaiXLJz/9Ly5nJmCusgoWWIRuNSVRy410OOs6YrrSMPdrkeDkj/DZz2up1xrTWIgMvP4YvPHETejpMTj66apfSaj7LSy6JMzKrNSVdAnEBdtaMsqxuNISRmbNNPWmperDU1tvh/5wyXD8C40rNHFX47kagkWjaP6WN9f/dMeH+oLtB899rJvLbyidyOcz3m0DxFgY2Oxx8IX4+trwpYDBb5rkFOTUjfkRYPzySjya+zJpZpYkwJalY2dt1ByqLc+T8xp0JX26Uj5dSZ+NKZ+7MgFxtQodn2ryybll0u7NmJzXoLY8jwkqX291Tp8zxtQcgPHxcbvx0f1XgsBuNUb33NvhiGRMEFOWmLL4LU0+7bJQiTg1XAHMqs+1CEImpqpmcXF5pDMaO5F3Zn8pFAq19el2cE9h8XK1Y6TmO33VRrQpk1S0Z1w8JRECJmdaTM60EAI8V6AcWKiEjF6pMFuqjnSF54/ezfDw5OTkwuDgoF4HF4tF+/jm1lIl1vdztUGytBxuqjW0F3cjkUq4uFIiBVirWSyvMHa1YS5O1erlcvXzzmjsxN0MD6fT6dLJkyfDm/V0iw4fPiynp6dTv8h9z4ZOZi/W6ROO7M4knARAraGbxpiSovmbF819udU5fU4IMTcxMbF8xx/kFolDhw551/y72ipRT0EqVZCIjEVLSdQSZmU2b67/mTQzS8aYWm9vr3/kyBFzK+AvE1J23zgEK9cAAAAASUVORK5CYII=" alt="Вперед" title="Вперед"></a>
+      </td>
+      </tr>
+    </table>
+  </BODY>
+</HTML>
