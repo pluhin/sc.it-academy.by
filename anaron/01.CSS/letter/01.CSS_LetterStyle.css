@@ -1,0 +1,31 @@
+
+body {
+    margin-top: 15%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 20%
+}
+header {
+    
+    font-family: serif;
+    text-align: right;
+}
+
+h1 {
+    font-size: medium;
+}
+h3 {
+font-family: 'Bad Script', cursive;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 7%
+}
+
+article {
+font-family: 'Bad Script', cursive;
+    
+
+}
+article p {
+    text-indent: 7%
+}
