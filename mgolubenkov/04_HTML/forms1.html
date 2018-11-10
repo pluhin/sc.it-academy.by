@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+	<HTML>
+		<HEAD>
+			<META charset="utf-8">
+			<TITLE>Формы</TITLE>
+		</HEAD>
+		<BODY> 
+        <p><i>Рекомендации к выполнению работы:</i></p>
+		<ul>
+			<li><i>Все эти формы размещены в таблице, шириной 700px, 4 строки х 2 столбца</i></LI>
+            <li><i>Каждая форма должна правильно заполненные атрибуты name, method и action.</i></li>
+            <li><i>Для атрибута action, воспользуйтесь значением "http://sc.it-academy.by/fe/form.php" - небольшой
+                скрипт показывающий переменные переданные методами post и get.</i></li>
+		</ul>
+		<table width="700" alingalign="left" valing="top" cols="2" cellpadding="10" ><br> 
+			<col width="50%"><col width="50%">
+			<!--01-1-->
+			<tr>
+				<td>
+				<p><b>Простая форма поиска с вариантами:</b><br></p>
+			    <fieldset>
+				<!--	<p><b>Простая форма поиска с вариантами:</b><br></p>-->
+                    <legend>Строка поиска</legend>
+                    <input type="text" name="search" maxlength="10">
+                    <input type="submit" value="Искать"><br>
+					<label>
+							<input type="radio" name="search_dist" value="site" checked>
+							на сайте
+						</label>
+						<label> 
+							<input type="radio" name="search_dist" value="google">
+							в Google
+						</label><br>
+						<i>Длина запроса не более 10 символов</i>
+				</fieldset>
+				<br>
+				</td>
+				<!--01-2-->
+				<td>
+				<p><b>Простая форма поиска с вариантами:</b><br></p>
+				<fieldset>
+					<!--<p><b>Простая форма поиска с вариантами:</b><br></p>-->
+                    <legend>Строка поиска</legend>
+					<input type="text" name="search" maxlength="10" required autofocus>
+						<span>*</span>
+					<input type="hidden" name="hidden_field" value="hidden">
+					<input type="submit" value="Искатьд"><br>
+					<label>
+						<input type="radio" name="search_dist" value="site">
+						на сайте
+					</label>
+					<label>
+						<input type="radio" name="search_dist" value="google" checked>
+						в Google
+					</label><br>
+					<i>* - обязательное поле</i><br>
+					<i>Автофокус в поле поиска</i>
+				</fieldset>
+				</td>
+			</tr>
+			<!--02-1-->
+			<tr>
+				<td><b>Простая форма авторизации:</b></td>
+				<td><b>Опрос(голосование):</b></td>
+			</tr>
+			<tr>
+				<td>
+				<fieldset>
+                    <legend>Авторизируйтесь</legend>
+					<input type="text" name="search" maxlength="10">
+					<span>*</span> Логин
+					<input type="text" name="search" maxlength="10">
+					<span>*</span> Пароль<br>
+					<input type="checkbox" name="drink" value="rad1">Оставаться в системе<Br>
+					<input type="submit" value="Войти"><br>
+					<i>* - обязательное поле</i><br>
+				</fieldset>	
+				<br>
+				<br>
+				</td>
+			<!--02-2-->
+				<td>
+				<fieldset>
+						<legend>Как вам?</legend>
+						<input type="radio" name="drink" value="rad1" checked>ничего<Br>
+						<input type="radio" name="drink" value="rad2">неплохо<Br>
+						<input type="radio" name="drink" value="rad3">хорошо<Br>
+						<input type="radio" name="drink" value="rad3">супер<br>
+						<input type="submit" value="Отправить"><br>
+						<i>Есть скрытое поле<br>
+						name=date_voite, value="2018.11.10"</i><br>
+				</fieldset>	
+				</td>
+			</tr>
+			<!--03-1-->
+			<tr>
+            	<td><b>Отзыв:</b></td>
+				<td><b>Выпадающий и мульти списки:</b></td>
+			</tr>
+			<tr>
+				<td>
+				<fieldset>
+					<legend>Оставьте Ваш отзыв</legend>
+						<input type="text" name="search" maxlength="10">
+						<span>*</span> Имя
+						<input type="text" name="search" maxlength="10">
+						<span>*</span> e-mail<br>
+						<textarea name="text_area">Форма отправки</textarea><br>
+						<input type="submit" value="Отправить"><br>
+						<i>* - обязательное поле<br>
+						поле email - с проверкой<br>
+						метод POST
+						</i><br>
+				</fieldset>	
+				</td>
+			
+			<!--03-2-->
+			
+				<td>
+					<fieldset>
+						<legend>Города РБ</legend>
+						<select size="1" multiple name="hero[]">
+							<option selected value="Города РБ"><b>Города РБ</b></option>
+							<option value="Брест">Брест</option>
+							<option value="Минск">Минск</option>
+							<option value="Витебск">Витебск</option>
+							<option selected value="Города России"><b>Города России</b></option>
+							<option value="Москва">Москва</option>
+							<option value="Рязень">Рязень</option>
+							<option value="Магадан">Магадан</option>   
+							</select>
+
+							<select name="list[]" size="8" multiple id="list">
+							<option value="1">Города РБ</option>
+							<option value="2" disabled>Брест</option>
+							<option value="3" disabled>Минск</option>
+							<option value="4" disabled>Витебск</option>
+							<option value="5">Города России</option>
+							<option value="6" disabled>Москва</option>
+							<option value="7" disabled>Рязень</option>
+							<option value="8" disabled>Магадан</option>   
+						</select>
+				
+					<input type="submit" value="Ok"><br>
+					</fieldset>	
+					<br>
+					<br>
+				</td>
+			</tr>
+		<!--04-1-->
+			<tr>
+					<td><b>Загрузка файла на сервер:</b></td>
+					<td><b>Валидация данных HTML5:</b></td>
+			</tr>
+			<tr>
+					<td>
+					<fieldset>
+						<legend>Upload</legend>
+							Файл:<br>
+							<input type="file" name="file_Fild" size="1" dir="ltr">
+							No file chosen <br>
+							Срок хранения (года):<br>
+							<input type="text" name="search" size="8">
+							<input type="submit" value=" заргузить"><br>
+							<i>Метод POST<br>
+							В теге form используйте атрибут
+							enctype="multipart/form-data" для отправки
+							файла на сервер</i>
+					</fieldset>	
+					</td>
+		<!--04-2-->
+					<td>
+						<fieldset>
+							<legend>Строка поиска</legend>
+							<input type="text" name="name_03" pattern="[А-Я][а-я]+" placeholder="Только русские буквы"><br>
+							<i>Телефонный номер в формате<br>
+							+ХХХ-ХХ-ХХХХХХХ, где Х - любое числоы</i><br>
+							<input type="text" name="name_04" pattern="\+375-(29|44|25)-[0-9]{7}" placeholder="+375-29-1234567"><br>
+							<input type="submit" value="Проверить"><br>
+						</fieldset>	
+						<br>
+						<br>
+						<br>
+					</td>
+			</tr>
+        </table>	
+	</BODY>
+    </HTML> ​
+
+
