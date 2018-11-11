@@ -55,10 +55,10 @@
 				<form>
 					<fieldset>
 						<legend>Авторизируйтесь</legend>
-						<input type="text" name="login" required>
-						<span>* Логин</span><br>
-						<input type="password" name="passwd" required>
-						<span>* Пароль</span><br>
+						<input type="text" id="log" name="login" required>
+						<label for="log">* Логин</label><br>
+						<input type="password" id="passwd" name="password" required>
+						<label for="passwd">* Пароль</label><br>
 						<label>
 							<input type="checkbox" name="stay">Оставаться в системе 
 						</label><br>
@@ -95,10 +95,10 @@
 				<form method="post" action="http://sc.it-academy.by/fe/form.php">
 					<fieldset>
 						<legend>Оставьте Ваш отзыв</legend>
-						<input type="text" name="login" required>
-						<span>* Имя</span><br>
-						<input type="email" name="mail" required>
-						<span>* e-mail</span><br>
+						<input type="text" id="login" name="name" required>
+						<label for="login">* Имя</label><br>
+						<input type="email" id="mail" name="email" required>
+						<label for="mail">* e-mail</label><br>
 						<textarea name="text_area" placeholder="Форма отправки"></textarea><br>
 						<input type="submit" value="Отправить"><br>
 						<em>* - обязательное поле</em>
