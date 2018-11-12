@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Формы</TITLE>
+	</HEAD>
+	<BODY>
+		<P>
+			<I>Рекомендации к выполнению работы:<BR>
+			<UL>
+				<LI>Все эти формы размещены в таблице шириной 700px, 4 строки x 2 столбца.</LI>
+				<LI>Каждая форма должна иметь правильно заполненные атрибуты name, method и action.</LI>
+				<LI>Для атрибута action воспользуйтесь значением "http://sc.it-academy.by/re/form.php" - небольшой<BR>
+				скрипт, показывающий переменные, переданные методами post и get.</I></LI>
+			</UL>
+		</P>
+		<TABLE width="700" align="center">
+			<COL width="50%">
+			<TR>
+				<TD>
+					<H3>Простая форма поиска с вариантами:</H3>
+					<FORM method="get" action="http://sc.it-academy.by/re/form.php">
+						<FIELDSET>
+							<LEGEND>Строка поиска</LEGEND>
+							<INPUT type="text" name="find" maxlength="10">
+							<INPUT type="submit" name="Искать"><BR>
+							<LABEL>
+								<INPUT type="radio" name="find_r" value="by site" checked>на сайте
+							</LABEL>
+							<LABEL>
+								<INPUT type="radio" name="find_r" value="by google" checked>в google
+							</LABEL><BR>
+							<SPAN>
+								<I>Длина запроса не более 10 символов</I>
+							</SPAN>
+						</FIELDSET>
+					</FORM>
+				</TD>
+				<TD>
+					<H3>Простая форма поиска с вариантами:</H3>
+					<FORM method="get" action="http://sc.it-academy.by/re/form.php">
+						<FIELDSET>
+							<LEGEND>Строка поиска</LEGEND>
+							<INPUT type="text" name="find" maxlength="10" required autofocus>
+							<SPAN>
+								<SUP>*</SUP>
+							</SPAN>
+							<INPUT type="submit" name="Искать"><BR>
+							<LABEL>
+								<INPUT type="radio" name="find_r" value="by site" checked>на сайте
+							</LABEL>
+							<LABEL>
+								<INPUT type="radio" name="find_r" value="by google" checked>в google
+							</LABEL><BR>
+							<SPAN>
+								<I>* - обязательное поле<BR>Автофокус в поле поиска</I>
+							</SPAN>
+						</FIELDSET>
+					</FORM>
+				</TD>
+			</TR>
+			<TR>
+				<TD>
+					<H3>Простая форма авторизации:</H3>
+					<FORM method="post" action="http://sc.it-academy.by/re/form.php">
+						<FIELDSET>
+							<LEGEND>Авторизируйтесь</LEGEND>
+							<INPUT type="text" name="login" required>
+							<SPAN>
+								<SUP>* </SUP>Логин
+							</SPAN><BR>
+							<INPUT type="password" name="password" required>
+							<SPAN>
+								<SUP>* </SUP>Пароль
+							</SPAN><BR>
+							<LABEL>
+								<INPUT type="checkbox" name="ost_v_syst">Оставаться в системе
+							</LABEL>
+							<INPUT type="submit" value="Войти"><BR>
+							<SPAN>
+								<I>*-обязательное поле</I>
+							</SPAN><BR>
+						</FIELDSET>
+					</FORM>
+				</TD>
+				<TD>
+					<H3>Опрос(голосование):</H3>
+					<FORM method="post" action="http://sc.it-academy.by/re/form.php">
+						<FIELDSET>
+							<LEGEND>Как вам?</LEGEND>
+							<INPUT type="radio" name="quiz" value="norm" checked>ничего<BR>
+							<INPUT type="radio" name="quiz" value="norm+">неплохо<BR>
+							<INPUT type="radio" name="quiz" value="good">хорошо<BR>
+							<INPUT type="radio" name="quiz" value="super">супер
+							<INPUT type="hidden" name="data_voite" value="2013.12.31"><BR>
+							<INPUT type="submit" value="Отправить"><BR>
+							<SPAN>
+								<I>Есть скрытое поле<BR>name="data_voite", value="2013.12.31"</I>
+							</SPAN>
+						</FIELDSET>
+					</FORM>
+				</TD>
+			</TR>
+			<TR>
+				<TD>
+					<H3>Отзыв:</H3>
+					<FORM method="post" action="http://sc.it-academy.by/re/form.php">
+						<FIELDSET>
+							<LEGEND>Оставьте ваш отзыв</LEGEND>
+							<INPUT type="text" name="login" required>
+							<SPAN>
+								<SUP>* </SUP>Имя
+							</SPAN><BR>
+							<INPUT type="password" name="password" required>
+							<SPAN>
+								<SUP>* </SUP>e-mail
+							</SPAN><BR>
+							<TEXTAREA name="form_otpr" placeholder="Форма отправки"></TEXTAREA><BR>
+							<INPUT type="submit" value="Отправить"><BR>
+							<SPAN>
+								<I>*-обязательное поле<BR>поле e-mail - с проверкой<BR>метод POST</I>
+							</SPAN>
+						</FIELDSET>
+					</FORM>
+				</TD>
+				<TD>
+					<H3>Выпадающий и мульти списки:</H3>
+					<FORM method="get" action="http://sc.it-academy.by/re/form.php">
+						<FIELDSET>
+							<LEGEND>Города РБ</LEGEND>
+							<SELECT name="cities_RB" ID="select1">
+								<OPTION value="1" selected>Брест</OPTION>
+								<OPTION value="2">Минск</OPTION>
+								<OPTION value="3">Витебск</OPTION>
+							</SELECT>
+							<SELECT name="cities[]" size="8" multiple ID="select2">
+								<OPTGROUP label="Города РБ">
+									<OPTION value="1">Брест</OPTION>
+									<OPTION value="2">Минск</OPTION>
+									<OPTION value="3">Витебск</OPTION>
+								</OPTGROUP>
+								<OPTGROUP label="Города России">
+									<OPTION value="1">Москва</OPTION>
+									<OPTION value="2">Рязань</OPTION>
+									<OPTION value="3">Магадан</OPTION>
+								</OPTGROUP>
+							</SELECT>
+							<INPUT type="submit" value="Ок">
+						</FIELDSET>
+					</FORM>
+				</TD>
+			</TR>
+			<TR>
+				<TD>
+					<H3>Загрузка файла на сервер:</H3>
+					<FORM method="post" action="http://sc.it-academy.by/re/form.php" enctype="multipart/form-data">
+						<FIELDSET>
+							<LEGEND>Upload</LEGEND>
+							<LABEL for="f1">Файл</LABEL><BR>
+							<INPUT type="file" name="file.exe"><BR>
+							<LABEL for="f2">Срок хранения(года):</LABEL><BR>
+							<INPUT type="text" ID="f2" name="f2">
+							<INPUT type="submit" value="Загрузить"><BR>
+							<SPAN>
+								<I>Метод POST<BR>В теге form используйте атрибут<BR>enctype="multipart/form-data" для отправки<BR>файла на сервер</I>
+							</SPAN>
+						</FIELDSET>
+					</FORM>
+				</TD>
+				<TD>
+					<H3>Валидация данных HTML5:</H3>
+					<FORM method="post" action="http://sc.it-academy.by/re/form.php">
+						<FIELDSET>
+							<LEGEND>Строка поиска</LEGEND>
+							<INPUT type="text" name="number1"  pattern="^[А-Я] [а-я]"><BR>
+							<SPAN>
+								<I>Телефонный номер в формате<BR>+XXX-XX-XXXXXXX, где X - любое число</I>
+							</SPAN>
+							<INPUT type="number" name="number2" placeholder="+375-29-1234567" pattern="[0-9]"><BR>
+							<INPUT type="submit" value="Проверить">
+						</FIELDSET>
+					</FORM>
+				</TD>
+			</TR>
+	</BODY>
+</HTML>

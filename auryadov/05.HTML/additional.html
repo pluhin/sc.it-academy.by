@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Форма регистрации</TITLE>
+	</HEAD>
+	<BODY>
+		<H1 align="center">Заполните анкету</H1>
+		<FORM ID="my_form1" name="pers_info" method="post" action="form.php">
+			<FIELDSET>
+				<LEGEND>Личные данные</LEGEND>
+				<INPUT type="text" name="surname" placeholder="Фамилия" pattern="^[А-Я] [а-я] {25}" required autofocus><BR>
+				<INPUT type="text" name="name" placeholder="Имя" pattern="^[А-Я] [а-я] {20}" required><BR>
+				<INPUT type="text" name="patronymic" placeholder="Отчество" pattern="^[А-Я] [а-я] {24}" required>
+				<FIELDSET>
+					<LEGEND>Паспортные данные</LEGEND>
+					<INPUT type="text" name="series" placeholder="АА" pattern="^[A-Z] {2}" maxlength="2" required>
+					<INPUT type="text" name="number" placeholder="1234567" pattern="^[0-9] {7}" maxlength="7" required>
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Дата рождения</LEGEND>
+					<INPUT type="text" name="year" placeholder="2000" pattern="^[0-9] {4}" maxlength="4"><BR>
+					<SELECT name="month" ID="select1">
+						<OPTION value="1" selected>Январь</OPTION>
+						<OPTION value="2">Февраль</OPTION>
+						<OPTION value="3">Март</OPTION>
+						<OPTION value="4">Апрель</OPTION>
+						<OPTION value="5">Май</OPTION>
+						<OPTION value="6">Июнь</OPTION>
+						<OPTION value="7">Июль</OPTION>
+						<OPTION value="8">Август</OPTION>
+						<OPTION value="9">Сентябрь</OPTION>
+						<OPTION value="10">Октябрь</OPTION>
+						<OPTION value="11">Ноябрь</OPTION>
+						<OPTION value="12">Декабрь</OPTION>
+					</SELECT><BR>
+					<INPUT type="number" name="day" min="1" max="31" step="1">
+				</FIELDSET>
+					<SELECT name="nationality" ID="select2" required>
+						<OPTION value="1" selected>РБ</OPTION>
+						<OPTION value="2">РФ</OPTION>
+						<OPTION value="3">США</OPTION>
+						<OPTION value="4">Соединённое Королевство(Великобритания)</OPTION>
+						<OPTION value="5">ФР(Французская Республика)</OPTION>
+						<OPTION value="6">ГЯ(Государство Япония)</OPTION>
+						<OPTION value="7">ФРГ(Федеративная Республика Германия</OPTION>
+						<OPTION value="8">ГК(Государство Канада)</OPTION>
+						<OPTION value="8">ИР(Итальянская Республика)</OPTION>
+					</SELECT><BR>
+				<LABEL for="address">Адрес:</LABEL><BR>
+				<TEXTAREA name="address"></TEXTAREA>
+			</FIELDSET>
+			<FIELDSET>
+				<LEGEND>Интересы</LEGEND>
+				<FIELDSET>
+					<LEGEND>Хобби</LEGEND>
+					<LABEL>
+						<INPUT type="checkbox" name="hobby[]">Рыбалка
+					</LABEL><BR>
+					<LABEL>
+						<INPUT type="checkbox" name="hobby[]">Астрономия
+					</LABEL><BR>
+					<LABEL>
+						<INPUT type="checkbox" name="hobby[]">Дайвинг
+					</LABEL><BR>
+					<LABEL>
+						<INPUT type="checkbox" name="hobby[]">Марки
+					</LABEL><BR>
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Домашние животные</LEGEND>
+					<SELECT name="pets[]" size="12" multiple ID="select3">
+						<OPTGROUP label="Попугаи">
+							<OPTION value="1">Волнистый</OPTION>
+							<OPTION value="2">Ара</OPTION>
+							<OPTION value="3">Неразлучник</OPTION>
+						</OPTGROUP>
+						<OPTGROUP label="Рыба">
+							<OPTION value="1">Караси</OPTION>
+							<OPTION value="2">Окуни</OPTION>
+							<OPTION value="3">Осётр</OPTION>
+						</OPTGROUP>
+						<OPTGROUP label="Птицы">
+							<OPTION value="1">Стая ворон</OPTION>
+							<OPTION value="2">Аист</OPTION>
+							<OPTION value="3">Археоптерикс</OPTION>
+						</OPTGROUP>
+					</SELECT>
+				</FIELDSET>
+			</FIELDSET>
+			<FIELDSET>
+				<LEGEND>Данные для входа и восстановления пароля</LEGEND>
+				<INPUT type="text" name="login" placeholder="Логин" min="5" pattern="^[A-Z] [a-z] {20}" required><BR>
+				<INPUT type="password" name="password" placeholder="Пароль" min="10" pattern="^[А-Я] [а-я] {20}" required>
+			</FIELDSET>
+			<FIELDSET>
+				<LEGEND>Координаты</LEGEND>
+				<INPUT type="email" name="email" placeholder="введите адрес почты"><BR>
+				<INPUT type="url" name="url" placeholder="введите адрес сайта"><BR>
+			</FIELDSET>
+			<FIELDSET>
+				<LEGEND>Цифры</LEGEND>
+				<INPUT type="number" name="number" {-2.5,2.5}step="0.1">
+				<INPUT type="range" name="range" min="1" max="10">
+			</FIELDSET>
+			<FIELDSET>
+				<LEGEND>Кнопки управления</LEGEND>
+				<INPUT type="submit" value="Отправить">
+				<INPUT type="reset" value="Сбросить"><BR>
+				<INPUT type="image" src="email.png" width="40" height="40" disabled>
+			</FIELDSET>
+		</FORM>
+	</BODY>
+</HTML>
