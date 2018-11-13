@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML  4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- copy to http://htmlbook.ru/faq/kak-sozdat-tablitsu-v-html5-i-ukazat-ee-parametry-cherez-->
+<html>
+ 	<head>
+  		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  		<title>Тег TABLE</title>
+ 	</head>
+ 	<body>
+  		<table frame="значение">...</table>
+		<!-- Значения
+			void		Не отрисовывать границы.
+			border		Граница вокруг таблицы.
+			above		Граница по верхнему краю таблицы.
+			below		Граница снизу таблицы.
+			hsides		Добавить только горизонтальные границы (сверху и снизу таблицы).
+			vsides		Рисовать только вертикальные границы (слева и справа от таблицы).
+			rhs			Граница только на правой стороне таблицы.
+			lhs			Граница только на левой стороне таблицы.-->
+  		<table border="1" align="center" width="30%" frame="hsides" cellpadding="5">
+   		<caption><i>Прогноз погоды</i></caption>
+   		<tr>
+    		<th><b>Город</b></th>
+    		<th><b>	&#8451;Утро	&#176;</b></th>
+   			<th><b>День</b></th>
+   			<th><b>Вечер</b></th>
+   			<th><b>Ночь</b></th>
+   		</tr>
+   		<tr>
+    		<th><b>Минск</b></th>
+    		<td>-5	&#8451;</td>
+   			<td>+9	&#176;</td>
+    		<td rowspan="2">+2	&#176;</td>
+   			<td>-10	&#176;</td>
+   		</tr>
+   		<tr>
+    		<th><b>Брест</b></th>
+    		<td>+9	&#176;</td>
+   			<td>+69	&#176;</td>
+`  			<td>-79	&#8451;</td>
+   		</tr>
+ 		</table>
+ 	</body>
+</html>
