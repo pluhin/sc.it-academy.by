@@ -1,0 +1,15 @@
+header {
+	text-align: right;
+}
+
+h2 {
+	font-family: 'Bad Script', cursive;
+	text-indent: 5mm;
+	text-decoration: underline;
+}
+
+article {
+	font-family: 'Bad Script', cursive;
+	text-align: justify;
+	text-indent: 5mm;
+}

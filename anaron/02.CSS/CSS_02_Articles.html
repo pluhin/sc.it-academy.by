@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE> CSS 02 Articles</TITLE>
+    <style>
+        body {
+            padding: 2, 0, 0, 2;
+        }
+
+        nav {
+            width: 15em;
+            background-color: lightgray;
+            float: left;
+        }
+
+        .articles {
+            margin-left: 15em;
+            text-align: left;
+            background-color: gray;
+            overflow: hidden;
+            margin-bottom: 2em;
+
+        }
+
+        footer {
+            margin-top: -25px;
+            background-color: lightgray;
+            margin-bottom: auto;
+            clear: both;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .img {
+            float: right;
+        }
+
+    </style>
+</HEAD>
+
+<BODY>
+    <div class="main">
+        <nav>
+            <h3>Блок навигации</h3>
+            <ul>
+                <li>Ширина 15em</li>
+                <li>Высота определяется контентом</li>
+                <li>Должен присутствовать цвет фона</li>
+                <li>Рвсполагается слева</li>
+                <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+            </ul>
+        </nav>
+        <div class="articles">
+            <h3>Статья 1</h3>
+            <p> Размер блока: <br> Занимает всю доступную ширину <br> Высота по размеру контента <br> Должен присутствовать цвет фона <br> Во всех статьях сделайте отступ снизу от соседей равным 2 ем, при помощи свойства margin-bottom </p>
+            <h3>Статья 2</h3>
+            <p> Размер блока <br> занимает всю доступную ширину <br> Высота по размеру контента <br> Должен присутствовать цвет фона <br> Во всех статьях сделайте отступ снизу от соседей равным 2ем,при помощи свойства margin-bottom. Картинка вставлена про помощи тега, плавание организовано по правому краю внутри данной статьи для этой картинки.
+            </p>
+            <img class="img" src="icon_mail.png" alt="letter" width="80" height="80">
+        </div>
+    </div>
+    <footer>
+        <p> Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.</p>
+    </footer>
+</BODY>
+
+</HTML>

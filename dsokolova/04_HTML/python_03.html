@@ -1,0 +1,102 @@
+<!DOCTYPE html>  
+<HTML> 
+    <HEAD>
+	    <META charset="utf-8">
+		<TITLE>Python 03</TITLE>
+	</HEAD>  
+	<BODY> 
+		<p><img src="Icon-Python.png" align="right" alt="logo Python" title="Логотип Пайтона"></p>
+		<h1>HOW-TO: Программа на Python, Часть 3</h1>
+		<ul>
+			<li><i><a href="python_01.html">Программа на Python — часть 1</a></i></li>
+			<li><i><a href="python_02.html">Программа на Python — часть 2</a></i></li>
+			<li><i><a href="python_03.html">Программа на Python — часть 3</a></i></li>
+		</ul>
+		<h2 id="chap_3">Содержание</h2>
+		<h3>HOW-TO: Программа на Python, Часть 3</h3>
+		<ul>
+			<li><a href="#chap_1">Модули</a></li>
+			<li><a href="#chap_2">Функции</a></li>
+		</ul>
+		<hr>
+		<p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и
+		присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы изучим модули и
+		функции. Давайте начнём.</p>
+		<h2 id="chap_1">Модули</h2>
+		<a href="#chap_3">К содержанию</a>
+		<p>Модули предлагают способ расширить программирование на Python. Вы можете создать
+		свои модули, использовать те, которые поставляются с Python или которые написали
+		другие. В самом Python есть сотни модулей, которые облегчают написание программ.
+		Список модулей, поставляемых с Python, находится по адресу:
+		<i><a href="http://docs.python.org/modindex.html">http://docs.python.org/modindex.html</a></i>. Некоторые модули предназначены для определённых
+		операционных систем, но большинство из них кроссплатформенные и работают
+		одинаково на <a href="https://ru.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, <a href="https://ru.wikipedia.org/wiki/Macintosh" target="_blank">Mac</a> и <a href="https://ru.wikipedia.org/wiki/Windows" target="_blank">Microsoft Windows</a>. Для использования внешнего модуля
+		необходимо импортировать его в программу. Один из модулей, поставляемых с Python,
+		называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
+		используем этот модуль в нашем первом примере.</p>
+<pre>#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+    print random.randint(1,10)</pre>
+		<p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
+		мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
+		модуль «random». Мы должны явно указать Python на это.</p>
+		<hr>
+		<h2 id="chap_2">Функции</h2>
+		<a href="#chap_3">К содержанию</a>
+		<p>Когда мы импортировали модуль random, мы использовали функцию <b>randint()</b>. Функция
+		— это блок кода, который создан для того, чтобы вызывать его в программе, обычно,
+		более одного раза. Это упрощает работу над программой и предотвращает набор одного и
+		того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код
+		больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень
+		простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,
+		сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и
+		результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
+		чисел. Тогда наш пример будет выглядеть как код ниже.</p>
+<pre>#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)</pre>
+<pre>print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)</pre>
+<pre>print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'</pre>
+		<p>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при
+		написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую
+		назовём <b><i>«DoTwo»</i></b>. Она будет каждый раз брать два числа, проводить математические
+		операции и выводить результат. Начнём с ключевого слова <b><i>«def»</i></b>, которое сигнализирует
+		о том, что мы собираемся определить функцию. После слова <b><i>«def»</i></b> добавим название
+		функции и список параметров, если таковые имеются, в круглых скобках. Эту строку
+		необходимо завершить двоеточием. Код функции набирается с отступом. Наш
+		улучшенный простой пример (<u>No2</u>) показан ниже.</p>
+<pre>#silly example 2...still silly, but better
+def DoTwo(num1,num2):
+        print '%d + %d = %d ' % (num1,num2,num1+num2)
+        print '%d * %d = %d ' % (num1,num2,num1*num2)
+        print '%d - %d = %d ' % (num1,num2,num1-num2)
+        print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5)</pre>
+		<p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-
+		либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей
+		программы. Чтобы вызвать функцию, нужно написать её имя и параметры.</p>
+		<table width="100%">
+			<col width="33%"><col width="33%"><col width="33%">
+			<tr>
+				<td align="left"><a href="python_02.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAAZiS0dEAP8A/wD/oL2nkwAABQxJREFUOI2NlUtsXFcZx3/n3MfMnbkzfteeAONXTVWctkmcCqJSCYEApS9EVGXRRSUkSBcoUhcgWBEFgSpWrCBrCwmJhEUlkFKJdjGKmqLGdWvZceM0D8djiD32zHied+bee85hMdQYNSn8pbM63/fT/5zvr3MEn6O5MwuOduWIUCaHIQVgjAhiFW2pml9avTQbPqxXPGzj6GvLJ4TUp43hCMLkkXYaABW2MXERxBJEf3608tt3L126pP4neO7MyrSS+nVh26/46XR/bjgrR4eSPDbcwHMUtys+6yXNzs6OrtTagY467zo6+JX3yS/eKxQK8QPBR3+8Oo6OLwg3e/LIlMdzT2d44kuGR/odLNkrNUC1EXNnK+LyYocry1W6Qf3jhKn+LHHj15c/hVsHnRqhfudns9/93ok+8eo3PGZyFgnH4s2rFVbW26yst5kYTWJJwXDW5olxh9EBh7vbZrgecNwMzS3+8IVHNwuFgrE/BSsZ/1S62ZPfOdbH80cdHFvQCDRXlmu8+LVBxgZd6q2YPxV2efZwFoQADE/PeETxoJh/W3+5WVdnisXiEtC0eoNaPCEd942nprPJk8ccpIQw0ry/1uDbc/3khlykECRcSawM3cgQRppOZAhjw6AvaYU2G6VoYlfnl049M3DXnjuz4Bj0aT+dzB6bdlFaU2sZ7m13+PrhLBOjyf0ZlPYiaq3PBAClDY/lFEt9iUy5nDm1Hoz93daxHME1R/qyfbI/GVNvSfaaMcdmfGa+4PUGZgz/KId8cLNJGJv/AJVhs6JY3uqnHqRo4ktMdbYWj+dtkTA5g8gPZwRBqAlCzeHJFHMz/gFHcPn96gPz3ufB7d1/n8q2McLOScfJ2xhSWG465UTstTRPTqY4PpP5r2bbEvzoubEHgpsdw2Yb3rkOQgiQrie1yOynot5x2K4ZUsleIv5f+UnB+Mh+SHpXh5LSGBGgwvZ2y+NuLctfP7Kot83nwg5quwZXbvTAAoNQ3Y4k7tqxirZsSxRrbT2phMcHG/CTPxp++TKM9fecByG8/gfY2P0sWBmIFDgSmkEXgyoJ3dqSquaXQCyZbkU7lsG1DJtlw2/+otlt9Jx7Lvz8JXikD5rd3urGGq0VwiiStsK1FYRl7dC5OaDv3bd2Vn+vcsd/0ELr7/f7tjfka3wnotOJuLEZ89SkjecKBtLwra9o3lttMpAM6UuGZNyIjBuRdiLCTotGZaeZCO9dGNWLSxbAs1P1zUriq5PCxHP5EZtsIibtxsRRxEYpYuaQi5eQJBzB1ZU90m6E7/Zq0k6MLSKK98t0WtW3npRvzkdRVLIAVldXzejxV++EoXlcazX+xSFLpBKChGPohIqNUpfpXIJ3PmpQaYQkXUPCMSRsgyBibaOuy+W9heF45cKAtXU9n8839l+3117Il2/XhxYagTVbb8cTmZTDYMbGdSRhbPjwdkC5HuPaAtcWOBbs1iKW79TYKtUXRqLFNw5x7dqtW7d25+fn1T64UCiYZ6a7lVpi9sN6m1RpL5potJWbtGOR9mxsKZECjFGUqy1W7rb1xxuNZrVaf2s4XrlwiGvXfN8vXbx4MYIH/CDnzp2TxWIxfV2e/mZkZU5hrFlhyVzGszyARlt1tNYlh85NN97+2+PW21eFENtra2t7D/1BDkicPXvWXQ/G+mvxeF46Tl4iMgYlJXFX6NbWgL53P6X/WdFaN6ampoLz58/rg4B/Acs1ek8PTca4AAAAAElFTkSuQmCC" alt="back" title="Предыдущая страница"></a></td>
+				<td align="center"><a href="#chap_3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABQZJREFUOI2FlV1oVEcUx/8zc+fevbt3v5JNYtK4+dgYKVsxMUobQqW1BZEGCkKltOhDKfGhCL70tSIUfOyTWOhDyauRUuiLoLQsrS02IVaNIWoSk6w12TXJft69u3vvzPRhGzW1aQ8MM8yc+c2cc+acIfgPGRqb4lKnLUSodij4AUAp4njCXRMFKzs7kazvtJfstDB4+u4wofKEVBgAUXFQFgAAeG6FwEsD5DbgXunb/OrGxMSE+F/w0NhMwqPyLNHYR1bAinTEQrSt2Ye9sRJMLrCwaWEpK5F9+lRuFmxHurUbunS+NB9+8VsqlfK2OGzbLT+b7VJEXKRG6OPBvrB58kiUfDjCMDqkYaNYh2kwnHzbwkg/wWtdJhHE1J/kVKIu5RuIHVpKWCuLy8vLcht4aGwmoYi4GAiFjr4/HCan3jKxp53B4Ay/3CvhnYEw+jpMXL9VQLzVh1hIw74ujrYox+KaihUqOIjY0PSno32PU6mUoltgj3qfE906dvRAmL43yME1gpIjcXOuhMP7QrD8DH4fxZGBMG7OlVCsCAipcGiPiQ8ONxErGOqvqshYOp0OACCsEajpYcL1CwOJkO/YAQ5KgborsbhWxcF+C7EwB6MEhBDoGkFLmGN6vgxdo6h7Ck0WhV3XsJJxuzdk/PbxkegjNjQ2xQF11goFD787ECBRC6i5ChslD/t7A+iMGdDY8xgTQmAaFJGAhrm0A6mAqiuhszoWslIvV4Ur6+s/a9KjLUpXA5FQmEZ8Hoo2hcYI+l/xoavNAKMvv0hKCDqadQwmAvjh9wKm0mEUHT9sWJTIXLLgdcUpMVQ7CInHggROXaLsCHS3Gdi72/+v0Bdld6uBfYkmOJ4PT20D0AJQRGunnMcpFPygPODnLvK2RGtER7LLv838nYRRguF+DaMHnrtJMd2kIEFtS6lY5cgUFNSKh3KtiKDJcGS/BZ/eOCBvS+RtwFMUnU2AjwPf/AQ8yhJkCgAhAFSDpSCophRx4LmVjG3CFj48ygM3l4FdEYqRJODTG8rfTVF8m2qMv/4ESHYCd1aAP5a3bttAUlGrUng1zRPumsZIulCRPYKYz8y0XGBbxqudXaIxgAIoOzUoiCyR9hoVBSsLkNuytik5U9D/bpyp7bR/cblPE/BzAZ8moGsCqr4hOaoPonJ5lTZKn3tFOPkCFzm0+G20+m1EjQoqNYmSI5G3JXy0ip5ICT2REoTwUHIkIkYV7VZDn4scZCVna17mml8+2WQA8GZv8XHOeL2HwBuKt2gIGR4oXMyla5h66ODHO2X8uV6DxV1YuoulTA3TC1UU7RpM5kEjLtKrG6jauasD9Ptx13WzDABmZ2dV28FTi/W6elVI0dXZzIipE0gpIaQEpwoGVzC0Rg88nydwMbdSlOvr+akWMXMpytbuxePx0rPqdno0vrFQbJ4qOyxZrHjdQT9HU1CDzil0jbzUOAPWCy7uLhawmilOtXrTFzowOTk/P78+Pj4unoFTqZQaSdQ2C0byVtGGP5Ovd5dtofu4RwKmBo1SUAIoJbCRszGzWJGz6VI5lytebREzlzowOWlZVvby5cv/fE8NOXfuHE2n04F79MSROgseJ5IlodH2oMlMACjboiqVzHJUH2he5lqSXf+VEJK5f/9+/sUfZKe8JWfOnNGXnF2RgtcVb+Q+CSoISuHViLTXonJ51S+fbEopS729vc758+fli4C/AAAdTsx0wjCZAAAAAElFTkSuQmCC" alt="home" title="К содержанию"></a></td>
+				<td align="right"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABPBJREFUOI2VlU1sXNUVx3/3vnfffM94HI+DQztOnUCFrCAnJouUqh+oFKUNQmLBokVZVckCRWJRxK5RpFZZskJZe8MiRizoIlUJ0FGa0NZWUGRjMHEMZFrHM/4Yv/l6M++9ey8LO04iGhB/6WzuOfd37tU951zBt2jy1KwyniwJbUewpAGsFUGso1XtZ+sL0+Phw/aKhzkOn547JqR5yVgmELaMdDIAxFFXEFdB3IDo7YObb1ydnp7W3wmePDV/IJbmVeE6v8tmsgP7hvJy754kPx5qkVKaW5tZvqwb6mtrZtPvBCbqX/VM8OfUzT99VKlU4v8LPvzKwigmviC8/PGJsRS/OZrj0A8twwMKR26HWqDRillejbh0vceVuQb9oPlpwjZeT3z2l0t34c79J7VCv5nJ55974VhBnPxFisdGHBLKoRVY3p+LWFzRDGYFCSUZyrscGlXsLSqWV+2Q3+Uphiav/+HEwf9WKhXr3gXHMn7N8fLHnztS4LeHFcoVtAIDQLMLzzyZBOAfcwGHyhLXEYDl6GMponhQTF02j7ea+lS1Wr0BtJ3th7p+TCjv/MSBfPL4EYWUEEaGXmToR4ZSwaFc8silJI8Ourw/1yftGaLYEsaWwaykE7rcrkX7N0z5xotPF79wJk/NKrCvZvO5n/1qIiOKWehHll5k6e9YrC2Due1bpBKCR/e4fLQYItmG9yKD54Tcqhuv3dORCdevuCaWJevZiYF8QQ4kY/y2RJsHi2WjqVlvap49UiChBMMFhxNHM7xVaRKFfeZrAzSDNB2yUpjGuB+PlqVI2BGEKA/lBEFo+F8DApP8htXbin9+2t9NNlxwOPnLArdbg9xaT7LWSYCbwQp3RCpVdrGkcVQmrSK2OoZnJ3NMjCUe1jcPaDAnee15jz++BSsNEEJgHS8lY5HbrYpmT1HzLeVh99tY31B5CLJJEGKnyAGLltJaERBH3VonxRd+nnf+8724XFmEmr8NFlik7vckcd+NdbTqOqLqd82PtEhx8d/w1493Uu80prEQG/j9T+Dln96DXp6H8+9u+5WEdtDHouvCdFal9rN1EDdMf9Mox+JKSxSbHdO0e5ZmAD9/4kHov24a3vy7xhWapKvxXI0NN4yi93nRfHXHXZgeDw+fvva2DrZeVjpVLOa8BwaIsTB5wOP0r5O7azM3Q6Y+7FFQUFB350eI6TY6ibj2XtqsbEqAg5tvXCXuTbe21ih4XUrpgFImoJQO2JsJeCQXklTb0IXbPd65tkXWvRdT8Lq0ttYwkf/BuHP5mjGm5QAsLCzYvU+dXA5D+4Q2evQHexyRTggSypJQlqCvKWZd1v2YSzM+YLZ9rkUQ8dntpllf35ot6fkLRWf1k3K53NqdbqdPlDduNffMtgNnvNmN9+fSisGci6ckQsDSSp+llT5CgOcKlAPrfsTcss+dWnN2OL5+fh8zM0tLS+tTU1N6F1ypVOzTB/qbfmL842aHdG0r3N/uaC+pYpFJubhSIgVYq9lodJhf7pqFaqvdaDT/VtLzF/YxM5PNZusXL16M7tXTfTp79qysVquZT+RLz4RO7kVhnHFcOZJLOSmAdkf3jDV1Re9zN669N+5cviaEqC0uLm499Ae5T+LMmTPel8EjA348WpZKlSUiZ9FSEveF6awWzVd30mZl0xjTGhsbC86dO2fuB3wNAOp21kVq/fwAAAAASUVORK5CYII=" alt="next" title="Следующая страница"></a></td>
+			</tr>
+		</table>
+	</BODY>
+</HTML>

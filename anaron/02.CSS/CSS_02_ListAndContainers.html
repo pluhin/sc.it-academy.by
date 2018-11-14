@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Список и контейнер</TITLE>
+    <style>
+        ol {
+            list-style: upper-roman;
+            font-weight: bold;
+            width: 350px;
+        }
+
+        li ol {
+            list-style: lower-roman;
+            font-weight: normal;
+        }
+
+        div {
+            width: 400px;
+            color: green;
+            background-color: black;
+            text-overflow: auto;
+            max-height: 4rem;
+        }
+
+    </style>
+</HEAD>
+
+<BODY>
+    <ol>
+        <li>Контейнер с кодом
+            <ol>
+                <li>Цвет фона: черный</li>
+                <li>Цвет текста: зеленый</li>
+                <li>Ширина: 400px</li>
+                <li>Максимальная высота контейнера: 4-е строки</li>
+                <li>Переполнение: автоматическое</li>
+            </ol>
+        </li>
+        <li>Список
+            <ol>
+                <li>Ширина: 350px</li>
+                <li>Тип списка: римские цифры</li>
+                <li>Тип вложенного списка: римские нижний регистр цифры</li>
+            </ol>
+        </li>
+    </ol>
+    <div>
+        <pre>#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</pre>
+    </div>
+</BODY>
+
+</HTML>
