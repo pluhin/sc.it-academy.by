@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <TITLE>Proba</TITLE>
     <style type="text/css">
+        body {
+            font: 1em Tahoma, Arial;
+            text-transform: uppercase;
+        }
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -18,21 +23,23 @@
         }
 
         li {
-            position: relative;        /* понедельник и тд */
+            position: relative;
+            /* понедельник и тд */
         }
 
-        li ul {                        /* подменю */
-            display:block;
+        li ul {
+            /* подменю */
+            display: block;
             position: absolute;
-            top: 26px;
+            top: -50px;
             left: -1px;
             opacity: 0;
-            transition: 1.5s all ease;
+            transition: 0.7s all ease;
         }
-
 
         li:hover ul {
             display: block;
+            top: 25px;
             opacity: 0.9;
         }
 
@@ -58,9 +65,7 @@
             ul {
                 display: contents;
                 width: 70px;
-                height: auto;
             }
-
 
             li a {
                 background-color: grey;
@@ -69,26 +74,26 @@
 
             ul li {
                 width: 140px;
-
             }
 
             li ul {
                 display: block;
-                left: 140px;
+                position: absolute;
                 top: 0px;
                 border-left: none;
                 opacity: 0;
-                transition: 1s all ease;
+                left: -150px;
             }
 
             li {
                 width: 100px;
                 cursor: pointer;
             }
-            li:hover li ul {
-                            background-color: yellow;
 
-                opacity: 1;
+            li:hover ul {
+                display: block;
+                top: 0px;
+                left: 139px;
             }
         }
 
