@@ -107,14 +107,12 @@
 					<FORM method="post" action="http://sc.it-academy.by/re/form.php">
 						<FIELDSET>
 							<LEGEND>Оставьте ваш отзыв</LEGEND>
-							<INPUT type="text" name="login" required>
-							<SPAN>
-								<SUP>* </SUP>Имя
-							</SPAN><BR>
-							<INPUT type="password" name="password" required>
-							<SPAN>
-								<SUP>* </SUP>e-mail
-							</SPAN><BR>
+							<LABEL>
+								<INPUT type="text" name="login" required>* Имя
+							</LABEL>
+							<LABEL>
+								<INPUT type="password" name="password" required>* e-mail
+							<LABEL>
 							<TEXTAREA name="form_otpr" placeholder="Форма отправки"></TEXTAREA><BR>
 							<INPUT type="submit" value="Отправить"><BR>
 							<SPAN>
@@ -172,11 +170,11 @@
 					<FORM method="post" action="http://sc.it-academy.by/re/form.php">
 						<FIELDSET>
 							<LEGEND>Строка поиска</LEGEND>
-							<INPUT type="text" name="number1"  pattern="^[А-Я] [а-я]"><BR>
+							<INPUT type="text" name="number1"  pattern="[А-Яа-яЁё]"><BR>
 							<SPAN>
 								<I>Телефонный номер в формате<BR>+XXX-XX-XXXXXXX, где X - любое число</I>
 							</SPAN>
-							<INPUT type="number" name="number2" placeholder="+375-29-1234567" pattern="[0-9]"><BR>
+							<INPUT type="number" name="number2" placeholder="+375-29-1234567" pattern="+[0-9]{3}-[0-9]{2}-[0-9]{7}"><BR>
 							<INPUT type="submit" value="Проверить">
 						</FIELDSET>
 					</FORM>

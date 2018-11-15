@@ -9,17 +9,17 @@
 		<FORM ID="my_form1" name="pers_info" method="post" action="form.php">
 			<FIELDSET>
 				<LEGEND>Личные данные</LEGEND>
-				<INPUT type="text" name="surname" placeholder="Фамилия" pattern="^[А-Я] [а-я] {25}" required autofocus><BR>
-				<INPUT type="text" name="name" placeholder="Имя" pattern="^[А-Я] [а-я] {20}" required><BR>
-				<INPUT type="text" name="patronymic" placeholder="Отчество" pattern="^[А-Я] [а-я] {24}" required>
+				<INPUT type="text" name="surname" placeholder="Фамилия" pattern="^[А-Яа-яЁё]+${1,25}" required autofocus><BR>
+				<INPUT type="text" name="name" placeholder="Имя" pattern="^[А-Яа-яЁё]+${1,20}" required><BR>
+				<INPUT type="text" name="patronymic" placeholder="Отчество" pattern="^[А-Яа-яЁё]+${1,24}" required>
 				<FIELDSET>
 					<LEGEND>Паспортные данные</LEGEND>
-					<INPUT type="text" name="series" placeholder="АА" pattern="^[A-Z] {2}" maxlength="2" required>
-					<INPUT type="text" name="number" placeholder="1234567" pattern="^[0-9] {7}" maxlength="7" required>
+					<INPUT type="text" name="series" placeholder="АА" pattern="[A-Z]{2}" maxlength="2" required>
+					<INPUT type="text" name="number" placeholder="1234567" pattern="[0-9]{7}" maxlength="7" required>
 				</FIELDSET>
 				<FIELDSET>
 					<LEGEND>Дата рождения</LEGEND>
-					<INPUT type="text" name="year" placeholder="2000" pattern="^[0-9] {4}" maxlength="4"><BR>
+					<INPUT type="text" name="year" placeholder="2000" pattern="[0-9]{4}" maxlength="4"><BR>
 					<SELECT name="month" ID="select1">
 						<OPTION value="1" selected>Январь</OPTION>
 						<OPTION value="2">Февраль</OPTION>
@@ -90,8 +90,8 @@
 			</FIELDSET>
 			<FIELDSET>
 				<LEGEND>Данные для входа и восстановления пароля</LEGEND>
-				<INPUT type="text" name="login" placeholder="Логин" min="5" pattern="^[A-Z] [a-z] {20}" required><BR>
-				<INPUT type="password" name="password" placeholder="Пароль" min="10" pattern="^[А-Я] [а-я] {20}" required>
+				<INPUT type="text" name="login" placeholder="Логин" pattern="^[a-zA-Z]+${1,20}" min="5" required><BR>
+				<INPUT type="password" name="password" placeholder="Пароль" pattern="^[a-zA-Z]+${1,20}" min="10" required autocomplete="off">
 			</FIELDSET>
 			<FIELDSET>
 				<LEGEND>Координаты</LEGEND>
@@ -100,7 +100,7 @@
 			</FIELDSET>
 			<FIELDSET>
 				<LEGEND>Цифры</LEGEND>
-				<INPUT type="number" name="number" {-2.5,2.5}step="0.1">
+				<INPUT type="number" name="number" min="-2.5" max="2.5" step="0.1">
 				<INPUT type="range" name="range" min="1" max="10">
 			</FIELDSET>
 			<FIELDSET>
