@@ -5,42 +5,35 @@
     <meta charset="utf-8">
     <TITLE>Спрайты</TITLE>
 </HEAD>
-<style>
-    .three {
-        background-image: url(cards.png);
-        background-repeat: no-repeat;
-        background-position: -290px -200px;
+<style type="text/css">
+    .common {
         width: 136px;
         height: 180px;
+        background-image: url(cards.png);
+        background-repeat: no-repeat;
         display: inline-block;
     }
 
-    #five {
-        background-image: url(cards.png);
-        background-repeat: no-repeat;
+    .three {
+        background-position: -145px -200px;
+    }
+
+    .five {
         background-position: -433px -600px;
-        width: 136px;
-        height: 180px;
-        display: inline-block;
         margin-left: -40px;
     }
 
     .nine {
-        background-image: url(cards.png);
-        background-repeat: no-repeat;
         background-position: -290px -1400px;
-        width: 136px;
-        height: 180px;
-        display: inline-block;
         margin-left: -40px
     }
 
 </style>
 
 <BODY>
-    <div class="three" img="cards.png"></div>
-    <div id="five"></div>
-    <div class="nine"></div>
+    <div class="common three"></div>
+    <div class="common five"></div>
+    <div class="common nine"></div>
 </BODY>
 
 </HTML>
