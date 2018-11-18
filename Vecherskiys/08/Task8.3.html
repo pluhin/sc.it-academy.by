@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<META charset="utf-8"> 
+		<title>Jquery password</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+    		$(document).ready(function() {
+        	$('#repPass').change(function() {
+            var pass = $("#pass").val();
+            var pass_rep = $("#repPass").val();
+            if (pass != pass_rep) {
+                $("#repPass").css('border', 'red 1px solid');
+				$("#pass").css('border', 'red 1px solid');
+				$('#errorBlock').css('color', 'red');
+				$('#repPass').css('background-color', 'red');
+				$('#pass').css('background-color', 'red');
+                $('#errorBlock').html('Пароли не совпадают');
+				alert('Вы ввели разные значения. Проверьте и введите заново');}
+			else {$("#repPass").css('border', 'green 1px solid');
+				$("#pass").css('border', 'green 1px solid');
+				$('#errorBlock').css('color', 'green');
+				$('#repPass').css('background-color', 'green');
+				$('#pass').css('background-color', 'green');
+                $('#errorBlock').html('Вы ввели верное значение');
+				alert('Ваш пароль принят')}
+        });
+    });
+</script>
+</head>
+<body>
+	<TABLE width="700" align="center" >
+		<tr>
+			<td>
+			<h2>Валидация пароля</h2>
+				<form>
+					<fieldset>
+						<legend>Форма ввода пароля</legend>
+						<div id="errorBlock">Введите значение пароля и подтвердите нажатием клавиши "Enter"</div><BR>
+						<label for="passwordX">Введите пароль</label><BR>
+						<input type="password" name="passwordX" id="pass" required/><BR>
+						<label for="passwordY">Повторите ваш пароль</label><BR>						
+						<input type="password" name="passwordY" id="repPass" required/><BR>
+					</fieldset>
+				</form>
+  			</td>
+		</tr>
+	</TABLE>
+</body>
+</html>
