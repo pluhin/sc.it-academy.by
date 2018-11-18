@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hometask5.5</title>
+	<style type="text/css">
+		.global {
+			flex: 0 0 15em; 
+			background-color: lightgrey;
+		}
+		.flexcol{
+			display: flex; 
+			flex-direction: column
+			}
+		.flexrow {
+			display: flex; 
+			flex-direction: row
+		}
+		.rightblock {
+			flex: 1 1 auto;
+		}
+		.block {
+			background-color: gray;
+			overflow: auto;
+			margin-bottom: 0.2em
+		}
+		.footerblok {
+			clear: both;
+			background-color: gray;
+		}
+		.letter {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="flexcol">
+		<div class="flexrow">
+			<div class="global">
+				<h2>Блок навигации</h2>
+					<ul>
+						<li>Ширина 15em</li>
+						<li>Высота определяется контентом</li>
+						<li>Должен присутствовать цвет фона</li>
+						<li>Располагается слева</li>
+						<li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+					</ul>
+			</div>
+		<div class="rightblock">
+			<div class="block">
+				<h2>Статья 1</h2>
+				<span>Размер блока:<br>
+				Занимает всю доступную ширину<br>
+				Высота по размеру контента<br>
+				Должен присутствовать цвет фона<br>
+				Во всех статьях сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom<br></span>
+			</div>
+			<div class="block">
+				<h2>Статья 2</h2>		
+				Размер блока:<br>
+				Занимает всю доступную ширину<br>
+				Высота по размеру контента<br>
+				Должен присутствовать цвет фона<br>
+				Во всех статьях сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom Картинка вставленна при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки.<br>
+				<div class="letter"><img src="icon_mail.png" width="150"></div>
+			</div>
+		</div>
+		</div>
+		<div class="footerblok">
+				Нижний блок, подвал.Занимает всю доступную ширину. Высота определяется помещеннным внутрь контентом.
+		</div>
+		</div>
+</body>
+</html>
