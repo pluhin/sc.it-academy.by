@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Плавающие блоки</title>
+			<style type="text/css">
+				.full {
+					width: 100%
+					overflow: hidden;
+
+				}
+
+				.blocks {
+					background-color: #D3CAC6;
+					float: left;
+					width: 15em;
+				}
+
+				.article {
+					overflow: hidden;
+					background-color: #808588;
+					margin-bottom: .2em;
+				}
+
+				.article ul {
+					list-style-type: none; 
+					padding: 0;
+				}
+
+				img {float: right;}
+
+				.footer {background-color: #D3CAC6;}
+				
+			</style>
+		</head>
+		<body>
+			<div class="full">
+				<div class="blocks" id="b_1">
+					<h3>Блок навигации</h3>
+					<ul>
+						<li>Ширина 15em</li>
+						<li>Высота определяется контентом</li>
+						<li>Должен присутсвовать цвет фона</li>
+						<li>Располагается слева</li>
+						<li>Блок навигации наполниет контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+					</ul>
+				</div>
+				<div class="article" id="b_2">
+					<h3>Статья 1</h3>
+					<ul>
+						<li>Размер блока:</li>
+						<li>Занимает всю доступную ширину</li>
+						<li>Высота по размеру контента</li>
+						<li>Должен присутствовать цвет фона</li>
+						<li>Во всех "статьях" сделвйте отступ снизу от соседей равным 0.2em, при помощи свойства margin-bottom</li>
+					</ul>
+				</div>
+				<div class="article" id="b_3">
+					<h3>Статья 2</h3>
+					<ul>
+						<li>Размер блока:</li>
+						<li>Занимает всю дотупную ширину</li>
+						<li>Высота по размеру контента</li>
+						<li>Должен присутствовать цвет фона</li>
+						<li>Во всех "статьях" сделвйте отступ снизу от соседей равным 0.2em, при помощи свойства margin-bottom. Картинка вставлена при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки</li>
+					</ul>
+					<img src="email.jpg">
+				</div>
+			</div>
+			<div class="footer">
+					Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.
+			</div>
+		</body>
+	</html>

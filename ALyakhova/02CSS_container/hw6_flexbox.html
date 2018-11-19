@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Flexbox</title>
+			<style type="text/css">
+				
+				div {
+					display: flex;
+					margin: 0;
+					padding: 0;
+
+				}
+				.navigation{flex-direction: row;}
+
+				.conteiner{
+					flex-direction: column;
+					align-content: stretch;
+				}
+
+				.blocks {
+					flex-direction: column;
+					background-color: #D3CAC6;
+					flex: none;
+					width: 15em;
+				}
+
+				.article {
+					flex-direction: column;
+					background-color: #808588;
+					margin-bottom: .2em;
+				}
+
+				.article ul {
+					list-style-type: none;
+					padding: 0;
+					margin: 0
+				}
+
+				img {align-self: flex-end;}
+
+				.footer {background-color: #D3CAC6;}
+				
+			</style>
+		</head>
+		<body>
+			<div class="navigation">
+				<div class="blocks" id="b_1">
+					<h3>Блок навигации</h3>
+					<ul>
+						<li>Ширина 15em</li>
+						<li>Высота определяется контентом</li>
+						<li>Должен присутсвовать цвет фона</li>
+						<li>Располагается слева</li>
+						<li>Блок навигации наполниет контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+					</ul>
+				</div>
+			<div class="conteiner">
+				<div class="article" id="b_2">
+					<h3>Статья 1</h3>
+					<ul>
+						<li>Размер блока:</li>
+						<li>Занимает всю доступную ширину</li>
+						<li>Высота по размеру контента</li>
+						<li>Должен присутствовать цвет фона</li>
+						<li>Во всех "статьях" сделвйте отступ снизу от соседей равным 0.2em, при помощи свойства margin-bottom</li>
+					</ul>
+				</div>
+				<div class="article" id="b_3">
+					<h3>Статья 2</h3>
+					<ul>
+						<li>Размер блока:</li>
+						<li>Занимает всю дотупную ширину</li>
+						<li>Высота по размеру контента</li>
+						<li>Должен присутствовать цвет фона</li>
+						<li>Во всех "статьях" сделвйте отступ снизу от соседей равным 0.2em, при помощи свойства margin-bottom. Картинка вставлена при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки</li>
+					</ul>
+					<img src="email.jpg">
+				</div>
+			</div>
+			</div>
+			<div class="footer">
+					Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.
+			</div>
+		</body>
+	</html>

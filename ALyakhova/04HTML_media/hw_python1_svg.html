@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+	 <HTML> 
+	 	<HEAD>
+			<META charset="utf-8"><TITLE>SVG images</TITLE>
+		</HEAD>
+		<BODY>
+			<H1>HOW-TO: Программа на Python, Часть 1 <IMG  width="250px" height="82px" SRC="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" ALIGN="right" ALT="PYTHON IMAGE" TITLE="Логотип Питон"></H1>
+			<UL> 
+				<LI><EM><A HREF="#">Программа на Python — часть 1</A></EM></LI>
+				<LI><EM><A HREF="hw_python2_svg.html">Программа на Python — часть 2</A></EM></LI>
+				<LI><EM><A HREF="hw_python3_svg.html">Программа на Python — часть 3</A></EM></LI>
+			</UL>
+			
+			<H2 ID="CONTENT">Содержание</H2>
+			
+			<H3>HOW-TO: Программа на Python, Часть 1</H3>
+			
+			<UL>
+				<LI><A HREF="#FIRSTPROG">Наша первая программа</A></LI>
+				<LI><A HREF="#CYCLEFOR">Пример цикла For</A></LI>
+			</UL>
+			
+			<P>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (<INS>GUI</INS>). Давайте создадим простую программу прямо сейчас</P>
+			
+			<H2 ID="FIRSTPROG">Наша первая программа</H2>
+
+			<A HREF="#CONTENT">К содержанию</A>
+			
+			<P>Наберём код в текстовом редакторе (например, в <STRONG>gedit</STRONG>). Потом мы разберёмся, что делает каждая строка и пойдём дальше.</P>
+			
+			<P>Введите эти 4 строки:</P>
+
+<PRE>#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</PRE>
+
+			<P>Это всё. Сохраните файл как <STRONG>hello.py</STRONG> в любом месте. Я предлагаю сохранить его в папке <STRONG>python_examples</STRONG> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</P>
+
+<PRE><STRONG><INS>chmod +x hello.py</INS></STRONG></PRE>
+
+			<P>в папке, в которой вы сохранили программу. Теперь запустите её.</P>
+
+<PRE>greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$</PRE>
+
+			<P>Вот и всё.</P>
+
+			<H2 ID="CYCLEFOR">Пример цикла For</H2>
+
+			<A HREF="#CONTENT">К содержанию</A>
+
+			<P>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</P>
+
+<PRE>#!/usr/bin/env python
+for cntr in range(0,10):
+     print cntr</PRE>
+
+			<P><EM>Не забудьте поставить символ табуляции перед строкой «print cntr».</EM> Это важно. В Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки как в других языках программирования, а отступы.</P>
+
+			<TABLE WIDTH="100%">
+				<TR>
+					<TD><A HREF="#" ALT="PREVIOUS PAGE" TITTLE="Переход на предыдущею страницу"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 44 44" enable-background="new 0 0 44 44" width="20px" height="20px">
+  <path d="M22,0C9.8,0,0,9.8,0,22s9.8,22,22,22s22-9.8,22-22S34.2,0,22,0z M35,23c0,0.6-0.4,1-1,1H17.4c-0.4,0-0.7,0.5-0.4,0.9l4,4  c0.4,0.4,0.4,1,0,1.4l-1.4,1.4c-0.2,0.2-0.4,0.3-0.7,0.3c-0.3,0-0.5-0.1-0.7-0.3l-9-9C9.1,22.5,9,22.3,9,22s0.1-0.5,0.3-0.7l9-9  c0.2-0.2,0.4-0.3,0.7-0.3c0.3,0,0.5,0.1,0.7,0.3l1.4,1.4c0.4,0.4,0.4,1,0,1.4l-4,4C16.8,19.4,17,20,17.5,20H34c0.6,0,1,0.4,1,1V23z" fill="#006DF0"/>
+</svg></A></TD>
+					
+                    <TD ALIGN="CENTER"><A HREF="#" ALT="HOME PAGE" TITLE="Переход к содержанию страницы"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 44 44" enable-background="new 0 0 44 44" width="20px" height="20px">
+  <g>
+    <path d="m22,0c-12.2,0-22,9.8-22,22s9.8,22 22,22 22-9.8 22-22-9.8-22-22-22zm12,20h-1.5c-0.3,0-0.5,0.2-0.5,0.5v12.5c0,0.6-0.4,1-1,1h-18c-0.6,0-1-0.4-1-1v-12.5c0-0.3-0.2-0.5-0.5-0.5h-1.5c-0.6,0-1-0.4-1-1 0-0.3 0.2-0.7 0.4-0.8l12-8c0.2-0.1 0.3-0.2 0.6-0.2s0.4,0.1 0.6,0.2l12,8c0.3,0.2 0.4,0.5 0.4,0.8 0,0.6-0.4,1-1,1z" fill="#006DF0"/>
+    <path d="m22.3,14.8c-0.2-0.1-0.4-0.1-0.6,0l-5.5,3.7c-0.1,0.1-0.2,0.2-0.2,0.4v10.6c0,0.3 0.2,0.5 0.5,0.5h3c0.3,0 0.5-0.2 0.5-0.5v-4.5c0-0.6 0.4-1 1-1h2c0.6,0 1,0.4 1,1v4.5c0,0.3 0.2,0.5 0.5,0.5h3c0.3,0 0.5-0.2 0.5-0.5v-10.6c0-0.2-0.1-0.3-0.2-0.4l-5.5-3.7z" fill="#006DF0"/>
+  </g>
+</svg></A></TD>
+					
+                    <TD ALIGN="RIGHT"><A HREF="hw_python2_svg.html" ALT="NEXT PAGE" TITLE="Переход на следующую страницу"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 44 44" enable-background="new 0 0 44 44" width="20px" height="20px">
+  <path d="m22,0c-12.2,0-22,9.8-22,22s9.8,22 22,22 22-9.8 22-22-9.8-22-22-22zm12.7,22.7l-9,9c-0.2,0.2-0.4,0.3-0.7,0.3s-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1 0-1.4l4-4c0.3-0.3 0.1-0.9-0.4-0.9h-16.5c-0.6,0-1-0.4-1-1v-2c0-0.6 0.4-1 1-1h16.6c0.4,0 0.7-0.5 0.4-0.9l-4-4c-0.4-0.4-0.4-1 0-1.4l1.4-1.4c0.2-0.2 0.4-0.3 0.7-0.3s0.5,0.1 0.7,0.3l9,9c0.2,0.2 0.3,0.5 0.3,0.7-0.1,0.3-0.2,0.5-0.4,0.7z" fill="#006DF0"/>
+</svg></A></TD>
+</TR>
+</TABLE>
+
+		</BODY>
+	</HTML>
