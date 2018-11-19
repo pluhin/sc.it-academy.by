@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>password comparison</TITLE>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.js.map">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#pasw1,#pasw2').keyup(function() {
+                if ($('#pasw1').val() == $('#pasw2').val()) {
+                    $('#result').text('match');
+                    $('#result').removeClass('text-danger');
+                    $('#result').addClass('text-success');
+                } else {
+                    $('#result').text('do not match');
+                    $('#result').removeClass('text-success');
+                    $('#result').addClass('text-danger');
+                }
+            })
+        })
+
+    </script>
+</HEAD>
+
+<BODY>
+            <form>
+            <fieldset>
+                <legend>password comparison</legend>
+                <input type="password" id="pasw1" name="pasw1">
+                <label for="pasw1">enter your first passowrd</label>
+                <br>
+                <input type="password" id="pasw2" name="pasw2">
+                <label for="pasw1">enter your second passowrd</label>
+                <br>
+                <span id="result"></span>
+            </fieldset>
+        </form>
+    </BODY>
+
+</HTML>
