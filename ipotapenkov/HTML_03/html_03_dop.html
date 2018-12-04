@@ -73,7 +73,7 @@
                 <fieldset>
                     <legend>Домашние животные(возможность выбора нескольких вариантов):</legend>
                     <label for="zhiv">array: select multiple</label><br>
-                    <select name="zhiv" id="zhiv" multiple size="12">
+                    <select name="zhiv[]" id="zhiv" multiple size="12">
                         <optgroup label="Попугаи">
                             <option value="0">Волнистый</option>
                             <option value="1">Ара</option>
@@ -101,16 +101,16 @@
             </fieldset>
             <fieldset>
                 <legend>Цифры</legend>
-                <input type="email"  placeholder="Введите адрес почты">
+                <input type="email" name="email_" placeholder="Введите адрес почты">
                 <label for="email">email: проверка должна осуществляться при помощи новых атрибутов тега &#60;input></label><br>
-                <input type="url" placeholder="Введите адрес сайта">
+                <input type="url" name="url" placeholder="Введите адрес сайта">
                 <label for="url">url: проверка должна осуществляться при помощи новых атрибутов тега &#60;input></label>
             </fieldset>
             <fieldset>
                 <legend>Цифры</legend>
-                <input type="number" min="-2.5" max="2.5" value="0.1">
+                <input type="number" name="number_1" min="-2.5" max="2.5" value="0.1">
                 <label for="number">number:Диапазон от -2.5 до 2.5 с шагом 0.1</label><br>
-                <input type="range" min="1" max="10">
+                <input type="range" name="range" min="1" max="10">
                 <label for="range">range: Максимальное 10 минимальное 1</label>
             </fieldset>
             <fieldset>
