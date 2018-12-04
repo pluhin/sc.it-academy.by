@@ -73,8 +73,8 @@
             <form method="post" action="http://sc.it-academy.by/fe/form.php">
                  <fieldset>
                     <legend>Оставьте Ваш отзыв</legend>
-                    <label><input type="text" name="login" maxlength="20" required><span>*</span>Имя</label><br>
-                    <label><input type="email" name="email" maxlength="40" required><span>*</span>e-mail</label><br>
+                    <input type="text" name="login" maxlength="20" required><span>*</span>Имя<br>
+                    <input type="email" name="email" maxlength="40" required><span>*</span>e-mail<br>
                     <textarea name="text_area">Форма отправки</textarea>
                     <input type="submit" name="send" value="Отправить"><br>
                     </fieldset>
@@ -90,7 +90,7 @@
                         <option value="2">Минск</option>
                         <option value="3">Гомель</option>
                     </select>
-                    <select name="list" size="6" multiple id="list">
+                    <select name="list2[]" size="6" multiple id="list2">
                         <optgroup label="Города РБ">
                             <option value="1">Брест</option>
                             <option value="2">Минск</option>
@@ -112,9 +112,9 @@
                 <h2>Загрузка файла на сервер:</h2>
                     <form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
                          <fieldset>
-                             <legend>Upload</legend>
-                            <label>Файл:</label><br>
-                                <input type="file" name="field_name" dir="ltr"><br>
+                            <legend>Upload</legend>
+                            <label for="file">Файл</label><br>
+                            <input type="file" name="field_name" dir="ltr" value="Выбрать файл"><br>
                             <label>Срок хранения (года):</label><br>
                             <input type="text" name="years" maxlength="2">
                             <input type="submit" name="send" value="Загрузить"><br>
@@ -126,7 +126,7 @@
                     <form method="post" action="http://sc.it-academy.by/fe/form.php">
 	                    <fieldset>
 		                    <legend>Строка поиска</legend>
-                                <input type="text" name="name_03" pattern="[а-я]{1,20}"><br>
+                                <input type="text" name="name_03" pattern="[а-яA-Я]{1,20}"><br>
                                 <input type="text" name="name_04" pattern="\+[0-9]{3}\-[0-9]{2}\-[0-9]{7}" placeholder="+375-29-1234567">+375-29-1234567<br>
 		                        <input type="submit" name="send" value="Проверить">
 	                    </fieldset>
