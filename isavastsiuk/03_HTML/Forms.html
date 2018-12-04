@@ -146,8 +146,11 @@
 
                         <fieldset>
                             <legend>Upload</legend>
-                            <label for="file">Файл:</label><br>
-                            <input type="file" id="file" name="file" multiple><br>
+                            <label>
+                                Файл:<br>
+                                <input type="file" id="file" name="file">
+                            </label>
+                            <br>
                             <label>
                                 Срок хранения (года):<br>
                                 <input type="text" id="years" name="years" pattern="[0-9]{1,2}">
@@ -165,7 +168,7 @@
                             <legend>Строка поиска</legend>
                             <input type="text" id="text" name="text" placeholder="Только русские буквы" pattern="[А-Яа-я]+"><br>
                             <label for="number"><em>Телефонный номер в формате +XXX-XX-XXXXXXX, где X - любое число</em></label><br>
-                            <input type="text" id="number" name="number" pattern="\+[0-9]{3}-(29|44|25)-[0-9]{7}" placeholder="+375-29-1234567"><br>
+                            <input type="text" id="number" name="number" pattern="\+[0-9]{3}-[0-9]{2}-[0-9]{7}" placeholder="+375-29-1234567"><br>
                             <input type="submit" value="Проверить">
                         </fieldset>
                     </form>
