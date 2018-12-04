@@ -16,10 +16,14 @@
                             <legend>Строка поиска</legend>
                             <input type="text" name="search" maxlength="10">
                             <input type="submit" value="Искать"><br>
-                            <input id="site" type="radio" name="search_dist" value="site" checked>
-                            <label for="site">На сайте</label>
-                            <input id="google" type="radio" name="search_dist" value="google">
-                            <label for="google">в Google</label><br>
+                            <label>
+                                <input id="site" type="radio" name="search_dist" value="site" checked>
+                                На сайте
+                            </label>
+                            <label>
+                                <input id="google" type="radio" name="search_dist" value="google">
+                                в Google
+                            </label><br>
                             <em>Длина запроса не более 10 символов</em>
                         </fieldset>
                     </form>
@@ -73,14 +77,22 @@
 
                         <fieldset>
                             <legend>Как вам?</legend>
-                            <input type="radio" id="notbad" name="State" value="Not Bad" checked>
-                            <label for="notbad">ничего</label><br>
-                            <input type="radio" id="soso" name="State" value="so-so">
-                            <label for="soso">неплохо</label><br>
-                            <input type="radio" id="good" name="State" value="good">
-                            <label for="good">хорошо</label><br>
-                            <input type="radio" id="super" name="State" value="super">
-                            <label for="super">супер</label><br>
+                            <label>
+                                <input type="radio" id="notbad" name="State" value="Not Bad" checked>
+                                ничего
+                            </label><br>
+                            <label>
+                                <input type="radio" id="soso" name="State" value="so-so">
+                                неплохо
+                            </label><br>
+                            <label>
+                                <input type="radio" id="good" name="State" value="good">
+                                хорошо
+                            </label><br>
+                            <label>
+                                <input type="radio" id="super" name="State" value="super">
+                                супер
+                            </label><br>
                             <input type="hidden" name="date_voite" value="2013.12.31">
                             <input type="submit" value="Отправить"><br>
                             <em>Есть скрытое поле</em><br>
@@ -100,11 +112,8 @@
                             <label for="name"><sup>*</sup> Имя</label><br>
                             <input type="email" id="email" name="email" required>
                             <label for="pass"><sup>*</sup> e-mail</label><br>
-
-                            <label>
-                                Форма отправки<br>
-                                <textarea  name="text" rows="1"></textarea>
-                            </label><br>
+                            <label for="textarea">Форма отправки<br> </label>
+                            <textarea  id="textarea" name="text" rows="1"></textarea><br>
                             <input type="submit" value="Отправить"><br>
                             <em>*-обязательное поле</em><br>
                             <em>поле email - с проверкой</em>
@@ -146,15 +155,10 @@
 
                         <fieldset>
                             <legend>Upload</legend>
-                            <label>
-                                Файл:<br>
-                                <input type="file" id="file" name="file">
-                            </label>
-                            <br>
-                            <label>
-                                Срок хранения (года):<br>
-                                <input type="text" id="years" name="years" pattern="[0-9]{1,2}">
-                            </label>
+                            <label for="file">Файл:</label><br>
+                            <input type="file" id="file" name="file[]" multiple><br>
+                            <label for="years">Срок хранения (года):</label><br>
+                            <input type="text" id="years" name="years" pattern="[0-9]{1,2}">
                             <input type="submit" value="Загрузить"><br>
                             <em>Метод POST и т.д.</em><br>
                         </fieldset>
