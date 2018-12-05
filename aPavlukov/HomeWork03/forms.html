@@ -59,9 +59,10 @@
 				<form method="POST" action="http://sc.it-academy.by/fe/form.php">
 					<fieldset>
 						<legend>Авторизуйтесь</legend>
-						<label><input type="text" name="login" required>*Логин</label><br>
-						<label><input type="password" name="password" required>*Пароль</label><br>
-
+						<input type="text" name="login" id="log" required>
+						<label for="log">*Логин</label><br>
+						<input type="password" name="password" id="pss" required>
+						<label for="pss">*Пароль</label><br>
 						<label>
 							<input type="checkbox" name="stay_at_system">оставаться в системе
 						</label><br>
@@ -96,8 +97,10 @@
 				<form method="POST" action="http://sc.it-academy.by/fe/form.php">
 					<fieldset>
 						<legend>Оставьте Ваш отзыв</legend>
-						<label><input type="text" name="login" required>*Имя</label>
-						<label><input type="email" name="e-mail" required>*e-mail</label><br>
+						<input type="text" name="login" id="login" required>
+						<label for="login">*Имя</label>
+						<input type="email" name="e-mail" id="mail" required>
+						<label for="mail">*e-mail</label><br>
 						<textarea name="text" placeholder="Форма отправки">
 						</textarea>
 						<button type="submit">отправить</button>
