@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            .nav {
+                width: 15em;
+                background-color: cadetblue;
+                float: left;
+                text-align: left}
+            .article {
+                margin-left: 15em}
+            .article div {
+                float: left;
+                background-color: cyan;
+                margin-bottom: 0.2em
+            }
+            .article p {margin-bottom: 0}
+            .footer {
+                background-color: darkgrey;
+                clear: both}
+            img {float: right}
+        </style>
+
+    </head>
+    <body>
+
+        <div class="nav">
+            <h3>Блок навигации</h3>
+            <ul>
+                <li>Ширина 15em</li>
+                <li>Должен присутствовать цвет фона</li>
+                <li>Располагается слева</li>
+                <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+            </ul>
+        </div>
+           <div class="article">
+                <div>
+                    <h3>Статья 1</h3>
+                    <p>Размер блока:<br>
+                       Занимает всю доступную ширину<br>
+                       Должен присутствовать цвет фона<br>
+                       Во всех "статья" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom</p>
+                </div>
+                <div>
+                    <h3>Статья 2</h3>
+                    <p>Размер блока:<br>
+                        Занимает всю доступную ширину<br>
+                        Должен присутствовать цвет фона<br>
+                        Во всех "статья" сделайте отступ снизу от соседей равным .2em, при помощи свойтсва margin-bottom. Картинка вставленна при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки.</p>
+                    <img src="Capture.PNG">
+                </div>
+           </div>
+        <div class="footer">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.</div>
+    </body>
+</html>
