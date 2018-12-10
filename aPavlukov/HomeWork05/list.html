@@ -5,14 +5,33 @@
     <meta charset="utf-8" />
 
     <title>Page List</title>
+    <style>
+        .code {
+            background: black;
+            max-height: 4.6rem;
+            max-width: 400px;
+            color: green;
+            overflow: auto;
+        }
+
+        .ul1 {
+            list-style: upper-roman;
+            width: 350px;
+        }
+
+        .ul2 {
+            list-style: lower-roman
+        }
+    </style>
+
 
 </head>
 
 <body>
-    <ul style="list-style:upper-roman; width: 350px;">
+    <ul class="ul1">
         <li>
             <h2>Контейнер с кодом</h2>
-            <ul style="list-style:lower-roman">
+            <ul class="ul2">
 
                 <li>цвет фона: чёрный</li>
                 <li>цвет текста: зелёный</li>
@@ -23,7 +42,7 @@
         </li>
         <li>
             <h2>Список</h2>
-            <ul style="list-style:lower-roman">
+            <ul class="ul2">
                 <li>Ширина 350px</li>
                 <li>Тип списка: римские цифры</li>
                 <li>Тип вложенного списка: римские нижний регистр цифры</li>
@@ -31,8 +50,7 @@
             </ul>
         </li>
     </ul>
-    <div style="background: black; max-height: 4.6rem; 
-max-width: 400px;color: green; overflow:auto;">
+    <div class="code">
         #!/usr/bin/env python
         print 'Hello. I am a python program.'
         name = raw_input("What is your name?")
