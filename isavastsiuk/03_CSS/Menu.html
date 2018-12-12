@@ -19,7 +19,7 @@
                 left: 149px;
                 top: 0;
             }
-            li:hover ul {
+           li:hover ul {
                 display: block;
             }
             li a {
@@ -38,12 +38,37 @@
                 background-color: white;
                 color: gray;
             }
-            /*************************************/
+/*******************************************************/
+
+
+
+
+            @media all and (min-width: 1020px){
+                li a {
+                    display: inline-table;
+                    width: 10em; margin: -2px
+                }
+
+                .line {
+                    width: 100%; border-bottom: none
+                }
+
+                .line li{
+                    display: inline
+                }
+
+                li ul {
+                    left: 0; top: 21px
+                }
+            }
+
+
+
 
         </style>
     </HEAD>
     <BODY>
-        <ul >
+        <ul class="line" >
             <li><a href="#">Понедельник</a>
                 <ul>
                     <li><a href="#">Завтрак</a></li>
