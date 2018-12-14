@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Пример страницы</TITLE>
+		<style>
+		.form_group {
+			width: 80%;
+			margin: 0 auto;
+			background-color: lightgrey
+		}
+		.form_label {
+			float: left;
+			width: 10em;
+		}
+		.form_input {
+			margin-left: 10em;		
+		}
+		.form_input input {
+			width: 100%;
+			box-sizing: border-box;
+		}
+		@media all and (max-width: 400px)
+		{
+			.form_group,
+			.form_label
+			 { width: 100% }
+			 .form_label {float: none;}
+			 .form_input {margin-left: 0}
+		}
+		@media all and (max-width: 800px)
+		{
+			.form_group { width: 90% }
+		}
+		@media all and (min-width: 1200px)
+		{
+			.form_group { width: 1000px }
+		}
+
+		
+		</style>
+
+	</HEAD> 
+	<BODY>
+	<div class="form_group">
+		<label class="form_label" for="test_input">Text label</label>
+		<div class="form_input">
+			<input type="text" name="" id="test_input">
+		</div>
+	</div>
+	</BODY> 
+</HTML> 
