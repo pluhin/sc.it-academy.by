@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Comparing password</TITLE>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('#pass1,#pass2').keyup(function() {
+                if ($('#pass1').val() == $('#pass2').val()) {
+                    $('#pass1,#pass2').css('background-color','green');
+                } else {
+                    $('#pass1,#pass2').css('background-color','red');
+                }
+                });
+        })
+        </script>
+        </HEAD>
+    <BODY>
+        <form method="post" action="http://sc.it-academy.by/fe/form.php">
+        <fieldset>
+            <legend>Comparing password</legend>
+                <input type="password" id="pass1" name="password" required>
+                <label for="pass">Password</label><br>  
+                <br> 
+                <input type="password" id="pass2" name="password" required>
+                <label for="pass">Confirm Password</label><br>
+                <br>  
+                <input type="submit" value="Enter">
+        </fieldset>
+        </form>        
+    </BODY>
+</HTML>
