@@ -17,8 +17,23 @@
             tr:nth-child(n+2)>td:last-child{
                 border-right: none;
             }
-            tr:nth-child(2n+1){
-                background-color: darkgray;
+            tr:nth-child(2n+3){
+                background-color: lightgray;
+
+            }
+            tr:first-child{
+                background-color: grey;
+                color: white;
+            }
+            caption {
+                caption-side: bottom;
+                text-transform: uppercase;
+                font-size: small;
+            }
+            tr:nth-child(n+2):hover{
+                cursor: pointer;
+                transform: translateX(3px);
+                text-shadow: 0.5px 0.5px 0.5px red;
             }
         </style>
 
