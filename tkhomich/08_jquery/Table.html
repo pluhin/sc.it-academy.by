@@ -20,16 +20,6 @@
             $('#table_data tr').removeClass('trdisplay');
             $('.show').val('Rows are not hidden').text('"Rows are not hidden!');
         });
-		$('h2').click(function(){
-			$(this).next('p').slideToggle(2000);
-		})
-		$('#max').text($('#range').attr('max'));
-		$('#min').text($('#range').attr('min'));
-		$('#current').text($('#range').val());
-		
-		$('#range').on('change',function(){
-			$('#current').text($('#range').val());
-		});
 	});
 	</script>
 </head>	
@@ -86,6 +76,5 @@
 			 <td>923123379</td>
 		 </tr>
  	</table>
-	</div>
 </body>
 </html>
