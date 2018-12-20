@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Flex</title>
+        <style>
+            .row {
+                display: flex;
+                flex-direction: row;
+                }
+            .column {
+                display: flex;
+                flex-direction: column
+                }
+            .column div {margin-bottom: .2em;
+                         background-color: aquamarine
+                }
+            .nav {flex-basis: 15em;
+                 background-color: darkgrey;
+                 flex-shrink: 0;
+                 align-self: start}
+            footer {background-color: beige}
+        </style>
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="nav" >
+                <h3>Блок навигации</h3>
+                <ul>
+                    <li>Ширина 15em</li>
+                    <li>Высота определяется контентом</li>
+                    <li>Должен присутствовать цвет фона</li>
+                    <li>Располагается слева</li>
+                    <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div>
+                    <h3>Статья 1</h3>
+                        Размер блока:<br>
+                        Занимает всю доступную ширину<br>
+                        Высота по размеру контента<br>
+                        Должен присутствовать цвет фона<br>
+                        Во всех "статья" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom
+                </div>
+                <div>
+                    <h3>Статья 2</h3>
+                        Размер блока:<br>
+                        Занимает всю доступную ширину<br>
+                        Высота по размеру контента<br>
+                        Должен присутствовать цвет фона<br>
+                        Во всех "статья" сделайте отступ снизу от соседей равным .2em, при помощи свойтсва margin-bottom. Картинка вставленна при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки.
+                    <img src="../Capture.PNG" style="float: right">
+                </div>
+            </div>
+
+        </div>
+        <footer>Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.</footer>
+    </body>
+</html>

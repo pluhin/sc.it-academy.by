@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Python3</TITLE>
+    </HEAD>
+    <BODY style="font-family: sans-serif;
+                    font-size: 10px;
+                    background-color: #eee;">
+        <img src="Icon-Python.png" align="right" alt="Лого Python" title="Лого Python">
+        <h1>HOW-TO: Программа на Python, Часть 3</h1>
+        <ul>
+            <li><a href="Python_01.html"><em>Программа на Python — часть 1</em></a></li>
+            <li><a href="Python_02.html"><em>Программа на Python — часть 2</em></a></li>
+            <li><a href="Python_03.html"><em>Программа на Python — часть 3</em></a></li>
+        </ul>
+        <h2 id="content">Содержание</h2>
+        <h3>HOW-TO: Программа на Python, Часть 3</h3>
+        <ul>
+            <li><a href="#1">Модули</a></li>
+            <li><a href="#2">Функции</a></li>
+        </ul>
+        <hr>
+        <p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и присвоение, операторы <strong>if</strong> и <strong>while</strong>. Я обещал, что в этой части мы изучим модули и функции. Давайте начнём.</p>
+        <h2 id="1">Модули</h2>
+        <a href="#content">К содержанию</a>
+        <p>Модули предлагают способ расширить программирование на Python. Вы можете создать свои модули, использовать те, которые поставляются с Python или которые написали другие. В самом Python есть сотни модулей, которые облегчают написание программ. Список модулей, поставляемых с Python, находится по адресу:<a href="http://docs.python.org/modindex.html" target="_blank"><em>http://docs.python.org/modindex.html</em></a>. Некоторые модули предназначены для определённых операционных систем, но большинство из них кроссплатформенные и работают одинаково на <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, <a href="https://en.wikipedia.org/wiki/MacOS" target="_blank">Mac</a> и <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Microsoft Windows</a>. Для использования внешнего модуля необходимо импортировать его в программу. Один из модулей, поставляемых с Python, называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы используем этот модуль в нашем первом примере.</p>
+        <pre>
+
+#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+    print random.randint(1,10)</pre>
+        <p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать модуль «random». Мы должны явно указать Python на это.</p>
+        <hr>
+
+        <h2 id="2">Функции</h2>
+        <a href="#content">К содержанию</a>
+
+
+        <p>Когда мы импортировали модуль random, мы использовали функцию <strong>randint()</strong>. Функция — это блок кода, который создан для того, чтобы вызывать его в программе, обычно, более одного раза. Это упрощает работу над программой и предотвращает набор одного и того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа, сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов чисел. Тогда наш пример будет выглядеть как код ниже.</p>
+        <pre>
+#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)
+print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)
+print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'</pre>
+        <p>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую назовём <strong><i>«DoTwo»</i></strong>. Она будет каждый раз брать два числа, проводить математические операции и выводить результат. Начнём с ключевого слова <strong><i>«def»</i></strong>, которое сигнализирует о том, что мы собираемся определить функцию. После слова <strong><i>«def»</i></strong> добавим название функции и список параметров, если таковые имеются, в круглых скобках. Эту строку необходимо завершить двоеточием. Код функции набирается с отступом. Наш улучшенный простой пример (<u>No2</u>) показан ниже.</p>
+        <pre>
+
+#silly example 2...still silly, but better
+def DoTwo(num1,num2):
+print '%d + %d = %d ' % (num1,num2,num1+num2)
+print '%d * %d = %d ' % (num1,num2,num1*num2)
+print '%d - %d = %d ' % (num1,num2,num1-num2)
+print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5)</pre>
+
+            <p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей программы. Чтобы вызвать функцию, нужно написать её имя и параметры.</p>
+
+        <table width="100%">
+            <tr>
+                <td><a href="Python_02.html"><img src="prev.png"></a></td><td align="center"><a href="#content"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABQZJREFUOI2FlV1oVEcUx/8zc+fevbt3v5JNYtK4+dgYKVsxMUobQqW1BZEGCkKltOhDKfGhCL70tSIUfOyTWOhDyauRUuiLoLQsrS02IVaNIWoSk6w12TXJft69u3vvzPRhGzW1aQ8MM8yc+c2cc+acIfgPGRqb4lKnLUSodij4AUAp4njCXRMFKzs7kazvtJfstDB4+u4wofKEVBgAUXFQFgAAeG6FwEsD5DbgXunb/OrGxMSE+F/w0NhMwqPyLNHYR1bAinTEQrSt2Ye9sRJMLrCwaWEpK5F9+lRuFmxHurUbunS+NB9+8VsqlfK2OGzbLT+b7VJEXKRG6OPBvrB58kiUfDjCMDqkYaNYh2kwnHzbwkg/wWtdJhHE1J/kVKIu5RuIHVpKWCuLy8vLcht4aGwmoYi4GAiFjr4/HCan3jKxp53B4Ay/3CvhnYEw+jpMXL9VQLzVh1hIw74ujrYox+KaihUqOIjY0PSno32PU6mUoltgj3qfE906dvRAmL43yME1gpIjcXOuhMP7QrD8DH4fxZGBMG7OlVCsCAipcGiPiQ8ONxErGOqvqshYOp0OACCsEajpYcL1CwOJkO/YAQ5KgborsbhWxcF+C7EwB6MEhBDoGkFLmGN6vgxdo6h7Ck0WhV3XsJJxuzdk/PbxkegjNjQ2xQF11goFD787ECBRC6i5ChslD/t7A+iMGdDY8xgTQmAaFJGAhrm0A6mAqiuhszoWslIvV4Ur6+s/a9KjLUpXA5FQmEZ8Hoo2hcYI+l/xoavNAKMvv0hKCDqadQwmAvjh9wKm0mEUHT9sWJTIXLLgdcUpMVQ7CInHggROXaLsCHS3Gdi72/+v0Bdld6uBfYkmOJ4PT20D0AJQRGunnMcpFPygPODnLvK2RGtER7LLv838nYRRguF+DaMHnrtJMd2kIEFtS6lY5cgUFNSKh3KtiKDJcGS/BZ/eOCBvS+RtwFMUnU2AjwPf/AQ8yhJkCgAhAFSDpSCophRx4LmVjG3CFj48ygM3l4FdEYqRJODTG8rfTVF8m2qMv/4ESHYCd1aAP5a3bttAUlGrUng1zRPumsZIulCRPYKYz8y0XGBbxqudXaIxgAIoOzUoiCyR9hoVBSsLkNuytik5U9D/bpyp7bR/cblPE/BzAZ8moGsCqr4hOaoPonJ5lTZKn3tFOPkCFzm0+G20+m1EjQoqNYmSI5G3JXy0ip5ICT2REoTwUHIkIkYV7VZDn4scZCVna17mml8+2WQA8GZv8XHOeL2HwBuKt2gIGR4oXMyla5h66ODHO2X8uV6DxV1YuoulTA3TC1UU7RpM5kEjLtKrG6jauasD9Ptx13WzDABmZ2dV28FTi/W6elVI0dXZzIipE0gpIaQEpwoGVzC0Rg88nydwMbdSlOvr+akWMXMpytbuxePx0rPqdno0vrFQbJ4qOyxZrHjdQT9HU1CDzil0jbzUOAPWCy7uLhawmilOtXrTFzowOTk/P78+Pj4unoFTqZQaSdQ2C0byVtGGP5Ovd5dtofu4RwKmBo1SUAIoJbCRszGzWJGz6VI5lytebREzlzowOWlZVvby5cv/fE8NOXfuHE2n04F79MSROgseJ5IlodH2oMlMACjboiqVzHJUH2he5lqSXf+VEJK5f/9+/sUfZKe8JWfOnNGXnF2RgtcVb+Q+CSoISuHViLTXonJ51S+fbEopS729vc758+fli4C/AAAdTsx0wjCZAAAAAElFTkSuQmCC"></a></td><td align="right"><a href=""><img src="next.png"></a></td>
+            </tr>
+        </table>
+
+    </BODY>
+</HTML> ​
