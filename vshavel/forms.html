@@ -80,31 +80,31 @@
 			<label><br>
 				<input type="checkbox" name "check1" id="check1">Оставаться в системе
 			</label><br>
-			<input type="button" name="enter" value="Войти">
+			<input type="submit" name="enter" value="Войти">
 				</fieldset>
 			</form>
 		</td>
 		<td>
 			<h3>Опрос(голосование)</h3>
 			<form method="post" action="http://sc.it-academy.by/fe/form.php">
-			<label>
+			
 				<fieldset>
 					<legend>Как вам?</legend>
-					
-					<input type="radio" name="radio_group"
-					value="radio1" id="radgr1" checked> Плохо
+				
+			<label>	<input type="radio" name="radio_group"
+					value="1" id="radgr1" checked> Плохо
 			</label><br>
 			<label>
 					<input type="radio" name="radio_group
-					value="radio2" id"=radgr2"> Неплохо
+					value="2" id"=radgr2"> Неплохо
 			</label><br>
 			<label>
 					<input type="radio" name="radio_group
-					value="radio3 id"=radgr3"> Хорошо
+					value="3" id"=radgr3"> Хорошо
 			</label><br>	
 			<label>
 					<input type="radio" name="radio_group
-					value="radio4 id"=radgr4"> Супер
+					value="4" id"=radgr4"> Супер
 			</label><br>
 
 				<input type="submit" value="Отправить">
@@ -138,10 +138,10 @@
 		</td>
 		<td>
 			<h3>Выпадающий и мульти списки:</h3>
-			
+			<form method="post" action="http://sc.it-academy.by/fe/form.php">
 				<fieldset>
 					<legend>Города РБ</legend>
-					<form method="post" action="http://sc.it-academy.by/fe/form.php">
+					
 					<select name="list" id="list">
 						<optgroup label="Города РБ">
 							<option value="1">Брест</option>
@@ -175,10 +175,10 @@
 			<tr>
 				<td>
 					<h3>Загрузка файлф на сервер</h3>
-			
+			<form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
 					<fieldset>
 						<legend>Upload</legend>
-						<form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
+						
 						 <label for="file1">Файл:</label><br>
 						<input type="file" name="file1" id="file1"><br>
 						<label for="srok1">Срок хранения (года):</label><br>
@@ -194,7 +194,7 @@
 						<legend>Строка поиска</legend>
 						<input type="text" name="tex2" placeholder="Только русские буквы" pattern="[А-я]+"><br>
 						<span>Телефонный номер формата:</span><br>
-						<input type="text" name="phone" placeholder="+XXX-XX-XXXXXXX" pattern="\+375-(29|44|25)-[0-9]{7}"><br>
+						<input type="text" name="phone" placeholder="+375-29-xxxxxxx" pattern="\+375-[0-9]{2}-[0-9]{7}"><br>
 						<input type="submit" value="Проверить">
 				
 				</fieldset>
