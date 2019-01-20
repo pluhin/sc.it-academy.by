@@ -57,7 +57,7 @@
 									 <input type="submit" value="Войти">				
 								</fieldset>
 							</form></td><td><h2>Опрос(голосование):</h2>
-								<form method="get" action="http://sc.it-academy.by/fe/form.php">
+								<form method="post" action="http://sc.it-academy.by/fe/form.php">
 									<fieldset>
 										 <legend>Как вам?</legend>
 										 <label>
@@ -88,9 +88,9 @@
 									 <legend>Оставьте ваш отзыв</legend>
 									 <input type="text" id="login"
 									 name="login" required autofocus>
-									 <label for="login"><span>*</span>Имя</label>
+									 <label for="name"<span>*</span>Имя</label>
 									 <input type="email" id="email" name="email" required autofocus>
-									 <label for="passwd"><span>*</span>email</label><br>
+									 <label for="email"><span>*</span>email</label><br>
 									 <textarea name="send_form"></textarea>	<br>
 									 <input type="submit" value="Отправить">				
 								</fieldset>
@@ -134,9 +134,9 @@
 										 <legend>Upload</legend>
 										 <label>Файл</label><br>
 										 <input type="file" name="file_Field" id="file_Field" dir="ltr">
-										 <label for="file" </label><br>
+										 <label for="file"></label><br>
 										 <label>Срок хранения (года):</label><br>
-										 <input type="login">
+										 <input type="number" name="number_1">
 									 <input type="submit" value="Загрузить">				
 									</fieldset>
 								</form>
@@ -146,9 +146,9 @@
 									<fieldset>
 										 <legend>Строка поиска</legend>
 										 <input type="text" name="search" maxlength="100" placeholder="Только русские буквы"><br>
-										 <label><i>Телефонный номер в формате</i></label>
-										 <label><i>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i></label>
-										 <input type="text" name="phone_number" pattern="\+375-(25|29|33|44)-[0-0]{7}" placeholder="+375-25,29,33,44-1...7"><br>
+										 <label><i>Телефонный номер в формате<br>
+										  +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</i></label>
+										 <input type="text" name="phone_number" pattern="\+375-(25|29|33|44)-[0-9]{7}" placeholder="+375-25,29,33,44-1...7"><br>
 										 <input type="submit" value="Отправить">
 									</fieldset>
 								</form>							
