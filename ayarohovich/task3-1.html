@@ -14,7 +14,7 @@
  	                    <fieldset>
  		                    <legend>Строка поиска</legend>
  		                    <input type="text" name="search" maxlength="10">
- 		                    <input type="submit" value="Отправить"><br>
+ 		                    <input type="submit" value="Искать"><br>
  		                    <label>
  			                <input type="radio" name="search_dist" value="site" checked>
  			                    на сайте
@@ -32,9 +32,8 @@
                     <form method="GET" action="http://sc.it-academy.by/fe/form.php">
  	                    <fieldset>
  		                    <legend>Строка поиска</legend>
- 		                    <input type="text" name="search" maxlength="10" required autofocus><span>*</span>
- 		                    <input type="hidden" name="hidden_field" value="hidden">
- 		                    <input type="submit" value="Отправить"><br>
+ 		                    <input type="text" name="search" maxlength="10" required autofocus><span><sup>*</sup></span> 		                    
+ 		                    <input type="submit" value="Искать"><br>
  		                    <label>
  			                <input type="radio" name="search_dist" value="site">
  			                    на сайте
@@ -43,7 +42,7 @@
  			                <input type="radio" name="search_dist" value="google" checked>
  			                   в Google   
 							 </label><br> 
-							 <em>*-обязательное поле</em>   
+							 <em><sup>*</sup>-обязательное поле</em>   
  						</fieldset>   
 					</form>  
 				</td> 
@@ -55,12 +54,12 @@
 						<fieldset>
 							<legend> Авторизируйтесь</legend>							
 							<input type="text" id="login" name="login" required>
-							<label for=“login”>*Логин
+							<label for=“login”><sup>*</sup> Логин
 							</label><br>
 							<input type="password" id="pass" name="password" required>
-							<label for=“pass”>*Пароль
+							<label for=“pass”><sup>*</sup> Пароль
 							</label><br>
-							<label></label><input type="checkbox" name="box">Оставаться в системе
+							<label><input type="checkbox" name="box">Оставаться в системе
 							</label> <br>
 							<input type="submit" value="Войти">										
 						</fieldset>
@@ -68,7 +67,7 @@
 				</td>
 				<td>
 					<h2>Опрос (голосование):</h2>
-					<form method="GET" action="http://sc.it-academy.by/fe/form.php">
+					<form method="POST" action="http://sc.it-academy.by/fe/form.php">
 						<fieldset>
 							<legend>Как вам</legend>
 							<input type="hidden" name="date" value="2013/12/31">
@@ -83,8 +82,7 @@
 							</label><br>
 							<label>
 							<input type="radio" name="poll" value="poll_4">супер
-							</label><br>
-							<input type="hidden" name="date" value="2013/12/31">
+							</label><br>							
 							<input type="submit" value="Отправить">
 						</fieldset>
 					</form>
@@ -97,13 +95,12 @@
 						<fieldset>
 							<legend>Оставьте Ваш Отзыв</legend>
 							<input type="text" id="login" name="login" required>
-							<label for="login">*Имя
+							<label for="login"><sup>*</sup> Имя
 							</label><br>
-							<input type="email" id="mail" required>
-							<label for="mail">*e-mail
+							<input type="email" name="email" id="mail" required>
+							<label for="mail"><sup>*</sup> e-mail
 							</label><br>
 							<textarea name="text_area" lang="ru">Форма  отправки</textarea><br>
-							
 							<input type="submit" value="Отправить">
 						</fieldset>	
 					</form>
