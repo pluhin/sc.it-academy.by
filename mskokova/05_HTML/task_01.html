@@ -140,11 +140,11 @@
 				<FORM method="post"enctype="multipart/form-data"action="http://sc.it-academy.by/fe/form.php">
 					<FIELDSET>
 						<LEGEND>Upload</LEGEND>
-						Файл:<br>
-						<input type="file" name="file" dir="ltr"><br>
-						Срок хранения (года):<br>
-						<INPUT type="text"name="time">
-						<input type="submit" value="загрузить">
+						<LABEL for="file">Файл:</LABEL><br>
+						<input ID="file" type="file" name="file" dir="ltr"><br>
+						<LABEL for="time">Срок хранения (года):</LABEL><br>
+						<INPUT ID="time" type="text"name="time">
+						<input type="submit" value="загрузить"> -->
 					</FIELDSET>
 				</FORM>
 			</td>
@@ -154,7 +154,7 @@
 						<LEGEND>Строка поиска</LEGEND>
 						<INPUT TYPE="text"  NAME="text" placeholder="Только русские буквы"lang="ru"><br>
 						<INPUT TYPE="text" ID="index" NAME="index"
-						pattern="\+375-(29|44|25)-[0-9]{7}"placeholder="+375-29-1234567">
+						pattern="\+375(29|44|25)[0-9]{7}"placeholder="+375-29-1234567">
 						<input type="submit" value="проверить">
 					</FIELDSET>
 				</FORM>
