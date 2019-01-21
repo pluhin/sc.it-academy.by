@@ -144,7 +144,7 @@
 						<input ID="file" type="file" name="file" dir="ltr"><br>
 						<LABEL for="time">Срок хранения (года):</LABEL><br>
 						<INPUT ID="time" type="text"name="time">
-						<input type="submit" value="загрузить"> -->
+						<input type="submit" value="загрузить">
 					</FIELDSET>
 				</FORM>
 			</td>
@@ -153,8 +153,7 @@
 					<FIELDSET>	
 						<LEGEND>Строка поиска</LEGEND>
 						<INPUT TYPE="text"  NAME="text" placeholder="Только русские буквы"lang="ru"><br>
-						<INPUT TYPE="text" ID="index" NAME="index"
-						pattern="\+375(29|44|25)[0-9]{7}"placeholder="+375-29-1234567">
+						<INPUT TYPE="tel" NAME="index" pattern="\+\-[0-9]{3}\-[0-9]{2}\-[0-9]{7}" placeholder="+375-29-1234567">
 						<input type="submit" value="проверить">
 					</FIELDSET>
 				</FORM>
