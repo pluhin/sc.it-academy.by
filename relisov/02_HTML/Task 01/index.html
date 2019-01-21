@@ -2,46 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Домашнее задание - базовое</title>
+    <title>Домашнее задание - основное</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <div class="wrapper">
-      <div class="content">
-        <div>
-          <<table>
-            <caption>День моего рождения</caption>
-            <thead>
-              <tr>
-                <th id ="header" colspan="6"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Пн</td><td id="00"></td><td id="10"></td><td id="20"></td><td id="30"></td><td id="40"></td>
-              </tr>
-              <tr>
-                <td>Вт</td><td id="01"></td><td id="11"></td><td id="21"></td><td id="31"></td><td id="41"></td>
-              </tr>
-              <tr>
-                <td>Ср</td><td id="02"></td><td id="12"></td><td id="22"></td><td id="32"></td><td id="42"></td>
-              </tr>
-              <tr>
-                <td>Чт</td><td id="03"></td><td id="13"></td><td id="23"></td><td id="33"></td><td id="43"></td>
-              </tr>
-              <tr>
-                <td>Пт</td><td id="04"></td><td id="14"></td><td id="24"></td><td id="34"></td><td id="44"></td>
-              </tr>
-              <tr>
-                <td>Сб</td><td id="05"></td><td id="15"></td><td id="25"></td><td id="35"></td><td id="45"></td>
-              </tr>
-              <tr>
-                <td>Вс</td><td id="06"></td><td id="16"></td><td id="26"></td><td id="36"></td><td id="46"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <main class="wrapper">
+      <div class="container">
+        <table border="1">
+          <caption><i>Прогноз погоды</i></caption>
+          <tbody>
+          <col width="150px"><col width="110px"><col width="110px"><col width="130px"><col width="115px">
+            <tr align="center" valign="middle">
+              <td><b>Город</b></td><td><b>Утро</b></td><td><b>День</b></td><td><b>Вечер</b></td><td><b>Ночь</b></td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><b>Минск</b></td><td>-5&#176;</td><td>+5&#176;</td><td rowspan="2">+2&#176;</td><td>-10&#176;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><b>Брест</b></td><td>0&deg;</td><td>+9&deg;</td><td>-4&deg;</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
+    </main>
   </body>
 </html>
