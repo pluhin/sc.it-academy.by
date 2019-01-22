@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<META charset="utf-8"> 
+		<title>Формы</title>
+	</head>
+	<body>
+        <table width="100%">
+            <tr>
+                <td align="center"><h2>Заполните анкету</h2></td>
+            </tr>
+        </table>
+        <form method="POST" action="http://sc.it-academy.by/fe/form.php">
+            <fieldset>
+                <legend> Личные данные</legend>
+                <input type="text" name="name_01" pattern="[А-Яа-я]+" placeholder="Фамилия" maxlength="25" required autofocus><br>
+                <input type="text" name="name_02" pattern="[А-Яа-я]+" placeholder="Имя" maxlength="20" required><br>
+                <input type="text" name="name_03" pattern="[А-Яа-я]+" placeholder="Отчество" maxlength="24" required><br>
+                <fieldset>
+                    <legend> Паспортные данные</legend>
+                    <input type="text" name="ser_01" pattern="[A-Z]+" placeholder="AA" maxlength="2" required>
+                    <input type="text" name="num_01" pattern="[0-9]{7}" placeholder="1234567" required>
+                </fieldset>
+                <fieldset>
+                    <legend> Дата рождения</legend>
+                    <input type="text" name="year_01" pattern="[0-9]{4}" placeholder="2000"><br>
+                    <select name="month" id="month">
+                        <option value="1" selected>Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7" >Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
+                    </select><br>
+                    <input type="number" name="day" min="1" max="31" step="1">
+                    </fieldset>
+                <select name="nation" id="nation" required>
+                    <option value="1" selected>РБ</option>
+                    <option value="2">РФ</option>
+                    <option value="3">РП</option>
+                    <option value="4">ФРГ</option>
+                </select><br>
+                <label for="adress">Адрес:
+                </label><br>
+                <textarea name="adress" id="adress" lang="ru"></textarea><br>
+            </fieldset>        
+            <fieldset>        
+                <legend> Интересы</legend>
+                <fieldset>
+                    <legend> Хобби</legend> 
+                    <label>
+                    <input type="checkbox" name="hobby[]"> Рыбалка
+                    </label><br>
+                    <label>
+                    <input type="checkbox" name="hobby[]"> Астрономия
+                    </label><br>
+                    <label>
+                    <input type="checkbox" name="hobby[]"> Дайвинг
+                    </label><br>
+                    <label>
+                    <input type="checkbox" name="hobby[]"> Марки
+                    </label>                       
+                </fieldset>  
+                <fieldset>
+                    <legend> Домашнии животные</legend> 
+                    <select name="anim[]" size="12" multiple id="anim">
+                        <optgroup label="Попугаи">
+                            <option value="1">Волнистый</option>
+                            <option value="2">Ара</option>
+                            <option value="3">Неразлучник</option>                            
+                        </optgroup>
+                        <optgroup label="Рыбы">
+                            <option value="4">Караси</option>
+                            <option value="5">Окуни</option>
+                            <option value="6">Осётр</option>                                
+                        </optgroup>	
+                        <optgroup label="Птицы">
+                            <option value="7">Стая ворон</option>
+                            <option value="8">Аист</option>
+                            <option value="9">Археоптерикс</option>                                
+                        </optgroup>								
+                    </select>							
+                </fieldset> 
+            </fieldset>        
+            <fieldset>
+                <legend>Данные для входа и восстановления пароля</legend>
+                <input type="text" id="login" name="login" pattern="[A-Za-z]{5,20}" placeholder="Логин" required><br>							
+				<input type="password" id="pass" name="password" pattern="[A-Za-z]{10,20}" placeholder="Пароль" autocomplete="off" required>			
+		    </fieldset>         
+            <fieldset>
+                <legend>Координаты:</legend>
+                <input type="email" name="email" id="email" placeholder="введите адрес почты"><br>
+                <input type="url" name="url" id="url" placeholder="введите адрес сайта"> <br>
+            </fieldset>        
+            <fieldset>
+                <legend>Цифры</legend>
+                <input type="number" name="numb12" min="-2.5" max="2.5" step="0.1"> <br>
+                <input type="range" name="range" min="1" max="10"> <br>
+            </fieldset>       <!--Я так и не понял во время тестирования почему не выдает эти данные, я подумал что это их особенность, оказывается нечего было выдавать, я даже переменную не ввел-->
+            <fieldset>
+                <legend>Кнопки управления</legend>
+                <input type="submit" value="Отправить">
+                <input type="reset" value="Сбросить"><br>
+                <button type='button'>
+                <img src='mail.jpg' width="80" height="80">
+                </button>               
+            </fieldset> 
+        </form>
+    </body> 
+</html>
+<!--Я не правильно запомнил с занятия, мне что-то показалось, что в таком запросе name не должно быть--> 
