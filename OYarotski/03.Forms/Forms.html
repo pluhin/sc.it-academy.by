@@ -117,7 +117,7 @@
 								<option value="0">Магадан</option>
 							</optgroup>
 						</select>
-						<select name="list[]" size="8" multiple>
+						<select name="multilist" size="8" multiple>
 							<optgroup label="Города РБ">
 								<option value="1">Брест</option>
 								<option value="2" selected>Минск</option>
@@ -157,7 +157,7 @@
 					<fieldset>
 						<legend>Строка поиска</legend>
 						<input type="text" name="name" placeholder="Только русские буквы" pattern="[А-я]+"><br>
-						<input type="tel" placeholder="+375-29-1234567" name="tel">
+						<input type="tel" placeholder="+375-29-1234567" name="tel"  pattern="\+[0-9]{3}-[0-9]{2}-[0-9]{7}">
 						<button type="submit">Проверить</button>
 
 					</fieldset>
