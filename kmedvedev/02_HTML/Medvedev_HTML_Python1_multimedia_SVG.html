@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Python 1 multimedia SVG</TITLE>
+    </HEAD>
+    <BODY>
+        <h1>HOW-TO: Программа на <img src="Icon-Python.png" align="right" alt="Логотип Python" title="Логотип Python"><br /> Python, Часть 1</h1>
+        <ul>
+            <li><em><a href="Medvedev_HTML_Python1_multimedia_SVG.html">Программа на Python — часть 1</a></em></li>
+            <li><em><a href="Medvedev_HTML_Python2_multimedia_SVG.html">Программа на Python — часть 2</a></em></li> 
+            <li><em><a href="Medvedev_HTML_Python3_multimedia_SVG.html">Программа на Python — часть 3</a></em></li> 
+        </ul>
+        <h2 id="content">Содержание</h2>
+        <h3>HOW-TO: Программа на Python, Часть 1</h3>
+        <ul>
+            <li><a href="#firstProgram">Наша первая программа</a></li>
+            <li><a href="#forExample">Пример цикла For</a></li>
+        </ul>
+        <p>Из множества существующих языков программирования Python — один из самых лёгких
+        в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+        Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+        обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+        создание консольных приложений, а в следующей — программирование графических
+        интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо сейчас.</p>
+        <h2 id="firstProgram">Наша первая программа</h2>
+        <p><a href="#content">К содержанию</a></p>
+        <p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает
+        каждая строка и пойдём дальше.</p>
+        <p>Введите эти 4 строки:</p>
+        <pre>
+
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</pre>
+        <p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+        <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать
+        программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для 
+        этого введите в терминале</p>
+        <strong><i>chmod +x hello.py</i></strong>
+        <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+        <pre>
+
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$</pre>
+        <p>Вот и всё.</p>
+        <h2 id="forExample">Пример цикла For</h2>
+        <p><a href="#content">К содержанию</a></p>
+        <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый<
+        редактор и наберите следующую программу:</p>
+        <pre>
+
+#!/usr/bin/env python
+for cntr in range(0,10):
+    print cntr</pre>
+        <p><i>Не забудьте поставить символ табуляции перед строкой «print cntr».</i> Это важно. В
+        Python для указания на блоки кода используются не круглые «<b>(</b>» и фигурные «<b>{</b>» скобки
+        как в других языках программирования, а отступы.</p>
+        <table align="center" border="0" width="100%">
+            <tr>
+                <td align="left">
+                    <a href="#">
+                        <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                            <defs>
+                                <filter id="svg_3_blur">
+                                    <feGaussianBlur stdDeviation="0.4" in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g>
+                                <title>background</title>
+                                <rect x="-1" y="-1" width="37" height="37" id="canvas_background" fill="none" />
+                                <g id="canvasGrid" display="none">
+                                    <rect id="svg_1" width="40" height="40" x="2" y="2" stroke-width="0" fill="url(#gridpattern)" />
+                                </g>
+                            </g>
+                            <g>
+                                <title>На предыдущую страницу</title>
+                                <ellipse stroke="#458ee8" fill="#0fa7ff" stroke-width="0" cx="17.499999" cy="17.5" id="svg_2" rx="16" ry="16" />
+                                <path transform="rotate(180 17.5,17.5) " stroke="#f4f5f7" filter="url(#svg_3_blur)" fill="#f4f8f9" stroke-width="0" d="m14.627701,28.52473c-0.676965,-0.613138 -0.588142,-0.984421 1.057755,-4.421422c0.831096,-1.73551 1.511081,-3.205905 1.511081,-3.267549c0,-0.061634 -2.29495,-0.112069 -5.099903,-0.112069l-5.099903,0l0,-3.250431l0,-3.250431l5.140321,0c3.963477,0 5.096076,-0.09792 4.947082,-0.427693c-0.106278,-0.235224 -0.831286,-1.79617 -1.611119,-3.468744c-1.469998,-3.152849 -1.469533,-3.998364 0.00227,-4.260445c0.732463,-0.130422 12.136026,9.890603 12.527985,11.009136c-3.798424,3.993785 -8.338837,8.174252 -12.52129,11.860232c-0.220533,0 -0.604951,-0.184762 -0.854287,-0.410584l0,0l0.000009,0z" id="svg_3" />
+                            </g>
+                        </svg>
+                    </a>
+                </td>
+                <td align="center">
+                    <a href="#content">
+                        <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                            <g>
+                                <title>background</title>
+                                <rect x="-1" y="-1" width="37" height="37" id="canvas_background" fill="none" />
+                                <g id="canvasGrid" display="none">
+                                    <rect id="svg_1" width="40" height="40" x="2" y="2" stroke-width="0" fill="url(#gridpattern)" />
+                                </g>
+                            </g>
+                            <g>
+                                <title>К содержанию</title>
+                                <ellipse stroke="#458ee8" fill="#0fa7ff" stroke-width="0" cx="17.499999" cy="17.5" id="svg_2" rx="16" ry="16" />
+                                <path id="svg_3" d="m27.351302,17.476765l-2.553732,-2.258607l0,-5.39425l-2.189271,0l0,3.457985l-5.108298,-4.517952l-9.851301,8.712824l2.34523,-0.049421l0,8.808715l14.907891,0l0,-8.759294l2.449481,0zm-9.851301,7.499431l-4.864768,0l0,-5.163373l4.864768,0l0,5.163373zm4.726323,-2.212874l-3.196752,0l0,-2.981479l3.196752,0l0,2.981479z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#f4f5f7" fill="#f4f8f9" />
+                            </g>
+                        </svg>
+                    </a>
+                </td>
+                <td align="right">
+                    <a href="Medvedev_HTML_Python2_multimedia_SVG.html">
+                        <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                            <defs>
+                                <filter id="svg_3_blur">
+                                    <feGaussianBlur stdDeviation="0.4" in="SourceGraphic" />
+                                </filter>
+                            </defs>
+                            <g>
+                                <title>background</title>
+                                <rect x="-1" y="-1" width="37" height="37" id="canvas_background" fill="none" />
+                                <g id="canvasGrid" display="none">
+                                    <rect id="svg_1" width="40" height="40" x="2" y="2" stroke-width="0" fill="url(#gridpattern)" />
+                                </g>
+                            </g>
+                            <g>
+                                <title>На следующую страницу</title>
+                                <ellipse stroke="#458ee8" fill="#0fa7ff" stroke-width="0" cx="17.499999" cy="17.5" id="svg_2" rx="16" ry="16" />
+                                <path stroke="#f4f5f7" filter="url(#svg_3_blur)" fill="#f4f8f9" stroke-width="0" d="m14.627701,28.52473c-0.676965,-0.613138 -0.588142,-0.984421 1.057755,-4.421422c0.831096,-1.73551 1.511081,-3.205905 1.511081,-3.267549c0,-0.061634 -2.29495,-0.112069 -5.099903,-0.112069l-5.099903,0l0,-3.250431l0,-3.250431l5.140321,0c3.963477,0 5.096076,-0.09792 4.947082,-0.427693c-0.106278,-0.235224 -0.831286,-1.79617 -1.611119,-3.468744c-1.469998,-3.152849 -1.469533,-3.998364 0.00227,-4.260445c0.732463,-0.130422 12.136026,9.890603 12.527985,11.009136c-3.798424,3.993785 -8.338837,8.174252 -12.52129,11.860232c-0.220533,0 -0.604951,-0.184762 -0.854287,-0.410584l0,0l0.000009,0z" id="svg_3" />
+                            </g>
+                        </svg>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </BODY>
+</HTML>

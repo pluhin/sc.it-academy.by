@@ -1,0 +1,26 @@
+h1 {
+	text-align: right;
+	font-weight:bold;
+	font-size:medium;
+}
+
+header {
+	text-align:right !important;
+}
+
+h3 {
+	font-weight:bold;
+	font-size:x-large;
+	text-decoration:underline;
+	text-indent:6mm;
+	font-family: 'Pacifico', cursive;
+}
+article {
+font-family: 'Caveat', cursive;
+text-indent:6mm;
+font-size:large;
+}
+
+footer {
+	font-weight:bold;
+}
