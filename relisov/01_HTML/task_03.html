@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Программа на Python, Часть 1</title>
+		<style>
+			body
+			{
+				background-color:			#999999;
+			}
+
+			.wrapper
+			{
+				margin:						auto;
+				width:						210mm;
+				background-color:			#FFFFFF;
+			}
+
+			.content
+			{
+				padding:					60px 50px 60px 100px;
+				width:						615px;
+				background-color:			#FFFFFF;
+				font-family:				"Times New Roman", 'Times', sans-serif;
+				line-height:				20px;
+				font-size:					1em;
+			}
+
+			.terminal
+			{
+				display:					table;
+				width:						500px;
+				font-family:				"Courier New", 'Courier', monospace;
+				font-size:					0.8em;
+				line-height:				17px;
+				white-space:				pre;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="content">
+				<div title="HOW-TO: Программа на Python, Часть 1">
+					<h1>HOW-TO: Программа на Python, Часть 1</h1>
+
+						<ul>
+							<li><i>Программа на Python — часть 1</i></li>
+							<li><i>Программа на Python — часть 2</i></li>
+							<li><i>Программа на Python — часть 3</i></li>
+						</ul>
+				</div>
+
+				<div title="Содержание">
+					<h2>Содержание</h2>
+
+					<h3>HOW-TO: Программа на Python, Часть 1</h3>
+
+						<ul>
+							<li><u>Наша первая программа</u></li>
+							<li><u>Пример цикла For</u></li>
+						</ul>
+
+						<p>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо сейчас.</p>
+				</div>
+
+				<div title="Наша первая программа">
+					<h2>Наша первая программа</h2>
+
+						<p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает каждая строка и пойдём дальше.</p>
+
+						<p>Введите эти 4 строки:</p>
+
+						<div class="terminal">#!/usr/bin/env python<br>print 'Hello. I am a python program.'<br>name = raw_input("What is your name?")<br>print "Hello there, " + name + "!"</div>
+
+						<p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю cохранить его в папке <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</p>
+
+						<div class="terminal"><i><u><b>chmod +x hello.py</b></u></i></div>
+
+						<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+
+						<div class="terminal">greg@earth:~/python_examples$ ./hello.py<br>Hello. I am a python program.<br>What is your name? Ferd Burphel<br>Hello there, Ferd Burphel!<br>greg@earth:~/python_examples$</div>
+
+						<p>Вот и всё.</p>
+				</div>
+
+				<div title="Пример цикла For">
+					<h2>Пример цикла For</h2>
+
+						<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</p>
+
+						<div class="terminal">#!/usr/bin/env python<br>for cntr in range(0,10):<br>	print cntr</div>
+
+						<p><i>Не забудьте поставить символ табуляции перед строкой «print cntr»</i>. Это важно. В Python для указания на блоки кода используются не круглые «<b>&#40;</b>» и фигурные «<b>&#123;</b>» скобки как в других языках программирования, а отступы.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
