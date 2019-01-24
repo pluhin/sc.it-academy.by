@@ -14,9 +14,9 @@
         <legend>Строка поиска</legend>
         <input type="text" id="login" name="search" autofocus maxlength="10">
         <input type="submit" value="искать">
-        <label><br>
-        <input type="radio" name="search_dist" value="site">на сайте
-        <input type="radio" name="search_dist" checked value="google">в google<br>
+        <br>
+        <input type="radio" name="search_dist" value="site"><label>на сайте</label>
+        <input type="radio" name="search_dist" checked value="google"><label>в google</label><br>
         </form>
         </label>
         </td>
@@ -46,7 +46,7 @@
         <label for="login">*Логин</label><br>
         <input type="password" id="password" name="password" required>
         <label for="password">*Пароль</label><br>
-        <input type="checkbox" name="check">Оставаться в сети
+        <input type="checkbox" name="check"><label>Оставаться в сети</label>
         <input type="submit" value="Войти">
         </fieldset>
         </form>
@@ -61,10 +61,11 @@
         <input type="radio" name="search_dist" value="хорошо">хорошо<br>
         <input type="radio" name="search_dist" value="супер">супер<br>
         <input type="submit" value="отправить"><br>
-        <input type="hidden" name=date_voite, value="2013.12.31">
+        <input type="hidden" name=date_voite value="2013.12.31">
+        </form>
         </fieldset>      
         </td>    
-        </form>
+        
         </tr>
         <tr>
         <td>
@@ -72,8 +73,8 @@
         <form method="POST" action="http://sc.it-academy.by/fe/form.php">
         <fieldset>
         <legend>Оставьте ваш отзыв:</legend>
-        <input type="text" id="login" placeholder required name="login" >*Имя<br>
-        <input type="email" name="email" placeholder="это обязательно поле" required>*e-mail<br>
+        <input type="text" id="login" placeholder required name="login" ><label>*Имя</label><br>
+        <input type="email" name="email" placeholder="это обязательно поле" required><label>*e-mail</label><br>
         <textarea name="форма отправки"></textarea>
         <input type="submit" value="отправить"><br>
         </fieldset>      
@@ -81,7 +82,7 @@
         </td>
        
         <td>
-        <h3>Выпадающий и мульти списки:</h3>
+        <h3>Выпадающий и мульти список:</h3>
         <form method="POST" action="http://sc.it-academy.by/fe/form.php">
         <fieldset>
         <legend>Города РБ</legend>
