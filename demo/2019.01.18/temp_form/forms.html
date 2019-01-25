@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<META charset="utf-8"> 
+		<title>Формы</title>
+	</head>
+	<body>
+<h2>Простая форма поиска с вариантами:</h2>
+<form method="get" action="http://sc.it-academy.by/fe/form.php">
+ 	<fieldset>
+ 		<legend>Строка поиска</legend>
+ 		<input type="text" name="search" maxlength="10">
+ 		<input type="submit" value="Отправить"><br>
+ 		<label>
+ 			<input type="radio" name="search_dist" value="site" checked>
+ 			на сайте
+ 		</label>
+ 		<label>
+ 			<input type="radio" name="search_dist" value="google">
+ 			в Google
+ 		</label><br>
+ 		<em></em>
+ 	</fieldset>
+</form>
+<hr>
+
+   
+
+<h2>Простая форма поиска с вариантами 2:</h2>
+<form method="get" action="http://sc.it-academy.by/fe/form.php">
+ 	<fieldset>
+ 		<legend>Строка поиска</legend>
+ 		<input type="text" name="search" maxlength="10" required autofocus><span>*</span>
+ 		<input type="hidden" name="hidden_field" value="hidden">
+ 		<input type="submit" value="Отправить"><br>
+ 		<label>
+ 			<input type="radio" name="search_dist" value="site">
+ 			на сайте
+ 		</label>
+ 		<label>  
+ 			<input type="radio" name="search_dist" value="google" checked>
+ 			в Google   
+ 		</label><br>    
+ 	</fieldset>   
+</form>    
+
+<form method="post" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset>
+		<legend> Some label</legend>
+<input type="text" name="name_01" pattern="[0-9]{1,10}" placeholder="[0-9]{1,10}"><br>
+<input type="text" name="name_02" pattern="[0-37]{2}" placeholder="[0-37]{1}"><br>
+<input type="text" name="name_03" pattern="[А-Я][а-я]+" placeholder="[А-Я][а-я]+"><br>
+<input type="text" name="name_04" pattern="\+375-(29|44|25)-[0-9]{7}" placeholder="+375-29,44,25-1...7 "> +375-29,44,25-1...7 <br>
+		<input type="submit" value="go">
+	</fieldset>
+</form>
+
+
+
+	</body>
+</head>
+</html>
