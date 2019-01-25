@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<HTML> 
+<HEAD>
+    <META charset="utf-8"><TITLE>Пример страницы</TITLE>
+        <style type="text/css"> /*прошу прощения за такую "красоту"*/
+       .container-1 {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        }
+        .container-2 {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        }
+
+        .container-3 {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        }
+        .box-1 {
+        flex-basis:  15em;
+        background-color: lightgreen
+        }
+
+        .box-2 {
+        flex: 2;
+        background-color: silver;
+        margin-bottom: 2em;
+        }
+
+        .box-3 {
+         flex: 1;
+        background-color: silver;
+        margin-bottom: 2em;
+        }
+        .box-4 {
+        flex: 1;
+        align-self: flex-end;
+        background-color: aqua
+        }
+        .c_d {            
+            float: right;             
+        }
+
+        </style>
+    </HEAD>
+    <body>
+            <div class="container-1">
+                <div class="box-1">
+                        <h2>Блок навигации</h2>
+                        <ul>
+                            <li>Ширина 15em</li>
+                            <li>Должен присутствовать цвет</li>
+                            <li>Располагается слева</li>
+                            <li>Блок навигации наполните контентом достаточным,
+                                чтобы по высоте он начинал захватывать вторую статью, 
+                                как показано в данном примере
+                            </li>
+                        </ul>
+                </div>
+                    <div class="container-2">
+                        <div class="box-2">
+                            <h2>Статья 1</h2>
+                            Размер блока:
+                            Занимает всю свободную ширину<br>
+                            Должен присутствовать цвет фона<br>
+                            Во всех "статьях" сделайте отступ снизу от соседей равным 2em, при помощи 
+                            свойства margin-bottom
+                        </div>
+                        <div class="box-3">
+                            <h2>Статья 2</h2>
+                            <img class="c_d" src="mail2.jfif">
+                            Размер блока:
+                            Занимает всю свободную ширину<br>
+                            Должен присутствовать цвет фона<br>
+                            Во всех "статьях" сделайте отступ снизу от соседей равным 2em, при помощи 
+                            свойства margin-bottom. Картинка вставлена при помощи тега, плавание организованно по правому краю внутри данной статьи для картинки.
+                        </div>
+                    </div>
+                </div>
+                        <div class="box-4">
+                            
+                            <p>Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.</p>
+                        </div>
+                  
+    </body>
+   
