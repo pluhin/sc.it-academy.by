@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Программа на Python, Часть 3</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body id="title">
+		<main class="wrapper">
+			<img src="img/Icon-Python.png" align="right" alt="Python logo">
+			<header class="container">
+				<h1>HOW-TO: Программа на Python, часть 3</h1>
+
+					<ul>
+						<li><i><a href="python_01.html#title">Программа на Python — часть 1</a></i></li>
+						<li><i><a href="python_02.html#title">Программа на Python — часть 2</a></i></li>
+						<li><i><a href="#title">Программа на Python — часть 3</a></i></li>
+					</ul>&#13;
+				
+				<h2 id="contents">Содержание</h2>
+				
+				<h3>HOW-TO: Программа на Python, Часть 3</h3>
+
+					<ul>
+						<li><a href="#chapter1">Модули</a></li>
+						<li><a href="#chapter2">Функции</a></li>
+					</ul>
+
+				<hr>
+
+					<p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и присвоение, операторы <b>if</b> и <b>while</b>. Я обещал, что в этой части мы изучим модули и функции. Давайте начнём.</p>
+			</header>
+
+			<article class="container">
+				<h2 id="chapter1">Модули</h2>
+				<p><a href="#contents">К содержанию</a></p>
+
+					<p>Модули предлагают способ расширить программирование на Python. Вы можете создать свои модули, использовать те, которые поставляются с Python или которые написали другие. В самом Python есть сотни модулей, которые облегчают написание программ. Список модулей, поставляемых с Python, находится по адресу: <a href="https://docs.python.org/modindex.html" target="_blank">http://docs.python.org/modindex.html</a>. Некоторые модули предназначены для определённых операционных систем, но большинство из них кроссплатформенные и работают одинаково на <a href="https://ru.wikipedia.org/wiki/Linux">Linux</a>, <a href="https://ru.wikipedia.org/wiki/Macintosh" target="_blank">Mac</a> и <a href="https://ru.wikipedia.org/wiki/Windows" target="_blank">Microsoft Windows</a>. Для использования внешнего модуля необходимо импортировать его в программу. Один из модулей, поставляемых с Python, называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы используем этот модуль в нашем первом примере.</p>&#13;
+
+						<span class="terminal">#=======================================<br># random_example.py<br># Module example using the random module<br>#=======================================<br>import random<br># print 14 random integers<br>for cntr in range(1,15):<br>&#09;print random.randint(1,10)</span>
+
+					<p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать модуль «random». Мы должны явно указать Python на это.</p>
+
+				<hr>
+			</article>
+
+			<article class="container">
+				<h2 id="chapter2">Функции</h2>
+				<p><a href="#contents">К содержанию</a></p>
+
+					<p>Когда мы импортировали модуль random, мы использовали функцию <b>randint()</b>. Функция — это блок кода, который создан для того, чтобы вызывать его в программе, обычно, более одного раза. Это упрощает работу над программой и предотвращает набор одного и того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа, сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов чисел. Тогда наш пример будет выглядеть как код ниже.</p>&#13;
+
+						<span class="terminal">#silly example<br>print '%d + %d = %d ' % (1,2,1+2)<br>print '%d * %d = %d ' % (1,2,1*2)<br>print '%d - %d = %d ' % (1,2,1-2)<br><br>print '\n'<br>print '%d + %d = %d ' % (1,4,1+4)<br>print '%d * %d = %d ' % (1,4,1*4)<br>print '%d - %d = %d ' % (1,4,1-4)<br><br>print '\n'<br>print '%d + %d = %d ' % (10,5,10+5)<br>print '%d * %d = %d ' % (10,5,10*5)<br>print '%d - %d = %d ' % (10,5,10-5)<br>print '\n'</span>
+
+					<p>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую назовём <i><b>«DoTwo»</b></i>. Она будет каждый раз брать два числа, проводить математические операции и выводить результат. Начнём с ключевого слова <i><b>«def»</b></i>, которое сигнализирует о том, что мы собираемся определить функцию. После слова <i><b>«def»</b></i> добавим название функции и список параметров, если таковые имеются, в круглых скобках. Эту строку необходимо завершить двоеточием. Код функции набирается с отступом. Наш улучшенный простой пример (<u>№2</u>) показан ниже.</p>&#13;
+
+						<span class="terminal">#=======================================<br># random_example.py<br># Module example using the random module<br>#=======================================<br>import random<br># print 14 random integers<br>for cntr in range(1,15):<br>&#09;print random.randint(1,10)</span>
+
+					<p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей программы. Чтобы вызвать функцию, нужно написать её имя и параметры.</p>
+			</article>
+
+			<footer class="navigation">
+				<a href="python_02.html#title"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAAZiS0dEAP8A/wD/oL2nkwAABQZJREFUOI2NlUtsVFUcxr9z7mPmztyZTl+0U3X6ohItaGlLlCCJ0RgCokZiWLggMdGyMCQsNLqSYDTElSvtujExkbog0QQSYTEhgIFSaFrGFmlpO9XOTOfRedx53PNyMVJrKOiXnNX5/3/5zvl/OYfgMRoamTCkSVuJUGEo+ABAKVLhgiVE3k7FxvvdR/WSR23sPj69l1B5VCoMgKgIqOYHAHBWJuBxgEwB7Mft2a+vjI+Pi/8ED43M9HIqTxJde9f226GOliBta/ZiR0sRliEwn7WxmJJIra3JbN6pSFa7YsrKF9bvn12LRqN8S/DuD2OdkHyUmMGDAz0WDu0JYNdTCttCBjRaL1UAckWOhQTD+ckqLk/nUKsUfvOo3Cee2S/PP4Brm50qIr7xB4MH3trbQI69bKEvrMFjaDh3NYuZxTJmFsvoavNCowQtQR27Og20NRpYSKiWfBnDaBmafP/w9pVoNKr0B2BO+ceaGTx4YLABr+82YOgExYrE5ek83nixCe1NJgoOxw/RNPbvDAKEAFDY02eB8SYydlE+XSyIkXg8PgWgpNUHNbmXGOaZgd6g9+CgAUoBl0lcnyvitaEQws0mKCHwmBRcKNSYgsskqkzB5QpNNoXj6lhOsq6MjEwd2dd4Xx8amTCUkkf9fm9wsNeEkBJ5R2EpWcVLO4PoavNuzCC1zpB3HgoAhFTYERa4HfIEMpnAkcVK+6+65LRVmWogFGygIS9HwaFYL3EM9tnoe8KqD0wp/JFxcfNuCS5X/wCFwkpWYDoRQqHigwObEpnrz/POiE48KqxAIi0BgoorUXEldnb7MNRnb3IEnL+e2zLvDRYwn/77VLoORfQwNYyIDgUfNMPvMxjWHYnnun0Y7gv8q1nXCD441L4luFRVWCkDl+4AhBAozbQoJ4GNVBSqBpJ5BZ+3noj/K9tL0Nm6EZL61UFQqhSpgLNy0rFwPx/Ez7c1FMrqsbDNSuaBy7N1MIECFbUqBa/pXLCErpF4viy7BbFwcxn46HuFz98B2kN15xUXOPkdsJx+GCwUwARgUKBUqUFBpIh0ElTk7RRApmQtKw1NwdQUVjIKX/0kkS7WnVsm8OmbwLYGoFSrrxqXkFKAKAGvLmDqAsrNSAPVu41yaVVbi30rwsPvOUrIt0O2bjXbErbBUK0yzK5wPN+twzIJGv3Aq89KXIuV0Oh10eB1ETAZAiaD32Bwqw4KmbWSyZZG2+XklAYA+3sKKznPC90EfCjSqiPo4fCbHJwxLKcY+jpMWB4Kj0FwdWYdfpPBNus1foNDJwzx1QyqTu7CAD03xhhLaQAQi8VU2/CxBddVzwgpOp9s1ojPQ+AxFKquwHKqht6wB5duF5EtuvCaCh5DwaMrEDDMLhdkOr0+0SpmRhu1xJ1IJFLceN2OH45k5gvNE6WK1l8o866Az0BTQIdpULhc4dZ8BZkCh6kTmDqBoQHpPMP0Qh6rycLENj55pgM3bty7dy89NjYmNsDRaFTt661l857+WwUHvuS621VyhOk1OPFbOnRKQQmglEAm52BmoSxj8WIplytcaBUzox24ccO27dTZs2cZsMUPcurUKRqPx/136NFXXC1whEitHzoNByzNAoCSI6pSyZSB6l2dJ3/p1y5eJYQk5+bm1h/5g2wSOXHihLlYaQ/leWeEGkaEggQUBKXgNSKdRKNcWvXJP7NSymJPT0/l9OnTcjPgL1TvfEZDLWD+AAAAAElFTkSuQmCC" alt="Назад" title="Перейти к предыдущей странице" style="align-self:left"></a>
+
+				<a href="#title"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABQdJREFUOI2FlV1oVEcUx/8z92vv7t2vZJOYNO4m2RiRrTUxShuC0trSIg0UpEhp0YdS4kMRfOlrRSj42Cex0IeSVyOl0BdBaVlaW2yWWDWmicZ8rR/ZTfbz7t27u/fOTB+2UVNNe2CYYebMb+acM+cMwX/I8HhK4SptI0x0QsALAEIQ22XOGisZ2dnJRGO7vWS7haFTd0YI5ceFwCCIiILKPgAAa1Qh3DRAbgHO5f7819cnJyfZ/4KHx2fijPIzRJY/Nny+UGckQDtaPdgdMaErDA/yBpazHOvr6zxfqtrcqV1XuP2Vfv/L35PJpLvJkbbc8vPZmCDsAtUCnwz1B/QTR8Lko1EJY8MycuUGdE3CibcMjA4QvBrTCSMe9VFBxBucv4HIweW4sbq4srLCt4CHx2figrALRiDw3gcjQXLyTR27OiVoioRf75p4ezCI/i4d126WEG33IBKQsTemoCOsYCkjImUbB0Tr8PRnY/0Pk8mkoJtgRt0viGocfXd/kL4/pECRCUyb48acicN7AzC8ErweiiODQdyYM1GuMjAucHCXjg8PtRCfERioi9B4Op32ASBSM1DTI1RRz++LBzxH9yugFGg4HItrNRwYMBAJKpAoASEEqkzQFlQwvVCBKlM0XIEWg8JqyFjNOj0bPHrr2Gh4SRoeTykg4owR8B9+Z9BHwgZQdwRypot9fT50RzTI0rMYE0KgaxQhn4y5tA0ugJrDoUoNLGa5Wqkxhzc2fpG5S9ugisFgIEhDHhdli0KWCAZe8SDWoUGiL75ISgi6WlUMxX348Y8SUukgyrYXFRgUopAoubEoJZroBCHRiJ/AbnBUbIaeDg27d3pfCn1edrZr2Btvge16sG5pgOyDIHInVZQohYAXVPV5FQdFi6M9pCIR824xfzuRKMHIgIyx/c/cBKrqFMQvbyqVawoyJQGx6qJSL8OvSziyz4BHbR5QtDiKFuAKiu4WwKMA3/4MLGUJMiWAEACiyRJgVBaC2GCNasbSYTEPlorAjRVgR4hiNAF41Kby9ymK75LN8TefAolu4PYq8OfK5m2bSMLqNQq3LrvMWZMlki5VeS8j+lMzDQfYkvFie5fIEkABVOw6BFiWcGuNspKRBcgtUc9zRRJQ/2mKJLbSXuJyj8zgVRg8MoMqM6CR4wpq98J85Qltlj7nMqsVSworoM1rod1rIaxVUa1zmDZH0eLw0Bp6QyZ6QyYYc2HaHCGthk6jqa+wArhdsFQ3c9XLH+clADjUV36Y117vJcIdjrbJCGguKBzMpetI3bfx0+0KHm3UYSgODNXBcqaO6Qc1lK06dMmFTBykn+RQswpXXqM/TDiOk5UAYHZ2VnQcOLnYaIg9nLNYd6tEdJWAcw7GORQqoCkCmtzsgWfzBA7mV8s8lyumIu7MxbC0djcajZpPq9upsWjuQbk1ZdpSolx1e/xeBS1+GapCocrkhaZIwEbJwZ3FEtay5VSbM32+C1NTCwsLGxMTE+wpOJlMitF4PV/SEjfLVXizRafHrDLVI7vEp8uQKQUlgBAMuYKFmaUq/2vVrBQK5SsRd+ZiF6amDMPIXrp06d/vqSlnz56l6XTad5ceP+JI/mMQUoJItNOvSzoAmFVW45xnFdTuqW7m6h7p2m+EkMz8/Hzx+R9ku7wlp0+fVpftHaGSG4s2c5/4BRilcOuEW2thvvLEyx/nOedmX1+ffe7cOf484G/jyE7ObPfSfwAAAABJRU5ErkJggg==" alt="Наверх" title="Перейти к началу текущей страницы" style="align-self:center"></a>
+
+				<a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABPBJREFUOI2VlU1sXNUVx3/3vnfffM94HI+DQztOnUCFrCAnJouUqh+oFKUNQmLBokVZVckCRWJRxK5RpFZZskJZe8MiRizoIlUJ0FGa0NZWUGRjMHEMZFrHM/4Yv/l6M++9ey8LO04iGhB/6WzuOfd37tU951zBt2jy1KwyniwJbUewpAGsFUGso1XtZ+sL0+Phw/aKhzkOn547JqR5yVgmELaMdDIAxFFXEFdB3IDo7YObb1ydnp7W3wmePDV/IJbmVeE6v8tmsgP7hvJy754kPx5qkVKaW5tZvqwb6mtrZtPvBCbqX/VM8OfUzT99VKlU4v8LPvzKwigmviC8/PGJsRS/OZrj0A8twwMKR26HWqDRillejbh0vceVuQb9oPlpwjZeT3z2l0t34c79J7VCv5nJ55974VhBnPxFisdGHBLKoRVY3p+LWFzRDGYFCSUZyrscGlXsLSqWV+2Q3+Uphiav/+HEwf9WKhXr3gXHMn7N8fLHnztS4LeHFcoVtAIDQLMLzzyZBOAfcwGHyhLXEYDl6GMponhQTF02j7ea+lS1Wr0BtJ3th7p+TCjv/MSBfPL4EYWUEEaGXmToR4ZSwaFc8silJI8Ourw/1yftGaLYEsaWwaykE7rcrkX7N0z5xotPF79wJk/NKrCvZvO5n/1qIiOKWehHll5k6e9YrC2Due1bpBKCR/e4fLQYItmG9yKD54Tcqhuv3dORCdevuCaWJevZiYF8QQ4kY/y2RJsHi2WjqVlvap49UiChBMMFhxNHM7xVaRKFfeZrAzSDNB2yUpjGuB+PlqVI2BGEKA/lBEFo+F8DApP8htXbin9+2t9NNlxwOPnLArdbg9xaT7LWSYCbwQp3RCpVdrGkcVQmrSK2OoZnJ3NMjCUe1jcPaDAnee15jz++BSsNEEJgHS8lY5HbrYpmT1HzLeVh99tY31B5CLJJEGKnyAGLltJaERBH3VonxRd+nnf+8724XFmEmr8NFlik7vckcd+NdbTqOqLqd82PtEhx8d/w1493Uu80prEQG/j9T+Dln96DXp6H8+9u+5WEdtDHouvCdFal9rN1EDdMf9Mox+JKSxSbHdO0e5ZmAD9/4kHov24a3vy7xhWapKvxXI0NN4yi93nRfHXHXZgeDw+fvva2DrZeVjpVLOa8BwaIsTB5wOP0r5O7azM3Q6Y+7FFQUFB350eI6TY6ibj2XtqsbEqAg5tvXCXuTbe21ih4XUrpgFImoJQO2JsJeCQXklTb0IXbPd65tkXWvRdT8Lq0ttYwkf/BuHP5mjGm5QAsLCzYvU+dXA5D+4Q2evQHexyRTggSypJQlqCvKWZd1v2YSzM+YLZ9rkUQ8dntpllf35ot6fkLRWf1k3K53NqdbqdPlDduNffMtgNnvNmN9+fSisGci6ckQsDSSp+llT5CgOcKlAPrfsTcss+dWnN2OL5+fh8zM0tLS+tTU1N6F1ypVOzTB/qbfmL842aHdG0r3N/uaC+pYpFJubhSIgVYq9lodJhf7pqFaqvdaDT/VtLzF/YxM5PNZusXL16M7tXTfTp79qysVquZT+RLz4RO7kVhnHFcOZJLOSmAdkf3jDV1Re9zN669N+5cviaEqC0uLm499Ae5T+LMmTPel8EjA348WpZKlSUiZ9FSEveF6awWzVd30mZl0xjTGhsbC86dO2fuB3wNAOp21kVq/fwAAAAASUVORK5CYII="Вперед" title="Перейти к следующей странице" style="align-self:right"></a>
+		</main>
+	</body>
+</html>
