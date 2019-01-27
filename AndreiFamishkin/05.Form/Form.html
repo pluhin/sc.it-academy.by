@@ -121,7 +121,7 @@
 													<option value="6">Магадан</option>
 											</optgroup>
 										</select>
-										<select name="list1"  size="6" multiple id="list1"> 	
+										<select name="list1[]"  size="6" multiple id="list1"> 	
 													<option>Города РБ</option>
 													<option value="1">Брест</option>
 													<option value="2">Минск</option>
@@ -143,12 +143,12 @@
 							<form method="POST" enctype="multipart/form-data" action="http://sc.it-academy.by/fe/form.php">
 								<fieldset>
 									<legend>Upload</legend>
-										<p>Файл:</p>
-										<input type="file"name="file_Field" dir="ltr">
-										<p>Срок хранения (года):</p>
+									
+									<label id="file">Файл:</label><br>
+										<input type="file"name="file_Field" dir="ltr"><br>
+									<label id="file">Срок хранения (года):</label>
 										<input type="number" name="srok_hranenia" maxlength="2">
 										<input type="submit" name="zagruzit" value="Загрузить"><br>
-
 								</fieldset>
 							</form>
 					</th>
@@ -157,10 +157,9 @@
 							<form method="POST" action="http://sc.it-academy.by/fe/form.php">
 								<fieldset>
 									<legend>Строка поиска</legend>
-										<input type="text" placeholder="Только русские буквы">
-<pre><i>Телефонный номер в формате
-+ХХХ-ХХ-ХХХХХХХ, где Х-любое число </i></pre>
-									<input type="text" name="number" pattern="\+375-(29|44|25|33)-[0-9]{7}" placeholder="+375-29-2544545">
+										<input type="text" name="searchru" pattern="[А-Яа-я]+" placeholder="Только русские буквы"><br>
+										<label id="format_number"><i>Телефонный номер в формате<br> +ХХХ-ХХ-ХХХХХХХ, где Х-любое число </i></label>
+										<input type="tel" name="phone" pattern="\+[0-9]{3}-[0-9]{2}-[0-9]{7}" placeholder="+375-29-1234567" autocomplete="off"><br>
 									<input type="submit" name="proverka" value="Проверить">
 
 
