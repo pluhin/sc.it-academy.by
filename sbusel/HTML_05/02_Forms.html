@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Форма регистрации (дополнительное задание по формам)</title>
+    </head>
+    <body>
+        <form name="survey_form" method="post" action="http://sc.it-academy.by/fe/form.php">
+            <h1>Заполните анкету</h1>
+            <fieldset>
+                <legend id="personal_data">Личные данные</legend>
+                <label>
+                    <input name="surname_personal_data" type="text" maxlength="25" pattern="[А-Яа-яЁё]+" placeholder="Фамилия" required autofocus> text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле)
+                </label>
+                <br>
+                <label>
+                    <input name="name_personal_data" type="text" maxlength="20" pattern="[А-Яа-яЁё]+" placeholder="Имя" required> text: Только кириллица, без пробелов, длина поля 20, обязательное поле)
+                </label>
+                <br>
+                <label>
+                    <input name="fathers_name_personal_data" type="text" maxlength="24" pattern="[А-Яа-яЁё]+" placeholder="Отчество" required> text: Только кириллица, без пробелов, длина поля 24, обязательное поле)
+                </label>
+               <fieldset id="passport_data_personal_data">
+                    <legend>Паспортные данные</legend>
+                    <a>text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2,<br>
+                    обязательное поле<br>
+                    text: Номер паспорта - только цифры с длинной 7 и макмимальное количество символом 7, количество цифр не менее 7, обязательное поле</a>
+                    <br>
+                    <input type="text" name="series_passport_data_personal_data" pattern="[A-Z]{2,}" size="2" maxlength="2" placeholder="AA" required>
+                    <input type="text" name="number_passport_data_personal_data" pattern="[0-9]{7,}" size="7" maxlength="7" placeholder="1234567" required>
+                </fieldset>
+                <fieldset id="birthday">
+                    <legend>Дата рождения</legend>
+                    <label>
+                        <input type="year" name="year_of_birthday" maxlength="4" pattern="[0-9]{4}" size="2" placeholder="2000"> text: Год рождения 4-е цифры
+                    </label>
+                    <br>
+                    <select id="months_birthday" name="months_birthday">
+                        <option value="January" selected>Январь</option>
+                        <option value="Fabruary">Февраль</option>
+                        <option value="March">Март</option>
+                        <option value="April">Апрель</option>
+                        <option value="May">Май</option>
+                        <option value="Juny">Июнь</option>
+                        <option value="July">Июль</option>
+                        <option value="August">Август</option>
+                        <option value="September">Сентябрь</option>
+                        <option value="October">Октябрь</option>
+                        <option value="November">Ноябрь</option>
+                        <option value="December">Декабрь</option>
+                    </select>
+                    <label for="months_birthday"> select: Месяц рождения</label>
+                    <br>
+                    <label>
+                        <input type="number" min="1" max="31" step="1" name="number_data_birthday"> number: Диапазон от 1 до 31 с шагом
+                    </label>
+                </fieldset>
+                <label>
+                    <select name="list_personal_data" required>
+                        <option value="РБ" selected>РБ</option>
+                        <option value="РФ">РФ</option>
+                        <option value="Украина">Украина</option>
+                    </select> (Национальность - выбор одного значения из списка, обязательное значение)
+                </label>
+                <br>
+                <label> Адрес:<br>
+                    <textarea name="textarea_personal_data"></textarea>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend id="interests">Интересы</legend>
+                <fieldset>
+                    <legend>array: Хобби</legend>
+                    <label>
+                            <input type="checkbox" name="checkbox_interests[]">Рыбалка
+                    </label>
+                    <br>
+                    <label>
+                            <input type="checkbox" name="checkbox_interests[]">Астрономия
+                    </label>
+                    <br>
+                    <label>
+                            <input type="checkbox" name="checkbox_interests[]">Дайвинг
+                    </label>
+                    <br>
+                    <label>
+                            <input type="checkbox" name="checkbox_interests[]">Марки
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>array: select multiple</legend>
+                    <!-- I found the only way to choose two or more varients, which is to hold button ""CTRL" and click on @option@-->
+                    <select id="pet_list_interests" name="pet_list_interests[]" size="12" multiple>
+                        <optgroup label="Попугаи" multiple>
+                            <option value="1_1">Волнистый</option>
+                            <option value="1_2">Ара</option>
+                            <option value="1_3">Неразлучник</option>
+                        </optgroup>
+                        <optgroup label="Рыбы" multiple>
+                            <option value="2_1">Караси</option>
+                            <option value="2_2">Окуни</option>
+                            <option value="2_3">Осётр</option>
+                        </optgroup>
+                        <optgroup label="Птицы" multiple>
+                            <option value="3_1">Стая ворон</option>
+                            <option value="3_2">Аист</option>
+                            <option value="3_3">Археоптерикс</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend id="data_for_pass">Данные для ввода и восстановления пароля</legend>
+                <label>
+                    <input type="text" name="login_data_for_pass" pattern="[A-Za-z]{5,}" maxlength="20" placeholder="Логин" required> text: Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле
+                </label>
+                <br>
+                <label>
+                    <input type="password" name="pass_data_for_pass" pattern="[A-Za-z]{10,}" maxlength="20" placeholder="Пароль" required autocomplete="off"> password: Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend id="coordinates">Координаты</legend>
+                <label>
+                    <input type="email" name="email_coordinates" placeholder="введине адрес почты"> email: проверка должна осуществляться при помощи новых атрибутов &lt;input&gt;
+                </label>
+                <br>
+                <label>
+                    <input type="url" name="url_coordinates" placeholder="введите адрес сайта"> email: проверка должна осуществляться при помощи новых атрибутов &lt;input&gt;
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend id="digits">Цифры</legend>
+                <label>
+                    <input type="number" name="number_digits" min="-2.5" max="2.5" step="0.1"> number: Диапазон от -2.5 до 2.5 с шагом 0.1
+                </label>
+                <br>
+                <label>
+                    <input type="range" name="range_digits" min="1" max="10"> range: Максимальное 10 минимальное 1
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend id="buttons">Кнопки управления</legend>
+                <input type="submit" name="submit_buttons" value="Отправить">
+                <input type="reset" name="reset_buttons" value="Сбросить">
+                <br>
+                <table border="0">
+                    <tr>
+                        <td><img src="email.jpg"></td>
+                        <td valign="top">- при нажатии на эту кнопку ничего не происходит</td>
+                    </tr>
+                </table>
+                <!--<button type="button"><img src="email.jpg"></button>
+                <label>
+                    <input type="button" src="email.jpg">
+                </label>
+                <label>
+                    <input type="image" src="email.jpg">
+                </label>-->
+            </fieldset>
+        </form>
+    </body>
+</html>
