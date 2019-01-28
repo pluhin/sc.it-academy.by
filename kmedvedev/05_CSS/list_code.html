@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Список и контейнер с кодом</title>
+    <style type="text/css">
+        ul {list-style: upper-roman;}
+        li ul {list-style: lower-roman; list-style-position: outside;}
+        #li_span {font-weight: bold;}
+        .div_container {
+            width: 400px;
+            background-color: black;
+            color: green;
+            font-size: 12pt;
+            line-height: 1;
+            max-height: 48pt;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 350px">
+        <ul>
+            <li><span id="li_span">Цвета радуги</span>
+                <ul>
+                    <li>Красный</li>
+                    <li>Оранжевый</li>
+                    <li>Жёлтый</li>
+                    <li>Зелёный</li>
+                    <li>Голубой</li>
+                    <li>Синий</li>
+                    <li>Фиолетовый</li>
+                </ul>
+            </li>
+            <li><span id="li_span">План важных дел на завтра</span>
+                <ul>
+                    <li>Сходить в магазин</li>
+                    <li>Заехать на работу, составить документ и подписать у начальника</li>
+                    <li>Зайти в банк</li>
+                    <li>Отвезти автомобиль в ремонт</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="div_container">
+        <code>
+            private void button2_Click(object sender, EventArgs e)
+            {lucinda.WhoAmI();}
+            private void button1_Click(object sender, EventArgs e)
+            {lloyd.WhoAmI();}
+            private void button3_Click(object sender, EventArgs e)
+            {Elephant swap = lucinda;
+            lucinda = lloyd;lloyd = swap;
+            MessageBox.Show("Objects swapped");}
+        </code>
+    </div>
+</body>
+</html>

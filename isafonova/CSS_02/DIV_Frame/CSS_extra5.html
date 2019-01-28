@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="usf-8">
+		<title>Оформление списков и контейнеров</title>
+		<style type="text/css">
+            .container {
+                display: flex;
+                background: gray;
+                flex-flow: row wrap;           
+            }
+            .navigating {   
+            flex-basis: 15em;
+			background-color: lightsalmon;
+            align-self: flex-start
+		    }
+            .article {
+                display: flex;
+                flex-direction: column;
+                flex: auto;
+            }
+		    .article div {
+			background-color: gold;
+			margin-bottom: .2em;
+                     
+            }
+		    .footer {
+			background-color: lavender;
+			clear: both;
+            flex: auto;
+			}
+        </style>
+	</head>
+	<body>
+    <div class="container">
+		<div class="navigating">
+			<h2>Блок навигации</h2>
+				<ul>
+					<li>Ширина 15em.</li>
+					<li>Должен присутствовать цвет фона.</li>
+					<li>Располагается слева.</li>
+					<li>Блок навигации наполнить контентом достаточным, чтобы по высоте он начинал захватывать вторую статью.</li>
+					</ul>
+		</div>
+		<div class="article">
+				<div>
+				<h2>Статья 1</h2>
+				<p>Размер блока:<br> 
+				Должен занимать всю доступную ширину.<br>
+				Должен присутствовать цвет фона. <br>
+				Во всех "статьях" сделать отступ снизу от соседей равным .2em, при помощи свойства margin-bottom.</p>
+				</div>
+				<div>
+				<h2>Статья 2</h2>
+				<p>Размер блока: Занимает всю доступную ширину.<br>
+				Должен присутствовать цвет фона. <br>
+				Вс всех "статьях" сделать отступ снизу от соседей равным 2em, при помощи свойства margin-bottom.<br>
+				Картинка вставлена при помощи тега, плавание организовано по правому краю внитри данной статьи для этой картинки.<br>
+				<img src="icon_mail.png" align="right"></p>
+				</div>
+			</div>	
+			<div class="footer">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутри контентом.</div>
+        </div>
+    </div>
+	</body>
+</html>
