@@ -150,7 +150,7 @@
                                     <option value="Magadan_Russia_list_1">Магадан</option>
                                 </optgroup>
                             </select>
-                            <select name="list_2"size="8" multiple>
+                            <select name="list_2[]"size="8" multiple>
                                 <optgroup label="Города РБ">
                                     <option value="Brest_RB_list_2">Брест</option>
                                     <option value="Minsk_RB_list_2">Минск</option>
@@ -173,13 +173,13 @@
                             <p><strong>Загрузка файла на сервер:</strong></p>
                             <fieldset>
                                 <legend>Upload</legend>
-                                <a>Файл:</a>
+                                <label>Файл:<br>
+                                    <input type="file" name="file_upload[]" id="file_upload" multiple>
+                                </label>
                                 <br>
-                                <input type="file" name="file_upload[]" id="file_upload" multiple>
-                                <br>
-                                <a>Срок хранения (года):</a>
-                                <br>
-                                <input type="data" name="data_exp" size="5" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}">
+                                <label>Срок хранения (года):<br>
+                                    <input type="data" name="data_exp" size="5" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}">
+                                </label>
                                 <input type="submit" name="submit_upload_file" value="загрузить">
                                 <br>
                                 <a><em>Метод POST</em><br>
@@ -196,9 +196,10 @@
                                 <legend>Строка поиска</legend>
                                 <input type="text" name="text_russians_only" pattern="^[А-Яа-яЁё]+$" placeholder="Только русские буквы">
                                 <br>
-                                <a><em>Телефонный номер в формате</em><br>
-                                <em>+ХХХ-ХХ-ХХХХХХХ, где Х - любое числоы</em></a>
-                                <input type="tel" name="mobile_number_validation_html" pattern="\+\d{3}[-]{1}\d{2}[-]{1}\d{7}" placeholder="+375-29-1234567">
+                                <label><em>Телефонный номер в формате</em><br>
+                                <em>+ХХХ-ХХ-ХХХХХХХ, где Х - любое числоы</em><br>
+                                    <input type="tel" name="mobile_number_validation_html" pattern="\+\d{3}[-]{1}\d{2}[-]{1}\d{7}" placeholder="+375-29-1234567">
+                                </label>
                                 <input type="submit" name="submit_valifation_html" value="Проверить">
                             </fieldset>
                         </form>
