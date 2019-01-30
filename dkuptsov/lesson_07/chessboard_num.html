@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>chessboard_num</title>
+        <style type="text/css">
+            table {
+                counter-reset: k 65;
+                margin: 10px;
+                border: solid black 3px;
+                border-collapse: collapse;
+            }
+            td {
+                width: 50px;
+                height: 50px;
+                border: solid black 1px;
+                text-align: center;
+                font-size: 30px;
+            }
+            table tr:nth-child(even) td:nth-child(odd), table tr:nth-child(odd) td:nth-child(even){
+                background-color:black; color: white;
+            }
+            table td::before {
+                counter-increment: k -1;
+                content: counter(k);
+            }
+            div {
+                width: 420px; 
+                border: ridge darkgrey 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <table>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            </table>
+        </div>
+    </body>
+</html>
