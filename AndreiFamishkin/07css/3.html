@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+    <HTML> 
+        <HEAD>
+            <META charset="utf-8">
+            <TITLE>Навигация и статьи</TITLE>
+            <style> 
+                .first { display: flex;
+                    background: gray;}
+                .navigation {
+                    background-color: burlywood;
+                    width: 15em; 
+                    float: left;
+                    align-self: flex-start}
+                .state {
+                    background-color: yellow; flex: auto;}
+                .state div {
+                    margin-bottom: .2em;} /*не работает почему-то */           
+                 .menu {
+                    background-color: rgb(100,100,100);
+                    float: unset;}    
+            </style>
+        </HEAD>               
+        <body>
+            <div class="first">
+                <div class="navigation">
+                            <h2>Блок навигации</h2>
+                    <ul>
+                        <li>Ширина 15em</li>
+                        <li>Должен присутствовать цвет фона</li>
+                        <li>Располагается слева</li> 
+                        <li>Блок навигации наполните контентом достаточным, что бы по высоте он начинал захватывать вторую статью, как показано на данном примере</li>
+                    </ul>
+                </div>
+                <div class="state">        
+                    <div><h2>Статья 1</h2>
+                        <p>Размер блока<br>
+                        Занимает всю доступную ширину<br>
+                        Должен присутсвовать цвет фона<br> 
+                        Во всех "статьях" делайте отступ снизу от соседей равным .2em, при помощи<br>
+                        свойства margin-bottom</p>
+                    </div>
+                <div>
+                    <h2>Статья 2</h2>
+                        <p>Размер блока<br>
+                        Занимает всю доступную ширину<br>
+                        Должен присутсвовать цвет фона<br> 
+                        Во всех "статьях" делайте отступ снизу от соседей равным .2em, при помощи<br>
+                        свойства margin-bottom Картинка вставлена при помощи тега, плавание<br>
+                        организовано по правому краю внутри данной статьи для этой картинки 
+                    <img src="icon_mail.png" align="right"></p>    
+                </div>
+                </div>
+            </div>      
+            <div class="menu">
+                <div> Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом</div>
+             </div>
+         </BODY> 
+    </HTML> 
