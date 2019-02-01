@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        
+        <script >			
+            $(document).ready(function(){
+                $('#pas1,#pas2').change(function(){
+                
+                    if($('#pas1').val() ==$('#pas2').val()){
+                        $('#mess').text('Ваши пароли СОВПАДАЮТ');
+                        $('#pas1').css('background-color', 'green');
+                        $('#pas2').css('background-color', 'green');
+                        
+                    }
+                    else{
+                        $('#mess').text('Ваши пароли НЕ СОВПАДАЮТ');
+                        $('#pas1').css('background-color', 'red');
+                        $('#pas2').css('background-color', 'red');	
+                        
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        
+        <TABLE width="600" align="center" >
+            <tr>
+                <td>
+                    <form>
+                        <fieldset>
+                            <legend>Форма ввода пароля</legend>
+                            <input type="password" id="pas1" name="pas1">
+                            <label for="pas1">Введите пароль</label><br>
+                            <input type="password" id="pas2" name="pas2">
+                            <label for="pas2">Повторите пароль и нажмите Enter</label>
+                        </fieldset>
+                    </form>
+                    <div class="column">
+                        <h4 id="mess"></h4>
+                    </div>
+            
+                </td>
+            </tr>
+        </TABLE>
+    </body>
+</html>
