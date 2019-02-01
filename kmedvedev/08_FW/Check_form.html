@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Пароль</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <lable for="pswdIn">Введите пароль</lable>
+                    <input type="password" id="pswdIn" class="form-control text-dark bg-success" placeholder="Enter" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <lable for="pswdRepeat">Подтвердите пароль</lable>
+                    <input type="password" id="pswdRepeat" class="form-control text-dark bg-success" placeholder="Confirm" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="notice" class="d-inline p-2 bg-success text-white">Пароли совпадают</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#pswdIn').on('mouseenter', function () {
+                $('#pswdIn').focus();
+            })
+            $('#pswdRepeat').on('mouseenter', function () {
+                $('#pswdRepeat').focus();
+            })
+            $('#pswdIn').on('keyup', function () {
+                if ($('#pswdIn').val() == $('#pswdRepeat').val()) {
+                    $('#notice').removeClass('bg-danger').text('Пароли совпадают').addClass('bg-success');
+                    $('#pswdIn').removeClass('bg-danger').addClass('bg-success');
+                    $('#pswdRepeat').removeClass('bg-danger').addClass('bg-success');
+                }
+                else {
+                    $('#notice').removeClass('bg-success').addClass('bg-danger').text('Пароли не совпадают');
+                    $('#pswdIn').removeClass('bg-success').addClass('bg-danger');
+                    $('#pswdRepeat').removeClass('bg-success').addClass('bg-danger');
+                }
+            })
+            $('#pswdRepeat').on('keyup', function () {
+                if ($('#pswdIn').val() == $('#pswdRepeat').val()) {
+                    $('#notice').removeClass('bg-danger').text('Пароли совпадают').addClass('bg-success');
+                    $('#pswdIn').removeClass('bg-danger').addClass('bg-success');
+                    $('#pswdRepeat').removeClass('bg-danger').addClass('bg-success');
+                }
+                else {
+                    $('#notice').removeClass('bg-success').addClass('bg-danger').text('Пароли не совпадают');
+                    $('#pswdIn').removeClass('bg-success').addClass('bg-danger');
+                    $('#pswdRepeat').removeClass('bg-success').addClass('bg-danger');
+                }
+            })
+        })
+    </script>
+</body >
+</html >
