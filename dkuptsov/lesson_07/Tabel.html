@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Табель</TITLE>
+            <style type="text/css">
+            table {
+                position: relative;
+                border-collapse: collapse;
+            }
+            th{
+                border-bottom: dotted black 2px;
+            }
+            td {
+                border-bottom: dotted black 2px;
+                border-left: dotted black 2px;
+            }
+            tr:nth-child(odd) {
+                background-color: rgb(175, 175, 175);
+            }
+            tr:first-of-type{
+                background-color: rgb(100, 100, 100);
+            }
+            tr:not(:nth-child(1)) th {
+                text-align: left;
+                }
+            th:last-of-type:hover {
+                    background-color: rgb(146, 136, 49);
+                    font-style:oblique;
+                    cursor: pointer;
+            }
+            td:hover {
+                    background-color: rgb(146, 136, 49);
+                    font-style:oblique;
+                    cursor: pointer;
+            }
+            caption {
+                caption-side: bottom;
+                font-size: 20px;
+            }
+            </style>
+        </HEAD> 
+        <body>
+            <table>
+                <caption>данные о сотрудниках</caption>
+                <tr>
+                    <th>ФИО</th>
+                    <th>пол</th> 
+                    <th>должность</th>
+                    <th>дата рож.</th>
+                    <th>Данные 01</th>
+                    <th>Данные 02</th>
+                </tr>
+                <tr>
+                    <th>Иванов Иван Иванович</th>
+                        <td>М</td> 
+                        <td>начальник</td>
+                        <td>01.01.1960</td>
+                        <td>4567</td>
+                        <td>3453</td>
+                </tr>
+                <tr>   
+                    <th>Петрова Илонна Петровна</th>
+                        <td>Ж</td> 
+                        <td>секретарь</td>
+                        <td>01.01.1989</td>
+                        <td>98795</td>
+                        <td>46523</td>
+                </tr>  
+                <tr>
+                    <th>Сидоров Илья Игоревич</th>
+                        <td>М</td> 
+                        <td>бухгалтер</td>
+                        <td>01.01.1979</td>
+                        <td>743434</td>
+                        <td>987979</td>
+                </tr>
+                <tr>
+                    <th>Пупин Фёдор Фёдорович</th>
+                        <td>М</td> 
+                        <td>водитель</td>
+                        <td>01.01.1963</td>
+                        <td>74323434</td>
+                        <td>9232379</td>
+                </tr>
+                <tr>
+                    <th>Крупин Сергей Иванович</th>
+                        <td>М</td> 
+                        <td>водитель 2</td>
+                        <td>01.01.1983</td>
+                        <td>3234534</td>
+                        <td>923123379</td>
+                </tr>
+            </table>
+        </body> 
+    </html>
