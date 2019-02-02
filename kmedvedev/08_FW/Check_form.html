@@ -40,19 +40,7 @@
             $('#pswdRepeat').on('mouseenter', function () {
                 $('#pswdRepeat').focus();
             })
-            $('#pswdIn').on('keyup', function () {
-                if ($('#pswdIn').val() == $('#pswdRepeat').val()) {
-                    $('#notice').removeClass('bg-danger').text('Пароли совпадают').addClass('bg-success');
-                    $('#pswdIn').removeClass('bg-danger').addClass('bg-success');
-                    $('#pswdRepeat').removeClass('bg-danger').addClass('bg-success');
-                }
-                else {
-                    $('#notice').removeClass('bg-success').addClass('bg-danger').text('Пароли не совпадают');
-                    $('#pswdIn').removeClass('bg-success').addClass('bg-danger');
-                    $('#pswdRepeat').removeClass('bg-success').addClass('bg-danger');
-                }
-            })
-            $('#pswdRepeat').on('keyup', function () {
+            $('#pswdIn, #pswdRepeat').on('keyup', function () {
                 if ($('#pswdIn').val() == $('#pswdRepeat').val()) {
                     $('#notice').removeClass('bg-danger').text('Пароли совпадают').addClass('bg-success');
                     $('#pswdIn').removeClass('bg-danger').addClass('bg-success');

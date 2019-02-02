@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Сотрудники</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <div id="page">
+        <div id="appear_button">
+            <div id="col_but">
+            </div>
+        </div>
+        <div id="table_block">
+            <div id="col_table">
+                <table id="table_staff">
+                    <caption>Данные о сотрудниках</caption>
+                    <tr>
+                        <th>ФИО</th>
+                        <th>пол</th>
+                        <th>должность</th>
+                        <th>дата рож.</th>
+                        <th>Данные 01</th>
+                        <th>Данные 02</th>
+                    </tr>
+                    <tr>
+                        <th>Иванов Иван Иванович</th>
+                        <td>М</td>
+                        <td>начальник</td>
+                        <td>01.01.1960</td>
+                        <td>4567</td>
+                        <td>3453</td>
+                    </tr>
+                    <tr>
+                        <th>Петрова Илонна Петровна</th>
+                        <td>Ж</td>
+                        <td>секретарь</td>
+                        <td>01.01.1989</td>
+                        <td>98795</td>
+                        <td>46523</td>
+                    </tr>
+                    <tr>
+                        <th>Сидоров Илья Игоревич</th>
+                        <td>М</td>
+                        <td>бухгалтер</td>
+                        <td>01.01.1979</td>
+                        <td>743434</td>
+                        <td>987979</td>
+                    </tr>
+                    <tr>
+                        <th>Пупин Фёдор Фёдорович</th>
+                        <td>М</td>
+                        <td>водитель</td>
+                        <td>01.01.1963</td>
+                        <td>74323434</td>
+                        <td>9232379</td>
+                    </tr>
+                    <tr>
+                        <th>Крупин Сергей Иванович</th>
+                        <td>М</td>
+                        <td>водитель 2</td>
+                        <td>01.01.1983</td>
+                        <td>3234534</td>
+                        <td>923123379</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#page').addClass('container');
+            $('#appear_button, #table_block').addClass('row');
+            $('#col_but').addClass('col-10 btn btn-primary btn-lg btn-block').text('Скрытых сотрудников нет');
+            $('#col_table').addClass('col-10').css('padding', '0px');
+            $('#table_staff').addClass('table table-striped border');
+            $('#table_staff tr:first-child th:first-child').css('text-align', 'center');
+            $('#table_staff caption').css('caption-side', 'top').css('font-size', '1.5em').css('text-align', 'center');
+            $('#table_staff tr:not(:first-child)').on('click', function () {
+                $(this).hide();
+                $('#col_but').removeClass('btn-primary').addClass('btn-warning').text('Нажмите, чтобы показать всех сотрудников');
+            });
+            $('#col_but').on('click', function () {
+                $('#table_staff tr').show();
+                $('#col_but').removeClass('btn-warning').addClass('btn-primary').text('Скрытых сотрудников нет');
+            })
+        })
+    </script>
+</body>
+</html>
