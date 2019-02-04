@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Программа на Python, Часть 1</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+		<style>
+			body {
+			background-image: url("pic/Icon-Python.png");
+			background-repeat: no-repeat;
+			background-position: 1363px 5px;
+			background-attachment: fixed;
+			}
+			.prev {text-align: left}
+			.home {text-align: center}
+			.next {text-align: right}
+			li {margin-bottom: 0rem}
+			p {text-align: justify}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 id="top">HOW-TO: Программа на Python, Часть 1</h1>
+			<div class="row">
+				<div class="three columns">
+					<ul>
+						<li><i><a href="Python_skeleton_1.html">Программа на Python — часть 1</a></i></li>
+						<li><i><a href="Python_skeleton_2.html">Программа на Python — часть 2</a></i></li>				
+						<li><i><a href="Python_skeleton_3.html">Программа на Python — часть 3</a></i></li>
+					</ul>				
+					<h2 id="summary">Содержание</h2>
+					<h3>HOW-TO: Программа на Python, Часть 1</h3>
+					<ul>
+						<li><a href="#chapter1">Наша первая программа</a></li>
+						<li><a href="#chapter2">Пример цикла For</a></li>
+					</ul>
+				</div>
+				<div class="nine columns">
+					<p>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо сейчас.</p>
+					<h2 id="chapter1">Наша первая программа</h2>
+					<p><a href="#summary">К содержанию</a></p>
+					<p>Наберём код в текстовом редакторе (например, в <strong>gedit</strong>). Потом мы разберёмся, что делает каждая строка и пойдём дальше.</p>
+					<p>Введите эти 4 строки:</p>
+					<pre><code>
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+					</code></pre>
+					<p>Это всё. Сохраните файл как <strong>hello.py</strong> в любом месте. Я предлагаю сохранить его в папке <strong>python_examples</strong> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</p>
+					<pre><u><b><i>chmod +x hello.py</i></b></u></pre>
+					<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+					<pre><code>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$
+					</code></pre>
+					<p>Вот и всё.</p>
+					<h2 id="chapter2">Пример цикла For</h2>
+					<p><a href="#summary">К содержанию</a></p>
+					<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</p>
+					<pre><code>
+#!/usr/bin/env python
+for cntr in range(0,10):
+	print cntr
+					</code></pre>
+					<p><em>Не забудьте поставить символ табуляции перед строкой «print cntr».</em> Это важно. В Python для указания на блоки кода используются не круглые «<b>(</b>» и фигурные «<b>{</b>» скобки как в других языках программирования, а отступы.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">			
+			<table width="100%">	
+				<tr>
+					<td class="prev"><a href=""><img src="pic/prev.png" alt="Переход на предыдущую страницу" title="Переход на предыдущую страницу"></a></td>
+					<td class="home"><a href="#top"><img src="pic/home.png" alt="Переход к основному содержанию" title="Переход к основному  содержанию"></a></td>
+					<td class="next"><a href="Python_skeleton_2.html"><img src="pic/next.png" alt="Переход на следующую страницу" title="Переход на следующую страницу"></a></td>	
+				</tr>
+			</table>
+		</div>			
+	</body>
+</html>
