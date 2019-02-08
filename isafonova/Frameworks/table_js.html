@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Сотрудники</TITLE>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">        
+    </HEAD> 
+    <BODY>
+        <div id="notification"></div>    
+        <div id="table">
+            <table id="table_data">
+                <caption>данные о сотрудниках</caption>
+                <tr>
+                    <th>ФИО</th>
+                    <th>пол</th>
+                    <th>должность</th>
+                    <th>дата рож.</th>
+                    <th>Данные 01</th>
+                    <th>Данные 02</th>
+                </tr>
+                <tr>
+                    <th>Иванов Иван Иванович</th>
+                    <td>М</td>
+                    <td>начальник</td>
+                    <td>01.01.1960</td>
+                    <td>4567</td>
+                    <td>3453</td>
+                </tr>
+                <tr>
+                    <th>Петрова Илонна Петровна</th>
+                    <td>Ж</td> 
+                    <td>секретарь</td>
+                    <td>01.01.1989</td>
+                    <td>98795</td>
+                    <td>46523</td>
+                </tr>
+                <tr>
+                    <th>Сидоров Илья Игоревич</th>
+                    <td>М</td> 
+                    <td>бухгалтер</td>
+                    <td>01.01.1979</td>
+                    <td>743434</td>
+                    <td>987979</td>
+                </tr>
+                <tr>
+                    <th>Пупин Фёдор Фёдорович</th>
+                    <td>М</td> 
+                    <td>водитель</td>
+                    <td>01.01.1963</td>
+                    <td>74323434</td>
+                    <td>9232379</td>
+                </tr>
+                <tr>
+                    <th>Крупин Сергей Иванович</th>
+                    <td>М</td> 
+                    <td>водитель 2</td>
+                    <td>01.01.1983</td>
+                    <td>3234534</td>
+                    <td>923123379</td>
+                </tr>
+            </table>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#table_data').addClass("table table-bordered table table-striped table table-hover");
+                $('caption').css({'text-align':'center', 'text-transform': 'uppercase'});
+                $('#notification').addClass('btn btn-info btn-lg btn-block').text('Нет скрытых строк');
+                $('tr:first-child').addClass('thead-dark').css('text-align', 'center');
+                         
+                $('tr:not(:first-child)').click(function(){
+                    $(this).fadeOut(1);
+                    $('#notification').removeClass('btn btn-info btn-lg btn-block').addClass("btn btn-warning btn-lg btn-block").text('Есть скрытые строки. Нажми здесь, чтобы отобразить скрытые строки.'); 
+                })
+
+                $("#notification").click(function(){
+                    $('tr').fadeIn(1);
+                    $(this).removeClass("btn btn-warning btn-lg btn-block").addClass('btn btn-info btn-lg btn-block').text('Нет скрытых строк');
+                })
+            })                        
+        </script>  
+    </BODY>
+</html>
