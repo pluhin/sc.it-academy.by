@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Ссылки. Оформление</TITLE> 
+        <style type="text/css">
+        p{
+            border: 1px solid black;
+            border-radius: 0px 10px 0px 10px;
+            text-indent: 5mm;
+            padding: 10px
+        }
+		a[href^="https://"]::before {content:url('pic/extref.png')}
+           
+        p a[href$=".pdf"]::after{content:url('pic/logo-pdf.png')}
+        li a[href$=".pdf"]:hover::after{content:url('pic/logo-pdf.png')}
+       
+        
+        p a[href$=".doc"]::after{content:url('pic/logo-doc.jpg')}
+        li a[href$=".doc"]:hover::after{content:url('pic/logo-doc.jpg')}
+        
+        p a[href$=".zip"]::after{content:url('pic/logo-zip.gif')}
+        li a[href$=".zip"]:hover::after{content:url('pic/logo-zip.gif')}
+        ul{
+            list-style-type: none
+        }
+        li::before{content:url('pic/logo-list.jpg')}
+       
+        
+		</style>	
+        </HEAD> 
+        <BODY>
+        <h2>Форматы файлов.</h2>
+        <p>.DOC или .doc (от англ. <a href="https://ru.wikipedia.org/wiki/Doc" target="_blank">document</a>) — расширение имени файла,
+             используемое для файлов, представляющих текст, с разметкой или без.Расширение .DOC часто использовалось для обозначения
+              простых текстовых файлов без форматирования, однако позже стало использоваться для двоичных форматов с разметкой.<br>
+        <a href="files/document.doc">Документ MS Word</a>
+        </p>
+
+
+        <p>Portable Document Format (<a href="https://ru.wikipedia.org/wiki/pdf" target="_blank">PDF</a>) — межплатформенный формат
+             электронных документов, разработанный фирмой Adobe Systems с использованием ряда возможностей языка PostScript.
+		<br>
+        <a href="files/document.pdf">Документ PDF</a>
+        </p>
+
+		<p>ZIP — популярный формат сжатия данных и архивации файлов. Файл в этом формате обычно имеет
+             расширение <a href="https://ru.wikipedia.org/wiki/zip" target="_blank">.zip</a> и хранит в сжатом или
+              несжатом виде один или несколько файлов, которые можно из него извлечь путём распаковки с помощью
+               специальной программы.
+		<br>
+        <a href="files/document.zip">Архив</a>
+        </p>
+        <h3>Это список из файлов</h3>
+        <ul>
+        	<li><a href="files/document.doc">Документ MS Word</a></li>
+        	<li><a href="files/document.pdf">Документ PDF</a></li>
+        	<li><a href="files/document.zip">Архив</a></li>
+        </ul>
+
+        </BODY> 
+</HTML> 

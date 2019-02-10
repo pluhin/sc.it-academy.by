@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<title>jq</title>
+</head>
+<body>
+    <div>
+        <label><input type="password" id="pswin">введи пароль</label><br>
+        <label><input type="password" id="pswconf">подтверди пароль</label><br>
+        <button class="worker">нет скрытых строк</button>
+	<table>
+    <caption> данные о сотрудниках</caption>
+    <thead>
+    <tr>
+        <th>ФИО</th>
+        <th>пол</th> 
+        <th>должность</th>
+        <th>дата рож.</th>
+        <th>Данные 01</th>
+        <th>Данные 02</th>
+    </tr>
+    </thead>
+    <tr>
+        <th>Иванов Иван Иванович</th>
+        <td>М</td> 
+        <td>начальник</td>
+        <td>01.01.1960</td>
+        <td>4567</td>
+        <td>3453</td>
+    </tr>
+    <tr>
+        <th>Петрова Илонна Петровна</th>
+        <td>Ж</td> 
+        <td>секретарь</td>
+        <td>01.01.1989</td>
+        <td>98795</td>
+        <td>46523</td>
+    </tr>
+    <tr>
+        <th>Сидоров Илья Игоревич</th>
+        <td>М</td> 
+        <td>бухгалтер</td>
+        <td>01.01.1979</td>
+        <td>743434</td>
+        <td>987979</td>
+    </tr>
+    <tr>
+        <th>Пупин Фёдор Фёдорович</th>
+        <td>М</td> 
+        <td>водитель</td>
+        <td>01.01.1963</td>
+        <td>74323434</td>
+        <td>9232379</td>
+    </tr>
+    <tr>
+        <th>Крупин Сергей Иванович</th>
+        <td>М</td> 
+        <td>водитель 2</td>
+        <td>01.01.1983</td>
+        <td>3234534</td>
+        <td>923123379</td>
+    </tr>
+    </table>
+    </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script>
+    $("tr").addClass("border-bottom  ")
+    $("td").addClass("border-left ")
+    $("hover").css("background-color","aqua")
+    $("div").addClass("container").width("900px")
+    $("table").addClass("table table-warning table-hover")
+    $("th") .attr("scope")
+    $("thead  th").css('text-align','center')
+    $("thead").css("background-color","tan")
+    $("caption").css("font-size","1.5em")
+    $("button").css("background-color","aqua")
+    $("tr:not(:nth(0))").click(function(){
+        $("tr:hover").hide("slow");
+        $(".worker").text("введи пароль");
+        $("button").css("background-color","red")
+    })
+    $("#pswin").hover(function(){
+      $("#pswin").focus()
+    })
+    $("#pswconf").hover(function(){
+      $("#pswconf").focus()
+    })
+    $("#pswin,#pswconf").on('keyup',function(){
+    if($("#pswin").val()==$("#pswconf").val()&&
+        $("#pswconf").val()!='') {
+        $("button").css("background-color","aqua")   
+        $(".worker").text("показать сотрудников");
+        $( "button" ).click(function() {
+        $( "tr" ).show("slow");
+        $(".worker").text("нет скрытых строк"); 
+        })
+        }
+    else {$(".worker").text("пароль не совпал");
+        $("button").off("click");
+        $("button").css("background-color","red")
+        }   
+    })
+    </script>
+</body>
+</html>
