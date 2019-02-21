@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>02.HTML(Tables).Ilyenka_Siarhei</title>
+</head>
+<body>
+	<!-- Начало задания-->
+	
+<h2>Создайте таблицу с прогнозом погоды как показано на рисунке.</h2> 
+<ul>
+	<li>Знак градуса необходимо реализовать как минимум двумя способами</li>
+	<li>Таблицу разместить по центру страницы</li>
+</ul>
+<!--
+border	-рамка таблицы
+width	-ширина
+height	-высота
+align	-размешение на странице
+-->
+<table border="2px solid black" width="500" height="50" align="center">
+	<caption><em>Прогноз погоды</em></caption>
+	<tr>
+		<th>Город</th>
+		<th>Утро</th>
+		<th>День</th>
+		<th>Вечер</th>
+		<th>Ночь</th>
+	</tr>
+<!--
+rowspan	- объединение строк
+-->
+	<tr>
+		<td align="center"><strong>Минск</strong></td>
+		<td>-5<sup>о</sup></td>
+		<td>+5<sup>о</sup></td>
+		<td rowspan="2">+2<sup>о</sup></td>
+		<td>-10<sup>о</sup></td>
+	</tr>
+	<tr>
+		<td align="center"><strong>Брест</strong></td>
+		<td>0&#176</td>
+		<td>+9&#176</td>
+		<td>-4&#176</td>
+	</tr>
+</table>
+<hr>
+<h2>Домашнее задание - дополнительное</h2>
+<p>Создайте фрагмент календаря месяца вашего дня рождения текущего года согласно образцу показанному ниже.</p>
+<ul>
+	<li>Таблицу разместить по центру страницы</li>
+	<li>Столбцы с цифровыми значениями должны иметь одинаковую ширину</li>
+</ul>
+<!--
+на столбец выделил по 16% от 220пикселей
+-->
+<table border="=2px solid black" width="220" height="50" align="center">
+	<caption>Месяц моего дня рождения</caption>
+	<tr>
+		<th colspan="6"><strong>Май</strong></th>
+	</tr>
+	<tr>
+		<td width="16%" align="center"><strong>Пн</strong></td>
+		<td width="16%"></td>
+		<td width="16%">6</td>
+		<td width="16%">13</td>
+		<td width="16%">20</td>
+		<td width="16%">27</td>
+	</tr>
+	<tr>
+		<td width="16%" align="center"><strong>Вт</strong></td>
+		<td width="16%"></td>
+		<td width="16%">7</td>
+		<td width="16%">14</td>
+		<td width="16%">21</td>
+		<td width="16%">28</td>
+	</tr>
+	<tr>
+		<td width="16%" align="center"><strong>Ср</strong></td>
+		<td width="16%">1</td>
+		<td width="16%">8</td>
+		<td width="16%">15</td>
+		<td width="16%">22</td>
+		<td width="16%">29</td>
+	</tr>
+	<tr>
+		<td width="16%" align="center"><strong>Чт</strong></td>
+		<td width="16%">2</td>
+		<td width="16%">9</td>
+		<td width="16%">16</td>
+		<td width="16%">23</td>
+		<td width="16%">30</td>
+	</tr>
+	<tr>
+		<td width="16%" align="center"><strong>Пт</strong></td>
+		<td width="16%">3</td>
+		<td width="16%">10</td>
+		<td width="16%">17</td>
+		<td width="16%">24</td>
+		<td width="16%">31</td>
+	</tr>
+	<tr>
+		<td width="16%" align="center"><strong>Сб</strong></td>
+		<td width="16%">4</td>
+		<td width="16%">11</td>
+		<td width="16%">18</td>
+		<td width="16%">25</td>
+		<td width="16%"></td>
+	</tr>
+	<tr>
+		<td width="16%" align="center"><strong>Вс</strong></td>
+		<td width="16%">5</td>
+		<td width="16%">12</td>
+		<td width="16%">19</td>
+		<td width="16%">26</td>
+		<td width="16%"></td>
+	</tr>
+</table>
+
+
+	<!--Конец задания-->
+</body>
+</html>
