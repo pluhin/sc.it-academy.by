@@ -12,8 +12,9 @@
     <form method="get" action="http://sc.it-academy.by/fe/form.php">
         <fieldset>
             <legend>Строка поиска</legend>
+           <label>
             <input type="text" name="search" maxlength="10">
-            <input type="submit" value="Отправить"><br>
+            <input type="submit" value="Отправить"><br></label>
             <label>
                 <input type="radio" name="site" value="site" checked>
                 на сайте
@@ -52,10 +53,8 @@
             <form method="post" action="http://sc.it-academy.by/fe/form.php">
                 <fieldset>
                     <legend>Авторизируйтесь</legend>
-                    <input type="text" name="login" maxlength="10"  autofocus >
-                    <label>*Логин</label><br>
-                    <input type="text" name="password" maxlength="10"  autofocus >
-                    <label>*Пароль</label><br>
+                    <label> <input type="text" name="login" id="login">*Логин</label><br>
+                    <label> <input type="text" name="password" id="password">*Пароль</label><br>
                    <label> <input type="checkbox" name="system" checked>Остаться в системе</label><br>
                     <input type="submit" value="Отправить">
                     <em></em>
@@ -92,10 +91,8 @@
             <form method="post" action="http://sc.it-academy.by/fe/form.php">
                 <fieldset>
                 <legend>Оствьте ваш отзыв</legend>
-                    <input type="text" name="name"  id="name" >
-                    <label>*Имя</label><br>
-                    <input type="text" name="e-mail" id="email" >
-                    <label>*E-mail</label><br>
+                    <label> <input type="text" name="name"  id="name" >*Имя</label><br>
+                    <label> <input type="text" name="e-mail" id="email" >*E-mail</label><br>
                    <label for="forma_otpravki"><textarea id="forma_otpravki" name="forma_otpravki">Форма отправки </textarea></label><br>
                     <input type="submit" value="Отправить">
                 </fieldset>
@@ -118,7 +115,7 @@
                             <option>Челябинск</option>
                         </optgroup>
                     </select>
-                    <select name="multigoroda" size="8" multiple>
+                    <select name="multigoroda[]" size="8" multiple>
                         <optgroup label="Города РБ">
                             <option value="Брест">Брест</option>
                             <option value="Минск" selected>Минск</option>
@@ -142,10 +139,10 @@
         <form method="post" enctype="multipart/form-data" action="http://sc.it-academy.by/fe/form.php">
             <fieldset>
                 <legend>Upload</legend>
-            <label>Файл:</label>
-                <p> <input type="file" name="file"><br>
-                Срок хранения(года):</p>
-                <input type="text" name="srock" id="file" >
+            <label for="file">Файл:</label><br>
+                <input type="file" id="file" name="file"><br>
+               <label for="time">Срок хранения(года):</label>
+                <input type="text" name="time" id="time">
                 <button type="submit">загрузить</button>
             </fieldset>
         </form>
