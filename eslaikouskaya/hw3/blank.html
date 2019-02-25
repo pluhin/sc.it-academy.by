@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Заполните анкету</h1>
-        <form method="get" action="http://sc.it-academy.by/fe/form.php">
+        <form method="post" action="http://sc.it-academy.by/fe/form.php">
             <fieldset>
                 <legend>Личные данные</legend>
                 <input type="text" name="surname" required placeholder="Фамилия" pattern="^[А-Яа-я\S]+$" autofocus size="25"><br>
@@ -48,7 +48,7 @@
                     <option value="Poland">Польша</option>
                 </select><br>
                 <label>Адрес:<br>
-                <textarea></textarea></label>
+                <textarea name="address"></textarea></label>
             </fieldset>
             
             <fieldset>
@@ -94,7 +94,7 @@
             <fieldset>
                 <legend>Цифры</legend>
                 <input type="number" name="number" min="-2.5" max="2.5" step="0.1" ><br>
-                <input type="range" min="1" max="10">
+                <input type="range" name="range" min="1" max="10">
             </fieldset>
             <fieldset>
             <legend>Кнопки управления</legend>
