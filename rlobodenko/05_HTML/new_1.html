@@ -34,7 +34,6 @@
 <LEGEND>Строка поиска</LEGEND>
 <INPUT TYPE="text" NAME="search" MAXLENGTH="10" required 
 autofocus><span>*</span>
-<INPUT TYPE="hidden" name="hidden_field" value="hidden">
 	<input type="submit" value="Искать">
 <label>
 	<input type="radio" name="search_dist" value="site">
@@ -131,7 +130,9 @@ autofocus><span>*</span>
 			<FIELDSET> 
 <LEGEND>Upload</LEGEND> 
 <p>Файл:</p>
+<label>
 <input type="file" name="file_Field" dir="ltr">
+</label>
 <p>Срок хранения (года):</p>
 <input type="submit" value="Загрузить"><br>
 	</fieldset>
@@ -141,10 +142,10 @@ autofocus><span>*</span>
 <form method="get" action="http://sc.it-academy.by/fe/form.php">
 			<FIELDSET> 
 <LEGEND>Строка поиска</LEGEND>  
-<input type="email" placeholder="Только русские буквы"> <br>
-<p>Телефонный номер в формате</p>
-<p>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</p>
-<input type="url" placeholder="+375-29-1234567"> <br>
+<input type="email" name="e-mail" placeholder="Только русские буквы"> <br>
+<label>Телефонный номер в формате</label><br>
+<label>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</label><br>
+<input type="url" name="telephone" pattern="\+375-(29|44|25)-[0-9]{7}" placeholder="+375-29-1234567"> <br>
 <input type="submit" value="Проверить"><br>
 	</fieldset>
 </form></TD></TR>
