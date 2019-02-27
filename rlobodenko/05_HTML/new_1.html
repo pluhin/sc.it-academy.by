@@ -54,7 +54,7 @@ autofocus><span>*</span>
 <INPUT TYPE="text" NAME="login" MAXLENGTH="10" required 
 autofocus><span>*</span>
 <label for="pass"> Логин </label>
-<input type="password" name="password"><span>*</span>
+<input type="password" name="password" ID="passwd"><span>*</span>
 <label for="pass"> Пароль </label>
 <label>  
 	<p><input type="checkbox" name="val_1" id="chbox1"> 
@@ -69,16 +69,16 @@ autofocus><span>*</span>
 			<FIELDSET> 
 <LEGEND>Как вам?</LEGEND> 
 <label>
-<p><input type="radio" name="date_voite" value="2013.12.31" id="Checkbox_Group1_0" checked> ничего</p>
+<p><input type="radio" name="date_voite" value="date_voite" id="Checkbox_Group1_0" checked> ничего</p>
 </label>
 <label>
-<p><input type="radio" name="date_voite" value="2013.12.31" id="Checkbox_Group2_0"> неплохо</p>
+<p><input type="radio" name="date_voite" value="date_voite" id="Checkbox_Group2_0"> неплохо</p>
 </label>
 <label>
-<p><input type="radio" name="date_voite" value="2013.12.31" id="Checkbox_Group2_0"> хорошо</p>
+<p><input type="radio" name="date_voite" value="date_voite" id="Checkbox_Group2_0"> хорошо</p>
 </label>
 <label>
-<p><input type="radio" name="date_voite" value="2013.12.31" id="Checkbox_Group2_0"> супер</p>
+<p><input type="radio" name="date_voite" value="date_voite" id="Checkbox_Group2_0"> супер</p>
 </label>
 <input type="submit" value="Отправить"><br>
 </fieldset>
@@ -129,11 +129,11 @@ autofocus><span>*</span>
 <form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
 			<FIELDSET> 
 <LEGEND>Upload</LEGEND> 
-<p>Файл:</p>
+<label>Файл:</label>
 <label>
 <input type="file" name="file_Field" dir="ltr">
 </label>
-<p>Срок хранения (года):</p>
+<label>Срок хранения (года):</label>
 <input type="submit" value="Загрузить"><br>
 	</fieldset>
 </form></TD>
@@ -143,9 +143,9 @@ autofocus><span>*</span>
 			<FIELDSET> 
 <LEGEND>Строка поиска</LEGEND>  
 <input type="email" name="e-mail" placeholder="Только русские буквы"> <br>
-<label>Телефонный номер в формате</label><br>
-<label>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</label><br>
-<input type="url" name="telephone" pattern="\+375-(29|44|25)-[0-9]{7}" placeholder="+375-29-1234567"> <br>
+<label>Телефонный номер в формате<br>
++ХХХ-ХХ-ХХХХХХХ, где Х - любое число</label><br>
+<input type="url" name="telephone" pattern="\+[0-9]{3}-[0-9]{2}-[0-9]{7}" placeholder="+375-29-1234567"> <br>
 <input type="submit" value="Проверить"><br>
 	</fieldset>
 </form></TD></TR>
