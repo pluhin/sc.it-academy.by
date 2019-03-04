@@ -128,12 +128,14 @@ autofocus><span>*</span>
 <h2>Загрузка файла на сервер:</h2>
 <form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
 			<FIELDSET> 
+			
+<!-- не выводит строку поиска после "срок хранения(года)" --> 
 <LEGEND>Upload</LEGEND> 
-<label>Файл:</label>
+<label FOR="file">Файл:</label>
 <label>
 <input type="file" name="file_Field" dir="ltr">
 </label>
-<label>Срок хранения (года):</label>
+<label FOR="submit">Срок хранения (года):</label>
 <input type="submit" value="Загрузить"><br>
 	</fieldset>
 </form></TD>
@@ -143,7 +145,7 @@ autofocus><span>*</span>
 			<FIELDSET> 
 <LEGEND>Строка поиска</LEGEND>  
 <input type="email" name="e-mail" placeholder="Только русские буквы"> <br>
-<label>Телефонный номер в формате<br>
+<label FOR="url">Телефонный номер в формате<br>
 +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</label><br>
 <input type="url" name="telephone" pattern="\+[0-9]{3}-[0-9]{2}-[0-9]{7}" placeholder="+375-29-1234567"> <br>
 <input type="submit" value="Проверить"><br>
