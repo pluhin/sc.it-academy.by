@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>lists</TITLE> 
+            <STYLE>
+                ul { 
+                list-style: upper-roman;
+                font-weight: 800;
+            	width: 350px;
+            	}
+                li ul { 
+                list-style: lower-roman; 
+                font-weight: normal;
+            	font-style: normal;
+            	}
+            	.code {
+            	    background-color: black;
+            	    color: green;
+            	    width: 400px;
+            	    max-height: 4em;
+            	    overflow: auto;
+            	    line-height: 1em;
+            	}
+            </STYLE>
+        </HEAD> 
+        <BODY> 
+        <ul>
+            <li>Контейнер с кодом</li>
+                <ul>
+                    <li>Цвет фона: черный</li>
+                    <li>Цвет текста: зеленый</li>
+                    <li>Ширина: 400рх</li>
+                    <li>Максимальная высота контейнера: 4-е строки</li>
+                    <li>Переполнение: автоматическое</li>
+                </ul>
+            <li>Список</li>
+                <ul>
+                    <li>Ширина: 350рх</li>
+                    <li>Тип списка: римские цифры</li>
+                    <li>Тип вложенного списка: римские нижний регистр цифры</li>
+                </ul>
+        </ul>
+            <div class="code"><pre><code>
+print '%d + %d = %d ' % (num1,num2,num1+num2)
+print '%d * %d = %d ' % (num1,num2,num1*num2)
+print '%d - %d = %d ' % (num1,num2,num1-num2)
+print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5)</code></pre>
+            </div>
+        </BODY> 
+</HTML>

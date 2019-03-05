@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<HTML> 
+	<HEAD>
+				<META charset="utf-8">
+			<TITLE>Формы</TITLE>
+	</HEAD>  
+		<BODY>
+<h2 align="center">Заполните анкету</h2>
+<form method="POST" action="http://sc.it-academy.by/fe/form.php">
+		<FIELDSET> 
+<LEGEND>Личные данные</LEGEND> 
+<input type="name" placeholder="Фамилия" pattern="^[А-Я][а-я]" required autofocus SIZE="25" > <br><span> </span>
+<input type="name" placeholder="Имя" pattern="^[А-Я][а-я]" SIZE="20"><br><span> </span>
+<input type="name" placeholder="Отчество" pattern="^[А-Я][а-я]" SIZE="24"><br><span> </span>
+		<FIELDSET> 
+<LEGEND>Паспортные данные</LEGEND> 
+<input type="text" placeholder="АА" SIZE="2" MAXLENGTH="2" pattern="[A-Z]{2,2}"><span> </span>
+<input type="text" placeholder="1234567" SIZE="7" MAXLENGTH="7" pattern="[0-9]{7,7}"> <br><span> </span>
+	</fieldset>
+		<FIELDSET> 
+<LEGEND>Дата рождения</LEGEND> 
+<input type="text" placeholder="2000" MAXLENGTH="4" pattern="[0-9]{4}"> <br>
+<select name="list" id="list">
+<option value="1">Январь</option>
+<option value="2">Февраль</option>
+<option value="3">Март</option>
+<option value="4">Апрель</option>
+<option value="5">Май</option>
+<option value="6">Июнь</option>
+<option value="7">Июль</option>
+<option value="8">Август</option>
+<option value="9">Сентябрь</option>
+<option value="10">Октябрь</option>
+<option value="11">Ноябрь</option>
+<option value="12">Декабрь</option>
+</select><br>
+<input type="number" name="number" min="1" max="31" step="1"> <br>
+	</fieldset>
+
+	<select name="list" id="list">
+<option value="1">РБ</option>
+<option value="2">РФ</option>
+<option value="3">ЕС</option>
+<option value="4">США</option>
+</select><br>
+<textarea name="text_area" lang="ru">Адрес</textarea>
+	</fieldset>
+
+
+
+		<FIELDSET> 
+<LEGEND>Интересы</LEGEND> 
+		<FIELDSET> 
+<LEGEND>Хобби</LEGEND> 
+<label>  
+<input type="checkbox" name="Fishing" id="chbox1"> Рыбалка<br>
+</label>  
+<label>  
+<input type="checkbox" name="Astronomy" id="chbox1"> Астрономия<br>
+</label>  
+<label>  
+<input type="checkbox" name="diving" id="chbox1"> Дайвинг<br>
+</label>  
+<label>  
+<input type="checkbox" name="Stamps" id="chbox1"> Марки<br>
+	</label>
+	</fieldset>
+		<FIELDSET> 
+<LEGEND>Домашние животные</LEGEND> 
+<label>  
+<select name="list[]" size="12" multiple id="list">
+<optgroup label="Попугаи">
+  <option value="1">Волнистый</option>
+  <option value="2">Ара</option>
+  <option value="3">Неразлучник</option>
+  </optgroup>
+  <optgroup label="Рыба">
+  <option value="4">Караси</option>
+  <option value="5">Окуни</option>
+  <option value="6">Осётр</option>
+  </optgroup>
+    <optgroup label="Птицы">
+  <option value="7">Стая ворон</option>
+  <option value="8">Аист</option>
+  <option value="9">Археоптерикс</option>
+  </optgroup>
+</select>
+	</label>
+	</fieldset>
+	</form>
+	</fieldset>
+	
+	
+		<FIELDSET> 
+<LEGEND>Данные для входа и восстановления пароля</LEGEND> 
+<input type="text" placeholder="Логин" pattern="[A-Za-z]{5}+" placeholder="[A-Za-z]{5}+" SIZE="20"> <br><span> </span>
+<input type="password" placeholder="Пароль" pattern="[A-Za-z]{10}+" placeholder="[A-Za-z]{10}+" SIZE="20"><br><span> </span>
+		
+
+
+	</fieldset>
+	
+		<FIELDSET> 
+<LEGEND>Координаты:</LEGEND> 
+<input type="email" placeholder="Введите адрес почты" name="email[]" id="email" multiple > <br>
+<input type="url" placeholder="Введите адрес сайта" name="url[]" ><br>
+</fieldset>
+
+	
+	
+		<FIELDSET> 
+<LEGEND>Цифры</LEGEND> 
+<input type="number" name="number" min="-2.5" max="2.5" step="0.1"> <br>
+<input type="range" name="range" min="1" max="10"> <br>
+
+</fieldset>
+	
+	
+	
+		<FIELDSET> 
+<LEGEND>Кнопки управления</LEGEND> 
+<input type="submit" value="Отправить">
+<input type="submit" value="Сбросить"><br>
+<button type='submit'>
+        <b>Submit</b><br>
+        <img src="https://drive.google.com/file/d/0B7-pec-Rldg3SHlRWFBzcXVBMkU/view">
+</button>
+
+</fieldset>
+	</form>
+</BODY>
+</HTML> 

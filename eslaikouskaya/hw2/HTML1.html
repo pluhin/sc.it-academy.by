@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>HOW-TO: Программа на Python, Часть 1</TITLE>
+    </HEAD>
+    <BODY>
+         <H1>HOW-TO: Программа на Python, Часть 1<img src="https://sites.google.com/site/feexpr/_/rsrc/1421337235224/Downhome/Topic1/zadania-1/Icon-Python.png" align="right" alt="Python icon" title="Python"></H1>
+        <UL>
+        <LI><i><a href="./html1.html"> Программа на Python — часть 1</a></i></LI>
+        <LI><i><a href="./html2.html"> Программа на Python — часть 2</a></i></LI>
+        <LI><i><a href="./html3.html"> Программа на Python — часть 3</a></i></LI>
+        </UL>
+        <H2><a name="chapter3">Содержание</a></H2>
+        <H3>HOW-TO: Программа на Python, Часть 1</H3>
+        <UL>
+        <LI><a href="#chapter1"> Наша первая программа</a></LI>
+        <LI><a href="#chapter2"> Пример цикла For</a></LI>
+        </UL>
+        <P>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (GUI). Давайте создадим простую программу прямо сейчас.</P>
+        <H2><a name="chapter1">Наша первая программа</a></H2>
+        <P><a href="#chapter3">К содержанию</a></P>
+        <P>Наберём код в текстовом редакторе (например, в <STRONG>gedit</STRONG>). Потом мы разберёмся, что делает каждая строка и пойдём дальше.</P>
+        <P>Введите эти 4 строки:</P>
+<PRE><CODE>#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</CODE></PRE>
+        <P>Это всё. Сохраните файл как <STRONG>hello.py</STRONG> в любом месте. Я предлагаю сохранить его в папке <STRONG>python_examples</STRONG> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</P>
+<PRE><CODE><STRONG><CITE>chmod +x hello.py</CITE></STRONG></CODE></PRE>
+        <P>в папке, в которой вы сохранили программу. Теперь запустите её.</P>
+<PRE><CODE>greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$</CODE></PRE>
+        <P>Вот и всё.</P>
+        <H2><a name="chapter2">Пример цикла For</a></H2>
+        <P><a href="#chapter3">К содержанию</a></P>
+        <P>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</P>
+<PRE><CODE>#!/usr/bin/env python
+for cntr in range(0,10):
+print cntr</CODE></PRE>
+        <P><CITE>Не забудьте поставить символ табуляции перед строкой «print cntr».</CITE> Это важно. В Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки как в других языках программирования, а отступы.</P>
+        <table border="0" width="100%">
+        <tr>
+            <td align="left"><a href="#"><img src="https://35d24bdb-a-62cb3a1a-s-sites.googlegroups.com/site/feexpr/Downhome/Topic1/zadania-1/prev.png?attachauth=ANoY7cql4UVOzvSW_l4AswcSV6i-XdzefmAsPfdoS2Ks9FffY8h32f6244FUqzI29xhwr4s3VA3MLSP20qDMSMfds7dfTblfYZXRmW5gCVT_nipxdCCukDik4yvagiVvci_Y4qNh-IT13IY09sBDYzvVXRTMx_BwWU7cRaa1FNSNY6HnKoQmxJnAdO2A0kR3Qb9zREyhkdIajKyqFyAUfNbklRFH-3tgogDnFkCSfyLS2UqAnvI43tg%3D&attredirects=0" alt="left button" title="back"></a></td>
+           <td align="center"><a href="#"><img src="https://35d24bdb-a-62cb3a1a-s-sites.googlegroups.com/site/feexpr/Downhome/Topic1/zadania-1/home.png?attachauth=ANoY7crjfhZelY1ad63lm2OT2byacli-66qEhMnNERzgRMje_xknTKu0nI6uTF6fRr6qXL6udgD0H89j0d2ouvVJlZbbvBSd4fxNi3FtZQ6s61OVTgDPoHem1pqFg6EIbKG6lxyVXQeFr-DDcTsok-VAKM8oP4xbjeoLVQRcQc_QSEanebc-Nk6FH3Urnz9w6KpKt1x0zobaRiP9M6RGMp1eVY2M07AzhkcImvJbYwuD2tqrDnPagJU%3D&attredirects=0" alt="home button" title="home"></a></td>
+            <td align="right"><a href="./html2.html"><img src="https://35d24bdb-a-62cb3a1a-s-sites.googlegroups.com/site/feexpr/Downhome/Topic1/zadania-1/next.png?attachauth=ANoY7coRb-jgt-vg-1HFQEIo3vilU61Z68X_6x9JpblFElRVEdoAH4BVLdiutw8DfZNFjUQBE7935i5xuNuxaClK23WdQUPOninuEbiDNhMamapqkm80-r0c3N1E5F2h0r5qPUc6FXlKRH5QM5HZhakBQfLVndWVHXzlcKpNYi5r0QU4Gn-_rf8SF53G6CTY6-xItyzgC6tb3wMKFoG6PdDxEKqL5vWBpK9JhFjh4RLm1q82l5R1vJk%3D&attredirects=0" alt="right button" title="next"></a></td>
+        </table>
+    </BODY>
+</HTML>

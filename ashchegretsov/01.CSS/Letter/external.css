@@ -1,0 +1,17 @@
+header {
+    text-align: right
+}
+h1 {
+    font-size: 20px
+}
+h3 {
+    font-family: "Marck Script";
+    font-size: 30px;
+    text-decoration: underline;
+    text-indent: 40px
+}
+article {
+    font-family: "Marck Script";
+    font-size: 23px;
+    text-indent: 30px
+}
