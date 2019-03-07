@@ -1,0 +1,194 @@
+body {                            /*Вся страница*/
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, sans-serif;
+    background:url('img/icon.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+body p {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.dws-wrapper {                    /*Обернуть */
+    display:flex;
+    width:1000px;
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+    transition: 3s;
+}
+.dws-wrapper:hover {            /*События с контейнером*/
+    opacity:0.8;
+    transition:4s;
+}
+
+.img-box {
+    display:flex;
+    align-items: center;
+    overflow: ;
+    position: relative;            /*Позиционирование с h4 и p */
+    border-radius:1px 20px 20px 0px;
+    border-left: 0.7px solid #5f6062;
+}
+
+.img-box h4,
+.img-box p {
+    position: absolute;   /*Позиционирование*/
+    background: rgba(191,33,26,0.8);
+    color:#ffffff;
+    right:130px;
+    bottom:56px;
+    padding: 10px 30px;
+    transition: 3s;
+    opacity: 0;     /* Скрыть текст!!!*/
+    transform: translateX(-400px);
+    z-index: 2;/*Что бы появились текстовые блоки*/
+}
+.img-box h4 {                /*Свойства заголовка menu*/
+    transition: 5s;
+    text-transform: uppercase;
+
+}
+.img-box p {                 /*Свойства параграфа*/
+    font-size: 14px;
+    background: rgba(41,116,146, 0.5);
+    width:60%;
+    bottom:-25px;
+    text-align: right;
+    transition: 2s;
+}
+.img-box:hover h4 {
+    opacity: 1;
+    transition: 2s;
+    transform:translateX(-200px);
+    border-radius: 0px 10px 10px 0px;
+}   /*Анимация заголовка и параграфа при наведении*/
+.img-box:hover p {
+    opacity: 1;
+    transition: 5s;
+    transform:translateX(-50px);
+    border-radius: 0px 10px 10px 0px;
+}
+.img-wrapper {display: flex;} /*Изображение меню помещаем в блок */
+
+.img-wrapper img {            /*Свойства изображения Меню */
+    height: 400px;
+    border: 2px solid #5f6062;
+    transition: 3s;
+    border-left: none;
+    z-index: 1 ;  /*  Убрал 1*/
+}
+.img-box:hover img {           /*События с изображением Меню*/
+    border-radius: 30px;
+    transform: translate(-100px);
+    filter:grayscale(.75);
+    filter: drop-shadow(.75);
+}
+.img-box li ul a {
+    text-decoration: none;
+    font-size: 20px;
+    color:#ffffff;
+    transition: 2s;
+    opacity:0.7;
+}
+.img-box li ul:hover a{
+    opacity:1;
+    color:#ffffff;
+    transition:2s ;
+}
+.img-box li ul a:hover {
+    color:black;
+    transition:0.4s;
+}
+
+
+.img-box ul {             /*Свойства для всего списка <ul></ul>*/
+    list-style:none;
+
+    background: #67828d;*/
+  /* background: : #A96750;*/
+    border:2px solid #235477;
+    border-radius: 0px 10px 10px 0px;
+    transition: 3s;
+    opacity: 0;
+    margin-left: -115px; /*Анимация!! */
+    transform: translate(-54px);
+}
+.img-box:hover ul {
+    transform:translateX(0);
+    opacity: 0.9;
+    /*Движение меню вправо на 54px(в позицию 0)*/
+}
+.timefood {
+    display:flex;
+    font-size: 10px;
+
+
+
+}
+/*
+.timefood li {
+    position:;
+    display:none;
+    right: 54px;
+}
+.timefood:hover li{
+    display:block;
+}
+*/
+
+
+.img-box li {
+    position: relative;            /*Строки списка, в них ul > li */
+    margin: 29px;
+    padding: 3px;
+    border-bottom: 1px solid #214263;
+    box-shadow: 0 1px 0 0 #8bb5d2;
+    z-index: 4;
+}
+.img-box li ul {        /* Тот же .timefood Меню с едой*/
+    margin: 44px;
+    background-color: #8bb5d2;
+    list-style: none;
+    border:1px solid #214263;
+    display:none;
+
+    position: absolute;
+    top:-120px;
+    right:-250px;
+
+}
+.img-box li:hover ul {
+    display:block;
+
+}
+
+.img-box li:last-child {
+    border-bottom: none;
+    box-shadow: none;
+    /*Отмена этих свойств у последнего li */
+}
+.img-box li a {
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    color:#ffffff;
+    font-size: 27px;
+    transition: 1s;
+    text-shadow: 5px 5px 3px #133648;
+    align: center;
+
+    /* Свойства ссылок дней недели*/
+}
+.img-box li:hover a {
+
+    color:#1a4a6f;
+    transition: 0.25s;
+    text-shadow: -1px -1 px 0 #000000;
+
+    /* Вдавленность иконок и их цвет при наведении курсора*/
+}

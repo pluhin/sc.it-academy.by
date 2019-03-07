@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Menu</title>
+        <style media="screen">
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                border-bottom:0px solid black;
+                border-radius:5px;
+
+}
+            li {
+                margin-left: -5px;
+                position: relative;
+                display:inline-block; /* Расположение встроку*/
+                width:100px;      /*Выравниваем длину блоков*/
+            }
+
+            li ul {
+                border-bottom:1px ;
+                display: none;
+                position:absolute;
+                left:5px;
+            }
+            li:hover ul {
+                display:block;
+            }
+            li a {
+                display:block;    /* Равняет блоки по заданной ширине*/
+                text-decoration: none;
+                background-color: grey;
+                color:white;
+                border:1px solid black;
+                                        /* Был border-bottom*/
+                border-radius:5px;
+                padding: 5px;
+                transition: 0.5s;
+            }
+            li a:hover {
+                background-color: white;
+                color:grey;
+            }
+
+            @media all and (max-width:700px){
+                li {
+                    display: block;
+                    margin:0;
+                }
+                            /*Можно ещё поубирать border*/
+                li ul {
+                    left:100px;
+                    top: 0px;
+                }
+            }
+
+
+        /*    .demo {
+                position: relative;
+                width:700px;
+                height:500px;
+                background-color: grey;
+            }
+            .demo div {
+                position:absolute;
+                left:700px;
+                top:em;
+                z-index:-1;
+                width:100px;
+                height:70px;
+                background-color: gold;
+            }
+        */
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#">Monday</a>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Supper</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tuesday</a>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Supper</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Wednesday</a>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Supper</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Thursday</a>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Supper</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Friday</a>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Supper</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Saturday</a>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Supper</a></li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

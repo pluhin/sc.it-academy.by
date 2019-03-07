@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Blocks</title>
+	<style type="text/css">
+	.main {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.left {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;	
+		}
+	.left > .up {
+	flex: 1 1 15em;
+	background-color: darkgray;
+
+	}
+	.state {
+		margin-bottom: .2em;
+		flex-wrap: wrap;
+	}
+	.state > .first {
+		margin-bottom: .2em;
+		background-color: gray;
+	}
+	.state > .second {
+		display: block;
+		background-color: gray;
+	}
+	.bottom {
+		display: flex;
+		background-color: darkgray;
+	}
+	.image {
+		float: right;
+	}
+	.clearfix::after {
+ 	 content: "";
+ 	 display: block;
+ 	 clear: both;
+}
+	</style>
+</head>
+<!-- Не получается сделать обтекание картинки-->
+<body>
+	<div class="main">
+		<div class="left">
+			<div class="up">
+				<span>Блок навигации</span>
+					<ul>
+						<li>Ширина 15em</li>
+						<li>Должен присутствоать цвет фона</li>
+						<li>Располагается слева</li>
+						<li>Блок навигации наполните контектом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показанно в данном примере</li>
+					</ul>
+			</div>
+		<div class="state">
+			<div class="first">
+			<span>Статья 1</span>
+			<p>Размер блока:<br>
+			Занимает всю доступную ширину<br>
+			Должен присутсвовать цвет фона<br>
+			Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom</p>
+
+			</div>
+			<div class="second clearfix">
+			<span>Статья 2</span>
+			<p>	Размер блока:<br>
+			Занимает всю доступную ширину<br>
+			Должен присутсвовать цвет фона<br>
+			Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom. Картинка вставленна при помощи тега,плавание организованно по правому краю внутри данной статьи для этой картинки.</p>
+			<img class="image" src="../icon_mail.png">
+			</div>
+		</div>
+		</div>
+		<div class="bottom">
+		Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещённым внутрь контентом.
+		</div>
+	</div>
+
+</body>
+</html>
