@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Blocks</TITLE>
+        <style type="text/css">
+        .nav{
+            width: 15em;
+            background-color: rgba(0,0,0,.1);
+            float: left;
+            }
+        .art{
+            margin-left: 15em;
+            margin-bottom: 0.2em;
+            background-color: rgba(0,0,0,.2); 
+            }
+        img{
+            margin-bottom: .2em;
+            float:right;
+			
+            }   
+        .both{
+            clear: both;
+            background-color: rgba(0,0,0,.1);
+            }
+		.row{
+		background-color: rgba(0,0,0,.1);
+		 }
+		.forhidd{
+		overflow: hidden;
+		
+		}		 
+            </style>
+	</HEAD> 
+    <body>
+	     <div class="row">
+    		<div class="nav">
+        <h3>Блок навигации</h3>
+            <ul>
+                <li>Ширина 15em</li>
+                <li>Должен присутствовать цвет фона</li>
+                <li>Располагается слева</li>
+                <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью,как показано в данном примере</li>
+            </ul>
+        </div>
+        <div class="art">
+		    <div class="forhidd"></div>
+        <h3>Статья 1</h3>
+            Размер блока:<br>
+            Занимает всю доступную ширину<br>
+            Должен присутствовать цвет фона<br>
+            Во всех статьях сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-bottom
+        </div>
+        <div class="art">
+		    <div class="forhidd"></div>
+		<h3>Статья 2</h3>
+                <img src="icon_mail.png"  title="mail">
+            Размер блока:<br>
+			 Занимает всю доступную ширину<br>
+			 Должен присутствоать цвет фона<br>
+			 Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи 
+			 свойства margin-bottom. Картинка всавленна при помощи тега, плавание организованно 
+			 по правому краю внутри данной статьи для этой картинки.
+        </div>
+        <div class="both"> 
+		     <div class="forhidd"></div>
+		Нижний блок,подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.
+        </div>		
+	    </div>	
+	         
+	</body>
+</HTML>
