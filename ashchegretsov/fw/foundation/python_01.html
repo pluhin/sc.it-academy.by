@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Python 01</TITLE>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation-float.css">
+        <style>
+        header#page-header {
+            height: 500px;
+            background: #cecece;
+}
+        header#page-header > div.row {
+
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+}
+        section#page-content {
+            padding-top: 3em;
+        }
+        </style>
+    </HEAD>
+    <BODY>
+        <header id="page-header">
+            <div class="row">
+                <div class="small-12 columns">
+        <h1 class="text-center">HOW-TO:<br> Программа на Python<br> Часть 1</h1>
+        <!--<img src="logotype.png" height="200px" align="right"  alt="Логотип языка программирования Python" title="Python logo">-->
+                </div>
+            </div>
+        </header>
+            <div class="row">
+        <section id="page-content">
+                <div class="small-3 columns">
+        <ul>
+            <li><i><a href="python_01.html">Программа на Python — часть 1</a></i></li>
+            <li><i><a href="python_02.html">Программа на Python — часть 2</a></i></li>
+            <li><i><a href="python_03.html">Программа на Python — часть 3</a></i></li>
+        </ul>
+        <h2>Содержание</h2>
+        <h3>HOW-TO: Программа на Python, Часть 1</h3>
+        <ul>
+            <li><a href="#first_prog">Наша первая программа</a></li>
+            <li><a href="#cycle_for">Пример цикла For</a></li>
+
+        </ul>
+                </div>
+        </section>
+                <div class="small-9  columns">
+        <p>Из множества существующих языков программирования Python — один из самых лёгких
+        в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+        Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+        обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+        создание консольных приложений, а в следующей — программирование графических
+        интерфейсов <ins>(GUI)</ins>. Давайте создадим простую программу прямо сейчас.</p>
+        <h2 id="first_prog">Наша первая программа</h2>
+        <a href="#">К содержанию</a>
+        <p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает
+        каждая строка и пойдём дальше.</p>
+        <p>Введите эти 4 строки:</p>
+        <pre>
+
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+        </pre>
+        <p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+        <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать
+        программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+        этого введите в терминале</p>
+        <pre><i><b><ins>chmod +x hello.py</ins></b></i></pre>
+        <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+        <pre>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$
+        </pre>
+        <p>Вот и всё.</p>
+        <h2 id="cycle_for">Пример цикла For</h2>
+        <a href="#">К содержанию</a>
+        <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+        редактор и наберите следующую программу:</p>
+        <pre>
+
+#!/usr/bin/env python
+for cntr in range(0,10):
+    print cntr</pre>
+        <p><i>Не забудьте поставить символ табуляции перед строкой «print cntr»</i>. Это важно. В
+        Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки
+        как в других языках программирования, а отступы.</p>
+    </div>
+</div>
+        <hr>
+        <div class="button-group">
+        <table width="100%">
+            <tr>
+                <td align="left">
+                    <a class="button" href="" disabled>
+                        Вернуться назад
+                    </a>
+                </td>
+                <td align="center">
+                    <a class="button" href="#">
+                        Вверх
+                    </a>
+                </td>
+                <td align="right">
+                    <a class="button" href="python_02.html">
+                        Перейти вперёд
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </BODY>
+</HTML>
