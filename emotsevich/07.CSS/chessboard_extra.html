@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Шахматная доска</TITLE> 
+		    <style type="text/css">
+		    table {
+                border-collapse: collapse;
+                counter-reset: td 65; 
+            }
+            td:before {
+                counter-increment: td -1;
+                content: counter(td);
+            }
+            td {
+                width: 20px;
+                height: 20px;
+                border: 1px solid #000
+            }
+            table tr:nth-child(odd) td:nth-child(even) {
+                background: #000;
+                color: white;
+            }
+            table tr:nth-child(even) td:nth-child(odd) {
+                background: #000;
+                color: white;
+            }
+		    </style>	
+        </HEAD> 
+<BODY>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+        </BODY> 
+</HTML> 
