@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <title></title>
+        <style media="screen">
+        .roman {list-style: upper-roman;
+                width: 350px}
+        .roman li ul {list-style:lower-roman}
+        .footer {
+        /*Не понимаю почему верхняя строка пустая в контейнере*/
+            width: 400px;
+            background-color: black;
+            color: green;
+            max-height: 4em;
+            line-height: 1em;
+            white-space: pre-line;
+            overflow: auto ;
+        }
+        </style>
+    </head>
+    <body>
+        <ul class="roman">
+            <li>
+                <b>Контейнер с кодом</b>
+                <ul>
+                    <li>Цвет фона: чёрный</li>
+                    <li>Цвет текста: зелёный</li>
+                    <li>Ширина 400px</li>
+                    <li>Максимальная высота контейнера 4-е строки</li>
+                    <li>Переполнение автоматическое</li>
+                </ul>
+            </li>
+            <li>
+                <b>Список</b>
+                <ul>
+                    <li>Ширина 350px</li>
+                    <li>Тип списка: римские цифры</li>
+                    <li>Тип вложенного списка: римские нижний регистр цифры</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer">
+            #!/usr/bin/env python
+            print 'Hello. I am a python program.'
+            name = raw_input("What is your name?")
+            print "Hello there, " + name + "!"
+        </div>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Profile formes</TITLE>
+	</HEAD>
+	<BODY>
+        <FORM id="profile" name="profile" method="post" action="http://sc.it-academy.by/fe/form.php">
+            <fieldset>
+                <legend>Личные данные</legend>
+                <input type="text" id="surname" name="surname" size="25" pattern="[А-Я][а-я]+" placeholder="Фамилия" required autofocus><br>
+                <input type="text" id="name" name="name" size="20" pattern="[А-Я][а-я]+" placeholder="Имя" required><br>
+                <input type="text" id="patronimyc" name="patronimyc" size="40" pattern="[А-Я][а-я]+" placeholder="Отчество" required>
+                <fieldset>
+                    <legend>Паспортные данные</legend>
+                    <input type="text" id="series" name="series" size="2" maxlength="2" pattern="[A-Z]{2}" placeholder="AA" required>
+                    <label for="series">
+                        Серия паспорта
+                    </label><br>
+                    <input type="text" id="numpass" name="numpass" size="7" maxlength="7" pattern="\d{7}" placeholder="1234567" required>
+                    <label for="numpass">
+                        Номер паспорта
+                    </label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Дата рождения</legend>
+                    <input type="text" id="year" name="year" size="4" maxlength="4" pattern="\d{4}" placeholder="2000">
+                    <label for="year">
+                        Год рождения
+                    </label><br>
+                    <select id="month" name="month">
+                        <option value="1">Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7">Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
+                    </select>
+                    <label for="month">
+                        Месяц рождения
+                    </label><br>
+                    <input type="number" id="date" name="date" min="1" max="31" step="1">
+                    <label for="date">
+                        Дата
+                    </label><br>
+                </fieldset>
+                <label for="nation">
+                    Национальность:
+                </label><br>
+                <select id="nation" name="nation" required>
+                    <option value="1">РБ</option>
+                    <option value="2">РФ</option>
+                    <option value="3">ОАЭ</option>
+                    <option value="4">ЮАР</option>
+                    <option value="5">КНДР</option>
+                </select><br>
+                <label for="address">
+                    Адрес:
+                </label><br>
+                <textarea id="address" name="address" lang="ru"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Интересы</legend>
+                <fieldset>
+                    <legend>Хобби</legend>
+                    <label>
+                        <input type="checkbox" name="hobby[]">Рыбалка
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hobby[]">Астрономия
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hobby[]">Дайвинг
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hobby[]">Марки
+                    </label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Домашние животные</legend>
+                    <select name="animal[]" size="12" multiple id="animal">
+                        <optgroup label="Попугаи">
+                            <option value="1">Волнистый</option>
+                            <option value="2">Ара</option>
+                            <option value="3">Неразлучник</option>
+                        </optgroup>
+                        <optgroup label="Рыбы">
+                            <option value="4">Караси</option>
+                            <option value="5">Окуни</option>
+                            <option value="6">Осетр</option>
+                        </optgroup>
+                        <optgroup label="Птицы">
+                            <option value="7">Стая ворон</option>
+                            <option value="8">Аист</option>
+                            <option value="9">Археоптерикс</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Данные для входа и восстановления пароля</legend>
+                <input type="text" id="login" name="login" size="20" pattern="[A-Za-z]{5,}" placeholder="Логин" required><br>
+                <input type="password" id="passw" name="passw" size="20" pattern="[A-Za-z]{10,}" placeholder="Пароль" autocomplete="off" required>
+            </fieldset>
+            <fieldset>
+                <legend>Координаты:</legend>
+                <input type="email" id="email" name="email" pattern="[\w!#\$%&'\*\+—/=\?\^`\{\}\|~]+@[a-z]+\.[a-z]{2,}" placeholder="введите адрес почты"><br>
+                <input type="url" id="url" name="url"" pattern="(http://|https://|ftp://).+" placeholder="введите адрес сайта"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Цифры</legend>
+                <input type="number" id="number" name="number" min="-2.5" max="2.5" step="0.1"><br>
+                <input type="range" id="range" name="range" min="1" max="10">
+            </fieldset>
+            <fieldset>
+                <legend>Кнопки управления</legend>
+                <input type="submit" value="Отправить">
+                <input type="reset" value="Сбросить"><br>
+                <input type="image" src="data:image/jpeg;base64,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" title="Sorry, it doesn't work... Just nice picture" disabled>
+            </fieldset>
+    </BODY>
+</HTML>

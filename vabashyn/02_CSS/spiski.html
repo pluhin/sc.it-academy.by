@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        ul{
+            list-style:upper-roman ;
+        }
+        li ul{
+            list-style-type:lower-roman;
+        }
+        .cod{
+            width: 400px;
+            background-color: black;
+            color: green;
+        }
+        .cod pre {
+            margin-left:-55px ;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li ><h4>Контейнер с кодом</h4>
+            <ul>
+                <li>Цвет фона:черный</li>
+                <li>Цвет фона:зеленый</li>
+                <li>Ширина 400px</li>
+                <li>Максимальная высота контейнера 4-e троки</li>
+                <li>Переполнение:автоматическое</li>
+            </ul>
+        </li>
+        <li><h4>Список</h4>
+            <ul>
+                <li>Ширина:350px</li>
+                <li>Тип списка:римские цифры</li>
+                <li>Тип вложенного списка:римские нижний регистр цифры</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="cod">
+    <pre>
+        #!/usr/bin/env python print
+        'Hello. I am python programm.'
+        name = raw_input("What is your name?")
+        print "Hello there, "+ name + "!"
+    </pre>
+</div>
+</body>
+</html>

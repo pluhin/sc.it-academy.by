@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task03_(04.02.19)_Ilyenka_Siarhei</title>
+</head>
+<body>
+	<!-- Начало задания-->
+	
+	<!--strong  -  Полужирный текст-->
+	<!-- &#8242 - одинарная ковычка-->
+	<!-- em - курсивный шрифт-->
+<img src="./Pictures/method-draw-image.svg" alt="Питон" align="right" width="200" title="Ярлык Python">
+<h1 id="Honour3_Python"><h3 id="Honour1_Python">HOW-TO: Программа на Python, Часть 3</h3>
+<ul>
+	<li><a href="./Task01_(04.02.19)_Ilyenka_Siarhei.html">Программа на Python — часть 1</a></li>
+	<li><a href="./Task02_(04.02.19)_Ilyenka_Siarhei.html">Программа на Python — часть 2</a></li>
+	<li><a href="#">Программа на Python — часть 3</a></li>
+</ul>
+
+<a name="content"><h2>Содержание</h2></a>
+	<h3>HOW-TO: Программа на Python, Часть 3</h3>
+<ul>
+	<li><a href="#Modules">Модули</a></li>
+	<li><a href="#Functions">Функции</a></li>
+</ul>
+<br>
+<hr>
+<p>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и
+присвоение, операторы <strong>if</strong> и <strong>while</strong>. Я обещал, что в этой части мы изучим модули и
+функции. Давайте начнём.</p>
+<a name="Modules"><h2>Модули</h2></a>
+<a href="#content">К содержанию</a><br>
+<p>Модули предлагают способ расширить программирование на Python. Вы можете создать
+свои модули, использовать те, которые поставляются с Python или которые написали
+другие. В самом Python есть сотни модулей, которые облегчают написание программ.
+Список модулей, поставляемых с Python, находится по адресу:<br>	
+<a href="http://docs.python.org/modindex.html"><em><u>http://docs.python.org/modindex.html</u></em></a>. Некоторые модули предназначены для определённых операционных систем, но большинство из них кроссплатформенные и работают
+одинаково на <a href="https://ru.wikipedia.org/wiki/Linux">Linux</a>, <a href="https://ru.wikipedia.org/wiki/Mac">Mac</a> и <a href="https://ru.wikipedia.org/wiki/Windows">Microsoft Windows</a>. Для использования внешнего модуля
+необходимо импортировать его в программу. Один из модулей, поставляемых с Python,
+называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
+используем этот модуль в нашем первом примере.</p>
+<pre>
+
+
+#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+print random.randint(1,10)
+
+</pre>
+<p>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
+мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
+модуль «random». Мы должны явно указать Python на это.</p>
+<hr>
+<a name="Functions"><h2>Функции</h2></a>
+<a href="#content">К содержанию</a><br>
+<p>Когда мы импортировали модуль random, мы использовали функцию <u>randint()</u>. Функция
+— это блок кода, который создан для того, чтобы вызывать его в программе, обычно,
+более одного раза. Это упрощает работу над программой и предотвращает набор одного и
+того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код
+больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень
+простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,
+сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и
+результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
+чисел. Тогда наш пример будет выглядеть как код ниже.</p>
+<pre>
+
+#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)
+
+print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)
+
+print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'
+
+</pre>
+<p>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при
+написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую
+назовём <strong>«DoTwo»</strong>. Она будет каждый раз брать два числа, проводить математические
+операции и выводить результат. Начнём с ключевого слова <strong>«def»</strong>, которое сигнализирует
+о том, что мы собираемся определить функцию. После слова <strong>«def»</strong> добавим название
+функции и список параметров, если таковые имеются, в круглых скобках. Эту строку
+необходимо завершить двоеточием. Код функции набирается с отступом. Наш
+улучшенный простой пример (<u>№2</u>) показан ниже.</p>
+<pre>
+	
+#silly example 2...still silly, but better
+def DoTwo(num1,num2):
+	print '%d + %d = %d ' % (num1,num2,num1+num2)
+	print '%d * %d = %d ' % (num1,num2,num1*num2)
+	print '%d - %d = %d ' % (num1,num2,num1-num2)
+print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5)
+</pre>
+<p>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-
+либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей
+программы. Чтобы вызвать функцию, нужно написать её имя и параметры.</p>
+<table border="0" align="center" width="100%">
+	<tr>
+		<td><a href="./Task02_(04.02.19)_Ilyenka_Siarhei.html">
+			<svg width="22" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			 <g><title>Переход к ВТОРОЙ странице</title>
+			 <!--Экперимент с изображением-->
+  			<image transform="rotate(159.97390747070312 11,11) " xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABPBJREFUOI2VlU1sXNUVx3/3vnfffM94HI+DQztOnUCFrCAnJouUqh+oFKUNQmLBokVZVckCRWJRxK5RpFZZskJZe8MiRizoIlUJ0FGa0NZWUGRjMHEMZFrHM/4Yv/l6M++9ey8LO04iGhB/6WzuOfd37tU951zBt2jy1KwyniwJbUewpAGsFUGso1XtZ+sL0+Phw/aKhzkOn547JqR5yVgmELaMdDIAxFFXEFdB3IDo7YObb1ydnp7W3wmePDV/IJbmVeE6v8tmsgP7hvJy754kPx5qkVKaW5tZvqwb6mtrZtPvBCbqX/VM8OfUzT99VKlU4v8LPvzKwigmviC8/PGJsRS/OZrj0A8twwMKR26HWqDRillejbh0vceVuQb9oPlpwjZeT3z2l0t34c79J7VCv5nJ55974VhBnPxFisdGHBLKoRVY3p+LWFzRDGYFCSUZyrscGlXsLSqWV+2Q3+Uphiav/+HEwf9WKhXr3gXHMn7N8fLHnztS4LeHFcoVtAIDQLMLzzyZBOAfcwGHyhLXEYDl6GMponhQTF02j7ea+lS1Wr0BtJ3th7p+TCjv/MSBfPL4EYWUEEaGXmToR4ZSwaFc8silJI8Ourw/1yftGaLYEsaWwaykE7rcrkX7N0z5xotPF79wJk/NKrCvZvO5n/1qIiOKWehHll5k6e9YrC2Due1bpBKCR/e4fLQYItmG9yKD54Tcqhuv3dORCdevuCaWJevZiYF8QQ4kY/y2RJsHi2WjqVlvap49UiChBMMFhxNHM7xVaRKFfeZrAzSDNB2yUpjGuB+PlqVI2BGEKA/lBEFo+F8DApP8htXbin9+2t9NNlxwOPnLArdbg9xaT7LWSYCbwQp3RCpVdrGkcVQmrSK2OoZnJ3NMjCUe1jcPaDAnee15jz++BSsNEEJgHS8lY5HbrYpmT1HzLeVh99tY31B5CLJJEGKnyAGLltJaERBH3VonxRd+nnf+8724XFmEmr8NFlik7vckcd+NdbTqOqLqd82PtEhx8d/w1493Uu80prEQG/j9T+Dln96DXp6H8+9u+5WEdtDHouvCdFal9rN1EDdMf9Mox+JKSxSbHdO0e5ZmAD9/4kHov24a3vy7xhWapKvxXI0NN4yi93nRfHXHXZgeDw+fvva2DrZeVjpVLOa8BwaIsTB5wOP0r5O7azM3Q6Y+7FFQUFB350eI6TY6ibj2XtqsbEqAg5tvXCXuTbe21ih4XUrpgFImoJQO2JsJeCQXklTb0IXbPd65tkXWvRdT8Lq0ttYwkf/BuHP5mjGm5QAsLCzYvU+dXA5D+4Q2evQHexyRTggSypJQlqCvKWZd1v2YSzM+YLZ9rkUQ8dntpllf35ot6fkLRWf1k3K53NqdbqdPlDduNffMtgNnvNmN9+fSisGci6ckQsDSSp+llT5CgOcKlAPrfsTcss+dWnN2OL5+fh8zM0tLS+tTU1N6F1ypVOzTB/qbfmL842aHdG0r3N/uaC+pYpFJubhSIgVYq9lodJhf7pqFaqvdaDT/VtLzF/YxM5PNZusXL16M7tXTfTp79qysVquZT+RLz4RO7kVhnHFcOZJLOSmAdkf3jDV1Re9zN669N+5cviaEqC0uLm499Ae5T+LMmTPel8EjA348WpZKlSUiZ9FSEveF6awWzVd30mZl0xjTGhsbC86dO2fuB3wNAOp21kVq/fwAAAAASUVORK5CYII=" height="22" width="22" y="0" x="0"/></g>
+			</svg>
+		</a></td>
+		
+		<td align="center"><a href="#Honour3_Python">	
+			<svg width="22" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ 			<g><title>Переход к НАЧАЛУ третьей странице</title>
+  			<image x="0" y="0" stroke="null" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABQZJREFUOI2FlV1oVEcUx/8zc+fevbt3v5JNYtK4+dgYKVsxMUobQqW1BZEGCkKltOhDKfGhCL70tSIUfOyTWOhDyauRUuiLoLQsrS02IVaNIWoSk6w12TXJft69u3vvzPRhGzW1aQ8MM8yc+c2cc+acIfgPGRqb4lKnLUSodij4AUAp4njCXRMFKzs7kazvtJfstDB4+u4wofKEVBgAUXFQFgAAeG6FwEsD5DbgXunb/OrGxMSE+F/w0NhMwqPyLNHYR1bAinTEQrSt2Ye9sRJMLrCwaWEpK5F9+lRuFmxHurUbunS+NB9+8VsqlfK2OGzbLT+b7VJEXKRG6OPBvrB58kiUfDjCMDqkYaNYh2kwnHzbwkg/wWtdJhHE1J/kVKIu5RuIHVpKWCuLy8vLcht4aGwmoYi4GAiFjr4/HCan3jKxp53B4Ay/3CvhnYEw+jpMXL9VQLzVh1hIw74ujrYox+KaihUqOIjY0PSno32PU6mUoltgj3qfE906dvRAmL43yME1gpIjcXOuhMP7QrD8DH4fxZGBMG7OlVCsCAipcGiPiQ8ONxErGOqvqshYOp0OACCsEajpYcL1CwOJkO/YAQ5KgborsbhWxcF+C7EwB6MEhBDoGkFLmGN6vgxdo6h7Ck0WhV3XsJJxuzdk/PbxkegjNjQ2xQF11goFD787ECBRC6i5ChslD/t7A+iMGdDY8xgTQmAaFJGAhrm0A6mAqiuhszoWslIvV4Ur6+s/a9KjLUpXA5FQmEZ8Hoo2hcYI+l/xoavNAKMvv0hKCDqadQwmAvjh9wKm0mEUHT9sWJTIXLLgdcUpMVQ7CInHggROXaLsCHS3Gdi72/+v0Bdld6uBfYkmOJ4PT20D0AJQRGunnMcpFPygPODnLvK2RGtER7LLv838nYRRguF+DaMHnrtJMd2kIEFtS6lY5cgUFNSKh3KtiKDJcGS/BZ/eOCBvS+RtwFMUnU2AjwPf/AQ8yhJkCgAhAFSDpSCophRx4LmVjG3CFj48ygM3l4FdEYqRJODTG8rfTVF8m2qMv/4ESHYCd1aAP5a3bttAUlGrUng1zRPumsZIulCRPYKYz8y0XGBbxqudXaIxgAIoOzUoiCyR9hoVBSsLkNuytik5U9D/bpyp7bR/cblPE/BzAZ8moGsCqr4hOaoPonJ5lTZKn3tFOPkCFzm0+G20+m1EjQoqNYmSI5G3JXy0ip5ICT2REoTwUHIkIkYV7VZDn4scZCVna17mml8+2WQA8GZv8XHOeL2HwBuKt2gIGR4oXMyla5h66ODHO2X8uV6DxV1YuoulTA3TC1UU7RpM5kEjLtKrG6jauasD9Ptx13WzDABmZ2dV28FTi/W6elVI0dXZzIipE0gpIaQEpwoGVzC0Rg88nydwMbdSlOvr+akWMXMpytbuxePx0rPqdno0vrFQbJ4qOyxZrHjdQT9HU1CDzil0jbzUOAPWCy7uLhawmilOtXrTFzowOTk/P78+Pj4unoFTqZQaSdQ2C0byVtGGP5Ovd5dtofu4RwKmBo1SUAIoJbCRszGzWJGz6VI5lytebREzlzowOWlZVvby5cv/fE8NOXfuHE2n04F79MSROgseJ5IlodH2oMlMACjboiqVzHJUH2he5lqSXf+VEJK5f/9+/sUfZKe8JWfOnNGXnF2RgtcVb+Q+CSoISuHViLTXonJ51S+fbEopS729vc758+fli4C/AAAdTsx0wjCZAAAAAElFTkSuQmCC" height="22" width="22"/></g>
+			</svg>	
+		</a></td>
+
+		<td align="right"><a href="#">
+			<svg width="22" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ 			<g><title>Переход к НАЧАЛУ третьей странице</title>
+ 			 <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAABPBJREFUOI2VlU1sXNUVx3/3vnfffM94HI+DQztOnUCFrCAnJouUqh+oFKUNQmLBokVZVckCRWJRxK5RpFZZskJZe8MiRizoIlUJ0FGa0NZWUGRjMHEMZFrHM/4Yv/l6M++9ey8LO04iGhB/6WzuOfd37tU951zBt2jy1KwyniwJbUewpAGsFUGso1XtZ+sL0+Phw/aKhzkOn547JqR5yVgmELaMdDIAxFFXEFdB3IDo7YObb1ydnp7W3wmePDV/IJbmVeE6v8tmsgP7hvJy754kPx5qkVKaW5tZvqwb6mtrZtPvBCbqX/VM8OfUzT99VKlU4v8LPvzKwigmviC8/PGJsRS/OZrj0A8twwMKR26HWqDRillejbh0vceVuQb9oPlpwjZeT3z2l0t34c79J7VCv5nJ55974VhBnPxFisdGHBLKoRVY3p+LWFzRDGYFCSUZyrscGlXsLSqWV+2Q3+Uphiav/+HEwf9WKhXr3gXHMn7N8fLHnztS4LeHFcoVtAIDQLMLzzyZBOAfcwGHyhLXEYDl6GMponhQTF02j7ea+lS1Wr0BtJ3th7p+TCjv/MSBfPL4EYWUEEaGXmToR4ZSwaFc8silJI8Ourw/1yftGaLYEsaWwaykE7rcrkX7N0z5xotPF79wJk/NKrCvZvO5n/1qIiOKWehHll5k6e9YrC2Due1bpBKCR/e4fLQYItmG9yKD54Tcqhuv3dORCdevuCaWJevZiYF8QQ4kY/y2RJsHi2WjqVlvap49UiChBMMFhxNHM7xVaRKFfeZrAzSDNB2yUpjGuB+PlqVI2BGEKA/lBEFo+F8DApP8htXbin9+2t9NNlxwOPnLArdbg9xaT7LWSYCbwQp3RCpVdrGkcVQmrSK2OoZnJ3NMjCUe1jcPaDAnee15jz++BSsNEEJgHS8lY5HbrYpmT1HzLeVh99tY31B5CLJJEGKnyAGLltJaERBH3VonxRd+nnf+8724XFmEmr8NFlik7vckcd+NdbTqOqLqd82PtEhx8d/w1493Uu80prEQG/j9T+Dln96DXp6H8+9u+5WEdtDHouvCdFal9rN1EDdMf9Mox+JKSxSbHdO0e5ZmAD9/4kHov24a3vy7xhWapKvxXI0NN4yi93nRfHXHXZgeDw+fvva2DrZeVjpVLOa8BwaIsTB5wOP0r5O7azM3Q6Y+7FFQUFB350eI6TY6ibj2XtqsbEqAg5tvXCXuTbe21ih4XUrpgFImoJQO2JsJeCQXklTb0IXbPd65tkXWvRdT8Lq0ttYwkf/BuHP5mjGm5QAsLCzYvU+dXA5D+4Q2evQHexyRTggSypJQlqCvKWZd1v2YSzM+YLZ9rkUQ8dntpllf35ot6fkLRWf1k3K53NqdbqdPlDduNffMtgNnvNmN9+fSisGci6ckQsDSSp+llT5CgOcKlAPrfsTcss+dWnN2OL5+fh8zM0tLS+tTU1N6F1ypVOzTB/qbfmL842aHdG0r3N/uaC+pYpFJubhSIgVYq9lodJhf7pqFaqvdaDT/VtLzF/YxM5PNZusXL16M7tXTfTp79qysVquZT+RLz4RO7kVhnHFcOZJLOSmAdkf3jDV1Re9zN669N+5cviaEqC0uLm499Ae5T+LMmTPel8EjA348WpZKlSUiZ9FSEveF6awWzVd30mZl0xjTGhsbC86dO2fuB3wNAOp21kVq/fwAAAAASUVORK5CYII=" height="22" width="22" y="0" x="0"/></g>
+ 		</a></td>
+	</tr>
+</table>
+	<!--Конец задания-->
+</body>
+</html>

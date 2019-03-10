@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Контейнеры и списки</TITLE>
+        <style type="text/css">
+        span {font-weight: bold;}
+        .main_list{width: 350px;
+               list-style: upper-roman;}
+        .nested_list{width: 350px;
+                     list-style: lower-roman;}
+        .block{width: 400px;
+                white-space: pre-line;
+                max-height: 4rem;
+                line-height: 1rem;
+                overflow: auto;
+                background-color: black;
+                color: green;}
+        </style>
+    </HEAD>
+    <BODY>
+    <ul class="main_list">
+        <li><span>Контейнер с кодом</span>
+            <ul class="nested_list">
+                <li>Цвет фона: черный</li>
+                <li>Цвет текста: зеленый</li>
+                <li>Ширина: 400 px</li>
+                <li>Максимальная высота контейнера: 4-е строки</li>
+                <li>Переполнение: автоматическое</li>
+            </ul>
+        </li>   
+        <li><span>Список</span>
+            <ul class="nested_list">
+                <li>Ширина: 350 px</li>
+                <li>Тип списка: римские цифры</li>
+                <li>Тип вложенного списка: римские нижний реестр цифры</li>
+            </ul>   
+        </li>
+    </ul>
+    <div class="block">#!/usr/bin/env python
+            print 'Hello. I am a python program.'
+            name = raw_input("What is your name?")
+            print "Hello there, " + name + "!"</div>
+    </BODY>
+</HTML> ​
