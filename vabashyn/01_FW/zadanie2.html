@@ -11,10 +11,10 @@
     <div class="row">
         <form name="Password validation" id="form1" method="POST" action="#">
             <div class="form-group col">
-                <label for="passw1">Введите пароль:</label><br>
-                <input type="password" id="passw1" class="form-control" placeholder="Пароль"><br>
-                <label for="passw2">Введите пароль еще раз:</label><br>
-                <input type="password" id="passw2" class="form-control" placeholder="Пароль "><br>
+                <label for="password">Введите пароль:</label><br>
+                <input type="password" id="password" class="form-control" placeholder="Пароль"><br>
+                <label for="passwords">Введите пароль еще раз:</label><br>
+                <input type="password" id="passwords" class="form-control" placeholder="Пароль "><br>
                 <button type="submit" class="btn btn-primary">Отправить</button>
             </div>
         </form>
@@ -24,17 +24,17 @@
     </div>
     <script>
         $(document).ready(function(){
-            $("#passw1, #passw2").on("keyup", function(){
-                var psw1 = $("#passw1").val();
-                var psw2 = $("#passw2").val();
+            $("#password,#passwords").on("keyup", function(){
+                var psw1 = $("#password").val();
+                var psw2 = $("#passwords").val();
                 if (psw1 != psw2) {
                     $("#error").text("Введенные вами пароли не совпадают").css('color', 'red');
-                    $("#passw1").css('background-color', '#FF0000');
-                    $("#passw2").css('background-color', '#FF0000');
+                    $("#password").css('background-color', '#FF0000');
+                    $("#passwords").css('background-color', '#FF0000');
                 } else {
                     $("#error").text("Ваши пароли совпадают").css('color', 'black');
-                    $("#passw1").css('background-color', '#7CFC00');
-                    $("#passw2").css('background-color', '#7CFC00');
+                    $("#password").css('background-color', '#7CFC00');
+                    $("#passwords").css('background-color', '#7CFC00');
                 }
             })
         });
