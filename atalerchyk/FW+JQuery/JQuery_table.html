@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+        <TITLE>Таблица сотрудников JQuery</TITLE>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#button').addClass('.btn  btn btn-secondary');
+                $('#table').addClass('.table  table-striped');
+                $('td,th').addClass('.border border border-secondary');
+                $('#table tr').click(function(){
+                    $(this).hide();
+                    $('#button').val('Есть скрытых сотрудников');
+                    $('#button').text('Есть скрытые сотрудники');
+                   }) ;
+                   $('#button').click(function(){
+                   $('#button').val('Нет скрытых сотрудников');
+                   $('#button').text('Нет скрытых сотрудников');
+                   $('#table tr').show();
+               });
+            });
+        </script>
+    </HEAD>
+    <BODY>
+    <p><input type="buttom" id="button" value="Нет скрытых сотрудников"></p>
+        <table id="table">
+            <caption>данные о сотрудниках</caption>
+            <tr>
+                <th>ФИО</th>
+                <th>пол</th> 
+                <th>должность</th>
+                <th>дата рож.</th>
+                <th>Данные 01</th>
+                <th>Данные 02</th>
+            </tr>
+            <tr>
+                <th>Иванов Иван Иванович</th>
+                <td>М</td> 
+                <td>начальник</td>
+                <td>01.01.1960</td>
+                <td>4567</td>
+                <td>3453</td>
+            </tr>
+            <tr>
+                <th>Петрова Илонна Петровна</th>
+                <td>Ж</td> 
+                <td>секретарь</td>
+                <td>01.01.1989</td>
+                <td>98795</td>
+                <td>46523</td>
+            </tr>
+            <tr>
+                <th>Сидоров Илья Игоревич</th>
+                <td>М</td> 
+                <td>бухгалтер</td>
+                <td>01.01.1979</td>
+                <td>743434</td>
+                <td>987979</td>
+            </tr>
+            <tr>
+                <th>Пупин Фёдор Фёдорович</th>
+                <td>М</td> 
+                <td>водитель</td>
+                <td>01.01.1963</td>
+                <td>74323434</td>
+                <td>9232379</td>
+            </tr>
+            <tr>
+                <th>Крупин Сергей Иванович</th>
+                <td>М</td> 
+                <td>водитель 2</td>
+                <td>01.01.1983</td>
+                <td>3234534</td>
+                <td>923123379</td>
+            </tr>
+        </table>
+    </BODY>
+</HTML>
