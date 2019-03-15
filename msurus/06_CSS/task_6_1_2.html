@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Меню</TITLE>
+		<style type="text/css">
+      ul { 
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        }
+      ul li {
+        position: relative;
+      }
+      li a {
+        display: block;
+        background-color: darkblue;
+        color: white;
+        text-decoration: none;
+        border-color: black;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-radius: 5px;
+        padding-left: 2px;
+        margin-top: 2px;
+        margin-right: 2px;
+        transition: .4s all ease-in-out;
+      }
+      li a:hover {
+        color: black;
+        background-color: red;     
+      }
+@media all and (max-width: 600px) {
+      li ul {
+        position: absolute;
+        opacity: 0;
+      }
+      li:hover ul {
+        transition: opacity 3s;
+        opacity:1;
+      }
+      .ul{
+        position: absolute;
+        top: -22px;
+      }
+      .ul1 {
+        left: 100px; 
+        width: 60px;
+      }
+      .ul2 {
+        left: 160px; 
+        width: 45px;
+      }
+      .ul3 {
+        left: 205px; 
+        width: 50px;
+      }
+}
+@media all and (min-width: 600px) {
+      .spisok1 {
+        left: 0px;
+        top: 0px;     
+      }
+      .spisok2 {
+        left: 100px;
+        top: -22px;
+      }
+      .spisok3 {
+        left: 200px;
+        top: -44px;
+      }
+      .spisok4 {
+        left: 300px;
+        top: -66px;
+      }
+      .spisok5 {
+        left: 400px;
+        top: -88px;
+      }
+      .spisok6 {
+        left: 500px;
+        top: -110px;
+      }
+      li ul {
+        margin-top: -1000px;
+        position: absolute;
+      }
+      li:hover ul {
+        margin-top: 0;
+        transition: margin-top 0.5s;     
+      }
+}      
+		</style>
+	</HEAD> 
+	<BODY> 
+		<ul> 
+    <li class="spisok1"><a href="#">Понедельник</a>
+      <ul> 
+        <li class="ul ul1"><a href="#">Завтрак</a></li> 
+        <li class="ul ul2"><a href="#">Обед</a></li> 
+        <li class="ul ul3"><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li class="spisok2"><a href="#">Вторник</a> 
+      <ul> 
+        <li class="ul ul1"><a href="#">Завтрак</a></li> 
+        <li class="ul ul2"><a href="#">Обед</a></li> 
+        <li class="ul ul3"><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+    <li class="spisok3"><a href="#">Среда</a>
+      <ul> 
+        <li class="ul ul1"><a href="#">Завтрак</a></li> 
+        <li class="ul ul2"><a href="#">Обед</a></li> 
+        <li class="ul ul3"><a href="#">Ужин</a></li>  
+      </ul>
+    </li> 
+    <li class="spisok4"><a href="#">Четверг</a> 
+      <ul> 
+        <li class="ul ul1"><a href="#">Завтрак</a></li> 
+        <li class="ul ul2"><a href="#">Обед</a></li> 
+        <li class="ul ul3"><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+    <li class="spisok5"><a href="#">Пятница</a>
+      <ul> 
+        <li class="ul ul1"><a href="#">Завтрак</a></li> 
+        <li class="ul ul2"><a href="#">Обед</a></li> 
+        <li class="ul ul3"><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li class="spisok6"><a href="#">Суббота</a> 
+      <ul> 
+        <li class="ul ul1"><a href="#">Завтрак</a></li> 
+        <li class="ul ul2"><a href="#">Обед</a></li> 
+        <li class="ul ul3"><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+  </ul>
+</BODY> 
+</HTML> 

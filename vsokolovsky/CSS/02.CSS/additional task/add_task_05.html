@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <META charset="utf-8">
+        <TITLE>add_task_2</TITLE>
+        <style type=text/css>
+            .flex-container-column  {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            }
+            .flex-container-row {
+            display: flex;
+            flex-direction: row;
+            }
+            .novigation{
+                background-color: rgb(199, 195, 195);
+                flex: 0 0 15em;
+                align-self: start;
+                align-self: baseline;
+            }
+            .article1{
+                background-color: rgb(150, 150, 150);
+                margin-bottom: 0.2em;
+            }
+            .bottom{
+                background-color: rgb(199, 195, 195);
+                flex: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container-column">
+          <div class="flex-container-row" style="background-color: rgb(236, 229, 229); flex-grow: 1;">
+          <div class="novigation">
+            <h3>Блок навигации</h3>
+                <ul>
+                    <li>Ширина 15em</li>
+                    <li>Должен присутствовать цвет фона</li>
+                    <li>Располагается слева</li>
+                    <li>Блок навигации наполните 
+                    контентом достаточным, 
+                    чтобы по высоте он начинал 
+                    захватывать вторую статью, 
+                    как показано в данном 
+                    примере</li>
+                </ul>
+          </div>
+          <div class="flex-container-column">
+            <div class="article1">
+                  <h3>Статья 1</h3>
+                  <p>Размер блока:<br>
+                  Занимает всю доступную ширину<br>
+                  Должен присутствовать цвет фона<br>
+                  Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom
+                  </p>
+            </div>
+            <div class="article1">
+                  <h3>Статья 2</h3>
+                  <p>Размер блока:<br>
+                  Занимает всю доступную ширину<br>
+                  Должен присутствовать цвет фона<br>
+                  Во всех "статьях" сделайте отступ снизу от соседей равным .2em, пи помощи свойства margin-bottom
+                  Картинка вставлена при помощи тега, плавание организовано по праваму краю внутри данной статьи для этой картинки.
+                  </p>
+              <div class="flex-container-row" style="justify-content:flex-end;">
+                <div><img src="./img/icon_mail.png" width="100" alt="pic">
+                </div>
+              </div>              
+            </div>
+            </div>
+          </div>
+            <div class="flex-container-row">
+              <div class="bottom">
+                <p>Нижний блок, подвал. Занимаетвсю доступную ширину. Высота определяется помещенным внутрь контентом.</p>
+            </div>  
+          </div>
+        </div>   
+    </body>
+</HTML>

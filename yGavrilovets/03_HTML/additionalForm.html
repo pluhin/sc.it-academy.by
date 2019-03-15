@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Анкета</TITLE>
+	</HEAD>
+	<BODY>
+		<H1 align="center">Заполните анкету</H1>
+		<FORM id="profile" name="profile" method="post" action="http://sc.it-academy.by/fe/form.php">
+			<FIELDSET>
+				<LEGEND>Личные данные</LEGEND>
+				<INPUT type="text" name="lastName" autofocus required size="25" maxlength="25" pattern="^[А-Яа-яЁё]+$" placeholder="Фамилия"><br>
+				<INPUT type="text" name="firstName" required size="25" maxlength="20" pattern="^[А-Яа-яЁё]+$" placeholder="Имя"><br>
+				<INPUT type="text" name="fatherName" required size="25" maxlength="24" pattern="^[А-Яа-яЁё]+$" placeholder="Отчество"><br>
+				<FIELDSET>
+					<LEGEND>Паспортные данные</LEGEND>
+					<INPUT type="text" name="seriesPassport" required pattern="[A-Z]{2}" size="2" maxlength="2">
+					<INPUT type="text" name="numPassport" required pattern="[0-9]{7}" size="7" maxlength="7">
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Дата рождения</LEGEND>
+					<INPUT type="text" name="birthYear" pattern="[0-9]{4}" size="4" maxlength="4"><br>
+					<SELECT name="birthMonth">
+						<OPTION value="January">Январь<OPTION>
+						<OPTION value="Febuary">Февраль<OPTION>
+						<OPTION value="March">Март<OPTION>
+						<OPTION value="April">Апрель<OPTION>
+						<OPTION value="May">Май<OPTION>
+						<OPTION value="June">Июнь<OPTION>
+						<OPTION value="July">Июль<OPTION>
+						<OPTION value="August">Август<OPTION>
+						<OPTION value="September">Сентябрь<OPTION>
+						<OPTION value="October">Октябрь<OPTION>
+						<OPTION value="November">Ноябрь<OPTION>
+						<OPTION value="December">Декабрь<OPTION>
+					</SELECT><br>
+					<INPUT type="number" name="birthDay" min="1" max="31" step="1">
+				</FIELDSET>
+				<SELECT name="nation">
+					<OPTION value="Belarus" selected>РБ</OPTION>
+					<OPTION value="Russia">РФ</OPTION>
+					<OPTION value="USA">США</OPTION>
+					<OPTION value="Europe">ЕС</OPTION>
+				</SELECT><br>
+				<LABEL FOR id="adress">Адрес</LABEL><br>
+				<TEXTAREA id="adress" name="adress"></TEXTAREA>
+			</FIELDSET>
+			<FIELDSET>
+				<LEGEND>Интересы</LEGEND>
+				<FIELDSET>
+					<LEGEND>Хобби</LEGEND>
+					<label>
+						<input type="checkbox" name="hobby[]">Рыбалка
+					</label><br>
+					<label>
+						<input type="checkbox" name="hobby[]">Астрономия
+					</label><br>
+					<label>
+						<input type="checkbox" name="hobby[]">Дайвинг
+					</label><br>
+					<label>
+						<input type="checkbox" name="hobby[]">Марки
+					</label><br>
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Домашние животные</LEGEND>
+					<SELECT name="animals[]" size="12" multiple>
+						<optgroup label="Попугаи">
+							<option value="Budgerigar">Волнистый</option>
+							<option value="Ara">Ара</option>
+							<option value="Lovebird">Неразлучник</option>
+						</optgroup>
+						<optgroup label="Рыбы">
+							<option value="Crucian">Карась</option>
+							<option value="Piranha">Пиранья</option>
+							<option value="bigWhiteShark">Большая белая акула</option>
+						</optgroup>
+						<optgroup label="Птицы">
+							<option value="Raven">Стая ворон</option>
+							<option value="Stork">Аист</option>
+							<option value="Pterodactyl">Птеродактиль</option>
+						</optgroup>
+					</SELECT>
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Данные для входа и восстановления пароля</LEGEND>
+					<INPUT type="text" name="login" required placeholder="Логин" pattern="[A-Za-z]{6,20}" size="20"><br>
+					<INPUT type="password" name="pass" required placeholder="Пароль" pattern="[A-Za-z]{10,20}" size="20" autocomplete="off"><br>
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Координаты</LEGEND>
+					<INPUT type="email" name="email" placeholder="Введите адрес почты"><br>
+					<INPUT type="url" name="url" placeholder="Введите адрес сайта" pattern="https?://.+"><br>
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Цифры</LEGEND>
+					<INPUT type="number" name="number" min="-2.5" max="2.5" step="0.1"><br>
+					<INPUT type="range" name="range" min="1" max="10"><br>
+				</FIELDSET>
+				<FIELDSET>
+					<LEGEND>Кнопки управления</LEGEND>
+					<INPUT type="submit" value="Отправить">
+					<INPUT type="reset" value="Сбросить"><br>
+					<BUTTON type="button"><img src="picButton.svg" title="This button is dead((("></BUTTON>
+				</FIELDSET>
+			</FIELDSET>
+		</FORM>
+	</BODY>
+</HTML>

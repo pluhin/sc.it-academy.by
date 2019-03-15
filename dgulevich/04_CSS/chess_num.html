@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Шахматная доска</TITLE> 
+		<style type="text/css">
+            table {
+                border-collapse: collapse;
+                counter-reset: c 65;
+                text-align: center;
+                font-size: xx-large;
+                font-weight: bold;
+            }
+            td {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+            }
+            tr:nth-child(even) td:nth-child(odd), tr:nth-child(odd) td:nth-child(even) {
+                background-color: black;
+                color: white;
+            }
+            td::before {
+                content: counter(c);
+                counter-increment: c -1;
+                }
+		</style>	
+    </HEAD> 
+    <BODY>
+        <table>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+    </BODY> 
+</HTML> 

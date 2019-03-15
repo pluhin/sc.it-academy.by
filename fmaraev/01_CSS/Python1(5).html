@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+  <HTML>
+   <HEAD>
+	   <META charset="utf-8">
+		<TITLE>Пример страницы</TITLE>
+		<style> @import "styleM.css";</style>
+		</HEAD>
+	   <body>  
+		<h1>HOW-TO: Программа на Python, Часть 1</h1>
+		<ul>
+			<li><a href="./python1.html"><em>Программа на Python — часть 1</em></a></li>
+			<li><a href="./python2.html"><em>Программа на Python — часть 2</em></a></li>
+			<li><a href="./python3.html"><em>Программа на Python — часть 3</em></a></li>
+		</ul>
+		<h2 id="cont">Содержание</h2>
+		<h3>HOW-TO: Программа на Python, Часть 1</h3>
+		<ul>
+			<li><a href="#our">Наша первая программа</a></li>
+			<li><a href="#exam">Пример цикла For</a></li>
+		</ul>
+		<p>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+		Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+		обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+		создание консольных приложений, а в следующей — программирование графических
+		интерфейсов (<ins>GUI</ins>). Давайте создадим простую программу прямо сейчас.</p>
+		<h2 id="our">Наша первая программа</h2>
+		<a href="#cont">К содержанию</a>
+		<p>Наберём код в текстовом редакторе (например, в <strong>gedit</strong>). Потом мы разберёмся, что делает
+		каждая строка и пойдём дальше.</p>
+		<p>Введите эти 4 строки:</p>
+<pre>#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</pre>		
+		<p>Это всё. Сохраните файл как <strong>hello.py</strong> в любом месте. Я предлагаю сохранить его в папке
+		<strong>python_examples</strong> в домашнем каталоге. Этот пример показывает, как просто написать
+		программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+		этого введите в терминале</p>
+		<!--Вот с этим местом у меня возник вопрос. Никак не получилось сделать его таким же, как в примере, если пользоваться тегом pre или code-->
+		<pre><strong><ins><em>chmod +x hello.py</em></ins></strong></pre>
+		<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+<pre>greg@earth:~/python_examples$ ./hello.py<br>
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$</pre>		
+		<p>Вот и всё.</p>
+		<H2 id="exam">Пример цикла For</H2>
+		<a href="#cont">К содержанию</a>
+		<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+		редактор и наберите следующую программу:</p>
+<pre>#!/usr/bin/env python
+for cntr in range(0,10):
+	print cntr</pre>		
+		<p><em>Не забудьте поставить символ табуляции перед строкой «print cntr».</em> Это важно. В
+		Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки
+		как в других языках программирования, а отступы.</p>
+		<table width="138%">
+			<tr>
+				<td><a href="#"><svg width="78" height="52" xmlns="http://www.w3.org/2000/svg">
+					<!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+				   
+					<g>
+					 <title></title>
+					 <rect x="-1" y="-1" width="80" height="54" id="canvas_background" fill="#fff"/>
+					 <g id="canvasGrid" display="none">
+					  <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+					 </g>
+					</g>
+					<g>
+					 <title>Предыдущая</title>
+					 <rect fill="#110de8" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="281.5" y="131.4375" width="65" height="5" id="svg_5" stroke="#000"/>
+					 <path fill="#110de8" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" d="m334.78461,141.99052l13.0129,-16.97625l13.0129,16.97625l-26.0258,0z" id="svg_6" transform="rotate(89.88639831542969 347.79751586914057,133.50238037109378) " stroke="#000"/>
+					 <rect stroke="#000" id="svg_2" height="6" width="43" y="22.4375" x="26.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#110de8"/>
+					 <path transform="rotate(-90.8355941772461 21.802505493164062,25.158437728881836) " stroke="#000" id="svg_3" d="m7.8025,34.65844l14,-19l14,19l-28,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#110de8"/>
+					</g>
+				   </svg></a></td><td><a href="#cont"><svg width="78" height="52" xmlns="http://www.w3.org/2000/svg">
+					<!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+				   
+					<g>
+					 <title></title>
+					 <rect x="-1" y="-1" width="80" height="54" id="canvas_background" fill="#fff"/>
+					 <g id="canvasGrid" display="none">
+					  <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+					 </g>
+					</g>
+					<g>
+					 <title>К содержанию</title>
+					 <rect fill="#110de8" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="281.5" y="131.4375" width="65" height="5" id="svg_5" stroke="#000"/>
+					 <path fill="#110de8" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" d="m334.78461,141.99052l13.0129,-16.97625l13.0129,16.97625l-26.0258,0z" id="svg_6" transform="rotate(89.88639831542969 347.79751586914057,133.50238037109378) " stroke="#000"/>
+					 <rect stroke="#000" id="svg_2" height="22" width="19" y="23.4375" x="29.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#110de8"/>
+					 <path stroke="#000" transform="rotate(-0.8950270414352417 38.80250549316409,17.658439636230735) " id="svg_3" d="m20.74905,29.5708l18.05346,-23.82473l18.05346,23.82473l-36.10691,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#110de8"/>
+					</g>
+				   </svg></a></td><td><a href="./python2.html"><svg width="78" height="52" xmlns="http://www.w3.org/2000/svg">
+					<!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+				   
+					<g>
+					 <title></title>
+					 <rect x="-1" y="-1" width="80" height="54" id="canvas_background" fill="#fff"/>
+					 <g id="canvasGrid" display="none">
+					  <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+					 </g>
+					</g>
+					<g>
+					 <title>Следующая</title>
+					 <rect fill="#110de8" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="281.5" y="131.4375" width="65" height="5" id="svg_5" stroke="#000"/>
+					 <path fill="#110de8" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" d="m334.78461,141.99052l13.0129,-16.97625l13.0129,16.97625l-26.0258,0z" id="svg_6" transform="rotate(89.88639831542969 347.79751586914057,133.50238037109378) " stroke="#000"/>
+					 <rect stroke="#000" id="svg_2" height="6" width="43" y="22.4375" x="13.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#110de8"/>
+					 <path transform="rotate(87.87564849853516 60.80250549316406,25.15843963623047) " stroke="#000" id="svg_3" d="m46.8025,34.65844l14,-19l14,19l-28,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#110de8"/>
+					</g>
+				   </svg></a></td>
+			</tr>
+		</table>
+	</BODY>  
+</HTML>
