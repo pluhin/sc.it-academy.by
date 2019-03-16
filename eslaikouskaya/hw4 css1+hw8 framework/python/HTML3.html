@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<HTML>
+        <HEAD>
+            <META charset="utf-8">
+            <TITLE>HTML3</TITLE>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+            <style>
+                @import "StylesM.css";
+                ul {list-style: none;}
+                img.cen {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto
+                }
+                img.lef {
+                    display: block;
+                    margin-left: 0em;
+                    margin-right: auto
+                }
+                img.rig {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: 0em;
+                }
+            </style>
+        </HEAD>
+        <BODY>
+          <div class="container">
+            <div class="row">
+              <div class="twelve columns">
+            <H3><img src="https://sites.google.com/site/feexpr/_/rsrc/1421337235224/Downhome/Topic1/zadania-1/Icon-Python.png" align="right" alt="Python icon" title="Python" width="80px">HOW-TO: Программа на Python, Часть 3</H3>
+             </div>
+            <div class="row">
+              <div class="four columns">
+             <div class="row">
+               <div class="twelve columns">
+            <UL>
+              <LI><em><a href="./html1.html"> Программа на Python — часть 1</a></em></LI>
+              <LI><em><a href="./html2.html"> Программа на Python — часть 2</a></em></LI>
+              <LI><em><a href="./html3.html"> Программа на Python — часть 3</a></em></LI>
+            </UL>
+          </div>
+            <div class="row">
+              <div class="twelve columns">
+               <H4><a name="chapter3">Содержание</a></H4>
+               <H5>HOW-TO: Программа на Python, Часть 3</H5>
+              </div>
+            </div>
+          <div class="row">
+            <UL>
+            <div class="six columns">
+              <LI><a href="#chapter1"> Модули</a></LI>
+            </div>
+            <div class="six columns">
+              <LI><a href="chapter2"> Функции</a></LI>
+            </div>
+              </UL>
+          </div>
+          </div>
+        </div>
+          <div class="eight columns">
+            <P>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и присвоение, операторы <B>if</B> и <B>while</B>. Я обещал, что в этой части мы изучим модули и функции. Давайте начнём.</P>
+            <H2><a name="chapter1">Модули</a></H2>
+            <P><a href="#chapter3">К содержанию</a></P>
+            <P>Модули предлагают способ расширить программирование на Python. Вы можете создать свои модули, использовать те, которые поставляются с Python или которые написали другие. В самом Python есть сотни модулей, которые облегчают написание программ. Список модулей, поставляемых с Python, находится по адресу: <a href="http://docs.python.org/modindex.html." target="blank">http://docs.python.org/modindex.html</a>. Некоторые модули предназначены для определённых операционных систем, но большинство из них кроссплатформенные и работают одинаково на <a href="https://ru.wikipedia.org/wiki/Linux" target="blank">Linux</a>, <a href="https://ru.wikipedia.org/wiki/Mac" target="blank">Mac</a> и <a href="https://ru.wikipedia.org/wiki/Windows" target="blank">Microsoft Windows</a>. Для использования внешнего модуля необходимо импортировать его в программу. Один из модулей, поставляемых с Python, называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы используем этот модуль в нашем первом примере.</P>
+<PRE><CODE>#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+print random.randint(1,10)</CODE></PRE>
+            <P>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать модуль «random». Мы должны явно указать Python на это.</P>
+            <HR>
+            <H2><a name="chapter2">Функции</a></H2>
+            <P><a href="#chapter3">К содержанию</a></P>
+            <P>Когда мы импортировали модуль random, мы использовали функцию <B>randint()</B>. Функция — это блок кода, который создан для того, чтобы вызывать его в программе, обычно, более одного раза. Это упрощает работу над программой и предотвращает набор одного и того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа, сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов чисел. Тогда наш пример будет выглядеть как код ниже.</P>
+<PRE><CODE>#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)
+
+print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)
+
+print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'</CODE></PRE>
+             <P>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую назовём <B><EM>«DoTwo»</EM></B>. Она будет каждый раз брать два числа, проводить математические операции и выводить результат. Начнём с ключевого слова <B><EM>«def»</EM></B>., которое сигнализирует о том, что мы собираемся определить функцию. После слова <B><EM>«def»</EM></B> добавим название функции и список параметров, если таковые имеются, в круглых скобках. Эту строку необходимо завершить двоеточием. Код функции набирается с отступом. Наш улучшенный простой пример (<U>No2</U>) показан ниже.</P>
+<PRE><CODE>#silly example 2...still silly, but better
+def DoTwo(num1,num2):
+	        print '%d + %d = %d ' % (num1,num2,num1+num2)
+            print '%d * %d = %d ' % (num1,num2,num1*num2)
+            print '%d - %d = %d ' % (num1,num2,num1-num2)
+            print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5)</CODE></PRE>
+            <P>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что- либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей программы. Чтобы вызвать функцию, нужно написать её имя и параметры. </P>
+          </div>
+        </div>
+        <div class="row">
+          <div class="four columns">
+            <a href="html2.html"><img class="lef" src="https://35d24bdb-a-62cb3a1a-s-sites.googlegroups.com/site/feexpr/Downhome/Topic1/zadania-1/prev.png?attachauth=ANoY7cql4UVOzvSW_l4AswcSV6i-XdzefmAsPfdoS2Ks9FffY8h32f6244FUqzI29xhwr4s3VA3MLSP20qDMSMfds7dfTblfYZXRmW5gCVT_nipxdCCukDik4yvagiVvci_Y4qNh-IT13IY09sBDYzvVXRTMx_BwWU7cRaa1FNSNY6HnKoQmxJnAdO2A0kR3Qb9zREyhkdIajKyqFyAUfNbklRFH-3tgogDnFkCSfyLS2UqAnvI43tg%3D&attredirects=0" alt="left button" title="back">
+            </a></div>
+          <div class="four columns"> 
+            <a href="#"><img  class="cen" src="https://35d24bdb-a-62cb3a1a-s-sites.googlegroups.com/site/feexpr/Downhome/Topic1/zadania-1/home.png?attachauth=ANoY7crjfhZelY1ad63lm2OT2byacli-66qEhMnNERzgRMje_xknTKu0nI6uTF6fRr6qXL6udgD0H89j0d2ouvVJlZbbvBSd4fxNi3FtZQ6s61OVTgDPoHem1pqFg6EIbKG6lxyVXQeFr-DDcTsok-VAKM8oP4xbjeoLVQRcQc_QSEanebc-Nk6FH3Urnz9w6KpKt1x0zobaRiP9M6RGMp1eVY2M07AzhkcImvJbYwuD2tqrDnPagJU%3D&attredirects=0" alt="home button" title="home"></a></div>
+          <div class="four columns">
+            <a href="#"><img class="rig" src="https://35d24bdb-a-62cb3a1a-s-sites.googlegroups.com/site/feexpr/Downhome/Topic1/zadania-1/next.png?attachauth=ANoY7coRb-jgt-vg-1HFQEIo3vilU61Z68X_6x9JpblFElRVEdoAH4BVLdiutw8DfZNFjUQBE7935i5xuNuxaClK23WdQUPOninuEbiDNhMamapqkm80-r0c3N1E5F2h0r5qPUc6FXlKRH5QM5HZhakBQfLVndWVHXzlcKpNYi5r0QU4Gn-_rf8SF53G6CTY6-xItyzgC6tb3wMKFoG6PdDxEKqL5vWBpK9JhFjh4RLm1q82l5R1vJk%3D&attredirects=0" alt="right button" title="next"></a></div>
+            </div>
+            </div>
+        </table>
+    </BODY>
+</HTML>

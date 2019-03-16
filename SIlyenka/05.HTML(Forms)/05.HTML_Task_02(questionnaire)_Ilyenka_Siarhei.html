@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task01_(18.02.19)_Ilyenka_Siarhei</title>
+</head>
+<body>
+	<!-- Начало задания-->
+
+<h2 align="center">Заполните анкету</h3>
+
+<form method="post" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset>
+		<legend>Личные данные</legend>
+		<!--Вводить с заглавной буквы-->
+		<input type="text" name="surname" pattern="^[А-Я][а-я]{1,25}" placeholder="Фамилия" autofocus><br> 	
+		<input type="text" name="name" pattern="^[А-Я][а-я]{1,20}" placeholder="Имя"><br>
+		<input type="text" name="patronymic" pattern="^[А-Я][а-я]{1,24}" placeholder="Отчество"><br>
+		<fieldset>
+			<legend>Паспортные данные</legend>			
+			<input type="text" name="series" pattern="^[A-Z]{2,2}" placeholder="АА" size="2" required>
+			<input type="text" name="number_p" pattern="^[0-9]{7,7}" placeholder="1234567" size="7" required>			
+		</fieldset>
+		<fieldset>
+			<legend>Дата рождения</legend>			
+			<input type="text" name="year" pattern="^[0-9]{0,4}" placeholder="2000" size="4" ><br>
+			<select name="month" id="month">
+			<option value="Январь" selected>Январь</option>
+			<option value="Февраль">Февраль</option>
+			<option value="Март">Март</option>
+			<option value="Апрель">Апрель</option>
+			<option value="Май">Май</option>
+			<option value="Июнь">Июнь</option>
+			<option value="Июль">Июль</option>
+			<option value="Август">Август</option>
+			<option value="Сентябрь">Сентябрь</option>
+			<option value="Октябрь">Октябрь</option>
+			<option value="Ноябрь">Ноябрь</option>
+			<option value="Декабрь">Декабрь</option>
+			</select><br>
+			<input type="number" name="number_d" min="1" max="31" step="1" size="3"> <br>
+		</fieldset>
+			<select name="nationality" id="nationality">
+			<option value="РБ" selected>РБ</option>
+			<option value="TH">TH</option>
+			<option value="SU">SU</option>
+			<option value="US">US</option>
+			<option value="MG">MG</option>
+			<option value="DO">DO</option>
+			<option value="RU">RU</option>
+			</select>
+			<label for="nationality"><span> (Национальность - выбор одного значения из списка, обязательное поле)</span></label><br>
+			<label for="address"><span>Адрес:</span></label><br>
+			<textarea name="address" lang="ru" id="address"></textarea><br>		
+	</fieldset>
+	<fieldset>
+		<legend>Интересы</legend>
+		<fieldset>
+			<legend>Хобби</legend>
+			<input type="checkbox" name="hobby[]" value="Рыбалка"><span>Рыбалка</span><br>
+			<input type="checkbox" name="hobby[]" value="Астрономия"><span>Астрономия</span><br>
+			<input type="checkbox" name="hobby[]" value="Дайвинг"><span>Дайвинг</span><br>
+			<input type="checkbox" name="hobby[]" value="Марки"><span>Марки</span><br>
+		</fieldset>
+		<fieldset>
+			<legend>Домашние животные (возможность выбора нескольких вариантов)</legend>			
+			<select name="pet[]" size="5" multiple>
+			<optgroup label="Попугаи">
+				<option value="Волнистый">Волнистый</option>
+				<option value="Ари">Ари</option>
+				<option value="Неразлучник">Неразлучник</option>
+			</optgroup>
+			<optgroup label="Рыба">
+				<option value="Караси">Караси</option>
+				<option value="Окуни">Окуни</option>
+				<option value="Осётр">Осётр</option>
+			</optgroup>
+			<optgroup label="Птицы">
+				<option value="Стая ворон">Стая ворон</option>
+				<option value="Аист">Аист</option>
+				<option value="Археоптерикс">Археоптерикс</option>
+				<option value="Жаворонок">Жаворонок</option>
+				<option value="Стриж">Стриж</option>
+			</optgroup>
+			</select>
+		</fieldset>
+	</fieldset>
+	<fieldset>
+		<legend>Данные для входа и востоновления пароля</legend>
+		<input type="text" name="login_i" pattern="[A-Za-z]{5,20}" placeholder="Имя пользователя" required><span>*</span><br>
+		<input type="text" name="password_i" pattern="[A-Za-z]{10,20}" placeholder="Пароль" required autocomplete="off"><span>*</span><br>
+	</fieldset>
+	<fieldset>
+		<legend>Координаты:</legend>
+		<input type="email" name="post_i" placeholder="введите адрес почты"><br>
+		<input type="url" name="site_i" placeholder="введите адрес сайта"><br>
+	</fieldset>
+	<fieldset>
+		<legend>Цифры</legend>
+		<input type="number" name="number_f" min="-2.5" max="2.5" step="0.1" size="3"> <br>
+		<input type="range" name="number_g" min="1" max="10"> <br>
+	</fieldset>	
+	<fieldset>
+		<legend>Кнопка управления</legend>
+		<input type="submit" value="Отправить">
+		<input type="reset" value="Сбросить"><br>
+		<button type='button'>
+            <img src='email.jpg'>
+		</button>			
+	</fieldset>
+
+</form>
+<!--Конец задания-->
+</body>
+</html>

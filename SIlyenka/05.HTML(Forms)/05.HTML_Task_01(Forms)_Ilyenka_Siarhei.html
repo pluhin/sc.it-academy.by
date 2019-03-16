@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task01_(18.02.19)_Ilyenka_Siarhei</title>
+</head>
+<body>
+	<!-- Начало задания-->
+
+<h3><em>Рекомендации к выполнению работы:</em></h3>
+<ul>
+	<li><em>Все эти формы размещены в таблице, шириной 700px, 4 строки х 2 столбца</em></li>
+	<li><em>Каждая форма должна правильно заполненные атрибуты name, method и action.</em></li>
+	<li><em>Для атрибута action, воспользуйтесь значением "http://sc.it-academy.by/fe/form.php" - небольшой скрипт показывающий переменные переданные методами post и get.</em></li>
+</ul>
+<hr>
+<table border=0 width="700">
+	<tr>
+		<td valign="top">
+<h3>Простая форма поиска с вариантами:</h3>
+<form method="get" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset>
+		<legend>Строка поиска</legend>
+		<input type="text" name="search" maxlength="10">
+		<input type="submit" value="Отправить"><br>
+		<label>
+			<input type="radio" name="search_dist" value="site" checked> на сайте
+		</label>
+		<label>
+			<input type="radio" name="search_dist" value="Google" checked> в Google
+		</label>
+		<br><span><em>Длина запроса не более 10 символов</em></span>
+	</fieldset>
+</form>
+
+		</td>
+		<td valign="top">
+<h3>Простая форма поиска с вариантами:</h3>
+<form method="get" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset>
+		<legend>Строка поиска</legend>
+		<input type="text" name="search" autofocus required oninvalid="this.setCustomValidity('Заполни!')" oninput="setCustomValidity('')"><span>*</span>	
+		<!-- oninvalid="this.setCustomValidity('Заполни!')" oninput="setCustomValidity('')"   -    Изменяте надпсь-->
+		<input type="submit" value="Отправить"><br>
+		<label>
+			<input type="radio" name="search_dist" value="site" checked> на сайте
+		</label>
+		<label>
+			<input type="radio" name="search_dist" value="Google" checked> в Google
+		</label>
+		<br><em>* - обязательное поле <br> Автофокус в поле поиска</em></span>
+	</fieldset>
+</form>
+<span>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+<h3>Простая форма авторизации:</h3>
+<form method="post" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset><legend>Авторизируйтесь</legend>
+		<input type="text" name="search_1" id="log_1" required>
+		<label for="log_1"><span>* Логин</span></label><br>
+		<br>
+		<input type="password" name="search_2" id="log_2" required>
+		<label for="log_2"><span>* Логин</span></label><br>
+		<br>
+		<label>  
+		<input type="checkbox" name="val_1"><span>Оставаться в системе</span><br>
+		</label>
+		<input type="submit" value="Войти"><br>
+		<span><em>* - обязательное поле</em></span>
+	</fieldset>
+</form>
+		</td>
+		<td valign="top">			
+<h3>Опрос(голосование):</h3>
+<form method="post" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset><legend>Как вам?</legend>
+		<label><input type="radio" name="val" value="ничего" checked><span> ничего</span><br></label>
+		<label><input type="radio" name="val" value="неплохо"><span> неплохо</span><br></label>
+		<label><input type="radio" name="val" value="хорошо"><span> хорошо</span><br></label>
+		<label><input type="radio" name="val" value="СУППЕР"><span> СУППЕР</span><br></label>
+		<input type="submit" value="Отправить"><br>
+		<input type="hidden" name="name=date_voite" value="2013.12.31">
+		<span><em>Есть скрытое поле <br>name=date_voite, value="2013.12.31"</em></span>
+	</fieldset>
+</form>		
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+<h3>Отзыв:</h3>
+<form method="get" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset><legend>Оставьте Ваш отзыв</legend>
+		<input type="text" name="search_1" id="log_1" required>
+		<label for="log_1"><span>* Имя</span></label><br><br>
+		<input type="email" name="email[]" id="email" multiple required>
+		<label for="email"><span>* e-mail</span></label><br><br>
+		<textarea name="text_area" lang="ru" placeholder="Форма отправки"></textarea><br>
+		<input type="submit" value="Отправить"><br>
+		<span><em>* - обязательное поле <br>поле email - с проверкой <br>метод POST</em></span>
+	</fieldset>
+</form>	
+		</td>
+		<td valign="top">
+<h3>Выпадающий и мульти списки:</h3>
+<form method="get" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset><legend>Города РБ</legend>		
+		<select name="list" id="list">
+		<option value="Минск">Минск</option>
+		<option value="Брест">Брест</option>
+		<option value="Витебск">Витебск</option>
+		<option value="Могилев">Могилев</option>
+		<option value="Гомель">Гомель</option>
+		<option value="0" selected>Город</option>
+		</select>
+
+		<select name="list[]" id="list" size="8" multiple > <!--[] - можно отправить сразу массив данных -->
+		<optgroup label="Города РБ">
+		      <option value="Брест">Брест</option>
+		      <option value="Минск">Минск</option>
+		      <option value="Витебск">Витебск</option>
+		      <option value="Могилев">Могилев</option>
+		      <option value="Гомель">Гомель</option>
+		</optgroup>
+		<optgroup label="Города России">
+		      <option value="Москва">Москва</option>
+		      <option value="Рязань">Рязань</option>
+		      <option value="Магадан">Магадан</option>
+		</optgroup>
+		</select>
+		<input type="submit" value="Ок"><br>		
+	</fieldset>
+</form>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+<h3>Загрузка файла на сервер:</h3>
+<form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
+	<fieldset><legend>Upload</legend>
+		<input type="file" name="file_Field" dir="ltr"><br>
+		<span>Срок храненния (года):</span><br>
+		<input type="text" name="year" pattern="[0-9]{0,3}" size="5">	<!-- Интервал от 0 до 3 цифр-->
+		<input type="submit" value="Загрузить"><br>
+		<span><em>Метод POST<br>В теге form используйте атрибут<br> enctype="multipart/form-data" для отправки <br>файла на сервер</em></span>
+	</fieldset>
+</form>
+		</td>
+		<td valign="top">
+<h3>Валидация данных HTML5:</h3>
+<form method="get" action="http://sc.it-academy.by/fe/form.php">
+	<fieldset><legend>Строка поиска</legend>
+		<input type="text" name="name" pattern="^[А-Я][а-я]{1,30}" placeholder="Только русские буквы">		
+		<br><span><em>Телефонный номер в формате <br> +ХХХ-ХХ-ХХХХХХХ, где Х - любое числоы</em></span><br>
+		<input type="tel" name="phone" pattern="+[0-9]{3,3}-[0-9]{2,2}-[0-9]{7,7}">	
+		<input type="submit" value="Загрузить"><br>
+	</fieldset>
+</form>
+		</td>
+	</tr>
+	
+</table>
+
+<hr>
+
+<!--Конец задания-->
+</body>
+</html>
