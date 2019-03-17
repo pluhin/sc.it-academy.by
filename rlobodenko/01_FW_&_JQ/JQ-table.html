@@ -6,17 +6,26 @@
 					<script src="https://code.jquery.com/jquery-3.3.1.min.js">
 		</script>
 			<script>
-			$('.tr').click(function(){
-			$('#table_data').toggle();
-			if($('#table_data').is(':visible'))
-			{
-				$('.tr').val('hide');
-				$('.tr').text('hide');
-				}else{
-					$('.tr').val('show');
-				$('.tr').text('show');
-				}
-				});
+			$(function(){
+                    var button_label_01 = 'We have hidden lines in table. Just click me, and I show them';
+                    var button_label_02 = 'There are no hidden lines in table';       
+                    $('caption').addClass('h2');
+                    $('#table_data').addClass('table table-hover table-light');
+                    $('.display_button').addClass('btn btn-primary btn-sm  btn-block disabled');
+                    
+                    $('.display_button').val(button_label_02);
+
+                    $('tr:not(:only-of-type)').click(function(){
+                            $(this).hide();
+                            $('.display_button').val(button_label_01);
+                            $('.display_button').removeClass('disabled');
+                        });
+                    $('.display_button').click(function(){
+                        $('tr').show();
+                        $('.display_button').val(button_label_02);
+
+                    });
+                });
 				
 				
 			
@@ -36,7 +45,11 @@ color: #fff;
         </HEAD> 
         <BODY> 
 		<table>
- <caption>данные о сотрудниках</caption>
+ <caption><button type='submit'>
+        <b>данные о сотрудниках</b>
+    
+</button>
+</caption>
  <tr>
  <th>ФИО</th>
  <th>пол</th> 
