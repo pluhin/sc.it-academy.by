@@ -14,11 +14,11 @@
 <form method="get" action="http://sc.it-academy.by/fe/form.php">
 		<FIELDSET> 
 <LEGEND>Строка поиска</LEGEND> 
-<INPUT TYPE="text" NAME="search" MAXLENGTH="10" >
+<INPUT TYPE="text" NAME="search" MAXLENGTH="10">
 <INPUT TYPE="submit" value="Искать"><br>
 <label>
 	<input type="radio" name="search_dist" value="site" checked>
-	на сайте
+на сайте
 </label>
 <label>
 	<input type="radio" name="search_dist" value="google">
@@ -91,11 +91,11 @@ autofocus><span>*</span>
 <LEGEND>Оставьте ваш отзыв</LEGEND> 
 <INPUT TYPE="text" NAME="login" MAXLENGTH="10" required 
 autofocus><span>*</span>
-<label for="pass"> Имя </label>
+<label for="pass"> Имя </label><br>
 <input type="password" name="password"><span>*</span>
-<label for="pass"> e-mail </label>
-<textarea name="text_area" lang="ru">Форма отправки </textarea>
-<p><input type="submit" value="Отправить"><br></p>
+<label for="pass">e-mail</label><br>
+<textarea name="text_area" lang="ru">Форма отправки </textarea><br>
+<input type="submit" value="Отправить">
 </fieldset>
 </form></TD>
 <TD><hr>
@@ -129,30 +129,17 @@ autofocus><span>*</span>
 <form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
 			<FIELDSET> 
 
-			
-<!-- не выводит строку поиска после "срок хранения(года)" --> 
 <LEGEND>Upload</LEGEND> 
 <label FOR="file">Файл:</label>
 <label>
-<input type="file" name="file_Field" dir="ltr">
-</label>
-<label FOR="submit">Срок хранения (года):</label>
-<<<<<<< HEAD
+<input type="file" name="file_Field" dir="ltr"></label><br>
+<label FOR="submit">Срок хранения (года):</label><br>
 <INPUT TYPE="text" ID="years" NAME="years" SIZE="5">
 
 
-<input type="submit" name="submit" value="Загрузить"><br>
-=======
-=======
-<LEGEND>Upload</LEGEND> 
-<label>Файл:</label>
-<label>
-<input type="file" name="file_Field" dir="ltr">
-</label>
-<label>Срок хранения (года):</label>
+
 
 <input type="submit" value="Загрузить"><br>
->>>>>>> 416d09b909069c215ff41b695401d8cfa93c505c
 	</fieldset>
 </form></TD>
 <TD><hr>
@@ -162,11 +149,8 @@ autofocus><span>*</span>
 <LEGEND>Строка поиска</LEGEND>  
 <input type="email" name="e-mail" placeholder="Только русские буквы"> <br>
 
-<label FOR="url">Телефонный номер в формате<br>
-=======
-<label>Телефонный номер в формате<br>
-
-+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</label><br>
+<label FOR="url"><em>Телефонный номер в формате</em><br>
+<em>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</em></label><br>
 <input type="url" name="telephone" pattern="\+[0-9]{3}-[0-9]{2}-[0-9]{7}" placeholder="+375-29-1234567"> <br>
 <input type="submit" value="Проверить"><br>
 	</fieldset>
