@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Forms, just demonstrate</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#input_1').on('keyup',function(){
+                    var value_input_1 = $('#input_1').val();
+                    var value_input_2 = $('#input_2').val();
+                    if (value_input_1 != value_input_2){
+                        $('h3').text('not matching');
+                        $('#fs_1,#fs_2').css('background-color','black');
+                        $('#input_1,#input_2').css('background-color','red');
+                        $('legend').css('color','violet');
+                    }else{
+                        $('h3').text('matching passwords');
+                        $('#fs_1,#fs_2').css('background-color','lime');
+                        $('#input_1,#input_2').css('background-color','white');
+                        $('legend').css('color','black');
+                    }
+                });
+                $('#input_2').on('keyup',function(){
+                    var value_input_1 = $('#input_1').val();
+                    var value_input_2 = $('#input_2').val();
+                    if (value_input_1 != value_input_2){
+                        $('h3').text('not matching');
+                        $('#fs_1,#fs_2').css('background-color','black');
+                        $('#input_1,#input_2').css('background-color','red');
+                        $('legend').css('color','violet');
+                    }else{
+                        $('h3').text('matching passwords');
+                        $('#fs_1,#fs_2 ').css('background-color','lime');
+                        $('#input_1,#input_2').css('background-color','white');
+                        $('legend').css('color','black');
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form action="">
+        <fieldset id="fs_1">
+            <legend>Password</legend>
+        <input type="password" placeholder="Enter password" id="input_1">
+    </fieldset><br><br>
+        <fieldset id="fs_2">
+            <legend>Confirm password</legend>
+        <input type="password" placeholder="Confirm your password" id="input_2">
+        </fieldset>
+        </form>
+        <h2>Condition:</h2>
+        <h3></h3>
+    </body>
+</html>
