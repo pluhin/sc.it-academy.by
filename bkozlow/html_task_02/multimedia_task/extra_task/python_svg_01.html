@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Домашнее задание 1</TITLE>
+    </HEAD>
+    <BODY>
+        <img src="image2vector.svg" align="right" title="титл" alt="альт">
+        <h1>HOW-TO: Программа на Python, Часть 1</h1>
+        <ul>
+            <li><a href="python_01.html">Программа на Python — часть 1</a></li>
+            <li><a href="python_02.html">Программа на Python — часть 2</a></li>
+            <li><a href="python_03.html">Программа на Python — часть 3</a></li>
+        </ul>
+        <a name="sod"></a>
+        <h2>Содержание</h2>
+        <h3>HOW-TO: Программа на Python, Часть 1</h3>
+        <ul>
+            <li><a href="#prog">Наша первая программа</a></li>
+            <li><a href="#for">Пример цикла For</a></li>
+        </ul>
+        Из множества существующих языков программирования Python — один из самых лёгких в изучении.
+        Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в
+        состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка
+        для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей —
+        программирование графических интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо
+        сейчас.
+        <a name="prog"></a>
+        <h2>Наша первая программа</h2>
+        <p><a href="#sod">К содержанию</a></p>
+        Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает каждая
+        строка и пойдём дальше.
+        Введите эти 4 строки:
+        <pre>
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+        </pre>
+        Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+        <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать программу на
+        Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале
+        <pre>
+<b><i><u>chmod +x hello.py</u></i></b>
+        </pre>
+        в папке, в которой вы сохранили программу. Теперь запустите её.
+        <pre>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$
+        </pre>
+        Вот и всё.
+        <a name="for"></a>
+        <h2>Пример цикла For</h2>
+        <p><a href="#sod">К содержанию</a></p>
+        Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и
+        наберите следующую программу:
+        <pre>
+#!/usr/bin/env python
+for cntr in range(0,10):
+    print cntr
+        </pre>
+        <i>Не забудьте поставить символ табуляции перед строкой «print cntr».</i> Это важно. В Python для
+        указания на блоки кода используются не круглые «(» и фигурные «{» скобки как в других языках
+        программирования, а отступы.
+        <table width="100%">
+            <tr>
+        <td align="left"><a href="">
+                <svg width="46" height="27" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                     <rect x="-1" y="-1" width="48" height="29" id="canvas_background" fill="#fff"/>
+                     <g id="canvasGrid" display="none">
+                      <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+                     </g>
+                    </g>
+                    <g>
+                     <title>Назад</title>
+                     <path fill="#9ACEE6" stroke-width="1.5" d="m25.04123,21.41817l-6.50048,-4.58181l12.56835,0l12.56833,0l0,-2.83636l0,-2.83636l-12.42414,0c-6.83327,0 -12.42413,-0.14376 -12.42413,-0.31947c0,-0.1757 2.7203,-2.23752 6.04511,-4.58181l6.04513,-4.26234l-5.58755,0l-5.58753,0l-8.53342,6.00574l-8.53341,6.00573l8.54978,5.99425l8.54979,5.99425l5.88232,0l5.88234,0l-6.50049,-4.58182l0,0z" id="svg_2" stroke="#000"/>
+                    </g>
+                </svg>
+            </a>
+        </td>
+        <td align="middle"><a href="#sod">
+                <svg width="27" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                     <rect x="-1" y="-1" width="29" height="42" id="canvas_background" fill="#fff"/>
+                     <g id="canvasGrid" display="none">
+                      <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+                     </g>
+                    </g>
+                    <g>
+                     <title>Содержание</title>
+                     <path fill="#84D3DB" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" d="m1.315825,15.684231l12.105241,-13.157878l12.105241,13.157878l-24.210481,0l-0.000001,0z" id="svg_4"/>
+                     <rect fill="#84D3DB" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="2.105282" y="16.736853" width="22.631544" height="20.526284" id="svg_5"/>
+                     <rect fill="#ffffff" stroke="#000" stroke-width="1.5" stroke-opacity="null" x="8.421062" y="23.019741" width="8.947355" height="6.842095" id="svg_6"/>
+                    </g>
+                </svg>
+            </a>
+        </td>
+        <td align="right"><a href="python_svg_02.html">
+                <svg width="49" height="27" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                     <rect fill="#fff" id="canvas_background" height="29" width="51" y="-1" x="-1"/>
+                     <g display="none" id="canvasGrid">
+                      <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_1"/>
+                     </g>
+                    </g>
+                    <g>
+                     <title>Следующая</title>
+                     <path id="svg_2" d="m23.090766,21.41817l6.659048,-4.58181l-12.874933,0l-12.874913,0l0,-2.83636l0,-2.83636l12.727205,0c6.999956,0 12.727195,-0.14376 12.727195,-0.31947c0,-0.1757 -2.786657,-2.23752 -6.19257,-4.58181l-6.19259,-4.26234l5.723849,0l5.723828,0l8.741578,6.00574l8.741568,6.00573l-8.758337,5.99425l-8.758347,5.99425l-6.025809,0l-6.025829,0l6.659058,-4.58182l0,0l-0.000001,0z" stroke-width="1.5" fill="#9ACEE6" stroke="#000"/>
+                    </g>
+                </svg>
+            </a>
+        </td>
+            </tr>
+        </table>
+    </BODY>
+</HTML> ​
