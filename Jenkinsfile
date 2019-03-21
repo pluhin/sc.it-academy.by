@@ -1,22 +1,11 @@
-@@ -1,19 +0,0 @@
+
 pipeline {
     agent any
     stages {
         stage('Create sanboxes') {
             steps { 
-<<<<<<< HEAD
                 sh 'printenv'
-
-=======
-                sh """
-                printenv
-                echo "========================================================================================"
-                if [ ! -z $CHANGE_BRANCH ]; then
-                    sh "mkdir -p /var/www/sandbox/$CHANGE_BRANCH"
-                    sh "ln -s $WORKSPACE /var/www/sandbox/$CHANGE_BRANCH/$CHANGE_AUTHOR || echo 'sandbox is exist'"
-                fi
-                """
->>>>>>> Jenkis changes
+                
             }
         }
     }
