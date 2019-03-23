@@ -4,133 +4,101 @@
 		<META charset="utf-8">
 		<TITLE>Menu</TITLE>
 		<style type="text/css">
-		ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  border-bottom: 1px solid black;
-  width: 100px;
-  border-radius: 5px;
-}
-li { position: relative; }
-li ul {
-  display: none;
-  position: absolute;
-  left: 149px;
-  top: 0px;
-}
-li:hover ul {
-  display: block;
-}
-li a {
-  display: block;
-  background-color: grey;
-  color: white;
-  text-decoration: none;
-  border: 1px solid black;
-  border-bottom: none;
-  border-radius: 5px;
-  padding: 4px;
-  transition: 1s all ease-in-out;
-}
-li a:hover {
-  background-color: white;
-  color: grey;
-}
-		
-		
+				ul {
+		  list-style: none;
+		  margin: 0px;
+		  padding: 0px;
+		  border-bottom: 1px solid black;
+		  width: 100px;
+		  border-radius: 5px;
+		}
+		li { position: relative; }
+		li ul {
+		  display: none;
+		  position: absolute;
+		  left: 149px;
+		  top: 0px;
+		}
+		li:hover ul {
+		  display: block;
+		}
+		li a {
+		  display: block;
+		  background-color: grey;
+		  color: white;
+		  text-decoration: none;
+		  border: 1px solid black;
+		  border-bottom: none;
+		  border-radius: 5px;
+		  padding: 4px;
+		  transition: 1s all ease-in-out;
+		}
+		li a:hover {
+		  background-color: white;
+		  color: grey;
+		}
 		.left {
-			width: 16%;
-			float: left;
+		width: 16%;
+		float: left;
 		}
-		.right {
-			width: 16%;
-			float: left;
-		}
-		.center {
-			float: left;
-			width: 16%;
-		}
-			.thursday {
-			float: left;
-			width: 16%;
-		}
-		
-			.friday {
-			float: left;
-			width: 16%;
-		}
-		
-			.saturday {
-			float: left;
-			width: 16%;
-
-		}
-		
-		
-	
-		
-		
 		.row {
-			overflow: hidden;
-		
+		overflow: hidden;
 		}
 		@media all and (max-width: 700px) {
-			.left, .right, .center, .thursday, .friday, .saturday {
-				float: none;
-				width: auto;
-			}
+		.left {
+		float: none;
+		width: auto;
+		}
 		}
 		</style>
 	</HEAD> 
 	<BODY> 
-	<div class="row">
+		<div class="row">
 		<div class="left">
-    <li><a href="#">Понедельник</a>
-      <ul> 
-        <li><a href="#">Завтрак</a></li> 
-        <li><a href="#">Обед</a></li> 
-        <li><a href="#">Ужин</a></li> 
-      </ul>
-    </li>  </div>
-		<div class="right">
-<li><a href="#">Вторник</a> 
-      <ul> 
-        <li><a href="#">Завтрак</a></li> 
-        <li><a href="#">Обед</a></li> 
-        <li><a href="#">Ужин</a></li> 
-      </ul> 
-    </li>  </div>
-		<div class="center"><li><a href="#">Среда</a>
-      <ul> 
-        <li><a href="#">Завтрак</a></li> 
-        <li><a href="#">Обед</a></li> 
-        <li><a href="#">Ужин</a></li> 
-      </ul>
-    </li> </div>
-	
-	<div class="thursday"> <li><a href="#">Четверг</a> 
-      <ul> 
-        <li><a href="#">Завтрак</a></li> 
-        <li><a href="#">Обед</a></li> 
-        <li><a href="#">Ужин</a></li> 
-      </ul> 
-    </li> </div>
-		<div class="friday"> <li><a href="#">Пятница</a>
-      <ul> 
-        <li><a href="#">Завтрак</a></li> 
-        <li><a href="#">Обед</a></li> 
-        <li><a href="#">Ужин</a></li> 
-      </ul>
-    </li> </div>
-		<div class="saturday">  <li><a href="#">Суббота</a> 
-      <ul> 
-        <li><a href="#">Завтрак</a></li> 
-        <li><a href="#">Обед</a></li> 
-        <li><a href="#">Ужин</a></li> 
-      </ul> 
-    </li> </div>
-	
-	</div>
+			<li><a href="#">Понедельник</a>
+		<ul> 
+			<li><a href="#">Завтрак</a></li> 
+			<li><a href="#">Обед</a></li> 
+			<li><a href="#">Ужин</a></li> 
+		</ul>
+		</li>  </div>
+			<div class="right">
+		<li><a href="#">Вторник</a> 
+		  <ul> 
+			<li><a href="#">Завтрак</a></li> 
+			<li><a href="#">Обед</a></li> 
+			<li><a href="#">Ужин</a></li> 
+		  </ul> 
+		</li>  </div>
+			<div class="center"><li><a href="#">Среда</a>
+		  <ul> 
+			<li><a href="#">Завтрак</a></li> 
+			<li><a href="#">Обед</a></li> 
+			<li><a href="#">Ужин</a></li> 
+		  </ul>
+		</li> </div>
+		
+		<div class="thursday"> <li><a href="#">Четверг</a> 
+		  <ul> 
+			<li><a href="#">Завтрак</a></li> 
+			<li><a href="#">Обед</a></li> 
+			<li><a href="#">Ужин</a></li> 
+		  </ul> 
+		</li> </div>
+			<div class="friday"> <li><a href="#">Пятница</a>
+		  <ul> 
+			<li><a href="#">Завтрак</a></li> 
+			<li><a href="#">Обед</a></li> 
+			<li><a href="#">Ужин</a></li> 
+		  </ul>
+		</li> </div>
+			<div class="saturday">  <li><a href="#">Суббота</a> 
+		  <ul> 
+			<li><a href="#">Завтрак</a></li> 
+			<li><a href="#">Обед</a></li> 
+			<li><a href="#">Ужин</a></li> 
+		  </ul> 
+		</li> </div>
+		</div>
 	</BODY> 
 </HTML> 
