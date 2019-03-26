@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Анкета</title>
+		<title>Анкета1</title>
     </head>
 <body>
 
@@ -10,23 +10,23 @@
 <form method="post" action="http://sc.it-academy.by/fe/form.php">
 	<fieldset>
 		<legend>Личные данные</legend>
-		<input type="text" name="surname" pattern="^[А-Я][а-я]{1,25}" placeholder="Фамилия" maxlength="25" autofocus> (text: Только кирилица, без пробелов, 
+		<input type="text" name="surname" pattern="[А-Я][а-я]+" placeholder="Фамилия" maxlength="25" required autofocus> (text: Только кирилица, без пробелов, 
 			длина поля 25, обязательное поле, автофокус на данном поле)<br> 	
-		<input type="text" name="name" pattern="^[А-Я][а-я]{1,20}" placeholder="Имя" maxlength="20"> (text: Только кирилица, без пробелов, 
+		<input type="text" name="name" pattern="[А-Я][а-я]+" placeholder="Имя" maxlength="20" required> (text: Только кирилица, без пробелов, 
 		длина поля 20, обязательное поле)<br>
-		<input type="text" name="patronymic" pattern="^[А-Я][а-я]{1,24}" placeholder="Отчество" maxlength="24"> (text: Только кирилица, без пробелов, 
+		<input type="text" name="patronymic" pattern="[А-Я][а-я]+" placeholder="Отчество" maxlength="24" required> (text: Только кирилица, без пробелов, 
 		длина поля 24, обязательное поле)<br>
 		<fieldset>
 			text: Серия - только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2, количество букв не менее 2, 
 			обязательное поле<br>
 			text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле<br>
 			<legend>Паспортные данные</legend>			
-			<input type="text" name="series" pattern="^[A-Z]{2,2}" placeholder="АB" size="2" required>
-			<input type="text" name="number_p" pattern="^[0-9]{7,7}" placeholder="1234567" size="7" required>			
+			<input type="text" name="series" pattern="^[A-Z]{2}" placeholder="АB" maxlength="2" required>
+			<input type="text" name="number_p" pattern="[0-9]{7}" placeholder="1234567" maxlength="7" required>			
 		</fieldset>
 		<fieldset>
 			<legend>Дата рождения</legend>			
-			<input type="text" name="year" pattern="^[0-9]{0,4}" placeholder="1970" size="4">text: Год рождения 4-е цифры<br>
+			<input type="text" name="year" pattern="[0-9]{4}" placeholder="1970" maxlength="4">text: Год рождения 4-е цифры<br>
 			<select name="month" id="month"> select: Месяц рождения
 			<option value="Январь" selected>Январь</option>
 			<option value="Февраль">Февраль</option>
@@ -44,26 +44,32 @@
 			<input type="number" name="number_d" min="1" max="31" step="1" size="2">number: Диапазон от 1 до 31 с шагом 1<br>
 		</fieldset>
 			<select name="nationality" id="nationality">
-			<option value="BLR" selected>BY</option>
-			<option value="RUS">RU</option>
-			<option value="UKR">UA</option>
-			<option value="KAZ">KZ</option>
-			<option value="KGZ">KG</option>
-			<option value="POL">PL</option>
-			<option value="UZB">UZ</option>
+			<option value="BLR" selected>Республика Беларусь</option>
+			<option value="RUS">Российская Федерация</option>
+			<option value="UKR">Украина</option>
+			<option value="KAZ">Казахстан</option>
+			<option value="UZB">Узбекистан</option>
 			</select>
 			<label for="nationality"><span> (Национальность - выбор одного значения из списка, обязательное поле)</span></label><br>
-			<label for="address"><span>Адрес:</span></label><br>
-			<textarea name="address" lang="ru" id="address" required></textarea><br>		
+			<label>Адрес:</label><br>
+			<textarea name="address" lang="ru" required>Адрес места жительства</textarea><br>
 	</fieldset>
 	<fieldset>
 		<legend>Интересы</legend>
 		<fieldset>
 			<legend>Хобби</legend>
-			<input type="checkbox" name="hobby[]" value="Рыбалка"><span>Рыбалка</span><br>
-			<input type="checkbox" name="hobby[]" value="Астрономия"><span>Астрономия</span><br>
-			<input type="checkbox" name="hobby[]" value="Дайвинг"><span>Дайвинг</span><br>
-			<input type="checkbox" name="hobby[]" value="Марки"><span>Марки</span><br>
+			<label>
+				<input type="checkbox" name="hobby[]" value="Рыбалка">Рыбалка<br>
+			</label>
+			<label>
+				<input type="checkbox" name="hobby[]" value="Астрономия">Астрономия<br>
+			</label>
+			<label>
+				<input type="checkbox" name="hobby[]" value="Дайвинг">Дайвинг<br>
+			</label>
+			<label>
+				<input type="checkbox" name="hobby[]" value="Марки">Марки<br>
+			</label>
 		</fieldset>
 		<fieldset>
 			<legend>Домашние животные (возможность выбора нескольких вариантов)</legend>			
@@ -88,15 +94,15 @@
 	</fieldset>
 	<fieldset>
 		<legend>Данные для входа и востоновления пароля</legend>
-		<input type="text" name="login_i" pattern="[A-Za-z]{5,20}" placeholder="Имя пользователя" size="20" required> (text: Только латиница, без пробелов, 
+		<input type="text" name="login_i" pattern="[A-Z a-z]{5,20}" placeholder="Имя пользователя" maxlength="20" required> (text: Только латиница, без пробелов, 
 		не менее 5 символов, длина поля 20, обязательное поле)<br>
-        <input type="text" name="password_i" pattern="[A-Za-z]{10,20}" placeholder="Пароль" size="20" required autocomplete="off"> password: Только латиница, без пробелов, 
+        <input type="password" name="password_i" pattern="[A-Z a-z]{10,20}" placeholder="Пароль" maxlength="20" required autocomplete="off"> password: Только латиница, без пробелов, 
         не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение<br>
 	</fieldset>
 	<fieldset>
 		<legend>Координаты:</legend>
-		<input type="email" name="post_i" placeholder="введите адрес почты"> (email: проверка должна осуществляться при помощи новых атрибутов тега &lt;imput&gt;)<br>
-		<input type="url" name="site_i" placeholder="введите адрес сайта"> url: проверка должна осуществляться при помощи новых атрибутов тега &lt;imput&gt;<br>
+		<input type="email" name="email" placeholder="введите адрес email"> (email: проверка должна осуществляться при помощи новых атрибутов тега &lt;imput&gt;)<br>
+		<input type="url" name="url" pattern="https?://.+" placeholder="введите адрес сайта"> url: проверка должна осуществляться при помощи новых атрибутов тега &lt;imput&gt;<br>
 	</fieldset>
 	<fieldset>
 		<legend>Цифры</legend>

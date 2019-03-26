@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Формы</title>
+		<title>Формы1</title>
     </head>
 <body>
 
@@ -140,10 +140,11 @@
 <form method="post" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
 <fieldset>
     <legend>Upload</legend>
-    <input type="file" name="file_field" dir="ltr"><br>
-    <span>Срок храненния (года):</span><br>
-    <input type="text" name="year" pattern="[0-9]{0,3}" size="5">
-    <input type="submit" value="Загрузить"><br>
+    <label>Файл:</label><br>
+        <input type="file" name="file_field" dir="ltr"><br>
+    <label>Срок храненния (года):</label><br>
+        <input type="number" name="years">
+        <input type="submit" value="Загрузить"><br>
     <span><em>Метод POST<br>В теге form используйте атрибут<br> enctype="multipart/form-data" для отправки <br>файла на сервер</em></span>
 </fieldset>
 </form>
@@ -151,12 +152,12 @@
 
 <td valign="top">
     <h2>Валидация данных HTML5:</h2>
-    <form method="get" action="http://sc.it-academy.by/fe/form.php">
+    <form method="post" action="http://sc.it-academy.by/fe/form.php">
         <fieldset>
             <legend>Строка поиска</legend>
-            <input type="text" name="letters" pattern="^[А-Я][а-я]{1,30}" placeholder="Только русские буквы" maxlength="20"><br>
+            <input type="text" name="letters" pattern="[А-Я а-я]+" placeholder="Только русские буквы" maxlength="20"><br>
             <span><em>Телефонный номер в формате<br> +ХХХ-ХХ-ХХХХХХХ, где Х - любое число</em></span><br>
-            <input type="text" name="number" placeholder="+375-29-1234567" pattern="\+375-(29|44|33|25)-[0-9]{7}" maxlength="15"><br>
+            <input type="tel" name="number" placeholder="+375-29-1234567" pattern="\+375-(29|44|33|25)-[0-9]{7}" maxlength="15"><br>
             <input type="submit" value="Загрузить"><br>
         </fieldset>
     </form>
