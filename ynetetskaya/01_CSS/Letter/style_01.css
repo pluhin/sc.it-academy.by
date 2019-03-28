@@ -1,0 +1,16 @@
+/*font-family: 'Bad Script', cursive;*/
+header {
+    text-align: right;
+}
+h3{
+    text-decoration: underline;
+    text-indent: 5mm;
+    font-family: 'Bad Script', cursive;
+}
+.main {
+    font-size: medium;
+}
+.line {
+    text-indent: 5mm;
+    font-family: 'Bad Script', cursive;    
+}
