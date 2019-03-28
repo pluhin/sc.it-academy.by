@@ -1,0 +1,17 @@
+h1 {
+	font-size: 100%;
+}
+
+header {
+	text-align: right;
+}
+
+h3 {
+	font-size: 150%;
+	text-decoration: underline;
+	font-family: 'Marck Script', cursive;
+}
+
+article	{
+	font-family: 'Marck Script', cursive;
+}
