@@ -1,0 +1,7 @@
+header {text-align: right;}
+h1 {font-size: large;}
+body article p, body h3 {
+	font-family:'Marck Script';
+	text-indent: 7mm;
+}
+body h3 {text-decoration: underline;}
