@@ -1,0 +1,35 @@
+body {
+    font-family: Times, "Old Standard TT", serif; /* Семейство шрифтов */
+    font-size: 12pt; /* Размер основного шрифта в пунктах  */
+    background-color: #f0f0f0; /* Цвет фона веб-страницы */
+    color: rgb(0, 0, 0); /* Цвет основного текста */ 
+  }
+header {
+    text-align: right;
+    margin-right: 20px; /* Отступ справа в пикселах */
+    font-size: 12pt; /* Размер шрифта в пунктах */
+    font-family: Times, "Old Standard TT", serif; /* Семейство шрифтов */
+    font-weight: normal; /* Нормальное начертание текста  */
+  }
+h1 {
+    font-size: 14pt; /* Размер шрифта в пунктах */
+    font-family: Times, "Old Standard TT", serif; /* Семейство шрифтов */
+    font-weight: normal; /* Нормальное начертание текста  */
+  }
+h3 {
+    text-indent: 80px; /* Отступ первой строки в пикселах */
+    font-size: 16pt; /* Размер шрифта в пунктах */
+    font-family: "Old Standard TT", Times, serif; /* Семейство шрифтов */
+    font-weight: Italic; /* Нормальное начертание текста  */
+  }
+article {
+    margin-right: 20px; /* Отступ справа в пикселах */
+    text-indent: 20px; /* Отступ первой строки в пикселах */
+    font-size: 14pt; /* Размер шрифта в пунктах */
+    font-family: "Old Standard TT", Times, serif; /* Семейство шрифтов */
+    font-weight: Italic; /* Нормальное начертание текста  */
+}
+p {
+    text-align: left; /* Выравнивание по ширине */
+    margin-left: 60px; /* Отступ слева в пикселах */
+  }
