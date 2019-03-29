@@ -6,17 +6,17 @@ body {color: #030303;
 .shapka {text-align: right;
 }
 
-.zag1 {
+.shapka h1 {
 	font-size: 20px;
 }
 
-article{
+.osnovnoi_text {
 	text-indent: 10mm;
 	font-style: italic;
 	font-family: 'Bad Script', cursive;
 }
 
-.zag2{
+.osnovnoi_text h3 {
 	font-family: 'Bad Script', cursive;
 	text-decoration: underline;
 }
