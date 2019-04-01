@@ -9,15 +9,14 @@
                 width: 350px; 
                 list-style-type: upper-roman;
             }
-            .nested{         
-                /*нужно ли тут 350*/       
+            .nested{      
                 list-style-type: lower-roman;
             }
             .python {                
                 background-color: black;
                 color: green;
                 width: 400px;
-				max-height: 5em;
+				max-height: 4em;
                 overflow-y: auto;
                 white-space: pre-line;
             }            
@@ -25,8 +24,7 @@
     </HEAD>
     <BODY>
         <ul class="main">
-            <!--жирные буквы-->
-            <li>Контейнер с кодом</li>
+            <li>Контейнер с кодом
             <ul class="nested">
                 <li>Цвет фона: черный</li>
                 <li>Цвет текста: зеленый</li>
@@ -34,13 +32,14 @@
                 <li>Максимальная высота контейнера: 4-е строки</li>
                 <li>Переполнение: автоматическое</li>
             </ul>
-            <!--жирные буквы-->
-            <li>Список</li>
+            </li>
+            <li>Список
             <ul class="nested">
                 <li>Ширина: 350px</li>
                 <li>Тип списка: римские цифры</li>
                 <li>Тип вложенного списка: римские нижний регистр цифры</li>
             </ul>
+            </li>
         </ul>
         <div class="python">
             #!/usr/bin/env python
