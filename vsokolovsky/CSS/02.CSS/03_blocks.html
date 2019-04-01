@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <META charset="utf-8">
+        <TITLE>lists_and_containers</TITLE>
+        <style type=text/css>
+        .backg{
+            background: rgb(236, 229, 229);
+        }
+        .novigation{
+            width: 15em;
+            background: rgb(199, 195, 195);
+            float: left;
+        }
+        .article1{
+            background: rgb(150, 150, 150);
+            margin-bottom: 0.2em;
+            overflow: hidden;
+            float:top;
+            width: auto;
+        }
+        .bottom{
+            clear: both;
+            background: rgb(199, 195, 195);
+            margin-top: -0.8em;
+        }
+        .img{
+            float: right;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="backg">
+            <div class="novigation">
+            <h3>Блок навигации</h3>
+                <ul>
+                    <li>Ширина 15em</li>
+                    <li>Должен присутствовать цвет фона</li>
+                    <li>Располагается слева</li>
+                    <li>Блок навигации наполните 
+                    контентом достаточным, 
+                    чтобы по высоте он начинал 
+                    захватывать вторую статью, 
+                    как показано в данном 
+                    примере</li>
+                </ul>
+            </div>
+            <div class="article1">
+					<h3>Статья 1</h3>
+					<p>Размер блока:<br>
+					Занимает всю доступную ширину<br>
+					Должен присутствовать цвет фона<br>
+					Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom
+                    </p>
+            </div>
+            <div class="article1">
+					<h3>Статья 2</h3>
+					<p>Размер блока:<br>
+					Занимает всю доступную ширину<br>
+					Должен присутствовать цвет фона<br>
+					Во всех "статьях" сделайте отступ снизу от соседей равным .2em, пи помощи свойства margin-bottom
+					Картинка вставлена при помощи тега, плавание организовано по праваму краю внутри данной статьи для этой картинки.
+					<img src="./img/icon_mail.png" width="100" alt="pic" class="img">
+                    </p>              
+            </div>
+            <div class="bottom"><p>Нижний блок, подвал. Занимаетвсю доступную ширину. Высота определяется помещенным внутрь контентом.</p></div>  
+        </div>    
+    </body>
+</HTML>
