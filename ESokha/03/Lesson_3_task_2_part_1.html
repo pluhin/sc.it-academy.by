@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<HTML> 
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Lesson_2_task_1_part_2</TITLE>
+    </HEAD>
+    <BODY>
+	<H2 align="center">Заполните анкету</H2>
+    <form method="POST" name="form" id="formm" action="http://sc.it-academy.by/fe/form.php">
+		<fieldset> 
+		<legend>Личные данные</legend>
+        <input type="text" name="name" id="namee" SIZE ="25" maxlength="25" pattern ="[А-Яа-я]{2,}"  placeholder="Фамилия"  required autofocus>
+        <label for="namee">text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле</label><br>
+        <input type="text" name="surname" id="surnamee" SIZE ="20" maxlength="20" pattern = "[А-Яа-я]{2,}" placeholder="Имя" required>
+        <label for="surnamee">text: Только кириллица, без пробелов, длина поля 20, обязательное поле</label><br>
+        <input type="text" name="patronymic" id="patronymicc" SIZE ="24" maxlength="24" pattern ="[А-Яа-я]{2,}"  placeholder="Отчество" required>
+        <label for="patronymicc">text: Только кириллица, без пробелов, длина поля 24, обязательное поле</label>
+		<fieldset>
+		<legend>Паспортные данные</legend>
+		<label for="surnamee">text: Серия - только заглавные латинские буквы с длинной 2 и максимальным количеством символов 2, количество букв не менее 2, обязательное поле</label><br>
+		<label for="numpasportt">text: Номер паспорта - только цифры с длинной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле</label><br>
+		<input type="text" name="series" id="seriess" SIZE ="2" maxlength="2" pattern = "[A-Z]{2,}" placeholder="AA"  required>	
+		<input type="text" name="numpasport" id="numpasportt" SIZE ="7" maxlength="7" pattern = "[0-9]{7,}" placeholder="12345678"  required>
+		</fieldset>
+		<fieldset>
+		<legend>Дата рождения</legend>
+        <input type="text" name="birthday" id="birthdayy" SIZE ="4" maxlength="4" pattern = "[0-9]{4}" placeholder="2000"  required> 
+        <label for="birthdayy">text: Год рождения 4 цифры</label><br>
+		<select name="month" id="monthh">
+			<option value="1">Январь</option>
+			<option value="2">Февраль</option>
+			<option value="3">Март</option>
+			<option value="2">Апрель</option>
+			<option value="3">Май</option>
+			<option value="0" selected>Январь</option>
+        </select>
+        <label for="monthh">select: Месяц рождения</label><br>
+        <input type="number" name="day" id="dayy" min="1" max="31" step="1">
+        <label for="dayy">number: Диапазон от 1 до 31 с шагом 1</label>
+		</fieldset>
+		<select name="country" id="countryy" required>
+			<option value="1">BY</option>
+			<option value="2">RUS</option>
+			<option value="2">UK</option>
+			<option value="0" selected>BY</option>
+        </select>
+        <label for="countryy">(Национальность - выбор одного значения из списка, обязательно поле)</label><br>
+		<label for="adresss">Адрес:</label><br>
+		<textarea name="adress" id="adresss">
+		</textarea><br>
+		</fieldset>
+		<fieldset>
+		<legend>Интересы</legend>
+		<fieldset>
+		<legend>Хобби</legend>
+		<label>
+			<input type="checkbox" name="fishing" id="fishingg"> Рыбалка
+		</label> <br>
+		<label>
+			<input type="checkbox" name="asrtonomy" id="asrtonomyy"> Астрономия
+		</label> <br>
+		<label>
+			<input type="checkbox" name="diving" id="divingg"> Дайвинг
+		</label> <br>
+		<label>
+			<input type="checkbox" name="mark" id="markk"> Марки
+		</label> <br>		
+		</fieldset>
+		<fieldset>
+		<legend>Домашние животные (возможность выбора нескоьких вариантов)</legend>
+		<label for="pets">array: select multiple</label><br>
+		<select name="pet[]" id="pets" size="12" multiple>
+			<optgroup label="Попугаи">
+				  <option value="1">Волнистый</option>
+				  <option value="2">Ара</option>
+				  <option value="3">Неразлучник</option>
+			</optgroup>
+			<optgroup label="Рыба">
+				  <option value="4">Караси</option>
+				  <option value="5">Окуни</option>
+				  <option value="6">Осетр</option>
+			</optgroup>
+			<optgroup label="Птицы">
+				  <option value="4">Стая ворон</option>
+				  <option value="5">Аист</option>
+				  <option value="6">Орел</option>
+			</optgroup>
+		</select>
+		</fieldset>
+		</fieldset>
+		<fieldset> 
+			<legend>Данные для входа и восстановления пароля</legend>
+			<input type="text" ID="log" name="login" SIZE ="20" maxlength="20" pattern ="[A-Za-z]{5,}"  placeholder="Логин" required>
+			<LABEL FOR="log">text: Только латиница без пробелов, не менее 5 символов, длина поля 20, обязательное поле</LABEL> <br>
+			<INPUT TYPE="password" ID="passwd" NAME="password" SIZE ="20" maxlength="20" pattern ="[A-Za-z]{10,}" placeholder="Пароль" required autocomplete="off">
+			<LABEL FOR="passwd">Только латиница без пробелов, не менее 10 символов, длина поля 20, обязательное поле. отключить автозаполнение</LABEL><br>                 
+		</fieldset>
+		<fieldset> 
+			<legend>Координаты</legend>
+			<input type="text" ID="email" name="mail" SIZE ="20" maxlength="20" pattern =".+[@].+"  placeholder="введите адрес почты" required>
+			<LABEL FOR="email">проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;</LABEL> <br>
+			<INPUT TYPE="text" ID="urll" NAME="url" SIZE ="20" maxlength="20" pattern ="https.+" placeholder="введите адрес сайта" required autocomplete="off">
+			<LABEL FOR="urll">проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;</LABEL><br>                 
+		</fieldset>
+		<fieldset> 
+			<legend>Цифры</legend>
+            <input type="number" name="numbersss" id="numberssss" min="-2.5" max="2.5" step="0.1"> 
+            <LABEL FOR="numberssss">number: Диапазпон от -2.5 до 2.5 с шагом 0.1</LABEL><br>
+            <input type="range" name="maxx" id="maxxx" min="1" max="10">
+            <LABEL FOR="maxxx">range: Максимальное 10 минимальное 1</LABEL>           
+		</fieldset>
+		<fieldset>
+		<legend>Кнопки управления</legend>
+		<input type="submit" value="Отправить">
+		<input type="reset" value="Сбросить"><br>
+		<button type='button' id="butt">
+        <img src="Image/email.jpg">
+		</button>
+		<LABEL FOR="butt">- при нажатии на эту кнопку ничего не происходит</LABEL>
+		</fieldset>
+    </form>
+
+       <!-- </td>
+        <td>
+            <form method="GET" action="http://sc.it-academy.by/fe/form.php">
+                <fieldset> 
+                <legend>Строка поиска</legend>
+                <input type="text" name="search" maxlength="10" required autofocus><span>*</span>
+                <input type="hidden" name="hidden_field" value="hidden">
+                <input type="submit" value="Искать"><br>
+                <label>
+                    <input type="radio" name="search_dist" value="site" checked>
+                    на сайте
+                </label>
+                <label>
+                        <input type="radio" name="search_dist" value="google" checked>
+                        в Google
+                    </label><br>
+                    <em>* - обязательное поле </em><br>
+                    <em>Автофокус в поле поиска</em>                    
+                </fieldset>
+            </form>
+        </td>
+    </tr>
+	
+	
+	
+    <tr>
+        <td>
+            <form method="POST" action="http://sc.it-academy.by/fe/form.php">
+                <fieldset> 
+                <legend>Авторизируйтесь</legend>
+                <input type="text" ID="log" name="login" maxlength="25" SIZE="25" required>
+                <LABEL FOR="log">* Логин</LABEL> <br>
+                <INPUT TYPE="password" ID="passwd" NAME="password" SIZE="25" required>
+                <LABEL FOR="passwd">* Пароль</LABEL><br>      
+                <label>
+                <input type="checkbox" name="in system" id="insystem"> Оставаться в системе
+                </label> <br>
+                <input type="submit" value="Войти"><br>
+                <em>* - обязательное поле </em>
+                </fieldset>
+            </form>
+        </td>
+        <td>
+            <form method="POST" action="http://sc.it-academy.by/fe/form.php">
+                <fieldset> 
+                <legend>Как вам?</legend>
+                <label>
+                    <input type="radio" name="feedback" value="nothing" id="feedbacknothing" checked>ничего
+                </label><br>
+                <label>
+                    <input type="radio" name="feedback" value="notbad" id="feedbacknotbad">неплохо
+                </label><br>
+                <label>
+                    <input type="radio" name="feedback" value="good" id="feedbackgood">хорошо
+                </label><br>
+                <label>
+                    <input type="radio" name="feedback" value="super" id="feedbacksuper">супер
+                </label><br>
+                <input type="submit" value="Отправить"><br>
+                <em>Есть скрытое поле</em><br>
+                <em>name=date_voite, value="2013.12.31"</em>                  
+                </fieldset>
+            </form>
+        </td>
+    </tr>
+
+
+    
+    <tr>
+        <td>
+            <form method="POST" action="http://sc.it-academy.by/fe/form.php">
+                <fieldset> 
+                <legend>Оставьте Ваш отзыв</legend>
+                <input type="text" ID="log" name="login" maxlength="25" SIZE="25" required>
+                <LABEL FOR="log">* Имя</LABEL> <br>
+                <input type="email" ID="mail" name=“email” SIZE="25" required> 
+                <LABEL FOR="mail">* e-mail</LABEL><br>      
+                <textarea name="text_area" lang="ru">
+                Форма отправки
+                </textarea><br>
+                <input type="submit" value="Отправить"><br>
+                <em>* - обязательное поле </em>
+                </fieldset>
+            </form>
+        </td>
+        <td>
+            <form method="POST" action="http://sc.it-academy.by/fe/form.php">
+                <fieldset> 
+                <legend>Города РБ</legend>
+                <select name="list" id="list">
+                    <option value="1">Минск</option>
+                    <option value="2">Брест</option>
+                    <option value="3">Гомель</option>
+                    <option value="0" selected>Брест</option>
+                </select>
+                <select name="lists[]" size="8" multiple id="lists">
+                    <optgroup label="Города РБ">
+                          <option value="1">Брест</option>
+                          <option value="2">Минск</option>
+                          <option value="3">Витебск</option>
+                    </optgroup>
+                    <optgroup label="Города России">
+                          <option value="4">Москва</option>
+                          <option value="5">Рязань</option>
+                          <option value="6">Магадан</option>
+                    </optgroup>
+                </select>
+                <input type="submit" value="Ok">                
+                </fieldset>
+            </form>
+        </td>
+    </tr>
+    
+
+
+
+    <tr>
+        <td>
+            <form method="POST" enctype="multipart/form-data" action="http://sc.it-academy.by/fe/form.php">
+                <fieldset> 
+                <legend>Upload</legend>
+                Файл:<br>
+                <input type="file" name="file_Field" dir=“ltr”><br>
+                Срок хранения (года):<br>
+                <input type="number" name="year" min="2010" max="2020" step="1">
+                <input type="submit" value="загрузить"><br>
+                <em>Метод POST</em>
+                </fieldset>
+            </form>
+        </td>
+        <td>
+            <form method="GET" action="http://sc.it-academy.by/fe/form.php">
+                <fieldset> 
+                <legend>Строка поиска</legend>
+                <input type="text" name="word" placeholder="Только русские буквы" lang=“ru”> <br>
+                <em>Телефонный номер в формате</em><br>
+                <em>+ХХХ-ХХ-ХХХХХХХ, где Х - любое число</em><br>
+                <input type="text" name="number" placeholder="+375-29-1234567"> <br>
+                <input type="submit" value="Проверить">              
+                </fieldset>
+            </form>
+        </td>
+    </tr> -->
+    </BODY>
+  </HTML> ​
