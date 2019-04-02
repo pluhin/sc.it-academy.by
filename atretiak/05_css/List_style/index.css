@@ -1,0 +1,17 @@
+.list {
+    width: 350px;
+    list-style: upper-roman;
+}
+.style {
+    width: 350px;
+    list-style: lower-roman;
+}
+.code {
+    width: 400px;
+    background-color: black;
+    color: green;   
+    max-height: 4rem;
+    line-height: 1rem;
+    white-space: pre-line;
+    overflow: auto;
+}
