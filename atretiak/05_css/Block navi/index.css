@@ -1,0 +1,23 @@
+.row {
+    background-color: rgba(0,0,0,.1);
+}
+.navi {
+    width: 15em;
+    float: left;
+    background-color: rgba(0,0,0,.2);
+}
+.article {
+    margin-left: 15em;
+    background-color: rgba(0,0,0,.3);
+    overflow: hidden;
+    margin-bottom: .2em;
+}
+#article_email {
+    width: 100px;
+    float: right;
+    margin: 1em;
+}
+.footer {
+    background-color: rgba(0,0,0,.2);
+    clear: both;
+}
