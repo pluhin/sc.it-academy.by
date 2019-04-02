@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Оформление списков и контейнеров</title>
+		<style type="text/css">
+            .container {
+                display: flex;
+                flex-flow: row wrap;           
+            }
+            .navigation_block {   
+            	flex-basis: 15em;
+				background-color: cadetblue;
+            	align-self: flex-start
+		    }
+            .article {
+                display: flex;
+                flex-direction: column;
+                flex: auto;
+            }
+		    .article div {
+				background-color: cornflowerblue;
+				margin-bottom: .2em;                     
+            }
+		    .basement_block {
+				background-color: cadetblue;
+				clear: both;
+            	flex: auto;
+			}
+        </style>
+	</HEAD>
+	<BODY>
+    <div class="container">
+		<div class="navigation_block">
+			<h2>Блок навигации</h2>
+				<ul>
+					<li>Ширина 15em.</li>
+					<li>Должен присутствовать цвет фона.</li>
+					<li>Располагается слева.</li>
+					<li>Блок навигации наполнить контентом достаточным, чтобы по высоте он начинал захватывать вторую статью.</li>
+				</ul>
+		</div>
+		<div class="article">
+			<div>
+				<h2>Статья 1</h2>
+				<p>Размер блока:<br> 
+				Должен занимать всю доступную ширину.<br>
+				Должен присутствовать цвет фона. <br>
+				Во всех "статьях" сделать отступ снизу от соседей равным .2em, при помощи свойства margin-bottom.</p>
+			</div>
+			<div>
+				<h2>Статья 2</h2>
+				<p>Размер блока: Занимает всю доступную ширину.<br>
+				Должен присутствовать цвет фона. <br>
+				Вс всех "статьях" сделать отступ снизу от соседей равным 2em, при помощи свойства margin-bottom.<br>
+				Картинка вставлена при помощи тега, плавание организовано по правому краю внитри данной статьи для этой картинки.<br>
+				<img class="send_flex" align="right" src="icon_mail.png" alt="mail_icon"></p>
+			</div>
+		</div>	
+		<div class="basement_block">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутри контентом.</div>
+        </div>
+    </div>
+	</BODY>
+</HTML>
