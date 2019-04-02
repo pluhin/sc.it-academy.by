@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Страница с блоками</TITLE>
+        <style>
+            .c_0 {
+                background-color: antiquewhite;
+            }
+            .c_1 {
+                width: 15em;
+                background-color: indianred;
+                color: blanchedalmond;
+                padding: .5em;
+                float: left;
+            }
+            .c_2 {
+                overflow: hidden;
+                background-color: bisque;
+                color: darkslategrey;
+                margin-bottom: .2em;
+            }
+            .img {
+                float: right;
+            }
+            .c_3 {
+                clear: both;
+                background-color: firebrick;
+                color: bisque;
+                padding: .2em;
+            }
+        </style>
+    </HEAD>
+    <BODY>
+        <div class="c_0"> 
+            <div class="c_1">
+                <h3>Блок навигации</h3>
+                <ul>
+                    <li>Ширина 15em</li>
+                    <li>Должен присутствовать цвет фона</li>
+                    <li>Располагается слева</li>
+                    <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью,
+                        как показано в данном примере</li>
+                </ul>
+            </div>
+            <div class="c_2">
+                <h3>Статья 1</h3>
+                Размер блока:<br>
+                Занимает всю доступную ширину<br>
+                Должен присутствовать цвет фона<br>
+                Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom
+            </div>
+            <div class="c_2">
+                <h3>Статья 2</h3>
+                Размер блока:<br>
+                Занимает всю доступную ширину<br>
+                Должен присутствовать цвет фона<br>
+                Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom<br>
+                Картинка вставлена при помощи тега, плавание организовано по правому краю внутри данной статьи для этой картинки<br>
+                <img src="images/icon_mail.png" class="img">
+            </div>
+            <div class="c_3">
+                Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещённым внутрь контентом.
+            </div>
+        </div>
+    </BODY>
+</HTML>
