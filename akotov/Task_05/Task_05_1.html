@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <HTML>
+        <HEAD>
+            <META charset="utf-8">
+            <TITLE>Доп задание_05</TITLE>
+        </HEAD>
+        <BODY>
+            <h1 align="center">Рекомендации к выполнению работы:</h1>
+            <table width="700" border="1" col width="50%"><col width="50%">
+                <form method="GET" action="form.php">
+                    <fieldset>
+                    <legend>Личные данные</legend>
+                        <input type="text" placeholder="Фамилия" SIZE="25" pattern="^[А-Яа-яЁё\s]" required autofocus> text: Только 
+                        кириллица, без пробелов, длинна поля 25, обязательное поле, автофокус на данном поле)<br>
+                        <input type="text" placeholder="Имя" SIZE="20" pattern="^[А-Яа-яЁё\s]" required> text: Только кириллица, без 
+                        пробелов, длинна поля 20, обязательное поле)<br>
+                        <input type="text" placeholder="Отчество" SIZE="24" pattern="^[А-Яа-яЁё\s]" required> text: Только кириллица,
+                        без пробелов, длинна поля 24, обязательное поле)<br>
+                    <fieldset>
+                        <legend>Паспортные данные</legend>
+                    text: Серия - только заглавные две латинские буквы с длинной 2 и максимальным кличеством символов 2,
+                    количеством букв не менее 2, обязательное поле<br>
+                    text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр
+                    не менее 7, обязательное поле
+                    <br>
+                    <input type="series" placeholder="АА" size="2" maxlength="2" pattern="^[A-Z]" required>
+                    <input type="series" placeholder="1234567" size="7" maxlength="7" pattern="^[0-9]" required> 
+                </form>
+                    </fieldset>
+                <form method="GET" action="form.php">
+                    <fieldset>
+                            <legend>Дата рождения</legend>
+                                <input type="text" placeholder="Год" SIZE="4"> text: Год родения 4-е цифры<br>
+                                <select name="list" id="list">
+                                        <option value="1">Январь</option>
+                                        <option value="2">Февраль</option>
+                                        <option value="3">Март</option>
+                                        <option value="4">Апрель</option>
+                                        <option value="5">Май</option>
+                                        <option value="6">Июнь</option>
+                                        <option value="7">Июль</option>
+                                        <option value="8">Август</option>
+                                        <option value="9">Сентябрь</option>
+                                        <option value="10">Октябрь</option>
+                                        <option value="11">Ноябрь</option>
+                                        <option value="12">Декабрь</option>
+                                </select>
+                                select: Месяц рождения<br>
+                                <input type="number" SIZE="4" min="1" max="31"> number: Диапазон от 1 до 31 с шагом 1<br>
+                    </fieldset>
+                </form>
+                                <select name="list" id="list">
+                                        <option value="1">РБ</option>
+                                        <option value="2">РФ</option>
+                                </select>
+                                (Национальность - выбор одного значения из списка)<br>
+                                Адрес:<br>
+                                <textarea name="text" lang="ru"></textarea>
+                    </fieldset>
+                </form>
+                <form method="GET" action="form.php">
+                    <fieldset>
+                            <legend>Интересы</legend>
+                    <fieldset>
+                            <legend>Хобби</legend>
+                <form id="my_form" name="user_data" method="GET" action="form.php">
+                            <label>
+                                <input type="checkbox" name="hobby">Рыбалка<br>
+                                <input type="checkbox" name="hobby">Астраномия<br>
+                                <input type="checkbox" name="hobby">Дайвинг<br>
+                                <input type="checkbox" name="hobby">Марки<br>
+                            </label>
+                </form>       
+                </form>
+                    </fieldset>
+                <form method="GET" action="form.php">      
+                    <fieldset>
+                            <legend>Домашние животные (возможность выбора нескольких вариантоов):</legend>
+                            <pre>array: select multiple</pre>
+                            <select name="list[]" size="12" multiple id="list">
+                            <optgroup label="Попугай">
+                            <option value="1">Волнистый</option>
+                            <option value="2">Ара</option>
+                            <option value="3">Неразлучник</option>
+                                <optgroup label="Рыба">
+                                <option value="4">Караси</option>
+                                <option value="5">Окуни</option>
+                                <option value="6">Осётр</option>
+                                    <optgroup label="Птицы">
+                                    <option value="7">Стая ворон</option>
+                                    <option value="8">Аист</option>
+                                    <option value="9">Археоптерикс</option>
+                            </select>
+                    </fieldset>
+                </form>
+                <form method="GET" action="form.php">
+                    <fieldset>
+                            <legend>Дата для входа и восстановления пароля</legend>
+                            <input type="text" placeholder="Логин" size="20" maxlength="5" pattern="^[A-Za-z]{5,}" required>
+                            text: Толька латиница, без пробелов, не менее 5 символов, длинна поля 20, обязательное поле)<br>
+                            <input type="password" placeholder="Пароль" size="20" maxlength="5" pattern="^[A-Za-z]{10,}" autocomplete="off" required> 
+                            password: Только латиница, без пробелов, не менее 10 символов,длинна поля 20, обязательное поле, отключить<br> 
+                            атозаполнение
+                    </fieldset>
+                </form>
+                <form method="GET" action="form.php">
+                    <fieldset>
+                            <legend>Координаты</legend>
+                            <input type="email" placeholder="введите адрес почты" size="20"> email: проверка должна осуществляться 
+                            при помощи новых атрибутов тега &lt;input&gt;)<br>
+                            <input type="url" placeholder="введите адрес сайта" size="20"> url: проверка должна осуществляться
+                            при помощи новых атрибутов тега &lt;input&gt;<br>
+                    </fieldset>
+                </form>
+                <form method="GET" action="form.php">
+                    <fieldset>
+                            <legend>Цифры</legend>
+                            <input type="number" step="0.1" min="-0.2" max="2.5" size="4"> 
+                            number: Диапазон от -2.5 до 2.5 с шагом 0.1<br>
+                            <input type="range" min="1" max="10" value="5"> range: Максимальное 10 минимальное 1
+                    </fieldset>
+                </form>
+                <form method="GET">   
+                    <fieldset>
+                            <legend>Кнопки управления</legend>
+                            <input type="submit" value="Отправить">
+                            <input type="reset" value="Сбросить"><br>
+                            <input type="image" src="data:image/png;base64,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" 
+                            width="40" height="40" alt="lorem">
+                            - при нажатии на эту кнопку ничего не происходит
+                    </fieldset>
+                </fomr>
+            </table>
+        </BODY>
+    </HTML>
