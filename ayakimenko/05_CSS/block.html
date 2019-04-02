@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Block</title>
+    <style>
+        .row{
+            background-color: rgb(243, 242, 242);
+        }
+        .nav{
+            max-width: 15em;
+            background-color: rgb(221, 220, 220);
+            float: left;
+        }
+        .st{
+            width: auto;
+            background-color:lightgrey;
+            margin-bottom: .2em;
+            margin-left: 15em;
+            overflow: hidden;
+        }
+        .footer{
+            width: 100%;
+            height: auto;
+            background-color: rgb(221, 220, 220);
+        }
+        img{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+    <div class="nav">
+        <h2>Блок навигации</h2>
+        <ul>
+            <li>ширина 15em</li>
+            <li>Должен присутствовать цвет фона</li>
+            <li>Располагается слева</li>
+            <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере.</li>
+        </ul>
+    </div>
+    <div class="st">
+        <h2>Статья 1</h2>
+        Размер блока:
+        Занимает всю доступную ширину.
+        Должен присутствовать цвет фона.
+        Во всех "статьях" сделайте отступ снизу от соседей .2em, при помощи свойства margin-bottom
+    </div>
+    <div class="st">
+        <h2>Статья 2</h2>
+        Размер блока:
+        Занимает всю доступную ширину.
+        Должен присутствовать цвет фона.
+        Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom. Картинка вставленна при помощи тега, плавание организованно по правому краю внутри данной статьи для этой картинки.
+        <img src="icon_mail.png" alt="e-mail">
+    </div>
+    <div class="footer">
+        Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещённым внутрь контентом.
+    </div>
+    </div>
+</body>
+</html>
