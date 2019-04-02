@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Блоки</TITLE>
+		<STYLE type="text/css">
+			.row {
+				display: flex;
+				flex-direction: row;
+			}
+			.row > .first {
+				flex: 0 0 15em;
+				background-color:green;	
+				align-self: flex-start;				
+			}
+			.row > .article {
+				flex: 1 1 100%;
+			}
+			.row > .last {
+				flex: 1 1 100%;
+			}
+			h3{margin-top:0mm}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<div class="row">
+			<div class="first">
+				<ul><h3>Блок навигации</h3>
+					<li>Здесь должны быть какие-то фразы</li>
+					<li>Но я не знаю, о чем написать</li>
+					<li>Поэтому здесь просто бессмысленные фразы</li>
+					<li>Но их слишком мало, чтобы захватить вторую статью</li>
+					<li>Поэтому я их продублирую:</li>
+					<li>Здесь должны быть какие-то фразы</li>
+					<li>Но я не знаю, о чем написать</li>
+					<li>Поэтому здесь просто бессмысленные фразы</li>
+					<li>Но их слишком мало, чтобы захватить вторую статью</li>
+				</ul>
+			</div>
+			<div class="article">
+				<div style="background-color:red; margin-bottom:2em">
+					<h3>Статья 1</h3>
+					<p>Java is a programming language used for both client-server programs, web applications and Android development. It is one of the most popular programming languages and runs on all platforms via the Java Virtual Machine (JVM). Java’s syntax was originally derived from C and C++ and was created by Sun Microsystems between 1991 and 1995. While it is mostly considered to be an object-oriented language, it is really more of a multi-paradigm language due to the inclusion of imperative and generic paradigms. It is a statically typed language and has various type-safety features built right in.</p>
+				</div>
+				<div style="background-color:yellow; margin-bottom:2em;  min-height:160px">
+					<h3>Статья 2</h3>
+					<img src="Untitled1.png" style="float:right; height:100%">
+					<p>Wireless printers use your Wi-Fi network to print from your laptop. With a wireless printer, your laptop isn’t attached to a printer cable and files can be sent to the printer from any room in your home or office. When you’re away from your Wi-Fi, your wireless printer may be able to print files you email to it. Find out how to print wirelessly.</p>
+				</div>
+			</div>
+		</div>
+		<div class="last" style="background-color:lightblue">
+			<p style="overflow:hidden">Тут текст не нужен, просто обозначим наличие блока.</p>
+		</div>
+	</BODY>
+</HTML>
