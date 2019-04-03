@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Домашнее задание формы дополнительное</TITLE>
+    </HEAD>
+    <BODY>
+        <h1 align="center">Заполните анкету</h1>
+        <form method="POST" action="http://sc.it-academy.by/fe/form.php">
+            <fieldset>
+                <legend>Личные данные</legend>
+                <input type="text" id="id_01" name="surname" autofocus required pattern="[А-Я][а-я]{1,25}" placeholder="Фамилия">
+                <label for="id_01">(Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле)</label>
+                <br>
+                <input type="text" id="id_02" name="name" required pattern="[А-Я][а-я]{1,20}" placeholder="Имя">
+                <label for="id_02">(Только кириллица, без пробелов, длина поля 20, обязательное поле)</label>
+                <br>
+                <input type="text" id="id_03" name="patronymic" required pattern="[А-Я][а-я]{1,24}" placeholder="Отчество">
+                <label for="id_03">(Только кириллица, без пробелов, длина поля 24, обязательное поле)</label>
+                <fieldset>
+                    <legend>Паспортные данные</legend>
+                    <label for="id_04">Серия - только заглавные две латинские буквы с длиной 2 и максимальным количество символом 2, количество букв не менее 2, обязательное поле</label><br>
+                    <label for="id_05">Номер паспорта - только цифры с длиной 7 и максимальными количеством символов 7, количество цифр не менее 7, обязательное поле</label><br>
+                    <input type="text" id="id_04" name="pass_series" required pattern="[A-Z]{2}" size="2" placeholder="AA">
+                    <input type="text" id="id_05" name="pass_number" required pattern="[0-9]{7}" size="7" placeholder="1234567">
+                </fieldset>
+                <fieldset>
+                    <legend>Дата рождения</legend>
+                    <input type="text" id="id_06" name="birth_year" pattern="[0-9]{4}" size="5">
+                    <label for="id_06">Год рождения 4-е цифры</label>
+                    <br>
+                    <select name="birth_month" id="id_07">
+                        <option value="1">Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7">Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
+                    </select>
+                    <label for="id_07">Месяц рождения</label>
+                    <br>
+                    <input type="number" id="id_08" min="1" max="31" step="1">
+                    <label for="id_08">Диапазон от 1 до 31 с шагом 1</label>
+                </fieldset>
+                <select name="nationality" id="id_09" required>
+                    <option value="RB">РБ</option>
+                    <option value="RF">РФ</option>
+                </select>
+                <label for="id_09">(Национальность - выбор одного значения из списка, обязательное поле)</label>
+                <br>
+                <label for="id_10">Адрес:</label>
+                <br>
+                <textarea name="adres" id="id_10"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Интересы</legend>
+                <fieldset>
+                    <legend>Хобби</legend>
+                    <label>
+                        <input type="checkbox" name="hobby[]"> Рыбалка
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="hobby[]"> Астрономия
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="hobby[]"> Дайвинг
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="hobby[]"> Марки
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Домашние животные</legend>
+                    <select name="animals[]" id="id_11" multiple size="9">
+                            <optgroup label="Попугаи">
+                            <option value="1">Волнистый</option>
+                            <option value="2">Ара</option>
+                            <option value="3">Неразлучник</option>
+                            </optgroup>
+                            <optgroup label="Рыба">
+                            <option value="4">Караси</option>
+                            <option value="5">Окуни</option>
+                            <option value="6">Осётр</option>
+                            </optgroup>
+                            <optgroup label="Птицы">
+                            <option value="7">Стая ворон</option>
+                            <option value="8">Аист</option>
+                            <option value="9">Археоптерикс</option>
+                            </optgroup>
+                        </select>
+                </fieldset>
+            </fieldset>
+                <fieldset>
+                    <legend>Данные для входа и востановления пароля</legend>
+                    <input type="text" id="id_12" name="login" required pattern="[A-Za-z]{5,20}" placeholder="Логин">
+                    <label for="id_12">(Только латиница, без пробелов, не менее 5 символов длина поля 20, обязательное поле)</label>
+                    <br>
+                    <input type="password" id="id_13" name="pass" required pattern="[A-Za-z]{10,20}" placeholder="Пароль" autocomplete="off">
+                    <label for="id_13">(Только латиница, без пробелов, не менее 10 символов длина поля 20, обязательное поле, отключить автозаполнение)</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Координаты</legend>
+                    <input type="email" id="id_14" name="e-mail" placeholder="введите адрес почты">
+                    <label for="id_14">(email: проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;)</label>
+                    <br>
+                    <input type="url" id="id_15" name="url" placeholder="введите адрес сайта">
+                    <label for="id_15">(url: проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;)</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Цифры</legend>
+                    <input type="number" name="number 2" id="id_16" min="-2.5" max="2.5" step="0.1">
+                    <label for="id_16">Диапазон от -2.5 до 2.5 с шагом 0.1</label>
+                    <br>
+                    <input type="range" name="range" id="id_17" max="10" min="1">
+                    <label for="id_17">Максимальное 10 минимальное 1</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Кнопки управления</legend>
+                    <input type="submit" value="Отправить">
+                    <input type="reset" value="Сбросить">
+                    <br>
+                    <button disabled id="id_18">
+                        <img src="letter.jpg">
+                    </button>
+                    <label for="id_18">- при нажатии на эту кнопку ничего не происходит</label>
+                </fieldset>
+        </form>
+    </BODY>
+</HTML>

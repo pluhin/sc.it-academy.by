@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>Анкета</title>
+	</head>
+	<body>
+		<h1 align="center">Заполните анкету</h1>
+		<form id="anket" name="anketa" method="post" action="http://sc.it-academy.by/fe/form.php">
+			<fieldset>
+				<legend>Личные данные</legend>
+					<input type="text" name="familiya" id="familiya1" size="25" required autofocus placeholder="Фамилия" pattern="^[А-Яа-яЁё]+$">
+					<label for="familiya">text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле)</label>
+						<br>
+					<input type="text" name="imya" id="imya1" size="20" required placeholder="Имя" pattern="^[А-Яа-яЁё]+$">
+					<label for="imya">text: Только кириллица, без пробелов, длина поля 20, обязательное поле)</label>
+						<br>
+					<input type="text" name="otchestvo" id="otchestvo1" size="24" required placeholder="Отчество" pattern="^[А-Яа-яЁё]+$">
+					<label for="otchestvo">text: Только кириллица, без пробелов, длина поля 24, обязательное поле)</label>
+						<fieldset>
+							<legend>Паспортные данные</legend>
+							<label for="seriyapas">text: Серия - только заглавные две латинские буквы</label>
+							<br>
+							<label for="nomerpas">text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле</label>
+							<br>
+							<input type="text" name="seriyapas" id="seriyapas1" size="4" required placeholder="AA" pattern="[A-Z]{2}">
+							<input type="text" name="nomerpas" id="nomerpas1" size="9" required placeholder="1234567" pattern="[0-9]{7}">
+						</fieldset>
+						<fieldset>
+							<legend>Дата рождения</legend>
+							<input type="text" name="god" id="god1" size="6" placeholder="2000" pattern="[0-9]{4}">
+							<label for="god">text: Год рождения 4-е цифры</label>
+							<br>
+							<select name="mesyac" id="mesyac1">
+								<option value="1" selected>Январь</option>
+								<option value="2">Февраль</option>
+								<option value="3">Март</option>
+								<option value="4">Апрель</option>
+								<option value="5">Май</option>
+								<option value="6">Июнь</option>
+								<option value="7">Июль</option>
+								<option value="8">Август</option>
+								<option value="9">Сентябрь</option>
+								<option value="10">Октябрь</option>
+								<option value="11">Ноябрь</option>
+								<option value="12">Декабрь</option>
+							</select>
+							<label for="mesyac">select: Месяц рождения</label>
+							<br>
+							<input type="number" name="chislo" id="chislo1" step="1" min="1" max="31">
+							<label for="number">number: Диапазон от 1 до 31 с шагом 1</label>
+						</fieldset>
+						<select name="strana" id="strana1" required>
+								<option value="1" selected>РБ</option>
+								<option value="2">РФ</option>
+								<option value="3">США</option>
+						</select>
+						<label for="strana">(Нацианальность - выбор одного значения из списка, обязательное поле)</label>
+						<br>
+						<label for="adress">Адрес:</label>
+						<br>
+						<textarea name="adress" id="adress1" lang="ru"></textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Интересы</legend>
+				<fieldset>
+					<legend>array: Хобби</legend>
+					<label><input type="checkbox" name="hobby[]" id="hobby1" value="hobby_1">Рыбалка</label>
+					<br>
+					<label><input type="checkbox" name="hobby[]" id="hobby2" value="hobby_2">Астрономия</label>
+					<br>
+					<label><input type="checkbox" name="hobby[]" id="hobby3" value="hobby_3">Дайвинг</label>
+					<br>
+					<label><input type="checkbox" name="hobby[]" id="hobby4" value="hobby_4">Марки</label>
+				</fieldset>
+				<fieldset>
+					<legend>Домашние животные (возможность выбора нескольких вариантов)</legend>
+					<label for="givotnie[]">array: select multiple</label>
+					<br>
+					<select name="givotnie[]" id="givotnie1" size="12" multiple>
+						<optgroup label="Попугаи">
+							<option value="1">Волнистый</option>
+							<option value="2">Ара</option>
+							<option value="3">Неразлучник</option>
+						</optgroup>
+						<optgroup label="Рыба">
+							<option value="4">Караси</option>
+							<option value="5">Окуни</option>
+							<option value="6">Осётр</option>
+							</optgroup>
+						<optgroup label="Птицы">
+							<option value="7">Стая ворон</option>
+							<option value="8">Аист</option>
+							<option value="9">Археоптикс</option>
+						</optgroup>
+					</select>
+				</fieldset>
+			</fieldset>
+			<fieldset>
+				<legend>Данные для входа и восстановления пароля</legend>
+				<input type="text" name="login" id="login1" size="20" required placeholder="Логин" pattern="[a-zA-Z]{5,}">
+					<label for="login">text: Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле)</label>
+						<br>
+				<input type="password" name="passwords" id="passwords1" size="20" required placeholder="Пароль" autocomplete="off" pattern="[a-zA-Z]{10,}">
+					<label for="passwords">password: Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить автозаполнение)</label>
+			</fieldset> 
+			<fieldset>
+				<legend>Координаты</legend>
+				<input type="email" name="emails" id="emails1" size="20" placeholder="введите адрес почты">
+					<label for="emails">email: проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;)</label>
+						<br>
+				<input type="url" name="urls" id="urls1" size="20" placeholder="введите адрес сайта">
+					<label for="urls">url: проверка должна осуществляться при помощи новых атрибутов тега &lt;input&gt;)</label>
+			</fieldset> 
+			<fieldset>
+				<legend>Цифры</legend>
+				<input type="number" name="cifri" id="cifri1" step="0.1" min="-2.5" max="2.5">
+					<label for="cifri">number: Диапазон от -2.5 до 2.5 с шагом 0.1</label>
+						<br>
+				<input type="range" name="shkala" id="shkala1" min="1" max="10">
+					<label for="shkala">range: Максимальное 10 минимальное 1</label>
+			</fieldset>
+			<fieldset>
+				<legend>Кнопки управления</legend>
+				<input type="submit" name="otpravka" id="otpravka1" value="Отправить">
+				<input type="reset" name="otpravka" id="otpravka1" value="Сбросить">
+				<br>
+				<button type="button" name="kartinka" id="kartinka1"> 
+				<img src="email.jpg" align="top">
+				</button>
+				<label for="kartinka">- при нажатии на эту кнопку ничего не происходит</label>
+			</fieldset>
+		</form>
+	</body>
+</head>
+</html>
