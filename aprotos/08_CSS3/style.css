@@ -1,4 +1,5 @@
-/** a {
+
+a {
 text-decoration: none;
 }
 a:visited {
@@ -6,37 +7,60 @@ color: black;
 }
 a:hover {
 	color: red;
-} **/
+} 
 
-
+@media (max-width: 1450px){
+body {
+	font-size: 35px;
+}
 ul{
 list-style-type: none;
 margin: 0;
 padding: 0;
-border: 1px solid black;
-width: 110px;
+width: 220px;
 text-align: center;
 }
 ul li {
 	position: relative;
+	border-style:groove;
+	border-radius: 10px;
+	background-color: #f2eded;
 }
 li ul {
 	position: absolute;
-	left: 150px;
+	left: 225px;
 	top: 0px;
+	display: none;
+}
+li:hover ul {
+	display: block;
+}
+}
+@media all and (min-width: 1450px) {
+body {
+	font-size: 35px;
+}
+ul { width: auto;
+margin:0;
+padding: 0;
+text-align: center;
+}
+li{ display:inline-block; 
+	width: 220px}
+ul li{
+	position: relative;
+	border-style:groove;
+	border-radius: 10px;
+	background-color: #f2eded;
+}
+li ul {
+position:absolute;
+top: auto;
+left: -3px;
+display: none;
+}
+li:hover ul {
+	display:block;
 }
 
-.demo {
-width: 300px;
-height: 250px;
-background-color: grey;
-position: relative;
-}
-.demo div {
-width: 50px;
-height: 50px;
-background-color: purple;
-position: absolute;
-left: 50px;
-top: 5em;
 }
