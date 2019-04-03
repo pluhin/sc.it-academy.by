@@ -1,0 +1,42 @@
+/** a {
+text-decoration: none;
+}
+a:visited {
+color: black;
+}
+a:hover {
+	color: red;
+} **/
+
+
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+border: 1px solid black;
+width: 110px;
+text-align: center;
+}
+ul li {
+	position: relative;
+}
+li ul {
+	position: absolute;
+	left: 150px;
+	top: 0px;
+}
+
+.demo {
+width: 300px;
+height: 250px;
+background-color: grey;
+position: relative;
+}
+.demo div {
+width: 50px;
+height: 50px;
+background-color: purple;
+position: absolute;
+left: 50px;
+top: 5em;
+}
