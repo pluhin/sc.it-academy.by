@@ -1,6 +1,8 @@
 
 a {
 text-decoration: none;
+text-align: center;
+vertical-align: middle;
 }
 a:visited {
 color: black;
@@ -25,15 +27,19 @@ ul li {
 	border-style:groove;
 	border-radius: 10px;
 	background-color: #f2eded;
+	width: 100%;
 }
 li ul {
 	position: absolute;
 	left: 225px;
 	top: 0px;
-	display: none;
+	opacity:0;
+	width: 0;
 }
 li:hover ul {
-	display: block;
+	opacity: 1;
+	width: 150px;
+	transition: .2s;
 }
 }
 @media all and (min-width: 1450px) {
@@ -46,21 +52,27 @@ padding: 0;
 text-align: center;
 }
 li{ display:inline-block; 
-	width: 220px}
+	width: 220px;}
 ul li{
 	position: relative;
 	border-style:groove;
 	border-radius: 10px;
 	background-color: #f2eded;
+	height: 100%;
+
 }
 li ul {
 position:absolute;
-top: auto;
+top: 1.2em;
 left: -3px;
-display: none;
+opacity: 0;
+height: 0px;
 }
+
 li:hover ul {
-	display:block;
+	opacity: 1;
+	height: 50px;
+	transition: .2s;
 }
 
 }
