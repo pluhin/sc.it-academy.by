@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Дни недели</TITLE>
+		<STYLE type="text/css">
+			@media screen and (min-width:900px){.row{display:flex; flex-direction:row}}
+			.column{display:flex; flex-direction:column;}																	
+			ul{list-style-type:none; margin:0; padding:0; border-radius:10px}
+			li{width: 150px}
+			@media screen and (max-width:900px){
+			ul li{position:relative}
+			li ul{position:absolute; left:150px; top:0}
+			}
+			li ul{margin-top:-200px; opacity:0; transition: 5s opacity}
+			li:hover ul{margin-top:0; opacity:1}
+			li a{color:black; background-color:red;  text-decoration:none; display:block; border: 1px solid black; border-bottom: 0; text-decoration:none; 
+			border-radius:10px;  transition: .5s all ease-in-out}
+			li a:hover{color:red; background-color:black; }
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<ul class="row">
+			<li class="column"><a href="#">Понедельник</a>
+				<ul >
+					<li><a href="#">Завтрак</a></li>
+					<li><a href="#">Обед</a></li>
+					<li><a href="#">Ужин</a></li>
+				</ul>	
+			</li>
+			<li class="column"><a href="#">Вторник</a>
+			<ul>
+					<li><a href="#">Завтрак</a></li>
+					<li><a href="#">Обед</a></li>
+					<li><a href="#">Ужин</a></li>
+				</ul>	
+			</li>
+			<li class="column"><a href="#">Среда</a>
+				<ul>
+					<li><a href="#">Завтрак</a></li>
+					<li><a href="#">Обед</a></li>
+					<li><a href="#">Ужин</a></li>
+				</ul>	
+			</li>
+			<li class="column"><a href="#">Четверг</a>
+				<ul>
+					<li><a href="#">Завтрак</a></li>
+					<li><a href="#">Обед</a></li>
+					<li><a href="#">Ужин</a></li>
+				</ul>	
+			</li>
+			<li class="column"><a href="#">Пятница</a>
+				<ul>
+					<li><a href="#">Завтрак</a></li>
+					<li><a href="#">Обед</a></li>
+					<li><a href="#">Ужин</a></li>
+				</ul>	
+			</li>
+			<li class="column"><a href="#">Суббота</a>
+					<ul>
+					<li><a href="#">Завтрак</a></li>
+					<li><a href="#">Обед</a></li>
+					<li><a href="#">Ужин</a></li>
+				</ul>	
+			</li>
+		</ul>
+		
+	</BODY>
+</HTML>
