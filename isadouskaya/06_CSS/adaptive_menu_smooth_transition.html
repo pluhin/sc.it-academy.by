@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+        <TITLE>Адаптивное меню</TITLE>
+        <style>
+            @import "https://fonts.googleapis.com/css?family=Montserrat";
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                position: fixed;
+            }
+            ul li {
+                position: relative;
+                float: left;
+            }
+            li ul {
+                display: hidden;
+                position: absolute;
+                opacity: 0;
+                transition: 1s;
+            }
+            li:hover ul {
+                display: block;
+                opacity: 1;
+                transition: 1.5s;
+            }
+            li a {
+                color: #502982;
+                text-decoration: none;
+                background-color: #FFF373;
+                padding: 5px;
+                display: block;
+                border: 1px solid #BFB330;
+                border-radius: 7px;
+                transition: .5s all ease-in-out;
+                width: 150px;
+            }
+            li a:hover {
+                background-color: #FFE900;
+                font-style: italic;
+                color: 	#340570;
+                display: block;
+                
+            }
+/* ------------------------------------------------------------------ */
+            @media all and (max-width: 1000px) {
+              ul {
+                width: 160px;
+                border-bottom: 1px solid #BFB330;
+                border-radius: 7px;
+                position: static;
+              }
+              ul li {float: none}
+              li ul {
+                  left: 160px;
+                  top: 0;
+              }
+              li a {border-bottom:none;}
+            }
+        </style>
+	</HEAD> 
+	<BODY>
+        <ul> 
+    <li><a href="#">Понедельник</a>
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li><a href="#">Вторник</a> 
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+    <li><a href="#">Среда</a>
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li><a href="#">Четверг</a> 
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+    <li><a href="#">Пятница</a>
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li><a href="#">Суббота</a> 
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+  </ul>
+    </BODY>
+</HTML>
