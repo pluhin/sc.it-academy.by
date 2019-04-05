@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Задание 3 flex</TITLE>
+		<style type="text/css">
+			.f_row {
+				display: flex;
+				flex-direction: row;
+			}
+			.f_col {
+				display: flex;
+				flex-direction: column;
+			}
+			.menu {
+				background-color: silver;
+				flex: 15em 0 0;
+				margin-bottom: .2em;
+			}
+			.content {
+				flex: auto 1 1;
+				background-color: darkgrey;
+				margin-bottom: .2em;
+			}
+			.footer {
+				background: silver;
+			}
+			#img {
+				float: right;
+			}
+		</style>
+	</HEAD>
+	<BODY>
+		<div class="c_col">
+		<div class="f_row">
+			<div class="f_col menu">
+					<h3>Блок навигации</h3>
+					<ul>
+						<li>Ширина 15em</li>
+						<li>Должен присутствовать цвет</li>
+						<li>Распологается слева</li>
+						<li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью, как показано в данном примере</li>
+					</ul>
+			</div>
+			<div class="f_col">
+				<div class="row content">
+					<h3>Статья 1</h3>
+					Размер блока:<br>
+					Занимает всю доступную ширину<br>
+					Должен присутствовать цвет фона<br>
+					Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom
+				</div>
+				<div class="row content">
+					<h3>Статья 2</h3>
+					Размер блока:
+					Занимает всю доступную ширину
+					Должен присутствовать цвет фона
+					Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom. Картинка вставлена при помощи тега, плавание организованно по правому краю внутри статьи для этой картинки.
+					<div id="img"><img src="img/mail.png" title="mail"></div>
+				</div>
+			</div>
+		</div>
+		<div class="f_row footer">
+		Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контентом</div>
+	</div>
+	</BODY>
+</HTML>

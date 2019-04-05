@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<HTML> 
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Страницы с блоками</TITLE>
+        <style type="text/css">
+            .navigation_block{
+                width: 15em;
+                background-color: cadetblue;
+                float: left;
+            }
+            .article{
+                background-color: cornflowerblue;
+                margin-bottom: .2em;
+                margin-left: 15em;
+                overflow: hidden;
+            }
+            .basement_block{ 
+                width: 100%;
+                background-color: cadetblue;
+                height: auto;                
+                clear: both;               
+            }
+            .send {
+                float: right;
+            }
+        </style>            
+    </HEAD>
+    <BODY>
+        <div class="navigation_block">
+            <h3>Блок навигации</h3>
+            <ul>
+                <li><a href="#">Ширина 15em</a></li>
+                <li><a href="#">Должен присутствовать цвет фона</a></li>
+                <li><a href="#">Располагается слева</a></li>
+                <li><a href="#">Блок навигации наполните контентом достаточным,
+                    что бы по высоте он начинал захватывать вторую статью,
+                    как показано в данном примере</a></li>
+            </ul>
+        </div>
+        <div class="article">
+            <h3>Статья 1</h3>
+            Размер блока:<br>
+            Занимает всю доступную ширину<br>
+            Должен присутствовать цвет фона<br>
+            Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи
+            ствойства margin-bottom
+        </div>        
+        <div class="article">
+            <h3>Статья 2</h3>
+            Размер блока:<br>
+            Занимает всю доступную ширину<br>
+            Должен присутствовать цвет фона<br>        
+            Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи        
+            ствойства margin-bottom. Картинка вставленна при помощи тега, плавание
+            организованно по правому краю внутри данной статьи 
+            <img class="send" src="icon_mail.png" alt="mail_icon">
+        </div>
+        <div class="basement_block">
+            Нижний блок, подвал. Занимает всю доступную ширину.<br>
+            Высота определяется помещенным внутрь контентом
+        </div>
+    </BODY>
+</HTML>

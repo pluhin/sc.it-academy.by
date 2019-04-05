@@ -1,0 +1,16 @@
+h1{
+    font-size: 18px;
+}
+header{
+    text-align: right;
+}
+h3{
+    text-decoration: underline;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+}
+.red_line{
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    text-indent: 5mm;
+}
