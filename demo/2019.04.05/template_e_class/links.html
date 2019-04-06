@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Ссылки. Оформление</TITLE> 
+		<style type="text/css">
+	       p:active {
+                transform: scale(-1);
+            }
+            #inp01 + span {visibility: hidden;}
+            #inp01:focus + span {visibility: visible;}
+            /*input:required {background-color: red}
+            input:optional {background-color: green}
+            input:invalid   {box-shadow: red 2px 2px 2px 2px}*/
+            
+            input[value$="1"] {background-image: url(1.pic);} 
+            input[value$="2"] {background-image: url(2.pic);}
+
+            #inp00,
+            #inp00 + label + div {
+                display: none;
+            }
+            #inp00:checked + label + div {
+                display: block;
+            }
+            #inp00 + label {
+                color: blue;
+                cursor: pointer;
+            }
+            #inp00 + label:hover {
+                text-decoration: underline;
+            }
+            table {border-collapse: collapse;}
+            td {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+            }
+            td:not(:first-child):not(:last-child) {
+                background-color: black;
+            }
+		</style>	
+    </HEAD> 
+    <BODY>
+
+<table>
+    <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+
+</table>
+<hr>
+
+<input type="checkbox" name="" id="inp00">   
+<label for="inp00">Some labels</label>
+<div>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </div>
+<br><br><br><br>
+
+<input type="text" name="" id="inp01">
+<span>*</span>
+<label for="inp01">Some labels</label><br>
+
+<br>
+<input type="text" name="" id="inp02" required>
+<input type="text" name="" id="inp03">
+
+
+ 
+
+<hr>
+
+
+        </BODY> 
+</HTML> 

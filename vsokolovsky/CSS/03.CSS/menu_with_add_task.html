@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Menu</title>
+        <style type=text/css>
+            body{
+                background: whitesmoke;
+                }
+            ul{ 
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                border-bottom: none;
+                border-radius: none;
+                width: 150px;
+            }
+            ul li{
+                position: relative;
+            }
+            li ul {
+                position: absolute;
+                width: 100%;
+                left: 100%;
+                top: -999em;
+                border-left: 5px solid transparent;
+                opacity: 0;
+                visibility: hidden;
+            }
+            li:hover ul {
+                opacity: 1;
+                top: 0;
+                transition: 1.2s opacity;
+                visibility: visible;
+            }
+            li a {
+                color: white;
+                background-color: #2cafc1;
+                text-decoration: none;
+                padding: 5px;
+                display: block;
+                border: 1px solid #ffffff;
+                border-left: white;
+                border-right: white;
+                border-radius: 4px;
+                transition: .3s all ease-in-out;
+                cursor: pointer
+            }
+            li a:hover{
+                color: black;
+                background-color: #79d4e0;
+            }
+            @media all and (min-width: 700px) {
+                ul {
+                    width: auto;
+                    border-bottom: none;
+                 }
+                li {
+                    display: inline-block;
+                    width: 100px;
+                }
+                li ul {
+                    top: 31px;
+                    left: -35px;
+                    margin: 31px;
+                }
+                li a {
+                    border-bottom: 1px solid whitesmoke;
+                }
+                li ul li a {
+                    border-top: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+        <li><a herf="#">Понедельник</a>
+            <ul>
+                <li><a herf="#">Завтрак</a></li>
+                <li><a herf="#">Обед</a></li>
+                <li><a herf="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a herf="#">Вторник</a>
+            <ul>
+                <li><a herf="#">Завтрак</a></li>
+                <li><a herf="#">Обед</a></li>
+                <li><a herf="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a herf="#">Среда</a>
+            <ul>
+                <li><a herf="#">Завтрак</a></li>
+                <li><a herf="#">Обед</a></li>
+                <li><a herf="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a herf="#">Четверг</a>
+            <ul>
+                <li><a herf="#">Завтрак</a></li>
+                <li><a herf="#">Обед</a></li>
+                <li><a herf="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a herf="#">Пятница</a>
+            <ul>
+                <li><a herf="#">Завтрак</a></li>
+                <li><a herf="#">Обед</a></li>
+                <li><a herf="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a herf="#">Суббота</a>
+            <ul>
+                <li><a herf="#">Завтрак</a></li>
+                <li><a herf="#">Обед</a></li>
+                <li><a herf="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a herf="#">Воскресенье</a>
+            <ul>
+                <li><a herf="#">Завтрак</a></li>
+                <li><a herf="#">Обед</a></li>
+                <li><a herf="#">Ужин</a></li>
+            </ul>
+        </li>
+        </ul>
+    </body>
+</html>
