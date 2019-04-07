@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Шахматная доска</TITLE> 
+		<style type="text/css">
+            table {border-collapse: collapse;}
+            td {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+            }
+            td:not(:first-child):not(:last-child) {
+            background-color: white;
+            }
+			TR:nth-child(odd) > TD:nth-child(even),
+			TR:nth-child(even) > TD:nth-child(odd)  
+			{ background-color: black }
+			.whitetext {
+			color: white;
+			}
+			h3 { 
+			font-size: 250%; 
+			} 
+		</style>
+    </HEAD> 
+    <BODY> 
+		<h3><table>
+			<tr align="center">
+				<td width="135">64</td><td class="whitetext">63</td><td>62</td><td class="whitetext">61</td><td>60</td><td class="whitetext">59</td><td>58</td><td class="whitetext">57</td>
+			</tr>
+			<tr align="center">
+				<td class="whitetext">56</td><td>55</td><td class="whitetext">54</td><td>53</td><td class="whitetext">52</td><td>51</td><td class="whitetext">50</td><td>49</td>
+			</tr>
+			<tr align="center">
+				<td>48</td><td class="whitetext">47</td><td>46</td><td class="whitetext">45</td><td>44</td><td class="whitetext">43</td><td>42</td><td class="whitetext">41</td>
+			</tr>
+			<tr align="center">
+				<td class="whitetext">40</td><td>39</td><td class="whitetext">38</td><td>37</td><td class="whitetext">36</td><td>35</td><td class="whitetext">34</td><td>33</td>
+			</tr>
+			<tr align="center">
+				<td>32</td><td class="whitetext">31</td><td>30</td><td class="whitetext">29</td><td>28</td><td class="whitetext">27</td><td>26</td><td class="whitetext">25</td>
+			</tr>
+			<tr align="center">
+				<td class="whitetext">24</td><td>23</td><td class="whitetext">22</td><td>21</td><td class="whitetext">20</td><td>19</td><td class="whitetext">18</td><td>17</td>
+			</tr>
+			<tr align="center">
+				<td>16</td><td class="whitetext">15</td><td>14</td><td class="whitetext">13</td><td>12</td><td class="whitetext">11</td><td>10</td><td class="whitetext">9</td>
+			</tr>
+			<tr align="center">
+				<td class="whitetext">8</td><td>7</td><td class="whitetext">6</td><td>5</td><td class="whitetext">4</td><td>3</td><td class="whitetext">2</td><td>1</td>
+			</tr></h1>
+		</table></h3>
+    </BODY> 
+</HTML> 
