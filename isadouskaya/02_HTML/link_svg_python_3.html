@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Программа на Python, часть 3</TITLE>
+    </HEAD>
+    <BODY>
+        <img src="Icon-Python.png" align="right" valign="top" alt="Icon-Python" title="Иконка Python">
+        <H1 id="top_3">HOW-TO: Программа на Python, Часть 3</H1>
+        <UL>
+            <LI><EM><a href="link_svg_python_1.html">Программа на Python — часть 1</a></EM></LI>
+            <LI><EM><a href="link_svg_python_2.html">Программа на Python — часть 2</a></EM></LI>
+            <LI><EM><a href="link_svg_python_3.html">Программа на Python — часть 3</a></EM></LI>
+        </UL>
+        <H2 id="content_3">Содержание</H2>
+        <H3>HOW-TO: Программа на Python, Часть 3</H3>
+        <UL>
+            <LI><a href="#part3_1">Модули</a></LI>
+            <LI><a href="#part3_2">Функции</a></LI>
+        </UL>
+        <HR>
+        <P>В прошлый раз мы изучали списки, подстановку переменных, комментарии, сравнение и
+        присвоение, операторы <STRONG>if</STRONG> и <STRONG>while</STRONG>. Я обещал, что в этой части мы изучим модули и
+        функции. Давайте начнём.</P>
+        <H2 id="part3_1">Модули</H2>
+        <a href="#content_3">К содержанию</a>
+        <P>Модули предлагают способ расширить программирование на Python. Вы можете создать
+        свои модули, использовать те, которые поставляются с Python или которые написали
+        другие. В самом Python есть сотни модулей, которые облегчают написание программ.
+        Список модулей, поставляемых с Python, находится по адресу:
+        <EM><a href="https://docs.python.org/3/py-modindex.html" target="_blank">http://docs.python.org/modindex.html</a></EM>. 
+        Некоторые модули предназначены для определённых
+        операционных систем, но большинство из них кроссплатформенные и работают
+        одинаково на <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, 
+        <a href="https://en.wikipedia.org/wiki/MacOS" target="_blank">Mac</a> и 
+        <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Microsoft Windows</a>. Для использования внешнего 
+        модуля необходимо импортировать его в программу. Один из модулей, поставляемых с Python,
+        называется «random». Он даёт возможность генерировать псевдослучайные числа. Мы
+        используем этот модуль в нашем первом примере.</P>
+        <PRE>#=======================================
+# random_example.py
+# Module example using the random module
+#=======================================
+import random
+# print 14 random integers
+for cntr in range(1,15):
+print random.randint(1,10)</PRE>
+        <P>Давайте разберём код по строкам. Первые четыре строки — это комментарии, о которых
+        мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать
+        модуль «random». Мы должны явно указать Python на это.</P>
+        <HR>
+        <H2 id="part3_2">Функции</H2>
+        <a href="#content_3">К содержанию</a>
+        <P>Когда мы импортировали модуль random, мы использовали функцию <STRONG>randint()</STRONG>. Функция
+        — это блок кода, который создан для того, чтобы вызывать его в программе, обычно,
+        более одного раза. Это упрощает работу над программой и предотвращает набор одного и
+        того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код
+        больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень
+        простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа,
+        сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и
+        результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов
+        чисел. Тогда наш пример будет выглядеть как код ниже.</P>
+        <PRE>#silly example
+print '%d + %d = %d ' % (1,2,1+2)
+print '%d * %d = %d ' % (1,2,1*2)
+print '%d - %d = %d ' % (1,2,1-2)</PRE>
+        <PRE>print '\n'
+print '%d + %d = %d ' % (1,4,1+4)
+print '%d * %d = %d ' % (1,4,1*4)
+print '%d - %d = %d ' % (1,4,1-4)</PRE>
+        <PRE>print '\n'
+print '%d + %d = %d ' % (10,5,10+5)
+print '%d * %d = %d ' % (10,5,10*5)
+print '%d - %d = %d ' % (10,5,10-5)
+print '\n'</PRE>
+        <P>Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при
+        написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую
+        назовём <STRONG><EM>«DoTwo»</EM></STRONG>. Она будет каждый раз брать два числа, проводить математические
+        операции и выводить результат. Начнём с ключевого слова <STRONG><EM>«def»</EM></STRONG>, которое сигнализирует
+        о том, что мы собираемся определить функцию. После слова <STRONG><EM>«def»</EM></STRONG> добавим название
+        функции и список параметров, если таковые имеются, в круглых скобках. Эту строку
+        необходимо завершить двоеточием. Код функции набирается с отступом. Наш
+        улучшенный простой пример (<U>No2</U>) показан ниже.</P>
+        <PRE>#silly example 2...still silly, but better
+def DoTwo(num1,num2):
+    print '%d + %d = %d ' % (num1,num2,num1+num2)
+    print '%d * %d = %d ' % (num1,num2,num1*num2)
+    print '%d - %d = %d ' % (num1,num2,num1-num2)
+    print '\n'
+DoTwo(1,2)
+DoTwo(1,4)
+DoTwo(10,5)</PRE>
+        <P>Как видите, здесь написано меньше кода — 8 строк вместо 12. Если нам нужно будет что-
+        либо поменять в функции, мы сможем сделать это, не создавая проблем для нашей
+        программы. Чтобы вызвать функцию, нужно написать её имя и параметры.</P>
+        <table width=100%>
+            <tr>
+                <td><a href="link_svg_python_2.html">
+                    <svg width="70" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <title>Предыдущая</title>
+                            <rect fill="#fff" id="canvas_background" height="52" width="72" y="-1" x="-1"/>
+                            <g display="none" id="canvasGrid">
+                            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_1"/>
+                            </g>
+                        </g>
+                        <g>
+                            <title>Предыдущая</title>
+                            <path id="svg_7" d="m88.5,81.4375" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+                            <path stroke="null" transform="rotate(-90 32.25000000000001,25.250000000000004) " id="svg_8" d="m9.750002,25.179198l22.5,-29.429196l22.499999,29.429196l-11.25,0l0,29.570804l-22.499998,0l0,-29.570804l-11.250001,0z" stroke-width="1.5" fill="#007f7f"/>
+                        </g>
+                    </svg>
+                </a></td>
+                <td align="center"><a href="#top_3">
+                    <svg width="70" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <title>Наверх</title>
+                            <rect x="-1" y="-1" width="72" height="52" id="canvas_background" fill="#fff"/>
+                            <g id="canvasGrid" display="none">
+                            <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+                            </g>
+                        </g>
+                        <g>
+                            <title>Наверх</title>
+                            <path fill="none" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" opacity="0.5" d="m88.5,81.4375" id="svg_7"/>
+                            <rect id="svg_2" height="26" width="29" y="22.4375" x="20.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="null" fill="#007f7f"/>
+                            <line stroke="null" stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="19.4375" x2="52.5" y1="17.4375" x1="13.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+                            <path stroke="null" id="svg_8" d="m13.337502,23.518437l21.5,-20l21.5,20l-43,0z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#007f7f"/>
+                        </g>
+                    </svg>
+                </a></td>
+                <td align="right"><a href="#">
+                    <svg width="70" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <title>Следующая</title>
+                            <rect x="-1" y="-1" width="72" height="52" id="canvas_background" fill="#fff"/>
+                            <g id="canvasGrid" display="none">
+                            <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+                            </g>
+                        </g>
+                        <g>
+                            <title>Следующая</title>
+                            <path fill="none" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" opacity="0.5" d="m88.5,81.4375" id="svg_7"/>
+                            <path fill="#007f7f" stroke-width="1.5" d="m9.750002,25.179198l22.5,-29.429196l22.499999,29.429196l-11.25,0l0,29.570804l-22.499998,0l0,-29.570804l-11.250001,0z" id="svg_8" transform="rotate(90 32.25000000000001,25.250001907348636) " stroke="null"/>
+                        </g>
+                    </svg>
+                </a></td>
+            </tr>
+        </table>
+    </BODY>
+</HTML>

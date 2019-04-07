@@ -1,0 +1,22 @@
+body {color: #030303;
+		font-size: 20px;
+		background: #DFE2D9;
+	}
+
+.shapka {text-align: right;
+}
+
+.shapka h1 {
+	font-size: 20px;
+}
+
+.osnovnoi_text {
+	text-indent: 10mm;
+	font-style: italic;
+	font-family: 'Bad Script', cursive;
+}
+
+.osnovnoi_text h3 {
+	font-family: 'Bad Script', cursive;
+	text-decoration: underline;
+}

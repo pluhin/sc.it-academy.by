@@ -1,0 +1,13 @@
+header {
+    text-align: right;
+}
+header h1 {
+    font-size: medium;
+}
+h3{
+    text-decoration: underline;
+}
+h3, article {
+    text-indent: 5mm;
+    font-family: 'Bad Script', cursive;
+}

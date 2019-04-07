@@ -1,0 +1,22 @@
+.s_default {
+    width: 140px;
+    height: 190px;
+    background-image: url('cards.png');
+    background-repeat: no-repeat;
+    position: relative;
+}
+.s_1 {
+    background-position: -144px -199px;
+    margin: 0px 0px;
+	z-index: 1;
+}
+.s_2 {
+    background-position: -432px -597px;
+    margin: -90px 30px;
+    z-index: 2;
+}
+.s_3 {
+    background-position: -288px -1393px;
+    margin: -90px 60px;
+    z-index: 3;
+}
