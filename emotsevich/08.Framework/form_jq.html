@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Пароли</TITLE>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+             $(document).ready(function(){
+                 $('#psw, #psw_conf').on("keyup", function() {
+                     var psw = $("#psw").val();
+                     var psw_conf = $("#psw_conf").val();
+                      if (psw != psw_conf) {
+                         $('div').text("Пароли не совпадают").css('color', 'red');
+                         $('#psw, #psw_conf').css('background-color', 'red');
+                        }
+                     else {
+                         $('div').text("Пароли совпадают").css('color', 'black');
+                         $('#psw, #psw_conf').css('background-color', 'green');
+                         }
+                 })
+             });
+        </script>
+    </HEAD>
+    <BODY>
+        <form action="post">
+            <label for="psw">Введите пароль:</label><br>
+            <input type="password" id="psw"><br>
+            <label for="psw_conf">Повторите пароль:</label><br>
+            <input type="password" id="psw_conf"><br>
+            <div></div>
+        </form>
+    </BODY>
+</HTML> ​
