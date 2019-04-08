@@ -17,14 +17,12 @@
     font-size: 50px;
     
     }
-    tr:nth-child(odd) > td:nth-child(even){
+    tr:nth-child(odd) > td:nth-child(even), tr:nth-child(even) > td:nth-child(odd)
+    {
     background-color: black;
     color: white;
     }
-    tr:nth-child(even) > td:nth-child(odd){
-    background-color: black;
-    color: white;
-    }
+    
         tr:nth-child(1) {counter-reset: k 65}
     td::after {
     counter-increment: k -1;

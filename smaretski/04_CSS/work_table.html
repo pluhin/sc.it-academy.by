@@ -13,12 +13,7 @@
     caption {text-transform: uppercase}
     th, td {border: 1px solid black;
     border-style: dotted}
-    th:nth-child(1) {
-    text-align: left;
-    }
-    tr:nth-child(1) > th:nth-child(1) {
-    text-align: center
-    }
+    tr:not(:nth-child(1)) th { text-align: left;}
     tr:nth-child(1){
     background-color: gray;
     color: white;
