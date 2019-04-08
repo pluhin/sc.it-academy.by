@@ -8,6 +8,7 @@
    		border-collapse: collapse;
    		border: 2px solid black;
    		margin: 25px;
+   		counter-reset: k+65;
    	}
    	td {
    		border: 1px solid black;
@@ -16,10 +17,20 @@
    	}
    	tr:nth-child(even) > td:nth-child(odd){
    		background-color:black;
+   		color: white;
    	}
    	tr:nth-child(odd) > td:nth-child(even){
    		background-color: black;
+   		color: white;
    	}
+   	td:after{
+   		counter-increment: k -1;
+   		content: counter(k);
+   		font-size: 60px;
+   		font-weight: bold;
+   		display: flex;
+   		justify-content: center;
+   }
    </style>
     </head>
 <body>
