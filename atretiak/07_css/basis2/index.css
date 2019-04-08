@@ -1,0 +1,19 @@
+table {border-collapse: collapse;}
+td, th {border: 1px dotted black;}
+tr:nth-child(1) {
+    background-color: grey;
+    color: white;
+    }
+tr:not(:nth-child(1)):nth-child(odd) {background-color: silver;}
+tr:not(:nth-child(1)) {
+    text-align: left;
+    cursor: pointer;
+    }
+tr:not(:nth-child(1)):hover {
+    background-color: gray;
+    color: white;
+    }
+    caption {
+        caption-side: bottom;
+        text-transform: uppercase;
+    }
