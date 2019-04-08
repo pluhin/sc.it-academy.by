@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Шахматная 2</TITLE> 
+        <style type="text/css">            
+            table{
+                border-collapse: collapse;               
+                counter-reset: k 65;
+                text-align: center;
+                font-size: 35px;
+                font-weight: bold;
+            }
+            td{
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+            }
+            td::before{
+                counter-increment: k -1;
+                content: counter(k);
+            }
+            tr:nth-child(odd)>td:nth-child(even),
+            tr:nth-child(even)>td:nth-child(odd)
+            {
+                background-color: black;
+                color: white;              
+            }
+        </style>
+    </HEAD> 
+    <BODY>
+        <table>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>                       
+        </table>
+    </BODY>
+</HTML> 

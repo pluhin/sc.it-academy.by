@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery Sample</title>
+	<style>
+	.zebra {
+		background-color: blueviolet;
+		color:  yellow;
+	}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			//alert('Hello!');
+			//alert($('#table_data tr').length + ' rows in table');
+			//var font_size = $('#table_data').css('font-size');
+			//alert(font_size);
+			//$('#table_data').css('font-size','5em');
+			/*$('#table_data').hover(
+			function(){$('#table_data tr:odd').addClass('zebra');},
+			function(){$('#table_data tr:odd').removeClass('zebra');}
+			);*/
+			$('.hide').click(function(){
+				$('#table_data').toggle();
+	
+				if($('#table_data').is(':visible')) {
+					$('.hide').val('Hide me!');
+					$('.hide').text('Hide me!');
+				}else{
+					$('.hide').val('Show me!');
+					$('.hide').text('Show me!');
+				}
+					
+			});
+			$('h2').click(function(){
+				$(this).next('p').slideToggle(1000);
+			});
+			$('#max').text($('#range').attr('max'));
+			$('#min').text($('#range').attr('min'));
+			$('#current').text($('#range').val());
+			$('#range').on('change',function(){
+				$('#current').text($('#range').val());
+			});
+		});
+	</script>
+</head>	
+<body>
+		<input type="range" id="range" min="10" max="100">
+		<br>Max: <span id="max"></span>
+		<br>Min: <span id="min"></span>
+		<br>Current: <span id="current"></span>
+		
+		<h2>Header </h2>
+		<p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+		<h2>Header </h2>
+		<p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+			
+
+	<input type="button" class="hide" value="Hide me!">
+	<a href="#" class="hide">Hide me!</a>
+	<table id="table_data">
+		 <caption>данные о сотрудниках</caption>
+		 <tr>
+			 <th>ФИО</th>
+			 <th>пол</th> 
+			 <th>должность</th>
+			 <th>дата рож.</th>
+			 <th>Данные 01</th>
+			 <th>Данные 02</th>
+		 </tr>
+		 <tr>
+			 <th>Иванов Иван Иванович</th>
+			 <td>М</td> 
+			 <td>начальник</td>
+			 <td>01.01.1960</td>
+			 <td>4567</td>
+			 <td>3453</td>
+		 </tr>
+		 <tr>
+			 <th>Петрова Илонна Петровна</th>
+			 <td>Ж</td> 
+			 <td>секретарь</td>
+			 <td>01.01.1989</td>
+			 <td>98795</td>
+			 <td>46523</td>
+		 </tr>
+		 <tr>
+			 <th>Сидоров Илья Игоревич</th>
+			 <td>М</td> 
+			 <td>бухгалтер</td>
+			 <td>01.01.1979</td>
+			 <td>743434</td>
+			 <td>987979</td>
+		 </tr>
+		 <tr>
+			 <th>Пупин Фёдор Фёдорович</th>
+			 <td>М</td> 
+			 <td>водитель</td>
+			 <td>01.01.1963</td>
+			 <td>74323434</td>
+			 <td>9232379</td>
+		 </tr>
+		 <tr>
+			 <th>Крупин Сергей Иванович</th>
+			 <td>М</td> 
+			 <td>водитель 2</td>
+			 <td>01.01.1983</td>
+			 <td>3234534</td>
+			 <td>923123379</td>
+		 </tr>
+ 	</table>
+	</div>
+</body>
+</html>
