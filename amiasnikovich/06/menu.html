@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>menu</title>
+	</head>
+	
+	<style type="text/css">
+		
+		body {
+			margin: 0;
+			padding: 1px;
+			background-image: url(./pan_001.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		
+		.usual_div {
+			width: auto;
+			height: 2200px;
+			border: 1px solid;
+			text-align: top;
+		}			
+		
+		.list, .second_list {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		
+		.second_list>li>a, .list>li>a {
+			text-decoration: none;
+			color: black;
+			/*border: 1px solid blue;*/
+			display: block;
+			width: 100px;
+			color: white;
+			font-size: large;
+		}
+		
+		.list>li {
+			display: inline-block;
+			/*border: 1px solid;*/
+			margin-right: 30px;
+			width: 100px;
+			position: relative;
+			padding: 20px;
+			background-color: #FBD217FF;
+			transition: .8s all ease-in-out;
+		}
+		.second_list {
+			position: absolute;
+		}
+		.second_list>li {
+			margin-top: 30px;
+			margin-bottom: -25px;
+			padding:20px;
+			/*border: 1px solid green;*/
+			margin-left: -20px;	
+			display: none;	
+			background-color: #FBD217FF;
+		}
+		
+		.list>li:hover .second_list>li{
+			display: block;
+		}
+		
+		.list > li:hover, .second_list>li:hover {
+			background-color: red;
+		}
+		
+		@media all and (max-width: 1250px){
+		
+			.list>li {
+				display: block;
+				width: 100px;
+				text-align: left;
+				position: relative;
+				padding: 20px;
+				margin-bottom: 5px;
+			}
+			
+			.second_list {
+				margin-left: 145px;
+				margin-top: -70px;
+				position: absolute;
+			}
+			.usual_div {
+				width: auto;
+				height: 2200px;
+				border: 1px solid;
+				text-align: top;
+				margin-left: 142px;
+				margin-top: -460px;
+			}			
+		}
+	</style>
+	
+	<body>
+			
+		
+				<ul class="list" id="main_list">
+					<li><a href="#">Понедельник</a>
+						<ul class="second_list">
+							<li><a href="#">Завтрак</a></li>
+							<li><a href="#">Обед</a></li>
+							<li><a href="#">Ужин</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Вторник</a>
+						<ul class="second_list">
+							<li><a href="#">Завтрак</a></li>
+							<li><a href="#">Обед</a></li>
+							<li><a href="#">Ужин</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Среда</a>
+						<ul class="second_list">
+							<li><a href="#">Завтрак</a></li>
+							<li><a href="#">Обед</a></li>
+							<li><a href="#">Ужин</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Четверг</a>
+						<ul class="second_list">
+							<li><a href="#">Завтрак</a></li>
+							<li><a href="#">Обед</a></li>
+							<li><a href="#">Ужин</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Пятница</a>
+						<ul class="second_list">
+							<li><a href="#">Завтрак</a></li>
+							<li><a href="#">Обед</a></li>
+							<li><a href="#">Пиво</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Суббота</a>
+						<ul class="second_list">
+							<li><a href="#">Завтрак</a></li>
+							<li><a href="#">Обед</a></li>
+							<li><a href="#">Ужин</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Воскресенье</a>
+						<ul class="second_list">
+							<li><a href="#">Завтрак</a></li>
+							<li><a href="#">Обед</a></li>
+							<li><a href="#">Ужин</a></li>
+						</ul>
+					</li>	
+				</ul>
+			
+			<div class="usual_div">
+					Some text<br>
+			</div>
+		
+	</body>
+
+</html>

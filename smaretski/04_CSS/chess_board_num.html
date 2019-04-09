@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Chess board</TITLE> 
+    <style type="text/css">
+    table {border: 2px solid black;
+    border-collapse: collapse;
+    outline: 5px solid black;
+    margin: 20px 20px 20px 20px;
+    }
+    tr, td {border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-style: italic;
+    font-size: 50px;
+    
+    }
+    tr:nth-child(odd) > td:nth-child(even), tr:nth-child(even) > td:nth-child(odd)
+    {
+    background-color: black;
+    color: white;
+    }
+    
+        tr:nth-child(1) {counter-reset: k 65}
+    td::after {
+    counter-increment: k -1;
+    content: " "counter(k)"";
+    text-align: center;
+    }
+    </style>	
+    </HEAD> 
+    <BODY>
+    <table>
+      <tr>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr><tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr><tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr><tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr><tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr><tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr><tr>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>     
+    </table>
+    </BODY> 
+</HTML> 
