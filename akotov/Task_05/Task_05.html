@@ -61,11 +61,11 @@
                             <form id="my_form" name="user_data" method="post" action="http://sc.it-academy.by/fe/form.php">
                             <fieldset>
                                 <legend>Авторизуйтесь</legend>
-                                    <input type="text" ID="passwd" name="text" SIZE="25">
+                                    <input type="text" ID="login" name="login" SIZE="25">
                                 <label for="login">*Логин</label>
                                         <input type="password" ID="passwd" name="password" SIZE="25">
                                     <label for="pass">*Пароль</label><br>
-                                        <label><input type="checkbox" name="hobby">Оставаться в системе</label><br>
+                                        <label><input type="checkbox" name="system">Оставаться в системе</label><br>
                                             <input type="submit" value="Войти">
                                         <p><em>*-обязательное поле</em></p>
                             </fieldset>
@@ -77,12 +77,23 @@
                         <fieldset>
                                 <legend>Как вам</legend>
                                 <label>
-                                        <input type="radio" name="radio_group">ничего<br>
-                                        <input type="radio" name="radio_group">неплохо<br>
-                                        <input type="radio" name="radio_group">хорошо<br>
-                                        <input type="radio" name=date_voite, value="2013.12.31" id="Checkbox_Group1_0">супер<br>
+                                    <input type="radio" name="radio_group">ничего
+                                </label><br>
+                                <label>        
+                                    <input type="radio" name="radio_group">неплохо
+                                </label><br>
+                                <label>
+                                    <input type="radio" name="radio_group">хорошо
+                                </label><br>
+                                <label>
+                                    <input type="radio" name="radio_group">супер
+                                </label><br>
+                                <label>
+                                    <input type="submit" value="Отправить">
                                 </label>
-                                <input type="submit" value="Отправить">
+                                <label>
+                                    <input type="hidden" name=date_voite value="2013.12.31">
+                                </label>
                                 <p><em>Есть скрытое поле<br>
                                 name=date_voite, value="2013.12.31"</em></p>
                         </fieldset>
@@ -95,8 +106,8 @@
                         <form id="my_form" name="user_data" method="post" action="http://sc.it-academy.by/fe/form.php">    
                         <fieldset>
                             <legend>Оставьте Ваш отзыв:</legend>
-                            <input type="text" id="login"
-                            name="login" size="25">
+                            <input type="text" id="login_1"
+                            name="login_1" size="25">
                             <LABEL for="passwd">*Имя</LABEL> 
                                 <input type="password" ID="passwd"
                                 name="password" size="25">
@@ -115,25 +126,22 @@
                         <fieldset>      
                             <legend>Города РБ</legend>
                             <select name="list" id="list">
-                                    <optgroup label="Города РБ">
+                                    <optgroup label="Города РБ"></optgroup>
                                     <option value="1">Брест</option>
                                     <option value="2">Минск</option>
                                     <option value="3">Витебск</option>
-                                    </optgroup>
-                                    <optgroup label="Города России">
+                                    <optgroup label="Города России"></optgroup>
                                     <option value="4">Москва</option>
                                     <option value="5">Рязань</option>
                                     <option value="6">Магадан</option>
-                                    </optgroup>
                             </select>
-                            <select name="list[]" size="8" multiple
-                            id="list">
+                            <select name="list_2" size="8" multiple
+                            id="list_2">
                             <optgroup label="Города РБ"></optgroup>
                             <option value="1">Брест</option>
                             <option value="2">Минск</option>
                             <option value="3">Витебск</option>
-                            <optgroup label="Города России">
-                                    </optgroup>
+                            <optgroup label="Города России"></optgroup>
                                     <option value="4">Москва</option>
                                     <option value="5">Рязань</option>
                                     <option value="6">Магадан</option>
@@ -148,11 +156,13 @@
                             action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">  
                             <fieldset>      
                             <legend>Upload</legend>
-                            <p>Файл:</p>
-                            <input type="file" name="file_Field" dir="ltr">
-                             <p>Срок хранения (года):</p>
-                                <INPUT TYPE="text" ID="file"NAME="file" SIZE="5">
-                                <label><input type="submit" value="Загрузить"></label>
+                            <label for="file">Файл:</label>
+                                <input type="file" name="file_Field" dir="ltr">
+                            <label for="file">Срок хранения (года):</label><br>
+                                <INPUT TYPE="text" ID="file_1"NAME="file_1" SIZE="5">
+                            <label>
+                                <input type="submit" value="Загрузить">
+                            </label>
                             </fieldset>
                             </fomr>
                         </td>
@@ -161,10 +171,12 @@
                             <form id="my_form" name="user_data" method="post" action="http://sc.it-academy.by/fe/form.php">
                             <fieldset>
                                 <legend>Города РБ</legend>
-                                <input type="search" name="search" placeholder="Только русские буквы" pattern="[А-Яа-яЁё]" required><br>
-                                <p><em>Телефонный номер в формате<br>
-                                        +XXX-XX-XXXXXXX, где X любое число<br></em></p>
-                                        <input type="tel" name="tel" placeholder="+375-29-1234567" required><br>
+                                    <input type="search" name="search" placeholder="Только русские буквы" pattern="[А-Яа-я]" required><br>
+                                <label for="number"><em>Телефонный номер в формате<br>
+                                        +XXX-XX-XXXXXXX, где X любое число</em></label><br>
+                                    <label>
+                                        <input type="tel" name="tel" pattern="^\+375-(29|33|44|25)-[0-9]{7}" placeholder="+375-29-1234567" required>
+                                    </label><br>
                                         <input type="submit" value="Проверить">   
                             </fieldset>
                             </fomr>

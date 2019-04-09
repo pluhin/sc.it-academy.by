@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <META>
+        <TITLE>Контейнеры и списки</TITLE>
+        <style type="text/css">
+        .h3 {
+            list-style: upper-roman;
+        }
+        .block {
+            list-style: lower-roman;
+            background-color:black;
+            display: block;
+            width: 400px;
+            height: 70px;
+            max-width: 4;
+            overflow: auto;
+        }
+        .list {
+            list-style: lower-roman;
+            display: inline;
+        }
+        .ul{
+            list-style: lower-roman; 
+        }    
+        .h3,.block,.list {
+            color: green;
+        }
+        </style>
+        </HEAD>
+        <body>
+                <h3 class="h3">Контейнер с кодом</h3>
+                <div class="block">
+                    <div>Цвет фона: чёрный</div>
+                    <div>Цвет текста: зеленый</div>
+                    <div>Ширина: 400рх</div>
+                    <div>Максимальная ысота контейнера: 4-е строки</div>
+                    <div>Переполнение: автоматически</div>
+                </div>
+                <h3 class="h3">Список</h3>
+                <ul class="list">
+                    <li>Ширина: 350рх</li>
+                    <li>Тип списка: римские цифры</li>
+                    <ul class="ul">
+                        <li>Тип вложенного списка: римские ниний регистр цифры</li>   
+                    </ul>
+                </ul>
+        </body>
+</HTML>

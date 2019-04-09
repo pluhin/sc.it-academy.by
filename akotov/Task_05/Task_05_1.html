@@ -7,15 +7,21 @@
         <BODY>
             <h1 align="center">Рекомендации к выполнению работы:</h1>
             <table width="700" border="1" col width="50%"><col width="50%">
-                <form method="GET" action="form.php">
+                <form method="POST" action="form.php">
                     <fieldset>
                     <legend>Личные данные</legend>
+                    <label>
                         <input type="text" placeholder="Фамилия" SIZE="25" pattern="^[А-Яа-яЁё\s]" required autofocus> text: Только 
-                        кириллица, без пробелов, длинна поля 25, обязательное поле, автофокус на данном поле)<br>
+                        кириллица, без пробелов, длинна поля 25, обязательное поле, автофокус на данном поле)
+                    </label><br>
+                    <label>
                         <input type="text" placeholder="Имя" SIZE="20" pattern="^[А-Яа-яЁё\s]" required> text: Только кириллица, без 
-                        пробелов, длинна поля 20, обязательное поле)<br>
+                        пробелов, длинна поля 20, обязательное поле)
+                    </label><br>
+                    <label>
                         <input type="text" placeholder="Отчество" SIZE="24" pattern="^[А-Яа-яЁё\s]" required> text: Только кириллица,
-                        без пробелов, длинна поля 24, обязательное поле)<br>
+                        без пробелов, длинна поля 24, обязательное поле)
+                    </label><br>
                     <fieldset>
                         <legend>Паспортные данные</legend>
                     text: Серия - только заглавные две латинские буквы с длинной 2 и максимальным кличеством символов 2,
@@ -23,14 +29,20 @@
                     text: Номер паспорта - только цифры с длиной 7 и максимальным количеством символов 7, количество цифр
                     не менее 7, обязательное поле
                     <br>
-                    <input type="series" placeholder="АА" size="2" maxlength="2" pattern="^[A-Z]" required>
-                    <input type="series" placeholder="1234567" size="7" maxlength="7" pattern="^[0-9]" required> 
+                    <label></label>
+                        <input type="series" placeholder="АА" size="2" maxlength="2" pattern="^[A-Z]" required>
+                    </label>
+                    <label>
+                        <input type="series" placeholder="1234567" size="7" maxlength="7" pattern="^[0-9]" required>
+                    </label> 
                 </form>
                     </fieldset>
-                <form method="GET" action="form.php">
+                <form method="POST" action="form.php">
                     <fieldset>
                             <legend>Дата рождения</legend>
-                                <input type="text" placeholder="Год" SIZE="4"> text: Год родения 4-е цифры<br>
+                            <label>
+                                <input type="text" placeholder="Год" SIZE="4"> text: Год родения 4-е цифры
+                            </label><br>
                                 <select name="list" id="list">
                                         <option value="1">Январь</option>
                                         <option value="2">Февраль</option>
@@ -46,81 +58,99 @@
                                         <option value="12">Декабрь</option>
                                 </select>
                                 select: Месяц рождения<br>
-                                <input type="number" SIZE="4" min="1" max="31"> number: Диапазон от 1 до 31 с шагом 1<br>
+                            <label>
+                                <input type="number" name="month" SIZE="4" min="1" max="31"> number: Диапазон от 1 до 31 с шагом 1
+                            </label><br>
                     </fieldset>
                 </form>
-                                <select name="list" id="list">
+                            <label>
+                                <select name="list_1" id="list_1">
                                         <option value="1">РБ</option>
                                         <option value="2">РФ</option>
                                 </select>
+                            </label>
                                 (Национальность - выбор одного значения из списка)<br>
                                 Адрес:<br>
+                            <label>
                                 <textarea name="text" lang="ru"></textarea>
+                            </label>
                     </fieldset>
                 </form>
-                <form method="GET" action="form.php">
+                <form method="POST" action="form.php">
                     <fieldset>
                             <legend>Интересы</legend>
                     <fieldset>
                             <legend>Хобби</legend>
-                <form id="my_form" name="user_data" method="GET" action="form.php">
+                <form id="my_form" name="user_data" method="POST" action="form.php">
                             <label>
                                 <input type="checkbox" name="hobby">Рыбалка<br>
-                                <input type="checkbox" name="hobby">Астраномия<br>
-                                <input type="checkbox" name="hobby">Дайвинг<br>
-                                <input type="checkbox" name="hobby">Марки<br>
+                                <input type="checkbox" name="hobby_2">Астраномия<br>
+                                <input type="checkbox" name="hobby_3">Дайвинг<br>
+                                <input type="checkbox" name="hobby_4">Марки<br>
                             </label>
                 </form>       
                 </form>
                     </fieldset>
-                <form method="GET" action="form.php">      
+                <form method="POST" action="form.php">      
                     <fieldset>
                             <legend>Домашние животные (возможность выбора нескольких вариантоов):</legend>
                             <pre>array: select multiple</pre>
-                            <select name="list[]" size="12" multiple id="list">
-                            <optgroup label="Попугай">
+                            <select name="list_2" size="12" multiple id="list_2">
+                            <optgroup label="Попугай"></option>
                             <option value="1">Волнистый</option>
                             <option value="2">Ара</option>
                             <option value="3">Неразлучник</option>
-                                <optgroup label="Рыба">
+                                <optgroup label="Рыба"></option>
                                 <option value="4">Караси</option>
                                 <option value="5">Окуни</option>
                                 <option value="6">Осётр</option>
-                                    <optgroup label="Птицы">
+                                    <optgroup label="Птицы"></option>
                                     <option value="7">Стая ворон</option>
                                     <option value="8">Аист</option>
                                     <option value="9">Археоптерикс</option>
                             </select>
                     </fieldset>
                 </form>
-                <form method="GET" action="form.php">
+                <form method="POST" action="form.php">
                     <fieldset>
                             <legend>Дата для входа и восстановления пароля</legend>
-                            <input type="text" placeholder="Логин" size="20" maxlength="5" pattern="^[A-Za-z]{5,}" required>
-                            text: Толька латиница, без пробелов, не менее 5 символов, длинна поля 20, обязательное поле)<br>
-                            <input type="password" placeholder="Пароль" size="20" maxlength="5" pattern="^[A-Za-z]{10,}" autocomplete="off" required> 
-                            password: Только латиница, без пробелов, не менее 10 символов,длинна поля 20, обязательное поле, отключить<br> 
+                        <label>
+                            <input name="text_2" type="text" placeholder="Логин" size="20" maxlength="5" pattern="^[A-Za-z]{5,}" required>
+                            text: Толька латиница, без пробелов, не менее 5 символов, длинна поля 20, обязательное поле)
+                        </label><br>
+                        <label>
+                            <input name="password" type="password" placeholder="Пароль" size="20" maxlength="5" pattern="^[A-Za-z]{10,}" autocomplete="off" required> 
+                            password: Только латиница, без пробелов, не менее 10 символов,длинна поля 20, обязательное поле, отключить
+                        </label><br> 
                             атозаполнение
                     </fieldset>
                 </form>
-                <form method="GET" action="form.php">
+                <form method="POST" action="form.php">
                     <fieldset>
                             <legend>Координаты</legend>
-                            <input type="email" placeholder="введите адрес почты" size="20"> email: проверка должна осуществляться 
-                            при помощи новых атрибутов тега &lt;input&gt;)<br>
-                            <input type="url" placeholder="введите адрес сайта" size="20"> url: проверка должна осуществляться
-                            при помощи новых атрибутов тега &lt;input&gt;<br>
+                        <label>
+                            <input name="email" type="email"  placeholder="введите адрес почты" size="20"> email: проверка должна осуществляться 
+                            при помощи новых атрибутов тега &lt;input&gt;)
+                        </label><br>
+                        <label>
+                            <input name="url" type="url" placeholder="введите адрес сайта" size="20"> url: проверка должна осуществляться
+                            при помощи новых атрибутов тега &lt;input&gt;
+                        </label><br>
                     </fieldset>
                 </form>
-                <form method="GET" action="form.php">
+                <form method="POST" action="form.php">
                     <fieldset>
                             <legend>Цифры</legend>
-                            <input type="number" step="0.1" min="-0.2" max="2.5" size="4"> 
-                            number: Диапазон от -2.5 до 2.5 с шагом 0.1<br>
-                            <input type="range" min="1" max="10" value="5"> range: Максимальное 10 минимальное 1
+                        <label>
+                            <input name="number" type="number" step="0.1" min="-0.2" max="2.5" size="4"> 
+                            number: Диапазон от -2.5 до 2.5 с шагом 0.1
+                        </label><br>
+                        <label>
+                            <input name="range" type="range" min="1" max="10" value="5"> range: Максимальное 10 минимальное 1
+                        </label>
                     </fieldset>
                 </form>
-                <form method="GET">   
+                <form method="POST">   
                     <fieldset>
                             <legend>Кнопки управления</legend>
                             <input type="submit" value="Отправить">

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+    <META>
+    <TITLE><Блок навигации></TITLE>
+    <style type="text/css">
+        .left {
+            float: left;
+            max-width: 15em;
+        }
+        .left div {
+            background-color: rgba(121, 75, 75, 0.5);
+        }
+        .center {
+            float: left;
+            margin-bottom: 2em;
+        }
+        .center div {
+            background-color: rgb(176, 176, 206);
+        }
+        .right {
+            margin-bottom: 2em;
+        }
+        .row {
+            overflow: hidden;
+            background-color: rgb(230, 230, 193);
+            margin: 0 auto;
+        }
+        .cell{
+            background-color: aqua;
+            width: 100%;
+            overflow: hidden;
+        }
+        #mail {
+            float: right;
+        }
+    </style>
+</HEAD>
+<body>
+    <div class="row">
+    <div class="left">
+        <div>
+                <h3>Блок навигации</h3>
+            <ul>
+                <li>Ширина 15em</li>
+                <li>Должен присутствоать цвет фона</li>
+                <li>Распологается с лева</li>
+                <li>Блок навигации наполните контекстом достаточным,
+                    чтобы по высоте он наал захватыать торую статью статью, 
+                    как показано в данном примере</li>
+            </ul>
+        </div>
+    </div>
+        <div class="center">
+            <div>
+                <h3>Статья 1</h3>
+                Размер блока:<br> 
+                Занимает всю доступную ширину<br>
+                Должен присутстовать цвет фона<br>
+                Во всех "статьях" сделайте отступ от соседей равными .2em, при помощи<br>
+                свойства margin-bottom
+            </div>
+            <div class="right">
+                <h3>Статья 2</h3>
+                Размер блока:<br>
+                Занимает всю доступную ширину<br>
+                Долен присутствоать цвет фона<br>
+                Во всех "статьях" сделайте отступ от соседей равным .2em, при помощи<br>
+                свойст margin-bottom. Каритнка вставленная при попощи тега, плавание<br>
+                организованно по правому краю нутри данной статьи для этой картинки
+             <div id="mail"><img src="icon_mail.png"></div>
+            </div>      
+        </div>
+            <div class="cell">Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещенным внутрь контейнером</div>
+    </div>
+</body>
+</HTML>
