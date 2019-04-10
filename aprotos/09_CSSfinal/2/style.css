@@ -1,0 +1,31 @@
+table{
+	border-collapse: collapse;
+	caption-side: bottom;
+}
+caption {
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	padding: 2px;
+}
+td, th {
+	border: 1px;
+	border-right-style:dotted;
+	border-bottom-style:dotted;
+}
+tr:nth-child(2n+2){
+	background-color: lightgrey;
+}
+
+tr:nth-child(n+2) > th {
+	text-align: left;
+}
+
+tr:first-child {
+	background-color: grey;
+	color: white;
+}
+tr:nth-child(n+2):hover {
+	background-color: lightblue;
+	border: 1.5px solid blue;
+	cursor: pointer;
+}

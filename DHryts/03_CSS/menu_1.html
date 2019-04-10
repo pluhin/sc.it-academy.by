@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Спрайты</TITLE>
+		<style type="text/css">
+			ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid black;
+        border-radius: 5px;
+        width: 150px;
+      }
+      ul li {
+        position: relative;
+      }
+      li ul {
+        display: none;
+        position: absolute;
+        left: 150px;
+        top: 0px;
+      }
+      li:hover ul {
+        display: block;
+      }
+      li a {
+        color: white;
+        background-color: grey;
+        text-decoration: none;
+        padding: 5px;
+        display: block;
+        border: 1px solid black;
+        border-bottom: none;
+        border-radius: 5px;
+        transition: .5s all ease-in-out;
+      }
+      li a:hover {
+        color: grey;
+        background-color: white;
+      }
+      @media all and (min-width: 915px) {
+            ul {
+                width: auto;
+                border-bottom: none;
+            }
+            li {
+                display: inline-block;
+                float: left;
+                width: 150px;
+            }
+            li ul {
+                top: auto;
+                left: 0px;
+            }
+            li a {
+                border-bottom: 1px solid black;
+            }
+            li ul li a {
+                border-top: none;
+            }
+		</style>
+	</HEAD> 
+	<BODY> 
+		<ul > 
+    <li><a href="#">Понедельник</a>
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li><a href="#">Вторник</a> 
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+    <li><a href="#">Среда</a>
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li><a href="#">Четверг</a> 
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+    <li><a href="#">Пятница</a>
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul>
+    </li> 
+    <li><a href="#">Суббота</a> 
+      <ul> 
+        <li><a href="#">Завтрак</a></li> 
+        <li><a href="#">Обед</a></li> 
+        <li><a href="#">Ужин</a></li> 
+      </ul> 
+    </li> 
+  </ul>
+  </div>
+</div>
+</BODY> 
+</HTML> 

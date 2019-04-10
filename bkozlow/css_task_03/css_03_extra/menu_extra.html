@@ -1,0 +1,152 @@
+
+<!DOCTYPE html> 
+<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Меню</TITLE>
+        <style type="text/css">
+       @media all and (min-width:708px) {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border-radius: 5px;
+            }
+        ul li {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            }
+            li ul {
+            display: block;
+            visibility: hidden;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transition: 0.5s all ease-in-out;
+        }
+        li:hover ul {
+            display: block;
+            visibility: visible;
+            left: 0px;
+            top: 29px;
+        }
+        li a {
+            color: white;
+            background-color: gray;
+            text-decoration: none;
+            padding: 5px;
+            display: block;
+            border: 1px solid black;
+            border-bottom: none;
+            border-radius: 5px;
+            transition: .5s all ease-in-out;
+        }
+        li a:hover {
+            color: gray;
+            background-color: white;
+        }
+    }
+    
+       @media all and (max-width:708px)
+       {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid black;
+            border-radius: 5px;
+            width: 150px;
+        }
+        ul li {
+            position: relative;
+        }
+        li ul {
+            display: block;
+            visibility: hidden;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transition: 0.5s all ease-in-out;
+        }
+        li:hover ul {
+            display: block;
+            visibility: visible;
+            left: 150px;
+            top: 0px;
+
+        }
+        li a {
+            color: white;
+            background-color: gray;
+            text-decoration: none;
+            padding: 5px;
+            display: block;
+            border: 1px solid black;
+            border-bottom: none;
+            border-radius: 5px;
+            transition: .5s all ease-in-out;
+        }
+        li a:hover {
+            color: gray;
+            background-color: white;
+        }
+
+       }
+    
+		</style>
+	</HEAD> 
+	<BODY> 
+        <ul>
+            <li><a href="#">Понедельник</a>
+                <ul>
+                    <li><a href="#">Завтрак</a></li>
+                    <li><a href="#">Обед</a></li>
+                    <li><a href="#">Ужин</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Вторник</a>
+                <ul>
+                    <li><a href="#">Завтрак</a></li>
+                    <li><a href="#">Обед</a></li>
+                    <li><a href="#">Ужин</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Среда</a>
+                <ul>
+                    <li><a href="#">Завтрак</a></li>
+                    <li><a href="#">Обед</a></li>
+                    <li><a href="#">Ужин</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Четверг</a>
+                <ul>
+                    <li><a href="#">Завтрак</a></li>
+                    <li><a href="#">Обед</a></li>
+                    <li><a href="#">Ужин</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Пятница</a>
+                <ul>
+                    <li><a href="#">Завтрак</a></li>
+                    <li><a href="#">Обед</a></li>
+                    <li><a href="#">Ужин</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Суббота</a>
+                <ul>
+                    <li><a href="#">Завтрак</a></li>
+                    <li><a href="#">Обед</a></li>
+                    <li><a href="#">Ужин</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Воскресенье</a>
+                <ul>
+                    <li><a href="#">Завтрак</a></li>
+                    <li><a href="#">Обед</a></li>
+                    <li><a href="#">Ужин</a></li>
+                </ul>
+            </li>
+        </ul>
+	</BODY> 
+</HTML> 
