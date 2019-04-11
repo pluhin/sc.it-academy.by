@@ -1,0 +1,38 @@
+    
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Password check</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"> 
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#val_1, #val_2').on('keyup',function(){
+                    var value_1 = $('#val_1').val();
+                    var value_2 = $('#val_2').val();
+                        if (value_1 == value_2){
+                            $('.answer').text('matching passwords');
+                            $('.answer').css('color', 'green');
+                            $('#val_1, #val_2').css('background-color', 'green');
+                        }else{
+                            $('.answer').text('not matching');
+                            $('.answer').css('color', 'red');
+                            $('#val_1, #val_2').css('background-color', 'red');
+                    }
+                });
+                });
+        </script>
+    </head>
+    <body>
+        <form>
+            <div class="form-group">
+                <input type="password" placeholder="Password" id="val_1">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Confirm Password" id="val_2">
+                <div class="answer"></div>
+            </div>
+        </form>
+    </body>
+</html>
