@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <style>
+    .zebra{
+        background-color: lightgray;
+        color: white;
+    }
+    </style>
+    <script>
+        $(document).ready(function(){
+        $('.table tr:even').addClass('zebra');
+        $('.table tr').click(function(){
+            $(this).hide();
+            $('.btn-block').text('Show all');
+        });
+            $('.btn-block').click(function(){
+            $('.table tr').show();
+            $(this).text('No hidden lines in table');
+            });
+        });
+    </script>
+</head>
+<body>
+        <button type="button" class="btn-block">No hidden lines in table</button>
+        <hr>
+    <table class="table">
+        <caption>данные о сотрудниках</caption>
+        <tr>
+        <th>ФИО</th>
+        <th>пол</th> 
+        <th>должность</th>
+        <th>дата рож.</th>
+        <th>Данные 01</th>
+        <th>Данные 02</th>
+        </tr>
+        <tr>
+        <th>Иванов Иван Иванович</th>
+        <td>М</td> 
+        <td>начальник</td>
+        <td>01.01.1960</td>
+        <td>4567</td>
+        <td>3453</td>
+        </tr>
+        <tr>
+        <th>Петрова Илонна Петровна</th>
+        <td>Ж</td> 
+        <td>секретарь</td>
+        <td>01.01.1989</td>
+        <td>98795</td>
+        <td>46523</td>
+        </tr>
+        <tr>
+        <th>Сидоров Илья Игоревич</th>
+        <td>М</td> 
+        <td>бухгалтер</td>
+        <td>01.01.1979</td>
+        <td>743434</td>
+        <td>987979</td>
+        </tr>
+        <tr>
+        <th>Пупин Фёдор Фёдорович</th>
+        <td>М</td> 
+        <td>водитель</td>
+        <td>01.01.1963</td>
+        <td>74323434</td>
+        <td>9232379</td>
+        </tr>
+        <tr>
+        <th>Крупин Сергей Иванович</th>
+        <td>М</td> 
+        <td>водитель 2</td>
+        <td>01.01.1983</td>
+        <td>3234534</td>
+        <td>923123379</td>
+        </tr>
+        </table>
+</body>
+</html>
