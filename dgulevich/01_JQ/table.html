@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<input type="button" id="button">
+	<table class="table table-striped" id="table_data">
+		 <caption>данные о сотрудниках</caption>
+		 <tr>
+			 <th>ФИО</th>
+			 <th>пол</th> 
+			 <th>должность</th>
+			 <th>дата рож.</th>
+			 <th>Данные 01</th>
+			 <th>Данные 02</th>
+		 </tr>
+		 <tr>
+			 <th>Иванов Иван Иванович</th>
+			 <td>М</td> 
+			 <td>начальник</td>
+			 <td>01.01.1960</td>
+			 <td>4567</td>
+			 <td>3453</td>
+		 </tr>
+		 <tr>
+			 <th>Петрова Илонна Петровна</th>
+			 <td>Ж</td> 
+			 <td>секретарь</td>
+			 <td>01.01.1989</td>
+			 <td>98795</td>
+			 <td>46523</td>
+		 </tr>
+		 <tr>
+			 <th>Сидоров Илья Игоревич</th>
+			 <td>М</td> 
+			 <td>бухгалтер</td>
+			 <td>01.01.1979</td>
+			 <td>743434</td>
+			 <td>987979</td>
+		 </tr>
+		 <tr>
+			 <th>Пупин Фёдор Фёдорович</th>
+			 <td>М</td> 
+			 <td>водитель</td>
+			 <td>01.01.1963</td>
+			 <td>74323434</td>
+			 <td>9232379</td>
+		 </tr>
+		 <tr>
+			 <th>Крупин Сергей Иванович</th>
+			 <td>М</td> 
+			 <td>водитель 2</td>
+			 <td>01.01.1983</td>
+			 <td>3234534</td>
+			 <td>923123379</td>
+		 </tr>
+ 	</table>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+	$(document).ready(function(){
+		$('#button').val('Нет скрытых сотрудников');
+		$('#button').addClass('btn btn-secondary btn-lg btn-block disabled');
+		$('#table_data').addClass('table');
+		$('caption').css('caption-side', 'top');
+		$('tr').click(function(){
+			$(this).hide();
+			$('#button').removeClass('btn-secondary disabled');
+			$('#button').addClass('btn-primary');
+			$('#button').val('Присутствуют скрытые сотрудники. Нажните кнопку для отображения их');
+		});
+		$('#button').click(function(){
+			$('#button').removeClass('btn-primary');
+			$('#button').addClass('btn-secondary disabled');
+			$('#button').val('Нет скрытых сотрудников');
+			$('tr').show();
+		});
+	});
+</script>
+</body>
+</html>
