@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<HTML> 
+	<HEAD>
+	<META charset="utf-8">
+	<TITLE>Flex</TITLE>
+		<style type="text/css">
+			.flex-container-column {
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+				}
+			.flex-container-row {
+				display: flex;
+				flex-direction: row;
+				}
+			
+			.flex-container-row > .s1 {
+				flex: 0 0 15em;
+				background-color: #00CED1;
+				color: #F5F5F5;
+				align-self: baseline;
+				}
+						
+			.flex-container-column > .s2 {
+				background-color: #6A5ACD;
+				color: #F5F5F5;
+				}
+			
+			.s3 {float: right;}
+			
+			.flex-container-column > .s4 {
+				background-color: #DA70D6;
+				color: #F5F5F5;
+				}
+		</style>
+	</HEAD> 
+	<BODY>
+		<div class="flex-container-column">
+			<div class="flex-container-row">
+				<div class="s1">
+					<h3>Блок навигации</h3>
+						<ul>
+							<li>Ширина 15em</li>
+							<li>Должен присутствовать цвет фона</li>
+							<li>Располагается слева</li>
+							<li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью,как показано в данном примере</li>
+						</ul>
+				</div>
+			<div class="flex-container-column">
+				<div class="s2">
+					<h3>Статья 1</h3>
+						Размер блока:<br>
+						Занимает всю доступную ширину<br>
+						Должен присутствовать цвет фона<br>
+						Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom
+				</div>
+				<div class="s2">
+					<h3>Статья 2</h3>
+					Размер блока:<br>
+					Занимает всю доступную ширину<br>
+					Должен присутствовать цвет фона<br>
+					Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи свойства margin-bottom<br>
+					Картинка вставлена при помощи тега, плавание организовано по правому краю внутри данной статьи для этой картинки<br>
+					<img src="konvert.png" class="s3">
+				</div>
+			</div>
+			</div>
+				<div class="s4">
+                Нижний блок, подвал. Занимает всю доступную ширину. Высота определяется помещённым внутрь контентом.
+				</div>
+		</div>
+	</BODY> 
+</HTML> 

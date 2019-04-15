@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Python_1</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<style>
+		code, pre{
+		background-color:  rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		border: 1px solid;
+	}
+	.u-pull-right {
+  float: right; 
+  }
+	</style>
+</head>
+	<body>
+	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+			<h1 id="up">HOW-TO: Программа на Python, Часть 1</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="five columns">
+			<ul>
+				<li><a href="python_1.html"><i>Программа на Python — часть 1</i></a></li>
+				<li><a href="python_2.html"><i>Программа на Python — часть 2</i></a></li>
+				<li><a href="python_3.html"><i>Программа на Python — часть 3</i></a></li>
+			</ul>
+			<h2 id="soderzhanie">Содержание</h2>
+			<h3>HOW-TO: Программа на Python, Часть 1</h3>
+			<ul>
+				<li><a href="#nash_p1">Наша первая программа</a></li>
+				<li><a href="#prim_for">Пример цикла For</a></li>
+			</ul>
+		</div>
+			<div class="seven columns">
+			<img src="Icon-Python.png" alt="python_logo" title="photo_from_data_url" class="u-pull-right">
+			<p>Из множества существующих языков программирования Python — один из самых лёгких
+			в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+			Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+			обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+			создание консольных приложений, а в следующей — программирование графических
+			интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо сейчас.</p>
+			<h2 id="nash_p1">Наша первая программа</h2>
+			<p><a href="#soderzhanie">К содержанию</a></p>
+			<p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает
+			каждая строка и пойдём дальше.</p>
+			<p>Введите эти 4 строки:</p>
+<pre>#!/usr/bin/env python
+	print 'Hello. I am a python program.'
+	name = raw_input("What is your name?")
+	print "Hello there, " + name + "!"</pre>
+			<p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+			<b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать
+			программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+			этого введите в терминале</p>
+<pre><b><u>chmod +x hello.py</u></b></pre>
+			<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+	<pre>greg@earth:~/python_examples$ ./hello.py
+	Hello. I am a python program.
+	What is your name? Ferd Burphel
+	Hello there, Ferd Burphel!
+	greg@earth:~/python_examples$</pre>
+			<p>Вот и всё.</p>
+			<h2 id="prim_for">Пример цикла For</h2>
+			<p><a href="#soderzhanie">К содержанию</a></p>
+			<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+			редактор и наберите следующую программу:</p>
+<pre>#!/usr/bin/env python
+for cntr in range(0,10):
+print cntr</pre>
+			<p><i>Не забудьте поставить символ табуляции перед строкой «print cntr»</i>. Это важно. В
+			Python для указания на блоки кода используются не круглые «<strong>&#40;</strong>» и фигурные «<strong>&#123;</strong>» скобки
+			как в других языках программирования, а отступы.</p>
+			</div>
+		<div class="row">
+			<div class="twelve columns">
+			<table class="u-full-width">
+				<tr>
+					<th>
+						<a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAACXBIWXMAAAsNAAALDQHtB8AsAAAAB3RJTUUH0wkJExMdNO/ZuAAAArVQTFRFAAAAZWVlZWVlZWVlZWVlMmjMMmnRN2W7ZWVlZWVlZWVlZWVlT2KFZWVlMmjMMmnQMmfJZWVlMmnRMmnRNWbAVmJ5OWW2ZWVlOWW3MmjMMmnOMmjLQWOjMmnNMmnROGW4MmjMMmjNN2a+M2bHRmOYOWa5OGW4SWOVQWapRmOZRGWjQmapQ2anPmOpMmjMMmnRMmjLMmnSMmnQMmjKMmbHNGfEMmbHNmbAM2XCMmnSMmfKM2jLMmjMMmnQNGjKMmjLNGfGNGfHMmfJMmbIMmjLMmjKMmnOMmrQMmnOMmjMNGnKMmfLNGnKMmvVMmzXMmrTNGzTQXLNM2zVNWzSPXDPNWvRPXDPNGvTN3PiPnfgPnfhP3fdRnrZRnrcTn7WV4TXSHvaMm/eMm/gNnn1N3r0OHHZOXrxOX78On/9O3/9O4D/PHPYPH/8PIH/PYL/QHXWQIT/QYT9QoT/Q4X9RYf/RoT2Rob8SIj8SIj/SYj8SnrSTYXrTYXsUIv4Uoz1VovvWo/xXY/tXZHyXpLxXpT3Xpf/X5LxYJj/YZDnYZLtYpHpZZv9Zpz/a5fobZjnbZ73cKL8c5nhc5vnc5zodJzodJ3odZ7qdqP3epzbeqXzfKDifabzfqv/gqXmgqbmg6nvhqzviqrli6znjKznja3ojq3lka/okrHtk7PtlLLqmbXqmrXnm7blm7fsnbfnncD/oLvso7vpp77qqsHrrMb2sMXstMnwtsruuMvvuMzuuczvu87wvtDywtP0w9PxxtbxyNfyydfyzNrz0d300t711eD11uH11+H11+L11+L22eP12uT23ur/3+j34Oj34+v45Ov45ez55+355+/+6PD/6e/66/L+7fL87fP97/P67/P78fT78fX78fX98fX+8vX78/f+9vn/+vv++/z+/P3+/v7+////MlzvGAAAAGF0Uk5TAAECAwQFBQYHCw0UFxgaGhwdHyMqKisrMDMzNDU5OTw9PT0+Q01PUVNUW2BiZY+PkpOYmaGhoqqwtrm9v7+/wcrKzNDW2d3d3uXl5ubo7e7u7u/w8PLy9P39/f39/f39/tDAlW4AAAABYktHRObBbFoFAAABkklEQVQYGQXByXISQQCA4b+ne1Z2JhEUSSUaDVGr8gDe9OK7+hYePagHpayYraIMCcOSIQPTzOr3CQDAcmt2lW2SHQAIADjoND2LLIkebwoABeAfDOuv2s/McHqZ9u5uc1BA9/Xp6M2TlkWxXp5/9+R1jgT/5PDj2Z4aB0HTqPX7gcweKwmn7z4cW8XVycj/5RalO1hHy1wyfHs2EkXwYl9Yuijy0hFLvVFmxz0s02jwFFYpQNFzW0q5zSM31b0h1SwooXq43XmNtqp5jZS9YygvAHADhF1Xtq22vZeAfA9AGn0TljQgjkwFAACWLwXCyLJ4fq4BAGD5W8i8VJtkVV7En3yyz3OAPFeRTmXVaHZVMhs40v+7yipDKBnO7mRR8/uuky36dmN0WfM8xyzn07lk7fX3PSePOo5543iOLcPxJJFUWZoeWWb20B1ry1TG1z+LUEvQWjWtuiomiZJGNPk5vd8WEiqtw/W/nm0I4i9XPxb3SYoAMJznrYZjkyXxdhbvchAACFu161KUaaTzXQn8By3KtZMjlOb3AAAAAElFTkSuQmCC" alt="left_arrow" title="left_arrow_from_data_url"></a>
+					</th>
+					<th>
+						<a href="#up"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAEUklEQVR42o2UbUybVRTHO3X6wfjNRLNo/OC38cU8LWNVwDEM2UxwOnUmmqGjaXldpsJEqtkUgaBMGWwqjEFAxA3Gpm6OlxB5cxmsvMg7MiwwttKHtrS09AVKn/6958JoMKPbSf557nOfe373PPeec2TBTEga2Cok9W8TkvrkQmJvhJDYw9StEBJuPBOmbn40iGtQqJKpgIFbheR+vZAyIpLYJpMM3s5UJNd0RqrV6ocfFPi8kDR4Skgdm4/MuCUdyLfhcLkHpy+bUNZghLZ6Ee8W2BGj/VdSpAw5hQRdU5imJYJt8Egw6HMMWi8cmUZ84RzqrrsxftsF26IXl65ZuOyuFUyLHrT0O3C03ISdH42DRT+q1DTFEnyzSOsjM6al3DobBidduGNegsGyvAp0rmDR7aMxzXHdvONGRbMFez676RcSdeM71Y3hDP7Q/8D9xcKRSXxVY8OA3omxGTeJgyx2LyS/n2vBuUJza99dGJl2obTBgvC0fyBoOn9i4CeYtqxBe5Xy1BHboZNGNPctoGvMgRtMBJgxLWHF58ddkyQ/TDZ+NLSO668hO9LLRISmDi6wqPcx8GMylkJbmQpeztBLp67Mo7HHiqYeG3fUz3oC0IBR5OtHRGvrdVaU1hvYhY5LioRrlfvic54i8Dam1tgcC6qa51DbbuYOw1NO+Fh0wWzK6EHR7yLiTnvwev4SlFo7WI73RKmqQgksZ7mpP1Q0jzNXjShvFNE3scgjvZ/Rxq3DXrx9EnjpC0B5zAfGM0Rpat4kcAQlfsqPIr6pNeCPLiuWvRIe1Ja8flR2rIJfPC5BSB6y7tbUfLAOPlgwj7RSI76uNeF8uw1XdQ54lgNR25wSpuYkTIiAxwtuZ1qAzPNAfAkQ/iWDr4GjNefiZVT7VKYx2W7sP+HC/vxVJZd6sOAKgMvauDPX8G1wS60IzEVksedxHzvj7tlX1FXvyaihUO2HaZ2IzpHWFfeDxMAIgFs3B+/KBnYz7ch0QdB09ceoiqNl1KWooYSlzUh78nzYuyZVie++Eaf/7ENMrg/kRyLGDk1b7YH4zO0yMupSitQha2yOGXFFdrzPlF7hwKzVB4db4udb3eHBwUIH18D0Cp/PvuCktdyHfENTBhyRqho1s6c5mFofq/WSXUdHcbjYiPSzIj4pF5FbY0ZerRmZlSJVFs1zZZ0zIe+CGZ9W8HfuQ75ydcdvjBXC9LjsroVq2rbLE7v/fO3YqPR5xQyyqmc36pcN4/V3Wks+ioROXYyq5C0GfXJDI6IXpbo+RJGoa31VO4i0kls4UWfEtxfFe4q+0Rpaq0i4rtur+v4Nxnj2nq2TjkSpbniBdanKiA//Xngne0zSnp3AdxcNKPxVJPExzdE3tsZBv0+REpQ3n82MIqfWR12KGgrVviJJZ4j6uNdKYuNZSim6/bWLCqHf3xBpEPgW2p26FDUUqn0qU6ooSn7KU0opun26qMCZBuw/G0GAr3mHnKsAAAAASUVORK5CYII=" alt="home_button" title="home_button_from_data_url"></a>
+					</th>
+					<th>
+						<a href="python_2.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAEQUlEQVR42pWUa1CUVRjHV8v80PitmRqnpg99ky/Nu4u4BSRSDDqhdrOZGi1gdtkVHCt0yK3RIqACFEGbIITBSAzDMW8gs8pFHYEFFNi45hKQe0HYXXZhWaB9+fc8r+viDtLEmfnNeznn/N7znvM8j+y/mqDtXCVoO9YK2ttyQdMeIWjaiFaFkNTyfJhK/5RKpZItt7FUSeSRuF7Y3WESkrttDH1kkOSNRIFc3RRJ8ieI/yV8SdB2HRNSeu2RacPijhwn9pR6cfzCfZTUWKE7NYkP8lyI0d0VFcnGKSHJUBumrosg+ZPEktIXSVot7B1CQv4oqm5No/9vD5yTc3B7/pFwEUM2L+o63Nhfeh8bPu0Hrb5Hqa6NY/lSK62OTBsSs6qc6Br04N7YDMzjszBZZvBLw5TEXYv0TmLg3jTK9OOI/WJgXtAY+jeoroSTfCXxqLijUNg7iG8qneg0TaF3ZDpAS980LA6fREXjJIx/efx9HnQPeVBcM47w1D4I6qafSbqGWOGXtivlKd3O+KNW6G9PoLnXjRai2Y/J4sXDZneLKNG7cfOPhf4bRhf2ldgQmtI1QaveRuLVMgqhVUTea2km8dhFO660OVDb5gyiqccNj1cMyEcnfCR34VLLg/5qgwPF1WY60H5RkXTz5LaEzGdZvJaoj8scR7l+FJUNY6ioG1/ExWYnZubmg+R55x3I/s2KXce92J4zA6XOBYrxtqjE8lAWyyk2TfEFdvx02Yoj58ZQcnXqsVztlLYkaFtSSmfx6leQUB70gXzmKHXlOyyO4MBP/tGG7DNm3DHNYDlteAx4L/+B+JVDIoTdRscmdeXHAfHOPDtSi62wT/qw3BZfBIR/TXK/OFp9OkHGuc9pGpMxjbdzKXSuLU98vQ/Ykg1EpJP8kI/2uNXyuqr8QxkXFM79MN0UojNFvJElYmvuvB9IvJkDxH4PlN8IluqNwKZMYGMGXYn1BzwUy80dMYmF0TKuUlxQwlJHxNjvfNgcDE2YR2Q68O2FYGnTgIjth32IyfKB5zHsWK9uOLMj4cA6GacfVylFitERlzmGXQUufPQIO/NdOHrJC+/cgtQwMAtN0cIYnsNzQ5M73ZGJlSpqz8m4cemjXC/auL8Hewqt2HfCxpnEV4lfG10BafewF5+XjXJ/YAzP4bly1fXfyRVCPP1QLAtVN6yTa1qvbT3YI35ZNoL0U5YAuVU29JCQ4fv0Cgsj9fFYnqNIajLEJBa9S65niJWBIsQPSlV1iEJjqN+i60Jq0TBJrDh81vZYuI/H8FhF0i3D5sQf3iLHC4vqMj/wlihVNS9TlToZ8cmdifczekXdiT9x5KwZ+edsjHTP77iPxrj593mlfunqJYu9v56u4SrFBYVzX6E1mKM+a3cwdG/hkOLT9x9UCP9+0EqXEDMr+OtcpbigcO5zmnJGcfBznHJI8enzQS0q7tT+BYMkj3kiBFFQAAAAAElFTkSuQmCC" alt="right_arrow" title="right_arrow_from_data_url"></a>
+					</th>
+				</tr>
+			</table>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

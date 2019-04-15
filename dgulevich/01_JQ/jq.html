@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Проверка пароля</title>
+	<style type="text/css">
+		input {
+			margin: 5px;
+			
+		}
+		.true {
+			background-color: palegreen;
+		}
+		.false {
+			background-color: tomato;
+		}
+	</style>
+</head>
+<body>
+	<h3>Проверка пароля</h3>
+	<input type="password" name="pass_1" id="pass_1" placeholder="пароль">
+	<br>
+	<input type="password" name="pass_2" id="pass_2" placeholder="повтор пароля">
+	<p></p>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input').keyup(function(){
+			if ($('#pass_1').val()==$('#pass_2').val()) {
+				$('input').removeClass('false');
+				$('input').addClass('true');
+				$('p').text('Пароли совпадают');
+			}else{
+				$('input').removeClass('true');
+				$('input').addClass('false');
+				$('p').text('Пароли не совпадают');
+			}
+			});
+		});
+	</script>	
+</body>
+</html>

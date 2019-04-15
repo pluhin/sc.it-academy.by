@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Псевдоэлементы и псевдоклассы 5</TITLE> 
+		<style type="text/css">
+			table {
+                border-collapse: collapse;
+            }
+            th {
+                width: 50px;
+                height: 50px;
+                border: 2px solid black;
+            }
+            tr:nth-child(odd) th:nth-child(even), tr:nth-child(even) th:nth-child(odd){background-color: black; color: white;}
+            table {
+                counter-reset: k 65;
+            }
+            th:after{
+                counter-increment: k -1;
+                content: counter(k);
+                font-size: 40px;
+            }
+        </style>	
+    </HEAD> 
+    <BODY>
+        <table>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+            <tr>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+            </tr>
+        </table>
+    </BODY> 
+</HTML> 

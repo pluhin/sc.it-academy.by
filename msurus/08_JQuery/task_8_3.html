@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>password Jquery</title>
+	<style>
+	::-webkit-input-placeholder {color:black};
+	.right {
+	}
+	</style>
+</head>	
+<body>
+		<h2>Введите пароль</h2>
+		<input type="password" name="pass" id="pass1" size="25" required autofocus placeholder="пароль" class="right">
+		<label for="pass">введите пароль</label>
+		<br>
+		<input type="password" name="passr" id="passr1" size="25" required placeholder="повторить пароль" class="right">
+		<label for="pass1">повторите пароль</label>
+		<br>
+		<h3></h3>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('input').on('keyup',function(){
+			if ($('#pass1').val() === $('#passr1').val()) 
+			{
+		 	$('.right').css('background-color','green');
+		 	$('h3').text('совпадают');
+		 	}else{
+		 	$('.right').css('background-color','red');
+		 	$('h3').text('не совпадают!!!!!');
+		 	}
+		 	});
+		});
+	</script>
+</body>
+</html>
