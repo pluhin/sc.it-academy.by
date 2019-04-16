@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<HTML> 
+        <HEAD> 
+            <META charset="utf-8"> 
+            <TITLE>Lesson_8_task_2_part_1</TITLE> 
+            <!--<link rel="stylesheet" href="от Дениса/bootstrap.css">-->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<!-- <script src="от Дениса/jquery-3.4.0.min.js"></script> -->
+			 <style>
+             .ppp {
+                 caption-side: top;
+             };
+			
+             </style>
+        		
+			<script>
+            $(document).ready(function(){
+            $('#tab').addClass('.table table-bordered');
+            $('#bbb').addClass('ppp');
+            $('#showw').addClass('btn btn-primary btn-lg btn-block');
+            $('#showw').prop('disabled',true);
+			
+			 $('.rrr').click(function(){ 
+			 $(this).hide();
+             $('#showw').prop('disabled',false);
+             $('#showw').val('Hide me!');
+
+			 });
+			 
+			 $('#showw').click(function(){
+			 $('tr').show();
+             $('#showw').prop('disabled',true);
+             $('#showw').val('No hidden employees');
+
+			 });
+	
+
+            });
+			</script>
+			
+        </HEAD> 
+  <BODY> 
+  <input type="button" id="showw" value="No hidden employees">
+            
+    <table id="tab" >
+      <caption id="bbb">Данные о сотрудниках</caption>
+      <tr>
+      <th >ФИО</th>
+      <th>пол</th>
+      <th>должность</th>
+      <th>датарож.</th>
+      <th>Данные 01</th>
+      <th>Данные 02</th>
+      </tr>
+      <tr class="rrr" >
+      <th>Иванов Иван Иванович</th>
+      <td>М</td>
+      <td>начальник</td>
+      <td>01.01.1960</td>
+      <td>4567</td>
+      <td>3453</td>
+      </tr>
+      <tr class="rrr" >
+      <th>Петрова Илонна Петровна</th>
+      <td>Ж</td>
+      <td>секретарь</td>
+      <td>01.01.1989</td>
+      <td>98795</td>
+      <td>46523</td>
+      </tr >
+      <tr class="rrr">
+      <th>Сидоров Илья Игоревич</th>
+      <td>М</td>
+      <td>бухгалтер</td>
+      <td>01.01.1979</td>
+      <td>743434</td>
+      <td>987979</td>
+      </tr>
+      <tr  class="rrr">
+      <th>ПупинФёдорФёдорович</th>
+      <td>М</td>
+      <td>водитель</td>
+      <td>01.01.1963</td>
+      <td>74323434</td>
+      <td>9232379</td>
+      </tr>
+      <tr  class="rrr">
+      <th>Крупин Сергей Иванович</th>
+      <td>М</td>
+      <td>водитель 2</td>
+      <td>01.01.1983</td>
+      <td>3234534</td>
+      <td>923123379</td>
+      </tr>
+      
+</table>
+        </BODY> 
+</HTML> 
+<!--.bott {
+    cursor: not-allowed;
+    }
+
+    $('#showw').hover(
+			function(){$('#showw').addClass('bott');}
+			);-->

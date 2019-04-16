@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Lesson_7_task_5_part_1</TITLE> 
+		<style type="text/css">
+	       
+            table {border-collapse: collapse;}
+            td {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+				text-align: center;
+				
+            }
+				
+            tr:nth-child(odd) > td:nth-child(even), tr:nth-child(even) > td:nth-child(odd) {
+                background-color: black;
+				color: white;
+            }
+			
+			table {counter-reset: k 43}
+			tr td::before{
+            counter-increment: k -1;
+            content: counter(k);
+            font-weight: bolder;
+			
+			}
+		</style>	
+    </HEAD> 
+    <BODY>
+        <table>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+
+        </table>
+    </BODY> 
+</HTML> 

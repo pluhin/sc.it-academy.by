@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson_8_task_4_part_1</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+        <script>
+            $(document).ready(function()
+            {     
+                $('#passw, #passw2').on("keyup", function()
+                {
+                var passww = $("#passw").val();
+                var passww2 = $("#passw2").val();
+                    if(passww != passww2) {
+                        $("#show").text("Incorrect password").css('color', 'red');
+                        $("#passw").css('background-color', 'red');
+                        $("#passw2").css('background-color', 'red'); 
+                        }
+                    else {
+                        $("#show").text("Match passwords").css('color', 'green');
+                        $("#passw").css('background-color', 'green');
+                        $("#passw2").css('background-color', 'green');  
+                        }
+                })  
+            });
+        </script>
+	</head>
+    <body>
+      <input type="password" id="passw" placeholder="Enter your password"><br>
+      <input type="password" id="passw2" placeholder="Confirm your password"><br>
+      <div id="show"></div>
+    </body>
+</html>
