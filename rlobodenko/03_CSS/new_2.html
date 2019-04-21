@@ -16,7 +16,8 @@
 		  margin: 0;
 		  padding: 0;
 		}
-		a {text-decoration: none;}
+		a {text-decoration: none;
+		}
 		.top-menu {
 		  background: white;
 		  position: relative;
@@ -59,9 +60,11 @@
 		  opacity: 0;
 		  visibility: hidden;
 		  transform: translate3d(0,30px,0);
+		  transition: .5s ease-out;
 		  transform-origin: 0% 0%;
 		}
-		.submenu {width: 100%;}
+		.submenu {width: 100%;
+		}
 		.submenu-standart {
 		  min-width: 200px;
 		  padding: 10px 0;
@@ -123,7 +126,8 @@
 			padding: 0;
 			background: rgba(0,0,0,.02);
 		  }
-		  .submenu-standart {padding: 10px 0;}
+		  .submenu-standart {padding: 10px 0;
+		  }
 		  .submenu > li {
 			border-right: none;
 			border-bottom: 1px solid #e5e5e5;
@@ -138,46 +142,46 @@
 		</style>
 	</HEAD> 
 	<BODY> 
-	<nav class="container">
-	<ul class="top-menu">
-		<li><a href="">Понедельник</a>
-	<ul class="submenu-standart">
-        <li><a href="">Завтрак</a></li>
-        <li><a href="">Обед</a></li>
-        <li><a href="">Ужин</a></li>
-    </ul></li>
-		<li class="dropdown-standart"><a href="" class="dropdown">Вторник</a>
-    <ul class="submenu-standart">
-        <li><a href="">Завтрак</a></li>
-        <li><a href="">Обед</a></li>
-        <li><a href="">Ужин</a></li>
-    </ul>
-		</li>
-		<li class="dropdown-standart"><a href="" class="dropdown">Среда</a>
-    <ul class="submenu-standart">
-        <li><a href="">Завтрак</a></li>
-        <li><a href="">Обед</a></li>
-        <li><a href="">Ужин</a></li>
-    </ul>
-        </li>
-		<li class="dropdown-standart"><a href="" class="dropdown">Четверг</a>
-	<ul class="submenu-standart">
-        <li><a href="">Завтрак</a></li>
-        <li><a href="">Обед</a></li>
-        <li><a href="">Ужин</a></li>
-    </ul></li>
-		<li class="dropdown-standart"><a href="" class="dropdown">Пятница</a>
-	<ul class="submenu-standart">
-        <li><a href="">Завтрак</a></li>
-        <li><a href="">Обед</a></li>
-        <li><a href="">Ужин</a></li>
-    </ul></li>
-		<li class="dropdown-standart"><a href="" class="dropdown">Суббота</a>
-	<ul class="submenu-standart">
-        <li><a href="">Завтрак</a></li>
-        <li><a href="">Обед</a></li>
-        <li><a href="">Ужин</a></li>
-    </ul></li>
+		<nav class="container">
+		<ul class="top-menu">
+			<li><a href="">Понедельник</a>
+		<ul class="submenu-standart">
+			<li><a href="">Завтрак</a></li>
+			<li><a href="">Обед</a></li>
+			<li><a href="">Ужин</a></li>
+		</ul></li>
+			<li class="dropdown-standart"><a href="" class="dropdown">Вторник</a>
+		<ul class="submenu-standart">
+			<li><a href="">Завтрак</a></li>
+			<li><a href="">Обед</a></li>
+			<li><a href="">Ужин</a></li>
+		</ul>
+			</li>
+			<li class="dropdown-standart"><a href="" class="dropdown">Среда</a>
+        <ul class="submenu-standart">
+			<li><a href="">Завтрак</a></li>
+			<li><a href="">Обед</a></li>
+			<li><a href="">Ужин</a></li>
+		</ul>
+			</li>
+			<li class="dropdown-standart"><a href="" class="dropdown">Четверг</a>
+			<ul class="submenu-standart">
+			<li><a href="">Завтрак</a></li>
+			<li><a href="">Обед</a></li>
+			<li><a href="">Ужин</a></li>
+		</ul></li>
+			<li class="dropdown-standart"><a href="" class="dropdown">Пятница</a>
+		<ul class="submenu-standart">
+			<li><a href="">Завтрак</a></li>
+			<li><a href="">Обед</a></li>
+			<li><a href="">Ужин</a></li>
+		</ul></li>
+			<li class="dropdown-standart"><a href="" class="dropdown">Суббота</a>
+		<ul class="submenu-standart">
+			<li><a href="">Завтрак</a></li>
+			<li><a href="">Обед</a></li>
+			<li><a href="">Ужин</a></li>
+     </ul></li>
 	</ul>
 	</nav>
 	</BODY> 
