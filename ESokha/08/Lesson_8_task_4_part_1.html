@@ -10,9 +10,8 @@
             {     
                 $('#passw, #passw2').on("keyup", function()
                 {
-                var passww = $("#passw").val();
-                var passww2 = $("#passw2").val();
-                    if(passww != passww2) {
+               
+                    if($('#passw').val() != $('#passw2').val()) {
                         $("#show").text("Incorrect password").css('color', 'red');
                         $("#passw").css('background-color', 'red');
                         $("#passw2").css('background-color', 'red'); 
