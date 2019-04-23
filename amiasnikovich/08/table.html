@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                     
+    </head>
+	<body>
+		<input type="button" id="hide" value="No hidden lines!">
+		<table>
+ 			
+ 			<thead>
+ 				
+		 	<tr>
+				<th id="first">ФИО</th>
+	 			<th>пол</th> 
+	 			<th>должность</th>
+	 			<th>дата рож.</th>
+	 			<th>Данные 01</th>
+	 			<th>Данные 02</th>
+ 			</tr>
+ 			</thead>
+ 			<tr>
+	 			<th>Иванов Иван Иванович</th>
+	 			<td>М</td> 
+	 			<td>начальник</td>
+	 			<td>01.01.1960</td>
+	 			<td>4567</td>
+			 	<td>3453</td>
+			</tr>
+			<tr>
+				 <th>Петрова Илонна Петровна</th>
+				 <td>Ж</td> 
+				 <td>секретарь</td>
+				 <td>01.01.1989</td>
+				 <td>98795</td>
+				 <td>46523</td>
+			</tr>
+			 <tr>
+				 <th>Сидоров Илья Игоревич</th>
+				 <td>М</td> 
+				 <td>бухгалтер</td>
+				 <td>01.01.1979</td>
+				 <td>743434</td>
+				 <td>987979</td>
+			</tr>
+ 			<tr>
+				<th>Пупин Фёдор Фёдорович</th>
+				<td>М</td> 
+				<td>водитель</td>
+				<td>01.01.1963</td>
+				<td>74323434</td>
+				<td>9232379</td>
+ 			</tr>
+			<tr>
+				<th>Крупин Сергей Иванович</th>
+				<td>М</td> 
+				<td>водитель 2</td>
+				<td>01.01.1983</td>
+				<td>3234534</td>
+				<td>923123379</td>
+ 			</tr>
+ 			<caption>Данные о сотрудниках</caption>
+ 		</table>
+ 		
+ 		<script>
+                
+                function rowLenght(){
+                	var b = ($('tr').length) - 1 ;
+                	return b;
+                	}
+                $(document).ready(function(){
+                    
+                	var count = rowLenght(), counter = count;
+                	
+                	$('tr:not(:first)').click(function(){
+                        $(this).hide();
+                        counter=counter-1;
+                   
+                    	if(counter == count){
+                        	 $('#hide').val('No hidden lines');
+                    	}
+                     	else{
+                        	$('#hide').val('Show ' + (count - counter) + ' hidden lines');
+                     	}
+                    }); 
+                    
+                    $('#hide').click(function(){
+                        $('tr').show();
+                        counter=count;
+                      	$('#hide').val('No hidden lines');
+
+                    });
+                    
+                    $('table').addClass('table table-hover table-bordered');
+                    $('thead').addClass('thead-dark')                                    
+                });
+            </script>
+
+	</body>
+</html>
