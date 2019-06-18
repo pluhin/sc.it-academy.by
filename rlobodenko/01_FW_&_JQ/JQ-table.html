@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Пример страницы</TITLE> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/cerulean/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+		</script>
+		<script>
+			$(function() {
+				var button_label_01 = "We have hidden lines in table. Just click me, and I show them";
+				var button_label_02 = "There are no hidden lines in table";
+				$("table").addClass("table table-hover table-light");
+				$("button").addClass("btn btn-primary btn-sm btn-block disabled").text(button_label_02);
+				$("tbody tr").click(function() {
+				$(this).hide();
+				$("button").text(button_label_01).removeClass("disabled")
+			});
+				$("button").click(function() {
+				$("tr").show();
+				$(this).text(button_label_02)
+			})
+			});
+		</script>
+		<style>
+			 TR:nth-child(2n+1) { background-color:#c0c0c0 } 
+			TR:nth-child(2n+0) { font-weight:bold } 
+			TR:nth-child(2n) { text-align: left } 
+			caption {
+			caption-side: bottom;
+			}
+			tbody tr:hover {
+			background: #f3bd48;
+			color: #fff;
+				}
+		</style>
+    </HEAD> 
+    <BODY> 
+		<table>
+		<caption><button id="button" type='button_label_01'>
+        <b>данные о сотрудниках</b>
+		</button>
+		</caption>
+			<tr>
+				<th>ФИО</th>
+				<th>пол</th> 
+				<th>должность</th>
+				<th>дата рож.</th>
+				<th>Данные 01</th>
+				<th>Данные 02</th>
+			</tr>
+			<tr>
+				<th>Иванов Иван Иванович</th>
+				<td>М</td> 
+				<td>начальник</td>
+				<td>01.01.1960</td>
+				<td>4567</td>
+				<td>3453</td>
+			</tr>
+			<tr>
+				<th>Петрова Илонна Петровна</th>
+				<td>Ж</td> 
+				<td>секретарь</td>
+				<td>01.01.1989</td>
+				<td>98795</td>
+				<td>46523</td>
+			</tr>
+			<tr>
+				<th>Сидоров Илья Игоревич</th>
+				<td>М</td> 
+				 <td>бухгалтер</td>
+				 <td>01.01.1979</td>
+				 <td>743434</td>
+				 <td>987979</td>
+			</tr>
+			<tr>
+				 <th>Пупин Фёдор Фёдорович</th>
+				 <td>М</td> 
+				 <td>водитель</td>
+				 <td>01.01.1963</td>
+				 <td>74323434</td>
+				 <td>9232379</td>
+			</tr>
+			<tr>
+				 <th>Крупин Сергей Иванович</th>
+				 <td>М</td> 
+				 <td>водитель 2</td>
+				 <td>01.01.1983</td>
+				 <td>3234534</td>
+				 <td>923123379</td>
+			</tr>
+		</table>
+	</BODY> 
+</HTML> 
