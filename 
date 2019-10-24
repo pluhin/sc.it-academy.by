@@ -1,0 +1,54 @@
+[33mcommit b2584b458b17adf6859092274bcfd59169c6d35c[m
+Author: DAlekseichik <AlekseichikDmitry@Gmail.com>
+Date:   Thu Oct 24 22:28:01 2019 +0300
+
+    Hometask 01 upd 2
+
+[1mdiff --git a/Alekseichik_Dmitry/01/Bonus.html b/Alekseichik_Dmitry/01/Bonus.html[m
+[1mindex 7b959aa..0178ae0 100644[m
+[1m--- a/Alekseichik_Dmitry/01/Bonus.html[m
+[1m+++ b/Alekseichik_Dmitry/01/Bonus.html[m
+[36m@@ -102,4 +102,5 @@[m
+ [m
+ [m
+ </BODY>[m
+[32m+[m[32m</HTML>[m
+ [m
+[1mdiff --git a/Alekseichik_Dmitry/01/Python01.html b/Alekseichik_Dmitry/01/Python01.html[m
+[1mindex 889fa6c..0030cb6 100644[m
+[1m--- a/Alekseichik_Dmitry/01/Python01.html[m
+[1m+++ b/Alekseichik_Dmitry/01/Python01.html[m
+[36m@@ -71,4 +71,6 @@[m [mfor cntr in range(0,10):[m
+ <p>Не забудьте поставить символ табуляции перед строкой «print cntr». Это важно. В[m
+ Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки[m
+ как в других языках программирования, а отступы.</p>[m
+[31m-     </BODY>[m
+\ No newline at end of file[m
+[32m+[m[32m     </BODY>[m
+[32m+[m[41m     [m
+[32m+[m[32m     </HTML>[m
+\ No newline at end of file[m
+[1mdiff --git a/Alekseichik_Dmitry/01/Python02.html b/Alekseichik_Dmitry/01/Python02.html[m
+[1mindex b0935d6..df09fe6 100644[m
+[1m--- a/Alekseichik_Dmitry/01/Python02.html[m
+[1m+++ b/Alekseichik_Dmitry/01/Python02.html[m
+[36m@@ -68,4 +68,5 @@[m [mcategories = ['Main dish','Meat','Fish','Soup','Cookies'][m
+ <p>Комментарии можно вставлять в любое место в строке, но помните, что Python[m
+ проигнорирует всё, что идёт после '#'.</p>[m
+ [m
+[31m-     </BODY>[m
+\ No newline at end of file[m
+[32m+[m[32m     </BODY>[m
+[32m+[m[32m    </HTML>[m
+\ No newline at end of file[m
+[1mdiff --git a/Alekseichik_Dmitry/01/Python03.html b/Alekseichik_Dmitry/01/Python03.html[m
+[1mindex eb9f34f..ea5fcc9 100644[m
+[1m--- a/Alekseichik_Dmitry/01/Python03.html[m
+[1m+++ b/Alekseichik_Dmitry/01/Python03.html[m
+[36m@@ -114,4 +114,4 @@[m [mDoTwo(10,5)[m
+ программы. Чтобы вызвать функцию, нужно написать её имя и параметры.[m
+ </p>[m
+      </BODY>[m
+[31m-[m
+[32m+[m[32m    </HTML>[m
+\ No newline at end of file[m
