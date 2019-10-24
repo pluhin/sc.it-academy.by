@@ -6,4 +6,5 @@
 - "Simpsons" Task
 - "Pyton" Tasks 1-3
 - "Bonus" Task
+- *some fixes
 
