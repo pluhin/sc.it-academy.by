@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<HTML> 
+
+    <HEAD>
+        <META charset="utf-8">
+         <TITLE>Формы</TITLE> 
+    </HEAD>  
+
+     <BODY>
+
+
+        <h2>Формы:</h2>
+
+        <table width="700" border=0 >
+
+<!-- 1 ROW --- 1 CELL -->
+            <tr>
+                    <td valign="top">
+
+                            <FORM id="form01" name="form01" method="GET" action="http://sc.it-academy.by/fe/form.php" >
+                                <FIELDSET> 
+                                <LEGEND>Строка поиска</LEGEND> 
+                            
+<input TYPE="text" ID="search1" NAME="search1" autocomplete="on" maxlength="10" > <input type="submit" value="Искать">
+<p>
+        <input type="radio" id="Site1" required
+        name="SearchSys1" value="Site">
+        <label for="Site1">искать на сайте</label>
+
+        <input type="radio" id="Google1" required
+        name="SearchSys1" value="Google">
+        <label for="Google1">искать в Google</label>
+
+</p>
+
+
+                               </FIELDSET>
+                            </FORM>
+                    </td>
+
+<!-- 1 ROW --- 2 CELL -->
+
+                    <td valign="top">
+
+                                    <FORM id="form02" name="form02" method="GET" action="http://sc.it-academy.by/fe/form.php" >
+                                     <FIELDSET> 
+                                     <LEGEND>Строка поиска</LEGEND> 
+<input TYPE="text" ID="search2" NAME="search2" autocomplete="on" autofocus required>
+<LABEL FOR="search2"> * обязательное поле</LABEL>  <input type="submit" value="Искать">
+
+<p>
+        <input type="radio" id="Site2" required
+        name="SearchSys2" value="Site">
+        <label for="Site2">искать на сайте</label>
+
+        <input type="radio" id="Google2" required
+        name="SearchSys2" value="Google">
+        <label for="Google2">искать в Google</label>
+
+</p>
+                                    </FIELDSET>
+                                 </FORM>
+                    </td>
+
+
+                </tr>
+
+<!--  2 ROW   1 CELL-->
+
+            <tr>
+                    <td valign="top"> 
+
+                                    <FORM id="form03" name="form03" method="POST" action="http://sc.it-academy.by/fe/form.php">
+                                    <FIELDSET> 
+                                    <LEGEND>Авторизируйтесь</LEGEND> 
+                    <input TYPE="text" ID="login1" NAME="login1" autocomplete="off" required>
+                    <label for="login1"> *Имя пользователя</label>
+
+                    <br></br>
+                    <input TYPE="password" ID="pass1" NAME="pass1" autocomplete="off" required>
+                    <label for="pass1"> *Пароль</label>
+
+                    <br></br>
+
+                    <input type="checkbox" name="keeponline1" id="keeponline1" checked >
+                    <label for="keeponline1"> Оставаться в системе</label>
+
+                    <br></br>
+                    <input type="submit" value="Войти">
+
+                    </FIELDSET> 
+                    </FORM>
+
+
+                    </td>
+
+
+
+
+                    <!--  2 ROW   2 CELL-->
+
+                    <td valign="top"> 
+
+                        <FORM id="form04" name="form04" method="post" action="http://sc.it-academy.by/fe/form.php" >
+                        <FIELDSET> 
+                        <LEGEND>Как оно Вам?</LEGEND> 
+
+                        <label>
+                        <input type="radio" id="How1" required
+                        name="How" value="Nothing">
+                        Ничего</label>
+                        <br></br>
+                        <label>
+                        <input type="radio" id="How2" required
+                        name="How" value="Not Bad">
+                        Неплохо</label>
+
+                        <br></br>
+
+                        <label>
+                        <input type="radio" id="How3" required checked
+                        name="How" value="Good">
+                        Хорошо</label>
+                        
+                        <br></br>
+
+                        <label>
+                        <input type="radio" id="How4" required
+                        name="How" value="Super">
+                        Супер</label>
+                    
+                        <input type ="hidden" name="date_voite" value="2013.12.31">
+                        
+                        <br></br>
+                        
+                        <input type="submit" value="Отправить">
+
+                    </FIELDSET> 
+                    </FORM>
+                </td>
+
+
+<tr>
+
+        <td valign="top" > 
+
+                <FORM id="form05" name="form05" method="POST" action="http://sc.it-academy.by/fe/form.php">
+                    <FIELDSET> 
+                    <LEGEND>Оставить отзыв</LEGEND> 
+                    <input TYPE="text" ID="login5" NAME="login5" autocomplete="off" required>
+                    <label for="login5"> *Имя</label>
+
+                    <br></br>
+                    <input TYPE="email" ID="email05" NAME="email05" autocomplete="off" required>
+                    <label for="email05"> *E-mail</label>
+
+            <br></br>
+
+                    <textarea name="text" cols="30" rows="3" lang="ru">Форма отправки</textarea>
+                    <input type="submit" value="Отправить">
+
+                    </FIELDSET> 
+                    </FORM>
+
+
+
+
+        </td>
+
+
+
+        <td valign="top" > 
+
+
+                <FORM id="form06" name="form06" method="POST" action="http://sc.it-academy.by/fe/form.php">
+                    <FIELDSET> 
+                    <LEGEND>Города РБ</LEGEND> 
+
+                <select name="droplist" id="droplist">
+            <optgroup label="Города РБ">
+                <option value="Brest">Брест</option>
+                <option selected value="Minsk">Минск</option>
+                <option value="Vitebsk">Витебск</option>
+            </optgroup>
+
+            <optgroup label="Города России">
+                <option value="Moscow">Москва</option>
+                <option value="Riazan">Рязань</option>
+                <option value="Magadan">Магадан</option>
+            </optgroup>
+</select>
+
+<select name="arraylist[]" id="arraylist" multiple size="8">
+            <optgroup label="Города РБ">
+                <option value="Brest">Брест</option>
+                <option selected value="Minsk">Минск</option>
+                <option value="Vitebsk">Витебск</option>
+            </optgroup>
+
+            <optgroup label="Города России">
+                <option selected value="Moscow">Москва</option>
+                <option value="Riazan">Рязань</option>
+                <option value="Magadan">Магадан</option>
+            </optgroup>
+    </select>
+
+<br>
+<input type="submit" value="Выбрать">
+
+</FIELDSET> 
+</FORM>
+     
+            </td>
+</tr>
+
+
+
+<tr>
+
+<!--  4 ROW  1 CELL-->
+<td valign="top" > 
+
+
+        <FORM id="form07" name="form07" method="POST" enctype="multipart/form-data" action="http://sc.it-academy.by/fe/form.php">
+            <FIELDSET> 
+            <LEGEND>Upload</LEGEND> 
+
+            <label for="file">Файл:</label><br>
+            <input ID="file" type="file" name="file" dir="ltr" required>
+            <br>
+            <label for="year">Срок хранения (до):</label><br>
+            <input type="number" ID="year" name="year" min="2019" max="2077" step="1" value="2033" />
+            <input type="submit" value="Загрузить">
+            </FIELDSET> 
+         </FORM>
+
+
+</td>
+
+
+<!--  4 ROW  2 CELL-->
+<td valign="top" > 
+
+        <FORM id="form07" name="form08" method="POST" action="http://sc.it-academy.by/fe/form.php">
+            <FIELDSET> 
+            <LEGEND>Строка поиска</LEGEND> 
+
+            <input type="text" NAME="human" ID="human" placeholder="Только русские буквы" 
+            lang="ru" pattern="^[А-Яа-яЁё\s]+$"
+            title="Пример: Иванов Иван Иванович"
+            > 
+            <br>
+            <input type="tel" NAME="gsm" ID="gsm" 
+            placeholder="+375-XX-XXXXXXX" 
+            pattern="^(\+375[\-]?)?(\(?\d{2}\)?[\-]?)?[\d\-]{7,7}$"
+            title="Номер должен быть в формате +375-XX-XXXXXXX"> 
+            <br>
+            <input type="submit" value="Проверить">
+
+
+            </FIELDSET> 
+         </FORM>
+
+</td>
+
+
+</tr>
+
+        </table>
+
+    </BODY>

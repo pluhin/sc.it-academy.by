@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<HTML> 
+
+    <HEAD>
+        <META charset="utf-8">
+         <TITLE>Анкета</TITLE> 
+    </HEAD>  
+
+     <BODY>
+
+
+<h1 align="middle"> Заполните анкету</h1>
+
+<FORM id="form01" name="form01" method="POST" action="http://sc.it-academy.by/fe/form.php" >
+
+    <FIELDSET> 
+    <LEGEND>Личные данные</LEGEND> 
+
+
+                <input TYPE="text" ID="name1" NAME="name1" autocomplete="on" maxlength="25" 
+                autofocus
+                placeholder="Фамилия"
+                lang="ru" 
+                required
+                pattern="^[А-Яа-яЁё]+$"
+                >
+                <label for="name1"> Только кирилица / 25 max /без пробелов / автофокус </label>
+
+                <br>
+
+
+                <input TYPE="text" ID="name2" NAME="name2" autocomplete="on" maxlength="20" 
+                placeholder="Имя"
+                lang="ru" 
+                required
+                pattern="^[А-Яа-яЁё]+$"
+                >
+                <label for="name2"> Только кирилица / 20 max /без пробелов </label>
+
+
+                <br>
+
+                <input TYPE="text" ID="name3" NAME="name3" autocomplete="on" maxlength="24" 
+                placeholder="Отчество"
+                lang="ru" 
+                required
+                pattern="^[А-Яа-яЁё]+$"
+                >
+                <label for="name3"> Только кирилица / 24 max /без пробелов </label>
+
+
+
+
+<FIELDSET> 
+        <LEGEND>Паспортные данные</LEGEND>
+
+        <p> Две заглавные латинские, не менее 2 <br>
+            Номер паспорта  только цифры, не менее 7 </p>
+        <input TYPE="text" ID="passseries" NAME="passseries" autocomplete="on" minlength="2" maxlength="2" 
+        placeholder="MP"
+        lang="en" 
+        required
+        pattern="^[A-Z]+$"
+        style="width: 24px;"
+        title="Введиите серию паспорта"
+        >
+       
+        <input TYPE="text" ID="passnum" NAME="passnum" autocomplete="on" minlength="7" maxlength="7" 
+        placeholder="1234567"
+        required
+        pattern="^[0-9]+$"
+        style="width: 96px;"
+        title="Введиите номер паспорта"
+        >
+
+    </FIELDSET>
+  
+    
+    
+    <FIELDSET> 
+
+            <LEGEND>Год рождения</LEGEND>
+
+            
+            <input type="text" ID="yearborn" name="yearborn" minlength="4" maxlength="4" value="1985"
+            pattern="^[0-9]+$"
+            title="Введите год рождения с 1910 по 2019"
+            />
+            <label for="year">4 цифры года рождения</label>
+
+
+            <br>
+
+            <select name="monthborn" id="monthborn">
+                   
+                    <optgroup label="Месяц рождения">
+                            <option value="January">Январь</option>
+                            <option value="Febuary">Февраль</option>
+                            <option value="March">Март</option>
+                            <option value="April">Апрель</option>
+                            <option value="May">Май</option>
+                            <option value="June">Июнь</option>
+                            <option value="July">Июль</option>
+                            <option value="August">Август</option>
+                            <option value="September">Сентябрь</option>
+                            <option value="October">Октябрь</option>
+                            <option selected value="November">Ноябрь</option>
+                            <option value="December">Декабрь</option>
+                    
+                    </optgroup>
+
+                  </select>
+                  <label for="monthborn">Месяц рождения</label>
+
+
+
+
+                  <label for="dayborn">Год рождения:</label><br>
+                  <input type="number" ID="dayborn" name="dayborn" min="1" max="31" step="1" value="14" />
+                  
+
+              
+
+    </FIELDSET>
+
+            <Fieldset>
+            <LEGEND>Национальность</LEGEND>
+
+            <select name="nation" id="nation" required>
+                   
+                    <optgroup label="Национальность">
+                            <option selected value="BY">Республика Беларусь</option>
+                            <option value="RU">Российская федерация</option>
+                            <option value="UKR">Украина</option>
+                            <option value="KZ">Казахстан</option>
+
+                    
+                    </optgroup>
+
+                  </select>
+                  <label for="nation">* Национальность ОБЯЗАТЕЛЬНОЕ ПОЛЕ</label>
+
+                <br>
+
+                  <textarea name="useraddress" cols="25" rows="3" lang="ru">Адрес проживания</textarea>
+
+           </Fieldset> 
+
+        </FIELDSET> <!-- END БЛОК ЛИЧНЫЕ ДАННЫЕ-->
+
+
+        <FIELDSET> <!-- БЛОК ИНТЕРЕСЫ -->
+
+
+            <LEGEND>Интересы</LEGEND>
+
+
+
+            <FIELDSET> <!-- БЛОК ХОББИ -->
+                <LEGEND>Хобби</LEGEND>
+
+                <label>
+                        <input type="checkbox" id="fish" name="hobby[]"> Рыбалка
+                   </label>
+                   <br>
+
+                   <label>
+                        <input type="checkbox" id="hunt" name="hobby[]"> Охота
+                   </label>
+                   <br>
+
+                   <label>
+                         <input type="checkbox" id="astro" name="hobby[]"> Астрономия
+                   </label>
+                   <br>
+
+                   <label>
+                        <input type="checkbox" id="sports" name="hobby[]"> Спорт
+                  </label>
+                  <br>                  
+
+
+
+            </FIELDSET> <!-- END БЛОК ХОББИ -->
+
+            <FIELDSET> <!-- ДОМАШНИЕ ЖИВОТНЫЕ -->
+                <LEGEND>Домашние животные</LEGEND>       
+            <select name="alimalslist[]" id="alimalslist" multiple size="12">
+                    <optgroup label="Попугаи">
+                        <option value="Ara">Ара</option>
+                        <option selected value="Wave">Волнистый</option>
+                        <option value="Noni">Неразлучник</option>
+                    </optgroup>
+        
+                    <optgroup label="Рыбки">
+                        <option selected value="Golden">Золотые рыбки</option>
+                        <option value="Shark">Акулы</option>
+                        <option value="Dolphin">Дельфины</option>
+                    </optgroup>
+
+                    <optgroup label="Коты">
+                            <option selected value="Syberian">Сибирские</option>
+                            <option value="Seam">Сеамские</option>
+                            <option value="Puma">Пумы</option>
+                        </optgroup>
+
+            </select>
+
+        </FIELDSET> <!-- END ДОМАШНИЕ ЖИВОТНЫЕ -->
+
+
+        </FIELDSET> <!-- END БЛОК ИНТЕРЕСЫ -->
+
+        <FIELDSET> <!-- ДАННЫЕ ДЛЯ ВХОДА -->
+            <LEGEND>Данные для входа и восстановления пароля </LEGEND>  
+
+            <input TYPE="text" 
+            ID="login1" 
+            NAME="login1" 
+            autocomplete="on" 
+            minlength="5" 
+            maxlength="20"
+            pattern="^[A-z]+$"
+            required>
+            
+            <label for="login1"> *Имя пользователя [A-z] 5-20 символов </label>
+            
+            <br></br>
+            <input TYPE="password" ID="pass1" NAME="pass1" required
+            autocomplete="off" 
+            minlength="10" 
+            maxlength="20"
+            pattern="^[A-z]+$"
+            required
+            >
+            <label for="pass1"> *Пароль [A-z] 10-20 символов </label>
+        </FIELDSET> 
+
+
+        <FIELDSET> <!-- КООРДИНАТЫ -->
+            <LEGEND>Координаты </LEGEND>  
+
+            <input TYPE="email" ID="email" 
+            NAME="email" 
+            autocomplete="on" 
+            placeholder="user@mailserver"
+            required>
+            <label for="email"> *Обязательно Введите E-MAIL </label>
+
+
+<br>
+
+            <input TYPE="url" ID="homepage" 
+            NAME="homepage" 
+            placeholder="https://example.com"
+            autocomplete="on">
+            <label for="homepage"> Ваша домашняя страница </label>
+
+        </FIELDSET> <!-- END КООРДИНАТЫ -->
+
+
+
+
+         <FIELDSET> <!-- ЦИФРЫ -->
+                <LEGEND>Цифры </LEGEND>  
+
+               
+                <input type="number" ID="somenumb" name="somenumb" min="-2.5" max="2.5" step="0.1" value="1.4" 
+                title="Цифры в диапазоне -2.5 до  2.5 с шагом 0.1"/>
+                <label for="somenumb">Цифры в диапазоне -2.5 до  2.5 с шагом 0.1</label>
+<br>
+                <input type="range" ID="somerange" name="somerange" min="1" max="10" step="1" value="5" 
+                title="Шкала в диапазоне 1 до 10 с шагом 1"/>
+                <label for="somerange">Шкала в диапазоне 1 до 10 с шагом 1</label>
+
+
+
+        </FIELDSET>
+
+        <FIELDSET> <!-- Кнопки управления -->
+
+                    <input type="submit" id="submitform" value="Отправить"> 
+                    <input type="reset" id="resetform" value="Сбросить">
+
+                    <br>
+                    <input type="image" id="emptybutton"  src='./img/email.jpg' disabled>
+                    <label for="emptybutton">Временно отключенная кнопка</label>
+
+
+        </FIELDSET>
+
+
+    </FORM>
+
+
+
+  </BODY>
