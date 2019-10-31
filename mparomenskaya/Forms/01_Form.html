@@ -1,0 +1,166 @@
+<!DOCTYPE html>  
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>Примеры форматирования</title>
+    </head> 
+    <body>
+        <table width="700" align="center">       
+            <tr>
+                <td>
+                    <form name="search_1" method="GET" action="http://sc.it-academy.by/fe/form.php">
+                        <fieldset>
+                        <legend>Строка поиска</legend>   
+                        <input type="text" name="str_1" size="15" maxlength="10">  <input type="submit" value="Искать">        
+                        <br>
+                        <label>
+                            <input type="radio" name="search_method_1" value="by_site_1" checked> на сайте   
+                        </label>
+                        <label>
+                            <input type="radio" name="search_method_1" value="by_google_1"> в google
+                        </label>
+                        </fieldset>
+                    </form>
+                </td>
+                <td>
+                    <form name="search_2" method="GET" action="http://sc.it-academy.by/fe/form.php">
+                        <fieldset>
+                        <legend>Строка поиска</legend>   
+                        <input type="text" name="str_2" size="15" autofocus required>*  <input type="submit" value="Искать">        
+                        <br>
+                        <label>
+                            <input type="radio" name="search_method_2" value="by_site_2" checked> на сайте   
+                        </label>
+                        <label>
+                            <input type="radio" name="search_method_2" value="by_google_2"> в google
+                        </label> 
+                        </fieldset>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="log_in" method="GET" action="http://sc.it-academy.by/fe/form.php">
+                        <fieldset>
+                        <legend>Авторизуйтесь</legend>   
+                        <input type="text" id="log_1" name="login_1" size="15" required>
+                        <label for="log_1">* Логин</label> 
+                        <br>
+                        <input type="password" id="pass" name="password" size="15" required>
+                        <label for="pass">* Пароль</label>
+                        <br>
+                        <label>
+                            <input type="checkbox" name="check_1"> Оставаться в системе
+                        </label>  
+                        <br> 
+                        <input type="submit" value="Войти"> 
+                        </fieldset>
+                    </form>
+                </td>
+                <td>
+                    <form name="voiting" method="POST" action="http://sc.it-academy.by/fe/form.php">
+                        <fieldset>
+                        <legend>Как вам?</legend>   
+                        <input type="date" name="date_voite" value="2013-12-31" hidden>   
+                        <label>
+                            <input type="radio" name="opinion" value="bad" checked> ничего   
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="opinion" value="not_bad"> неплохо   
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="opinion" value="good"> хорошо   
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="opinion" value="super"> супер   
+                        </label>
+                        <br>
+                        <input type="submit" value="Отправить"> 
+                        </fieldset>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="comment" method="POST" action="http://sc.it-academy.by/fe/form.php">
+                        <fieldset>
+                        <legend>Оставьте Ваш отзыв</legend>   
+                        <input type="text" id="log_2" name="login_2" size="15" required>
+                        <label for="log_2">* Имя</label> 
+                        <br>
+                        <input type="email" id="eml_1" name="email_1" size="15" required>
+                        <label for="eml_1">* e-mail</label>
+                        <br>
+                        <textarea name="text_1">Форма отправки</textarea>    
+                        <br>
+                        <input type="submit" value="Отправить"> 
+                        </fieldset>
+                    </form>
+                 </td>
+                <td>
+                    <form name="cities" method="POST" action="http://sc.it-academy.by/fe/form.php">
+                        <fieldset>
+                        <legend>Города РБ</legend>   
+                        <select name="city_list">
+                            <option value="1">Минск</option>
+                            <option value="2">Гомель</option>
+                            <option value="3">Гродно</option>
+                            <option value="4">Витебск</option>
+                            <option value="5">Могилев</option>
+                            <option value="0" selected>Брест</option>
+                        </select>
+                        <select name="city_list_big[]" size="6" multiple>
+                            <optgroup label="Города РБ">
+                                <option value="1" selected>Минск</option>
+                                <option value="2">Гомель</option>
+                                <option value="3">Гродно</option>
+                            </optgroup>
+                            <optgroup label="Города России">
+                                <option value="6">Москва</option>
+                                <option value="7">Рязань</option>
+                                <option value="8">Магадан</option>
+                            </optgroup>
+                        </select>
+                        <input type="submit" value="ОК">
+                        </fieldset>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="upload" method="POST" action="http://sc.it-academy.by/fe/form.php" enctype="multipart/form-data">
+                        <fieldset>
+                        <legend>Upload</legend> 
+                        <label for="ch_file">Файл:</label>
+                        <br> 
+                        <input type="file" id="ch_file" name="choose_file"> 
+                        <br>
+                        <label for="term">Срок хранения (года):</label>
+                        <br>
+                        <input type="text" name="term" size="15"> <input type="submit" value="Загрузить">
+                        </fieldset>
+                    </form>
+                </td>
+                <td>
+                    <form name="voite" method="POST" action="http://sc.it-academy.by/fe/form.php">
+                        <fieldset>
+                        <legend>Проверка номера</legend>   
+                        <input type="text" name="contact" size="30" pattern="[А-Яа-я]{1,30}" placeholder="Только русские буквы">
+                        <br>
+                        <label for="number">
+                            <em>Телефонный номер в формате +XXX-XX-XXXXXXX, где Х-любое число</em>
+                        </label>
+                        <br> 
+                        <input type="text" id="number" name="tel_number" pattern="\+[0-9]{3,3}-[0-9]{2,2}-[0-9]{7,7}" placeholder="+XXX-XX-XXXXXXX">
+                        <br>
+                        <input type="submit" value="Проверить">
+                        </fieldset>
+                    </form>                                                 
+                </td>
+            </tr>
+        </table>   
+    </body>
+</html> 
