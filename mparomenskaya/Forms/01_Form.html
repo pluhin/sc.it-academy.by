@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td>
-                    <form name="log_in" method="GET" action="http://sc.it-academy.by/fe/form.php">
+                    <form name="log_in" method="POST" action="http://sc.it-academy.by/fe/form.php">
                         <fieldset>
                         <legend>Авторизуйтесь</legend>   
                         <input type="text" id="log_1" name="login_1" size="15" required>
@@ -61,7 +61,7 @@
                     <form name="voiting" method="POST" action="http://sc.it-academy.by/fe/form.php">
                         <fieldset>
                         <legend>Как вам?</legend>   
-                        <input type="date" name="date_voite" value="2013-12-31" hidden>   
+                        <input type="hidden" name="date_voite" value="2013.12.31">   
                         <label>
                             <input type="radio" name="opinion" value="bad" checked> ничего   
                         </label>
