@@ -1,0 +1,17 @@
+
+.bg{
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 255) );
+
+}
+
+
+.blogpost {
+    border: 25px solid;   /*  Больше оригинала */
+    border-image: url(../img/sc_border.jpg) 20 20 20 20 stretch;
+    background-color:darkslategray; 
+    color:lightgreen; 
+    font-size: 120%;
+    padding-left: 1em; 
+    padding-right: 1em; 
+}
+

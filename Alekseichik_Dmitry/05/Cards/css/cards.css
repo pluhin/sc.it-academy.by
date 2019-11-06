@@ -1,0 +1,33 @@
+
+.cardsize{
+    width: 145px;
+    height: 200px;
+    background-image: url(../img/cards.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+   /* border: solid red 1px;  */
+    
+}
+
+/* 2 шага влево ( -2x  width: 145px; ) + width: 145px; */
+
+/* 2шага вниз ( -2x  height: 200px; ) + height: 200px; */
+
+.card3clubs{
+
+    background-position: calc(-1*145px) calc(-1*200px);
+
+}
+
+      /* -1x(4-1) -  -1x(4-1) */
+.card5hearts{
+    background-position: calc(-3*145px) calc(-3*200px); 
+    margin-left: -70px;
+}
+
+     /* -1x(3-1) -  -1x(8-1) */
+
+.card9diamonds{
+    background-position: calc(-2*145px) calc(-7*200px);
+    margin-left: -70px;
+    }

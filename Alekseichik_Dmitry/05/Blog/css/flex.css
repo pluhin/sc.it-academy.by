@@ -1,0 +1,60 @@
+.flexmainrow {
+    display: flex;
+    flex-direction: row; /*Горизонтальный ряд куда входит колонка и посты */
+    }
+
+.flexmainblog {
+display: flex;
+flex-direction: column; /*Права колонка общая для сообщений */
+align-self: flex-start;
+    }
+
+
+.navibar {
+background-color:rgba(120,130,150,0.9);
+display: flex; /*врубаем Flex */
+flex-direction: column; /*Выравниваем вертикально */
+flex-basis: 15em; /*Ширина блока  */
+flex-shrink: 0; /* на сколько “flex частей” будет уменьшаться элемент относительно других элементов в flex-контейнере  */
+align-self: auto;
+}
+
+.blogpost {
+background-color:rgba(135,206,250,0.9);
+margin-bottom: .2em;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;  
+justify-content: space-between;
+}
+/* flex-wrap Флексы выстраиваются в несколько строк, их направление задаётся свойством flex-direction.
+Мешает выравниванию внутри элемента img но выравнивает страницу
+
+box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+*/ 
+
+
+.bottompost{
+background-color:rgba(211,211,211,0.9);
+font-style:italic;
+display: flex;
+flex-direction: row;
+align-items: stretch
+}
+
+img {
+        box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+        float:right;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+    }
+
+ /*           display: flex;
+        flex-direction: column;   */
+
+
+html { 
+background: url(../img/background.jpg) repeat fixed; 
+background-size: contain;
+}

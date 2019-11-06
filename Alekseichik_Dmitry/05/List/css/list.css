@@ -1,0 +1,12 @@
+﻿ul li {list-style-type: lower-roman;}
+li.uprome {list-style-type: upper-roman;}
+
+
+xmp.styled {
+background-color: black;
+font-size: 1em;
+color: green;
+width: 400px;
+max-height: 4em;
+overflow: auto;
+}
