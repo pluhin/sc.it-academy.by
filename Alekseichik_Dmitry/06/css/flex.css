@@ -1,0 +1,114 @@
+html {
+    background: url(../img/background.jpg) repeat fixed;
+    background-size: contain;
+}
+
+.bottompost {
+    background-color: rgba(211, 211, 211, 0.9);
+    font-style: italic;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 25px;
+}
+
+.upperbar {
+    background-color: rgba(162, 190, 246, 0.9);
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    /* Включаем авто-перенос!  */
+    flex-wrap: wrap;
+    /* Включаем авто-перенос!  */
+    margin: 0px;
+    padding: 0px;
+    align-items: stretch;
+    border-radius: 25px;
+}
+
+li {
+    width: 71px;
+    position: relative;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    flex-shrink: 1;
+    /* Включаем авто-перенос!  */
+    flex-wrap: wrap;
+    /* Включаем авто-перенос!  */
+}
+
+ul li {
+    display: inline;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    /*Родитель по координатам*/
+}
+
+li ul {
+    display: none;
+    /* flex скрытый none*/
+    flex-direction: column;
+}
+
+li:hover ul {
+    display: flex;
+    /* Анимация */
+    animation-duration: 2s;
+    animation-name: slowmo;
+    animation-iteration-count: 1;
+    position: 500px, 500px;
+}
+
+li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+li a:hover {
+    display: block;
+    color: rgb(0, 0, 0);
+    background-color: rgba(108, 143, 212, 1);
+    text-decoration: none;
+    transition: .3s all ease-in-out;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
+    /*   border: 1px solid gray; */
+}
+
+@keyframes slowmo {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@media all and (max-width: 720px) {
+    li:hover ul {
+        position: absolute;
+        top: -1px;
+        left: 71px;
+    }
+    ul li {
+        background-color: rgba(162, 190, 246, 0.9);
+        /* Фиксим вылазящий на нижний блок кусок*/
+    }
+    ul {
+        flex-direction: column;
+    }
+}
