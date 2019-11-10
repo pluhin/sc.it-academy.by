@@ -1,0 +1,56 @@
+          ul {
+            list-style-type: none;      /*убираем отступы и маркеры списков */
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid black;
+            border-radius: 5px;
+            width: 150px;
+          }
+          li {position: relative;} /* Установка для родительского объекта считать позицию дочернего обьекта относительно него*/
+          ul li {transition: 1s all ease-in-out;}  /*делаем применение стилей постепенно в течение 1 секунды для всех пунктов списка */
+          li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 149px;
+          }
+          li:hover ul {             /* Скрытие при наведении */
+            display: block;
+          }
+          li a {
+            display: block;
+            border: 1px solid black;
+            border-bottom: none;
+            border-radius: 5px;
+            padding: 3px;
+            background-color: gray;
+            color: white;
+            text-decoration: none;
+            transition: 1s all ease-in-out;
+          }
+          li a:hover {
+            background-color: white;
+            color: gray;
+          }
+          @media all and (min-width: 920px) {
+                      ul {
+                          width: auto;
+                          border-bottom: none;
+                      }
+                      li {                                    /* расположение списка по горизонтали */
+                          display: inline-block;
+                          float: left;
+                          width: 150px;
+                      }
+                      li ul            /* отодвигаем подсписок под пункты меню на высоту пункта (реверсивно по сравнению с мобильной версией)*/
+                      {
+                          top: 25px;
+                          left: 0px;
+                      }
+                      li a {
+                          border-bottom: 1px solid black;
+                      }
+
+                                            }
+            
+          }
