@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <META charset="utf-8">
+    <TITLE>Данные о сотрудниках</TITLE>
+
+
+    <style type="text/css">
+        td,
+        tr,
+        th {
+            border: 1px dotted black;
+        }
+
+        /* и "маскируем" боковые и верхний края всей таблицы */
+        table {
+            border-collapse: collapse;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-top: 1px solid;
+            border-color: white;
+        }
+
+        /* Заголовок под таблицей */
+        caption {
+            caption-side: bottom;
+            text-transform: uppercase;
+        }
+
+        /*
+        th~th {
+            color: azure;
+            background-color: grey;
+        }
+        */
+        /*    ALL TABLE ZEBRA*/
+
+        tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        /*    UPPER-line coloring */
+        tr:nth-child(1) {
+            color: azure;
+            background-color: grey;
+        }
+
+        /******/
+        /*Всех кроме первого th влево*/
+        tr:not(:first-child) th {
+            text-align: left;
+        }
+
+
+        /*  background-color: red !important; /*
+        /*    tr:first-child th {
+            text-align: center !important;
+            background-color: green !important;
+        }
+        */
+
+
+        /*Реакция на ячейки*/
+        tr:not(:first-child) th:hover,
+        td:hover {
+            box-shadow: 0px 0px 3px 3px aquamarine ;
+            cursor: pointer;
+        }
+
+        /*     ALL "DATA" LINES 
+        tr:not(:nth-child(1)) {
+            cursor: pointer;
+            box-shadow: 0px 0px 2px 2px aquamarine; 
+        } */
+    </style>
+
+</HEAD>
+
+
+
+
+<BODY>
+    <H1>Данные о сотрудниках!</H1>
+
+    <table>
+        <caption>данные о сотрудниках</caption>
+        <tr>
+            <th>ФИО</th>
+            <th>пол</th>
+            <th>должность</th>
+            <th>дата рож.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr>
+            <th>Иванов Иван Иванович</th>
+            <td>М</td>
+            <td>начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr>
+            <th>Петрова Илонна Петровна</th>
+            <td>Ж</td>
+            <td>секретарь</td>
+            <td>01.01.1989</td>
+            <td>98795</td>
+            <td>46523</td>
+        </tr>
+        <tr>
+            <th>Сидоров Илья Игоревич</th>
+            <td>М</td>
+            <td>бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>743434</td>
+            <td>987979</td>
+        </tr>
+        <tr>
+            <th>Пупин Фёдор Фёдорович</th>
+            <td>М</td>
+            <td>водитель</td>
+            <td>01.01.1963</td>
+            <td>74323434</td>
+            <td>9232379</td>
+        </tr>
+        <tr>
+            <th>Крупин Сергей Иванович</th>
+            <td>М</td>
+            <td>водитель 2</td>
+            <td>01.01.1983</td>
+            <td>3234534</td>
+            <td>923123379</td>
+        </tr>
+    </table>
+</BODY>
+
+</HTML>
