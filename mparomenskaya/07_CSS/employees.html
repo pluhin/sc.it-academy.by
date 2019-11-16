@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Employees</TITLE>
+    <style type="text/css">
+        table{
+            border-collapse: collapse;
+        }
+        td,th{
+            border:1px grey dotted;
+            padding: 3px;
+        }
+        caption{
+            caption-side: bottom;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+        tr:not(:first-child)>th:first-child{
+            text-align: left;    
+        }
+        tr:first-child{
+            background-color: grey;
+            color: white;
+            cursor: default;
+        }
+        tr:not(:first-child){
+            cursor: pointer;
+        }
+        tr:nth-child(odd):not(:first-child){
+            background-color: lightgray;
+        }
+        tr:hover:not(:first-child){
+            background-color: lightskyblue;  
+            transform: scale(1.02);  
+        }
+    </style>
+	</HEAD>
+	<BODY>
+        <table>
+            <caption >Данные о сотрудниках</caption>
+            <tr>
+                <th>ФИО</th>
+                <th>пол</th> 
+                <th>должность</th>
+                <th>дата рож.</th>
+                <th>Данные 01</th>
+                <th>Данные 02</th>
+            </tr>
+            <tr>
+                <th>Иванов Иван Иванович</th>
+                <td>М</td> 
+                <td>начальник</td>
+                <td>01.01.1960</td>
+                <th>4567</th>
+                <td>3453</td>
+            </tr>
+            <tr>
+                <th>Петрова Илонна Петровна</th>
+                <td>Ж</td> 
+                <td>секретарь</td>
+                <td>01.01.1989</td>
+                <td>98795</td>
+                <td>46523</td>
+            </tr>
+            <tr>
+                <th>Сидоров Илья Игоревич</th>
+                <td>М</td> 
+                <td>бухгалтер</td>
+                <td>01.01.1979</td>
+                <td>743434</td>
+                <td>987979</td>
+            </tr>
+            <tr>
+                <th>Пупин Фёдор Фёдорович</th>
+                <td>М</td> 
+                <td>водитель</td>
+                <td>01.01.1963</td>
+                <td>74323434</td>
+                <td>9232379</td>
+            </tr>
+            <tr>
+                <th>Крупин Сергей Иванович</th>
+                <td>М</td> 
+                <td>водитель 2</td>
+                <td>01.01.1983</td>
+                <td>3234534</td>
+                <td>923123379</td>
+            </tr>
+        </table>
+    </BODY>
+</HTML>
