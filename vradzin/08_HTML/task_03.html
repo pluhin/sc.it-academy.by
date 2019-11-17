@@ -1,0 +1,26 @@
+<!DOCTYPE html>  
+<HTML> 
+<HEAD>
+    <META charset="utf-8">
+    <TITLE>Пароли</TITLE> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+$(function(){
+$("#t2").change(function () {
+if ($("#t1").val() === $("#t2").val()) {
+$("#t1").css("color","green");  
+$("#t2").css("color","green");    
+}   else {
+$("#t1").css("color","red"); 
+$("#t2").css("color","red"); 
+}
+});
+});
+    </script>
+</HEAD>  
+<BODY>
+    <input type="text" id="t1" /><br/>
+    <input type="text" id="t2" />
+
+</BODY>  
+</HTML> 
