@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<HTML> 
+    <HEAD> 
+        <META charset="utf-8"> 
+        <TITLE>Ссылки. Оформление</TITLE> 
+		<style type="text/css">
+		::first-letter {color: red;}
+        p::-moz-selection {background-color: yellow;}
+        p::selection {background-color: yellow;}
+        p::after {
+                content: "R";
+                color: red;
+                float: right;
+        }
+        h2 {counter-reset: k 10}
+        p::before{
+            counter-increment: k -2;
+            content: "Глава "counter(k)". ";
+            font-weight: bolder;
+        }
+		</style>	
+    </HEAD> 
+    <BODY>
+        <h2>Форматы файлов.</h2>
+        <p>.DOC или .doc (от англ. <a href="https://ru.wikipedia.org/wiki/Doc" target="_blank">document</a>) — расширение имени файла, используемое для файлов, представляющих текст, с разметкой или без.Расширение .DOC часто использовалось для обозначения простых текстовых файлов без форматирования, однако позже стало использоваться для двоичных форматов с разметкой.<br>
+        <a href="files/document.doc">Документ MS Word</a>
+        </p>
+
+
+    	<p>Portable Document Format (<a href="https://ru.wikipedia.org/wiki/pdf" target="_blank">PDF</a>) — межплатформенный формат электронных документов, разработанный фирмой Adobe Systems с использованием ряда возможностей языка PostScript.
+    	<br>
+        <a href="files/document.pdf">Документ PDF</a>
+        </p>
+
+    	<p>ZIP — популярный формат сжатия данных и архивации файлов. Файл в этом формате обычно имеет расширение <a href="https://ru.wikipedia.org/wiki/zip" target="_blank">.zip</a> и хранит в сжатом или несжатом виде один или несколько файлов, которые можно из него извлечь путём распаковки с помощью специальной программы.
+    	<br>
+        <a href="files/document.zip">Архив</a>
+        </p>
+        
+        <h3>Это список из файлов</h3>
+        <ul>
+        	<li><a href="files/document.doc">Документ MS Word</a></li>
+        	<li><a href="files/document.pdf">Документ PDF</a></li>
+        	<li><a href="files/document.zip">Архив</a></li>
+        </ul>
+
+        </BODY> 
+</HTML> 

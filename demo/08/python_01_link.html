@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<HTML> 
+<HEAD>
+	<META charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<TITLE>Программа на Python — часть 1</TITLE>
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+</HEAD> 
+<BODY>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+			  
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				  <ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+					  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					  </div>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				  </ul>
+				  <form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				  </form>
+				</div>
+			  </nav>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>HOW-TO: Программа на Python, Часть 1</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+	<ul>
+		<li><a href="python_01_link.html">Программа на Python — часть 1</a></li>
+		<li><a href="python_02_link.html">Программа на Python — часть 2</a></li>
+		<li><a href="python_03_link.html">Программа на Python — часть 3</a></li>
+	</ul>
+	<h2 id="top">Содержание</h2>
+	<h3>HOW-TO: Программа на Python, Часть 1</h3>
+	<ul>
+		<li><a href="#firsts">Наша первая программа</a></li>
+		<li><a href="#loops">Пример цикла For</a></li>
+	</ul>
+		</div>
+		<div class="col-9">
+	<p>Из множества существующих языков программирования Python — один из самых лёгких в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей — программирование графических интерфейсов (<abbr title="attribute">GUI</abbr>). Давайте создадим простую программу прямо сейчас.</p>
+	<h2 id="firsts">Наша первая программа. <small><a href="#top">к содержанию</a></small></h2>
+
+	<p>Наберём код в текстовом редакторе (например, в <abbr title="attribute">gedit</abbr>). Потом мы разберёмся, что делает каждая строка и пойдём дальше.</p>
+	<p>Введите эти 4 строки:</p>
+	<pre>#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</pre>
+	<p>Это всё. Сохраните файл как <strong>hello.py</strong> в любом месте. Я предлагаю сохранить его в папке <b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</p>
+	<pre><strong>chmod +x hello.py</strong></pre>
+	<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+	<pre>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$</pre>
+	<p>
+	Вот и всё.
+	</p> 
+	<h2 id="loops">Пример цикла For. <small><a href="#top">к содержанию</a></small></h2>
+
+	<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и наберите следующую программу:</p>
+	<code><pre>#!/usr/bin/env python
+for cntr in range(0,10):
+print cntr</pre></code>
+	<p><em>Не забудьте поставить символ табуляции перед строкой «print cntr».</em> Это важно. В Python для указания на блоки кода используются не круглые «<b>(</b>» и фигурные «<b>{</b>» скобки как в других языках программирования, а отступы.</p>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</BODY> 
+</HTML> 

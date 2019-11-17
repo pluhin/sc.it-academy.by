@@ -1,0 +1,60 @@
+<!DOCTYPE html>  
+<HTML> 
+    <HEAD>
+        <META charset="utf-8">
+        <TITLE>Карты</TITLE>
+        <style type="text/css">
+        /*Первый вариант*/
+        .main_v_1 {
+            display: flex;
+            flex-direction: row;
+        }
+        .s_default_v1{
+            height: 198px;
+            background-image: url(source/cards.png);
+            background-repeat: no-repeat;
+        }
+        .s_1_v1{
+            width: 72px;
+            background-position: -143px -198px;
+        }
+        .s_2_v1{
+            width: 72px;
+            background-position: -432px -596px;
+        }
+        .s_3_v1{
+            width: 143px;
+            background-position: -288px -1392px;
+        }
+        /*Второй вариант*/
+        .s_default_v2{
+            height: 198px;
+            width: 143px;
+            background-image: url(source/cards.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+        .s_1_v_2{
+            background-position: -143px -198px;
+        }
+        .s_2_v_2{
+            margin-left: -72px;
+            background-position: -432px -596px;
+        }
+        .s_3_v_2{
+            margin-left: -72px;
+            background-position: -288px -1392px;
+        }
+        </style>
+    </HEAD>  
+    <BODY>
+        <div class="main_v_1">
+            <div class="s_default_v1 s_1_v1"></div>
+            <div class="s_default_v1 s_2_v1"></div>
+            <div class="s_default_v1 s_3_v1"></div>    
+        </div>
+        <div class="s_default_v2 s_1_v_2"></div>
+        <div class="s_default_v2 s_2_v_2"></div>
+        <div class="s_default_v2 s_3_v_2"></div>    
+    </BODY>
+</HTML> 
