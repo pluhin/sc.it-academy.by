@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<HTML>  
+	<HEAD>
+		<META charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<TITLE>Python 01</TITLE>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" crossorigin="anonymous">
+	</HEAD> 	
+	<BODY>
+		<div class="grid-container">
+			<div class="grid-x">
+				<div class="cell medium-6 large-8">
+					<h1>HOW-TO: Программа на Python, Часть 1</h1>
+				</div>
+				<div class="cell medium-6 large-4">
+					<img src="./img/Icon-Python.png" title="Логотип Python" alt="Python Logo" align="right" width="150" height="150">
+				</div>
+			</div>
+			<div class="grid-x">
+				<div class="cell medium-6 large-4">
+					<ul>
+						<li><a href="./python01_foundation.html">Программа на Python — часть 1</a></li>
+						<li><a href="./python02_foundation.html">Программа на Python — часть 2</a></li>
+						<li><a href="./python03_foundation.html">Программа на Python — часть 3</a></li>
+					</ul>	
+					<h2 id="contents">Содержание</h2>
+					<h3>HOW-TO: Программа на Python, Часть 1</h3>
+					<ul>
+						<li><a href="#ourfirstprogram">Наша первая программа</a></li>
+						<li><a href="#cyclefor">Пример цикла For</a></li>
+					</ul>
+				</div>
+				<div class="cell medium-6 large-8">	
+					<p>Из множества существующих языков программирования Python — один из самых лёгких в изучении.
+					Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился. Хотя Python входит в
+					состав большинства дистрибутивов Linux, на него часто не обращают внимания при выборе языка
+					для изучения. В этой статье мы рассмотрим создание консольных приложений, а в следующей —
+					программирование графических интерфейсов (<u>GUI</u>). Давайте создадим простую программу прямо
+					сейчас.</p>
+					<h2 id="ourfirstprogram">Наша первая программа</h2>
+					<a href="#contents">К содержанию</a>
+					<p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает каждая
+					строка и пойдём дальше.</p>
+					<p>Введите эти 4 строки:</p>
+<pre><code>#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+</code></pre>
+					<p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+					<b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать программу на
+					Python. Для запуска программы нужно сделать её файл исполняемым. Для этого введите в терминале</p>
+<pre><code><u><b><i>chmod +x hello.py</i></b></u></code></pre>
+					<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+<pre><code>greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$
+</code></pre>
+					<p>Вот и всё.</p>
+					<hr>
+					<h2 id="cyclefor">Пример цикла For</h2>
+					<a href="#contents">К содержанию</a>
+					<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый редактор и
+					наберите следующую программу:</p>
+<pre><code>#!/usr/bin/env python
+for cntr in range(0,10):
+	print cntr
+</code></pre>
+					<p><i>Не забудьте поставить символ табуляции перед строкой «print cntr».</i> Это важно. В Python для
+					указания на блоки кода используются не круглые «(» и фигурные «{» скобки как в других языках
+					программирования, а отступы.</p>
+				</div>	
+			</div>
+			<div class="grid-x">
+				<div class="cell small-6">
+					<a href="#"><img src="./img/prev.png" align="left" width="22" height="22" title="Назад"></a>
+				</div>	
+				<div class="cell small-1">
+					<a href="#"><img src="./img/home.png" align="center" width="22" height="22" title="Текущая страница"></a>
+				</div>
+				<div class="cell small-5">
+					<a href="./python02_foundation.html#"><img src="./img/next.png" align="right" width="22" height="22" title="Программа на Python, Часть 2"></a>
+				</div>	
+			</div>	
+		</div>
+	</BODY>
+</HTML> ​
