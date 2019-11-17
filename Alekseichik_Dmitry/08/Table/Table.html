@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<HEAD>
+    <META charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <TITLE>Данные о сотрудниках</TITLE>
+
+    <link rel="icon" href="https://www.freefavicon.com/freefavicons/animal/racoon-snout-152-223156.png">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('table').addClass('table-bordered table-striped');
+
+            //Обводка для красоты
+            $('td').hover(
+                function () {
+                    $(this).css("box-shadow", "0px 0px 3px 3px aquamarine");
+                },
+                //выход из ховера
+                function () {
+                    $(this).css("box-shadow", "0px 0px 0px 0px gray");
+                });
+
+            $('tr:not(:first-child) th').hover(
+                function () {
+                    $(this).css("box-shadow", "0px 0px 3px 3px aquamarine");
+                },
+                //выход из ховера
+                function () {
+                    $(this).css("box-shadow", "0px 0px 0px 0px gray");
+                });
+
+
+
+            //Прячем строчки с данными //
+            $('tr:not(:nth-child(1))').click(function () {
+                $(this).hide();
+                var hiddenline = true;
+                $('#showlist').text('Показать всё');
+
+            })
+
+            //showlist кнопка функционал
+            $('#showlist').click(function () {
+                hiddenline = false;
+                $('tr').show();
+                $('#showlist').text('Нет скрытых строк');
+
+            })
+        })
+
+    </script>
+
+</HEAD>
+
+
+
+<BODY>
+
+    <H1>Данные о сотрудниках!</H1>
+
+    <table>
+        <caption>данные о сотрудниках</caption>
+        <tr>
+            <th>ФИО</th>
+            <th>пол</th>
+            <th>должность</th>
+            <th>дата рож.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr>
+            <th>Иванов Иван Иванович</th>
+            <td>М</td>
+            <td>начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr>
+            <th>Петрова Илонна Петровна</th>
+            <td>Ж</td>
+            <td>секретарь</td>
+            <td>01.01.1989</td>
+            <td>98795</td>
+            <td>46523</td>
+        </tr>
+        <tr>
+            <th>Сидоров Илья Игоревич</th>
+            <td>М</td>
+            <td>бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>743434</td>
+            <td>987979</td>
+        </tr>
+        <tr>
+            <th>Пупин Фёдор Фёдорович</th>
+            <td>М</td>
+            <td>водитель</td>
+            <td>01.01.1963</td>
+            <td>74323434</td>
+            <td>9232379</td>
+        </tr>
+        <tr>
+            <th>Крупин Сергей Иванович</th>
+            <td>М</td>
+            <td>водитель 2</td>
+            <td>01.01.1983</td>
+            <td>3234534</td>
+            <td>923123379</td>
+        </tr>
+
+    </table>
+
+    <button type="button" class="btn btn-info" id="showlist">Нет скрытых строк</button>
+
+</BODY>
+
+</HTML>

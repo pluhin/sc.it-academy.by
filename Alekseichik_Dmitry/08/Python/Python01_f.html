@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+  <META charset="utf-8">
+  <TITLE>Python 01f</TITLE>
+
+
+
+  <link rel="icon" type="image/png" href="./img/Icon-Python.png">
+
+  <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.css">
+
+  <link rel="stylesheet" href="./css/on_screen.css" media="screen">
+  <link rel="stylesheet" href="./css/on_print.css" media="print">
+
+
+ 
+  <!--
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.js"></script>
+  <style>
+    div {
+      border: 1px solid red;
+    }
+  </style>
+
+-->
+
+
+
+</HEAD>
+
+<BODY>
+
+
+    <div class="grid-container"> 
+   
+  <div class="grid-x grid-collapse">
+
+
+
+    <div class="cell small-4">
+
+      <H1> HOW-TO: Программа на Python, Часть 1 </H1>
+      <ul>
+        <!--  Список li -->
+        <li><a href="./Python01_f.html#">Программа на Python — часть 1</a></li>
+        <li><a href="#">Программа на Python — часть 2</a></li>
+        <li><a href="#">Программа на Python — часть 3</a></li>
+      </ul>
+
+      <H2 id="mainlist">Содержание</H2>
+      <H3>HOW-TO: Программа на Python, Часть 1</H3>
+      <!--  подчёркивание u -->
+      <ul>
+        <li><a href="#firststep01">Наша первая программа</a></li>
+        <li><a href="#cycle01">Пример цикла For</a></li>
+      </ul>
+
+
+    </div>
+
+
+    <div class="cell small-8 auto">
+
+
+      <hr>
+      </hr> <!--  Горизонтальная полоса -->
+      <img src="./img/Icon-Python.png" align="right" width="200" height="200" title="Логотип Python" alt="Python Logo">
+      <p>Из множества существующих языков программирования Python — один из самых лёгких
+        в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+        Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+        обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+        создание консольных приложений, а в следующей — программирование графических
+        интерфейсов (<u title="(англ. graphical user interface, GUI)">GUI</u>). Давайте создадим простую программу
+        прямо
+        сейчас.
+
+      </p>
+
+      <hr>
+      </hr> <!--  Горизонтальная полоса -->
+
+      <H2 id="firststep01">Наша первая программа</H2>
+      <a href="#mainlist">К содержанию</a>
+      <p>
+        Наберём код в текстовом редакторе (например, в gedit). Потом мы разберёмся,
+        что делает каждая строка и пойдём дальше.
+      </p>
+      <p>Введите эти 4 строки: </p>
+      <pre><code>#!/usr/bin/env python 
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"</code></pre>
+
+      <p>Это всё.</p>
+      <p>
+        Сохраните файл как <strong>hello.py</strong> в любом месте. Я предлагаю сохранить его в папке
+        <strong>python_examples</strong> в домашнем каталоге. Этот пример показывает, как просто написать
+        программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+        этого введите в терминале </p>
+
+     <code>chmod +x hello.py</code>
+
+      <p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+      <pre><code>greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$</code></pre>
+
+      <p>Вот и всё.</p>
+
+      <hr>
+      </hr> <!--  Горизонтальная полоса -->
+
+      <h2 id="cycle01">Пример цикла For</h2>
+      <a href="#mainlist">К содержанию</a>
+
+      <p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+        редактор и наберите следующую программу:</p>
+     <pre><code>#!/usr/bin/env python
+for cntr in range(0,10):
+  print cntr
+</code></pre>
+      <p>Не забудьте поставить символ табуляции перед строкой «print cntr». Это важно. В
+        Python для указания на блоки кода используются не круглые «(» и фигурные «{» скобки
+        как в других языках программирования, а отступы.</p>
+
+    </div>
+
+  </div> <!-- X ROW 1-->
+
+
+
+ <div class="grid-x grid-margin-x-collapse">
+    <!-- bottom menu row-->
+    <div class="cell small-5"><a href="#"><img src="./img/prev.png" align="left" width="22"
+          height="22" title="Часть 3"></a></div>
+
+    <div class="cell small-4"><a href="#"><img src="./img/home.png" width="22" align="center" height="22"
+          title="Домой"></div>
+
+    <div class="cell small-3"><a href="#"><img src="./img/next.png" align="right" width="22"
+          height="22" title="Часть 2"></div>
+
+  </div> <!-- bottom menu row-->
+
+
+</div> <!-- Container-->
+
+
+
+
+
+
+
+</BODY>
+
+</HTML>
